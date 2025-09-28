@@ -21,8 +21,8 @@ This was the code I used for my bachelor’s thesis. This project provides an au
 - Applies **BERTopic** with **SentenceTransformer embeddings**.  
 - Filters topic assignments based on probability threshold.  
 - Generates:  
-  - 📊 Faceted bar plots of top topic words (exported to \`/Plots\`)  
-  - 📝 Representative topic chunks per topic (exported to \`/RepDOCS\`)  
+  - 📊 Faceted bar plots of top topic words (exported to /Plots)  
+  - 📝 Representative topic chunks per topic (exported to /RepDOCS)  
 
 ---
 
