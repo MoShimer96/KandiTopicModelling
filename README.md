@@ -11,11 +11,11 @@ This was the code I used for my bachelor’s thesis. This project provides an au
 
 ## 🚀 Features
 
-**Document Cleaning (\`processDocuments.py\`):**  
+**Document Cleaning (processDocuments.py):**  
 - Removes citations, headers, footers, line breaks, duplicate lines, page numbers, and unwanted institution references.  
 - Outputs clean, normalized text files.
 
-**Topic Modelling (\`topicModelling.py\`):**  
+**Topic Modelling (topicModelling.py):**  
 - Loads cleaned text and splits it into meaningful paragraphs.  
 - Tokenizes and removes stopwords using NLTK.  
 - Applies **BERTopic** with **SentenceTransformer embeddings**.  
@@ -93,7 +93,7 @@ In \topicModelling.py\ you can adjust the following settings:
 ## 📝 Notes & Tips
 
 - The cleaning script avoids overwriting already cleaned files.  
-- Ensure your \`.txt\` files use **double newlines (\`\\n\\n\`)** to mark paragraphs for best chunking.  
+- Ensure your .txt files use **double newlines (\`\\n\\n\`)** to mark paragraphs for best chunking.  
 - Currently the pipeline uses English stopwords, so it’s optimized for English-language documents.
 
 ---
