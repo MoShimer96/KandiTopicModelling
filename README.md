@@ -56,7 +56,9 @@ The project also uses NLTK's resources (e.g. stopwords); these are usually downl
 
 1. Put your raw .txt files into the Documents/ directory.  
 2. Run the topic modelling script:
+   ```bash
    python topicModelling.py
+   ```
    
 
 That will:
