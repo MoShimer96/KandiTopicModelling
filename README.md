@@ -55,19 +55,17 @@ The project also uses NLTK's resources (e.g. stopwords); these are usually downl
 
 ## ▶️ How to Run
 
-1. Put your raw \`.txt\` files into the \`Documents/\` directory.  
+1. Put your raw .txt files into the Documents/ directory.  
 2. Run the topic modelling script:
-
-   \\\bash
    python topicModelling.py
-   \\\
+   
 
 That will:
 
-- Clean your documents (into \`DocumentsCleaned/\`)  
+- Clean your documents (into DocumentsCleaned/)  
 - Train a BERTopic model  
-- Save visualizations to \`Plots/\`  
-- Save representative text chunks into \`RepDOCS/\`
+- Save visualizations to Plots/  
+- Save representative text chunks into RepDOCS/
 
 ---
 
