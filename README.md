@@ -18,6 +18,7 @@ Generates:
 📊 Faceted bar plots of top topic words (stored in /Plots)
 📝 Representative topic chunks per topic (stored in /RepDOCS)
 📁 Project Structure
+##
 .
 ├── Documents/                # (Input) Raw .txt files
 ├── DocumentsCleaned/         # (Output) Cleaned documents from processDocuments.py
