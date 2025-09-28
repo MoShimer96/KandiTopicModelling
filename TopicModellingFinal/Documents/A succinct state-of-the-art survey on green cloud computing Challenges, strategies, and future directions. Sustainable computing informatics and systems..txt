@@ -1,0 +1,2198 @@
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+Contents lists available at ScienceDirect
+
+Sustainable Computing: Informatics and Systems
+journal homepage: www.elsevier.com/locate/suscom
+
+A succinct state-of-the-art survey on green cloud computing: Challenges,
+strategies, and future directions
+Dipto Biswas a,b , Sohely Jahan a , Sajeeb Saha c ,∗, Md. Samsuddoha a
+a
+b
+c
+
+University of Barishal, Karnakathi, Barishal sadar, Barishal, 8200, Bangladesh
+Daffodil International University, Daffodil Smart City, Birulia, Savar, Dhaka, 1216, Bangladesh
+Jagannath University, 9-10 Chitta Ranjan Avenue, Sadarghat, Dhaka, 1100, Bangladesh
+
+ARTICLE
+
+INFO
+
+Keywords:
+Cloud computing
+Green cloud computing
+Computing services
+Green manner
+Sustainable technology
+
+ABSTRACT
+Cloud computing is a method of providing various computing services, including software, hardware, databases,
+data storage, and infrastructure, to the public through the Internet. The rapid expansion of cloud computing
+services has raised significant concerns over their environmental impact. Cloud computing services should be
+designed in a green manner, efficient in energy consumption, virtualized, consolidated, and eco-friendly. Green
+Cloud Computing (GCC) is a significant field of study that focuses on minimizing the environmental impact and
+energy usage of cloud infrastructures. This survey provides a comprehensive overview of the current state of
+GCC, focusing on the challenges, strategies, and future directions. The review study begins by identifying
+important challenges in GCC from practical implementations, identifying GCC-introduced environmental
+protection and prevention initiatives, and expressing the demand for long-term technical progression. It
+then addresses GCC’s primary concerns, such as energy efficiency, resource management, operational costs,
+and carbon emissions, and categorizes implementations according to algorithms, architectures, frameworks,
+general issues, and models and methodologies. Furthermore, enhancements in virtualization, multi-tenancy,
+and consolidation have been identified, analyzed, and accurately portrayed to address the advancements
+in GCC. Finally, the survey outlines future research directions and opportunities for advancing the field of
+GCC, including the development of novel algorithms, technologies for energy harvesting, and energy-efficient
+and eco-friendly solutions. By providing a comprehensive overview of GCC, this survey aims to serve as
+documentation for further evolving new emerging technological approaches in the GCC environment.
+
+1. Introduction
+Sustainability and flexibility have become the most demanding
+features in information and communication technology (ICT)-based
+developments for users and developers. Consumption of energy is
+increasing extensively in human’s entire lives due to these technological developments [1]. The ICT-based developments create antithetical
+impacts on the environment that incite green developments for impairing intensified negative issues [2]. Present lives and future lives
+are negatively and positively influenced by ICT. Environmental issues
+are less considered due to the provided and achieved facilities of ICT.
+ICT has a prominent field called cloud computing that is effectively
+conscious about producing products that have fewer negative impacts
+on the environment. Although it is not an entirely new technology, the
+journey from distributed to cluster to grid to cloud computing has been
+
+completed. The rapid increase in Internet usage among the populace led
+to the development of cloud computing [3].
+The strategy of cloud computing involves providing computing
+services, including software, hardware, databases, data, storage, and
+infrastructure, to society through the Internet. It consists of interconnected, virtualized machines provisioned based on service level
+agreements between service providers and customers, providing unified
+computing resources [4]. Cloud computing has already taken off in
+the IT sector due to the worldwide increase in Internet usage. Cloud
+computing aims to offer services in a green manner that is efficient in
+energy consumption and virtualized, consolidated, and eco-friendly [5].
+However, there must be a basic motivation to protect the environment
+and the entire ecosystem. A great number of hindrances belong to
+developing a strategy related to ICT that is sustainable and effective
+for the environment [6].
+
+∗ Corresponding author.
+E-mail addresses: dipto.ete@diu.edu.bd (D. Biswas), sojahan@bu.ac.bd (S. Jahan), sajeeb@cse.jnu.ac.bd (S. Saha), msamsuddoha@bu.ac.bd
+(M. Samsuddoha).
+URLs: https://faculty.daffodilvarsity.edu.bd/profile/ice/dipto.html (D. Biswas), https://bu.ac.bd/view-profile.php?editId=82 (S. Jahan),
+https://jnu.ac.bd/profile/portal/web/258 (S. Saha), https://bu.ac.bd/view-profile.php?editId=400 (M. Samsuddoha).
+
+https://doi.org/10.1016/j.suscom.2024.101036
+Received 18 June 2024; Received in revised form 4 September 2024; Accepted 5 September 2024
+Available online 10 September 2024
+2210-5379/© 2024 Elsevier Inc. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+Fig. 1. A general overview of the cloud computing environment.
+
+Cloud computing is a cutting-edge approach that radically transforms the methods of producing, pricing, and provisioning computing
+services. In addition to local PCs and other Internet-connected devices,
+it enables access to services that are housed in faraway data centers
+demonstrated in Fig. 1. The cost of cloud services is determined by
+how much is used by consumers all over the world. In the computer
+industry, this notion of computing as a utility has long been aspired
+to, but it is still in its infancy until the development of affordable
+data centers, which will make this dream a reality [5]. A large-scale
+distributed computing paradigm based on economies of scale, where
+a pool of virtualized, dynamically scaled, managed computing power,
+storage, platforms, and services are made available to external clients
+through the Internet on demand [7]. Since data centers are the foundation of cloud computing, the expansion of green data centers and the
+development of green cloud computing (GCC) are closely intertwined.
+Data centers accounted for 1.3% of all energy usage in 2010, according
+to Koomey [7].
+The percentage of total carbon dioxide (CO2 ) emissions from ICTs
+is predicted to rise from 1.3% of global emissions in 2002 to 2.3% in
+2020, according to a GeSI report [5], which is regarded as ‘‘one of
+the most comprehensive and well-recognized snapshots of the Internet’s
+energy demand at the global level’’. Researchers at Lawrence Berkeley
+National Laboratory and Northwestern University created the Cloud
+Energy and Emissions Research Model (CLEER), a modeling tool with
+a focus on cloud computing and energy use [8]. Their model calculates
+the energy savings from moving local network software and computing
+onto server farms. According to the findings, switching all US corporate
+users to cloud computing may cut the primary energy footprint of
+email, productivity software, and customer relationship management
+software by as much as 87%. Even though the model does not account
+for all the factors, it can nevertheless help promote energy efficiency in
+the data centers owned by Internet corporations [7]. It might guarantee
+an improvement in energy transparency and enlighten customers so
+they can select the best offer. If data centers are constructed under
+the green computing principle, the advantages of cloud computing for
+environmental conservation will be more substantial. Building a data
+center is the prime action related to cloud computing. Developing a
+green data center is a staple task for implementing GCC technology.
+
+Foster, who represents academia, emphasizes several technological aspects that set cloud computing apart from other distributed computing
+models [8]. For instance, computational entities are virtualized and
+provided as services, and the economies of scale are what dynamically drive these services. Various existing research implementations
+demonstrated how GCC has diminished the negative influences on
+environmental issues [9].
+GCC is the term for sustainable and ecologically friendly cloud
+computing methods [10]. The goal of cloud computing along with GCC
+is frequently to lessen the negative environmental effects of information
+centers and IT facilities [11]. Conventional data centers use a lot of
+energy to run their servers and cool them. In general, the cost of
+a data center along with its carbon-di-oxide footprint is tremendous.
+The subject can be measured concerning power costs of about 0.12
+$ per kW/h, cooling requirements of about 0.120 $ per kW/h, consumption of energy of about 0.150 $ per kW/h, security along with
+maintenance of about 20k $ per Rack/year, and 100k $ 1 person
+per 1k servers/year [12]. Additionally, the carbon footprint can be
+measured regarding coal at about 2.21 pounds/KWh, petroleum at 2.11
+pounds/KWh, and natural gas at 0.92 pounds/KWh [12]. In a nutshell,
+the complete cost behind the data center is about 960,000 $ and the
+average carbon footprint yearly is about 13.27M pounds (5.7M in coal,
+4.9M in petroleum, and 2.67M in natural gas) [13]. This huge amount
+of cost and carbon threat can be mitigated by green architecture-based
+data centers in GCC technology [14].
+By using energy-efficient technology, cutting-edge cooling methods,
+along alternative sources of energy for data centers, GCC seeks to
+minimize energy consumption and lower the carbon footprint altogether [15]. The energy efficiency of data facilities can be affected by
+their location. To reduce its negative environmental effects, GCC takes
+into account variables including climate, accessibility to energy from
+renewable sources, and resource-efficient construction techniques [16].
+GCC takes into account the ethical recycling and disposal of electronic
+garbage, or ‘‘e-waste’’, [17] produced by outdated gear [18]. In the
+literature, the areas of applications of GCC include education, ICT,
+manufacturing, financial data availability services, data centers, smart
+city planning, telecommunications, utilities, energy, and so on on [19–
+22]. An estimation of the requirement of GCC according to the urgency
+2
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+Fig. 2. An estimation of urgency in sundry application areas of GCC.
+
+2. General overview on cloud computing
+
+consideration in various application areas has been prepared by analyzing a good number of literature works regarding the application of
+GCC [13–25], which is depicted in Fig. 2. This entails using appropriate
+recycling techniques to lessen the negative effects of technology on
+the surroundings. GCC has introduced the CLEER [10,26] model that
+measures energy consumption along with energy savings. GCC has also
+mentioned a few principles that ensure transparency, efficiency, and
+performance that reduce environmental issues extensively [11].
+GCC involves the use of environmentally friendly data centers that
+efficiently utilize energy. It upholds environmental sustainability by
+effectively balancing the cost-and-benefit ratio, adhering to green ICT
+principles, minimizing energy consumption, reducing e-waste and carbon dioxide emissions, ensuring information availability, and promoting awareness of environmental guidelines. The purposes and contributions of this literature review are:
+
+Cloud computing has become a dynamic and sophisticated technology by providing supporting resources for computation, accumulating large data, and highly accurate computation capabilities [15].
+It utilizes virtualization to develop an adaptable environment, diminish the dependency on physical resources, and build a parallel, grid,
+and distributed computing with microservice architecture [16]. Cloud
+computing technology is developing hardware and software aspects
+from various perspectives. The main facilities and features of cloud
+computing technology are that it offers encyclopedic and global features, a huge universe of data, the ability to scale, better service,
+and consumption-oriented views [17]. All of the mentioned facilities
+and characteristics must be ensured and provided. Computing devices
+are virtualized, dynamic, interconnected, parallel with each other,
+and provisioned with progressive attitudes. However, the computing
+devices are presented as a distributed, unified resource computing
+system. Cloud computing offers integrated and available technologies
+or resources as services [18,26].
+The five essential traits of cloud computing explain their relationship to and distinction from traditional computing, including ondemand self-service [27]: Without having to speak to the service
+provider directly, the customer can provision or unprovision services
+as needed; Broad Network Access [28]: It has network capabilities, and
+access is made through a regular technique; Resource Pooling [29]:
+Using a multi-tenant model, the provider’s computing resources are
+pooled to service numerous consumers based on their demands; Rapid
+Elasticity [30]: Services can be deployed quickly and elastically; Measured Service [30]: By giving the type of service a metering capability, cloud computing platforms automatically check and optimize
+resource utilization (e.g. storage, bandwidth, processing, or active user
+accounts) [31].
+There are various services such as Functions as a Service (FaaS),
+Software Resources as a Service (SaaS), Backup Architecture as a
+Service (BaaS), Security as a Service (SECaaS), Platform Resources as a
+Service (PaaS), Desktop as a Service (DEaaS), Data as a Service (DaaS),
+Infrastructure as a Service (IaaS), Code as a Service (CaaS), Network as
+a Service (Naas) and so on [31–33]. A general representation of cloud
+computing services has been depicted in Fig. 3.
+The cloud computing environment must have a smart and sophisticated topology that will ensure the comparatively highest degree
+
+• We provide a novel taxonomical analysis of the key areas of
+focus in GCC by categorizing the existing literature obtained from
+research publications.
+• Our objective is to offer precise definitions of the research questions that occur in developing GCC systems and then explore
+possible answers.
+• Investigating the potential of Energy Harvesting technologies in
+minimizing energy usage in GCC environments to produce ecofriendly solutions.
+• Identifying the further improvements areas of virtualization,
+multi-tenancy, and consolidation to cope with the progress of
+GCC.
+• Delineating the challenges, concerns, and recommendations for
+future research endeavors aimed at creating sustainable cloudbased solutions.
+The rest of the paper has been organized as follows: Section 2 represents a general overview of cloud computing. The trends and status of
+GCC have been presented in Section 3. Section 4 presents an approach
+of survey methodology. Challenges in GCC have been introduced in
+Section 5. Subsequently, Section 6 introduces existing strategies and
+solutions regarding the available challenges. Section 7 proposes sundry
+future research directions with detailed executable research propositions. This section also appraises the impact of sundry potential
+emerging technologies relevant to GCC. Consecutively, a conclusion has
+been represented in Section 8.
+3
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+Table 1
+Urgency of GCC in accomplishing various prominent objectives.
+Goals
+
+Description
+
+Recycling
+
+GCC offers a reuse mechanism in improving the management of e-waste. GCC also minimizes detrimental and unfriendly influence on
+the environment by enhancing the usage of biodegradable components and diminishing the usage of non-biodegradable components
+[40,41].
+
+Virtualization
+
+GCC offers a reconstruction of assorted hardware components for promoting proficient resource management in utilization. It helps
+generate virtualized mechanism and diminish dependency on servers [40,42,43].
+
+Efficiency in algorithmic
+approaches
+
+GCC introduces an assorted algorithmic approach in resource allocation for program execution. These algorithms maintain features
+identification of resources corresponding to requirements at reasonable period [42,43].
+
+Cost effectiveness
+
+GCC paves agility in workload and lessens costs at resource centralization [23,42].
+
+Capability enhancement of
+remote jobs
+
+GCC avoids reserving physical office infrastructures and promotes an environment of remote work through diminishing significant
+impact of carbon [40,42,43].
+
+Empowering companies in
+sustainable development
+
+GCC can be helpful by offering green architecture-based data center that will save from greenhouse outpouring about 650M metric tone
+in the next time [23,43].
+
+computing affects the environment [47]. It was a response to the
+Gartner report [26], which suggested that the worldwide ICT sector
+contributed about 2% of the world’s CO2 emissions. In 2009, Liu
+et al. introduced GreenCloud, a brand-new design that claims to lower
+data center power consumption [45]. However, the need to discover
+ways to reduce data center energy use is even older and has grown
+since 2009. For the development of GCC, these studies were crucial
+[48]. Actual and future GCC is based on green data centers, which
+maximize energy efficiency while minimizing CO2 emissions and ewaste, not just for ICT equipment but for all environmental factors
+(building, lighting, cooling, etc.) [9]. Green computing encompasses
+more than just how much power computers use. In addition to other
+environmental concerns like CO2 emissions, (e-)waste management,
+and resource consumption, it also covers the energy used by networks
+or cooling equipment [3]. In this situation, there are divergent research
+interests in green computing. They started by looking at how ‘‘sustainable’’ and ‘‘cloud computing’’ relate to one another. The rise in
+environmental awareness and the widespread use of cloud computing
+had an impact on the development of this research. Except for 2013,
+Fig. 4 shows the rise in interest in GCC in academic publications
+between 2009 and 2016 [49]. On the other hand, GCC holds a number of taxonomies and all are engaged with environmentally friendly
+behaviors. The taxonomies are inextricably responsible for sustainable
+cloud architecture [20,45,49]. This research has introduced 6 universally acknowledged and prominent taxonomies in Fig. 5. However,
+other taxonomies of GCC are — Data Privacy, Enhancement of Security, Compliance of Regulatory, Sustainable and Compatible Software
+Application Development, and so on [20,45,49].
+In Fig. 5, minimum 5 branches have been introduced of all 6 taxonomies, and the utilization of taxonomies is profoundly found in the
+fields of education, ICT, manufacturing, financial data availability services, data centers, smart city planning, telecommunications, utilities,
+energy and so on [19–22]. Energy efficiency is tremendously crucial
+for data centers [50,51], resource management promises to optimal
+resource distribution based on request, and improves the performance
+of resource sharing [51,52]. Operation-based costs diminish expenses
+regarding infrastructural maintenance, and server dependency [52,53].
+As a regulatory and obligatory requirement, Carbon-di-Oxide can be
+considered to accomplish the sustainable motives [52,54], while Energy harvesting can be an anchorage to mitigate the dependency on
+energy that is formed from the geological substances [51,55]. E-waste
+introduces disposal of reuse and recycling of wastages [51,56]. Eventually, the taxonomies offer an initiative for accomplishing business
+requirements as well as universal sustainability.
+The community that is engaged with computing is highly interested
+in understanding the impact of cloud computing and GCC on the environment [15]. Gartner et al. [26] did an estimation that mentioned that
+all the industries related to ICTs globally accounted for 2% emission of
+carbon dioxide. An efficient architecture named GreenCloud [9] has
+been introduced that decreases the consumption of power or energy
+
+Fig. 3. A general overview of services offered by cloud computing.
+
+of scalability, flexibility, and accessibility. Depending on this feature,
+cloud computing can be categorized as public cloud, private cloud,
+high computing cloud, hybrid cloud, and community cloud [34,35].
+SaaS, DEaaS, and SECaaS are for end users, whereas IaaS, PaaS, CaaS,
+DaaS, and others are for vendors of various virtualized software and
+its developers [36,37]. The specialty of IaaS is to provide offers related to energy efficiency. SaaS generally offers a significant benefit to
+environment-related protections [38]. It also provides virtualized green
+software resources, green data centers, and less equipment-based data
+centers, sharing, and centralization [21]. PaaS offers optimization on
+scheduling, energy level, and compilation. All the services in the GCC
+environment are highly conscious of environmental issues to protect
+the environment [22,39]. Moreover, GCC has been urgent nowadays
+to accomplish assorted goals in terms of virtualization, recycling, algorithmic proficiency, and cost-effectiveness, capability enhancement of
+remote jobs, empowering companies in sustainable development [23,
+40,41]. The urgency of GCC in terms of sustainable development has
+been described succinctly in Table 1. According to the literature [13,20,
+21,40,42–44] all that mentioned urgency as goals should be achieved
+in the real world application areas of GCC significantly illustrated at
+the Fig. 2. Cloud computing is highly convenient for all sorts of users
+due to its dynamic features and flexibility. It reduces the utilization
+of hardware and software-related resources extensively and minimizes
+the cost along with the emission of carbon dioxide [45]. Hence, ewaste is diminishing, and energy efficiency is increasing gradually. In a
+nutshell, cloud computing offers a high-configuration environment with
+enormously required resources, provides storage with higher capacity,
+and ensures computing with absolutely higher performance [22,46].
+3. Trends and status of GCC
+Due to the attention that green computing is receiving from the
+computing world, there is a growing interest in researching how cloud
+4
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+Fig. 4. Prominent focus areas of GCC.
+
+Fig. 5. Introduction to Green Cloud Computing (GCC) taxonomy and branches.
+
+from data centers. This study focuses on the relationship between
+sustainability and green behavior-based cloud computing [9]. The interest has grown due to the increment in cloud computing utilization
+from 2009 to 2021, based on academic literature perspectives [57,58].
+In general, GCC has several prominent focus domains [59] that are
+crucial and comparatively more effective, such as virtualization: a
+mechanism of sharing hardware resources for an enormous number
+of digital environments that are distinct [23], Replica Management:
+an enhanced architecture for sharing concurrent resources, avoiding
+redundancy [60], Energy Scaling: a service to dissociate the power
+during utilization [23], and sustainability of Power: a provisioning
+approach to fulfill the present demands [61]. A depiction of the focus
+areas of GCC has been generally represented in Fig. 4.
+This succinct literature review has categorized GCC into five sectors:
+Algorithms, Architectures, Frameworks, General Issues, and Models
+with Methods [49–64]. A few of the solutions related to environmental issues have been addressed, such as energy efficiency, efficient resource manipulation and management, reducing operational
+costs, and reducing emissions of carbon dioxide. All of those facts and
+categories are interrelated to solve environmental issues [49–64]. A
+mapping of key issues and challenges with relevant implementations
+between the sectors and taxonomies has been decorated in Table 3.
+We have listed all implementations and solutions in abbreviated form
+to reduce space complexities. The Energy Efficiency has been mapped
+
+with Algorithms [21,22,49] named Frequency Scaling and Dynamic
+Voltage (FSDV), Earliest Deadline First (EDF), Task Scheduling Algorithm (TSA), Best-Fit Decreasing (BFD), Green Load Balancer (GLB).
+Architectures [19,20] named Micro Data Centers (MDC), and HyperConverged Infrastructure (HCI). Frameworks [40,42] named GreenCloud, CloudSim, OpenNebula. General Issues [42,43] called Trade-offs
+Between Performance and Energy Efficiency (TPEE), Complexity of
+Energy Management (CEM), Limited Scalability of Energy-Efficient Solutions (LSEES), Integration with Legacy Systems (ILS). Models with
+Methods [10–12] named Power-Aware Best-Fit Decreasing (PABFD),
+Green Networking Protocols (GNP), Adaptive Resource Management
+(ARM) [12,20,21,49].
+Similarly, the resource management has been mapped with Algorithms [1,2], named Weighted Round Robin (WRR), First-Fit Decreasing (FFD), Genetic Algorithms (GA), Ant Colony Optimization (ACO).
+Architectures [1,2,43] such as Federated Cloud (FC), Hypervisor-Based
+Architecture (HBA), Multi-Tier Cloud Architecture (MTCA). Frameworks [19,22] named Apache Mesos, OpenStack, Kubernetes. General
+Issues [22,43] like Resource Over-Provisioning and Under-Provisioning
+(ROPUP), Scalability Challenges (SC), Heterogeneity of Resources
+(HoR), Inter-Resource Dependency (IRD). Models with Methods [3,22,
+43] such as Stochastic Models (SM), Heuristic Based Scheduling (HBS),
+Metaheuristic Algorithms (MHA), Thermal Aware Models (TAM), Adaptive Threshold Based Models (ATBM).
+5
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+Table 2
+Classification of numbers of papers identified in international database.
+Category
+
+Survey focus
+Years
+
+Total
+surveys
+
+Energy efficiency
+
+Resource
+management
+
+Operation based
+costs
+
+Carbon-dioxide
+emission
+
+Energy harvesting
+
+Algorithms
+
+2012–2023
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Not concerned
+
+Architectures
+
+2014–2023
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Not-concerned
+
+Not concerned
+
+Frameworks
+
+2011–2022
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Not concerned
+
+General issues
+
+2015–2023
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Not concerned
+
+Models with methods
+
+2009–2023
+
+178
+[37]
+132
+[62]
+162
+[63]
+212
+[35]
+223
+[60]
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Fully-concerned
+
+Not concerned
+
+Table 3
+Mapping of key issues and challenges with relevant implementations.
+Attributes
+
+Algorithms
+
+Architectures
+
+Frameworks
+
+General issues
+
+Models with methods
+
+Energy efficiency
+
+FSDV, EDF, GLB,
+TSA, BFD
+
+MDC, HCI
+
+GreenCloud, CloudSim,
+OpenNebula
+
+TPEE, CEM,
+LSEES, ILS
+
+PABFD, GNP, ARM
+
+Resource management
+
+WRR, FFD, GA, ACO
+
+FC, HBA, MTCA
+
+Apache Mesos, OpenStack,
+Kubernetes
+
+ROPUP, SC, HoR,
+IRD
+
+SM, HBS, MHA, TAM,
+ATBM
+
+Operation-based costs
+
+DPA, BCS, DMS,
+SIO, CELB
+
+SRP, IM, MCS, SDDC
+
+ACE, ACM, GCBR, FOF,
+RST, CGF, ACS, OSCMM
+
+CC, ROP, CVT, VLI
+
+CPM, ABC, CSM, TCO, RoI,
+TPM
+
+Carbon-di-oxide emission
+
+CASA, GS, CALB,
+RCA, LCA, CIM,
+EPCA
+
+REI, EECS, MDC, DCA,
+LPH, SI
+
+CFMS, SRT, GMT, ECO2C,
+OSEME, GPF
+
+MRC, ESD, DWE,
+BPE, DTE
+
+CEFM, RTCEM, OCM,
+CTM, MOOM, FLM,
+CARMM
+
+Energy harvesting
+
+TSF, SA, DTS, BMA,
+EBA, ERA
+
+HES, MI, EHS, EANA,
+DEHS, SEHM, DEM, EHC
+
+GE, PC, RCC, EH-IoT, EE,
+SDC, Eco-Cloud
+
+IES, ESL, CoI, EPU
+
+PVM, ERM, MOOM
+
+E-waste management
+
+LAA, UPA, RSA,
+MRA, DRO, WSA
+
+MHD, CCD, GPP, RLN,
+CRN, DEM
+
+GITG, LMF, CEF, EMF,
+EAF, EDITH
+
+CoR, TO, DSC, EB
+
+MFA, ESM, EoLM, CLSCM,
+TBRM, MCDM, MRO
+
+The operation-based costs have been mapped with Algorithms [10,
+11,40] such as Dynamic Pricing Algorithms (DPA), Budget-Constrained
+Scheduling (BCS), Deadline-Monotonic Scheduling (DMS), Spot Instance Optimization (SIO), Cost-Effective Load Balancing (CELB). Architectures [10,42,43] named Shared Resource Pools (SRP), Isolation
+Mechanisms (IM), Microservices (MCS), Software-Defined Data Center
+(SDDC). Frameworks [19,20] such as AWS Cost Explorer (ACE), Azure
+Cost Management (ACM), Google Cloud Billing Reports (GCBR), FinOps
+Framework (FOF), Right-Sizing Tools (RST), Cloud Governance Frameworks (CGF), Apache CloudStack (ACS), OpenStack Cost Management
+Modules (OSCMM). General Issues [10–12] like Cost Complexity (CC),
+Resource Over-Provisioning (ROP), Cost Visibility and Transparency
+(CVT), Vendor Lock-In (VLI). Models with Methods [25,65,66] such as
+Cost Prediction Models (CPM), Activity-Based Costing (ABC), Chargeback and Showback Models (CSM), Total Cost of Ownership (TCO),
+Return on Investment (RoI), Tiered Pricing Models (TPM).
+The Carbon-di-Oxide has been crucially mapped with Algorithms
+[10,65,66] such as Carbon-Aware Scheduling Algorithms (CASA),
+Green Scheduling (GS), Carbon-Aware Load Balancing (CALB), Resource Consolidation Algorithms (RCA), Life Cycle Assessment (LCA),
+Carbon Intensity Metrics (CIM), Energy-Proportional Computing Algorithms (EPCA). Architectures [40,42,65], like Renewable Energy
+Integration (REI), Energy-Efficient Cooling Systems (EECS), Modular
+Data Centers (MDC), Decentralized Cloud Architecture (DCA), LowPower Hardware (LPH), Scalable Infrastructure (SI). Frameworks [10,
+40,43] such as Carbon Footprint Management Systems (CFMS), Sustainability Reporting Tools (SRT), GreenMetrics Tools (GMT), ECO2Clouds
+(ECO2C), OpenStack Energy Management Extensions (OSEME), GreenPower Framework (GPF). General Issues [19,20,40,43] like Measurement and Reporting Challenges (MRC), Energy Source Dependency
+(ESD), Dynamic Workloads and Emissions (DWE), Balancing Performance and Emissions (BPE), Data Transfer and Emissions (DTE). Models with Methods [25,65,66] called Carbon Emission Factor Models
+(CEFM), Real-Time Carbon Emission Models (RTCEM), Offset Calculation Models (OCM), Carbon Trading Models (CTM), Multi-Objective
+
+Optimization Models (MOOM), Full Lifecycle Models (FLM), CarbonAware Resource Management Models (CARMM).
+Similarly, the energy harvesting has also been mapped with Algorithms [20–22] such as Time Series Forecasting (TSF), Stochastic
+Algorithms (SA), Dynamic Task Scheduling (DTS), Battery Management
+Algorithms (BMA), Energy Buffering Algorithms (EBA), Energy Routing Algorithms (ERA). Architectures [21,22,40], like Hybrid Energy
+Systems (HES), Microgrid Integration (MI), Energy Harvesting Sensors
+(EHS), Energy-Aware Network Architecture (EANA), Distributed Energy Harvesting Systems (DEHS), Scalable Energy Harvesting Modules
+(SEHM), Decentralized Energy Management (DEM), Energy Harvesting
+Controllers (EHC). Frameworks [21,43] such as GreenEnergy (GE),
+Power-Cloud (PC), Renewable Cloud Computing (RCC), Energy Harvesting IoT (EH-IoT), Energy Extensions (EE), Sustainable Data Center
+(SDC), Eco-Cloud. General Issues [10–12] like Intermittent Energy
+Supply (IES), Energy Storage Limitations (ESL), Cost of Implementation
+(CoI), Energy Prediction Uncertainty (EPU). Models with Methods [10,
+11,40], such as Photovoltaic Models (PVM), Energy Routing Models
+(ERM), Multi-Objective Optimization Models (MOOM).
+Moreover, the E-Waste management has been mapped with Algorithms [10,11,40] named Lifecycle Analysis Algorithms (LAA), Usage
+Pattern Analysis (UPA), Resource Sharing Algorithms (RSA), Material Recovery Algorithms (MRA), Disposal Route Optimization (DRO),
+Waste Sorting Algorithms (WSA). Architectures [12,42,43] like Modular Hardware Design (MHD), Cradle-to-Cradle Design (CCD), Green
+Procurement Policies (GPP), Reverse Logistics Networks (RLN), Collaborative Recycling Networks (CRN), Decentralized E-Waste Management (DEM). Frameworks [25,65,66] such as Green IT Governance
+(GITG), Lifecycle Management Frameworks (LMF), Circular Economy
+Frameworks (CEF), E-Waste Minimization Frameworks (EMF), E-Waste
+Auditing Frameworks (EAF), Eco-Design for IT Hardware (EDITH). General Issues [10,12,21,40,42,43] such as Complexity of Recycling (CoR),
+Technological Obsolescence (TO), Data Security Concerns (DSC), Economic Barriers (EB). Models with Methods [12,21,22,25,65] like Material Flow Analysis (MFA), E-Waste Stream Mapping (ESM), End-of-Life
+6
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+irrelevancy, design issues, and incompleteness. To ensure high-quality
+selection, an evaluation of methodological quality was performed on a
+total of 94 records and excluded a total of 23 records based on improper
+comparisons, limited findings, and theoretical discussion. Eventually,
+this research will have a total of 71 records relevant to GCC for this
+systematic review. The general outcome of this selection mechanism
+is to ensure that all the selected studies are relevant to GCC. In
+addition, high-quality studies relevant to fulfilling the mentioned contributions, challenges, future directions, and research questions have
+been included in this proposed systematic survey.
+
+Models (EoLM), Closed-Loop Supply Chain Models (CLSCM), TakeBack and Recycling Models (TBRM), Multi-Criteria Decision Models
+(MCDM), Material Recovery Optimization (MRO).
+Effective resource management will improve the performance of
+cloud computing by reducing costs, e-waste, and energy consumption.
+Resource management in GCC refers to the use of diverse, geographically dispersed resources to fulfill client demands with the least amount
+of environmental harm [37]. Thankfully, several things that help cloud
+computing providers also help the environment. For instance, cutting
+back on energy use will save prices for service providers while also
+lowering CO2 emissions [36]. Five necessary characteristics of cloud
+computing explain its relation and difference from traditional computing, such as On-demand-self-service: The consumer can provision or unprovision the services when needed, without human interaction with
+the service provider [48], Broad Network Access: It has capabilities
+over the network and access done through standard mechanisms [20],
+Resource Pooling: The computing resources of the provider are pooled
+to serve multiple consumers using a multi-tenant model [24], with
+various physical and virtual resources dynamically assigned depending
+on consumer demand [44], Rapid Elasticity: Services can be rapidly
+and elastically provisioned [67], Measured Service: cloud computing
+systems automatically check and optimize resource usage by providing
+a metering capability for the type of service (e.g., storage, bandwidth,
+processing, or active user accounts).
+Table 2 represents the impacts of the categories or approaches on
+the solutions from the year 2009 to the year 2023. Along with the
+numbers of the published papers that have been mentioned for or as
+compared to the solutions from 2009 to 2021 [21–48,50–67]. Table 2
+introduces the names of sectors corresponding to the taxonomies and
+available related studies. However, Table 3 mentions the challenges,
+general and key issues, relevant algorithms, frameworks, architectures,
+models, and methods as solutions to each challenge of each sector
+corresponding to each taxonomy. This investigation has confirmed that
+most of the studies have been strongly emphasized or fully concerned
+with energy efficiency, resource distribution management, reducing
+operational costs, and diminishing the reduction of carbon dioxide.
+All the existing literature mentions that GCC must ensure the above
+features with its flexibility, reliability, sustainability, scalability, and
+performance.
+
+4.2. Critical analysis on research gaps and survey contribution
+This research has mentioned and introduced a total of 5 contributions by considering current literature and state-of-the-art studies.
+Considering the current studies and implementations, this research has
+provided an effort to introduce the significant taxonomies of GCC.
+Moreover, 5 crucial sectors, along with their challenges, models, algorithms, methods, issues, and frameworks have been categorized indeed
+to recognize the research gaps in the current studies about GCC. Next,
+this research offers a total of 7 research questions as research gaps
+from the current studies to explore demanded advancements for enhancing the GCC technology to achieve sustainable computation and
+ongoing developments in the field of GCC against dealing with current challenges and general issues. This research has investigated the
+advancements of minimization in energy utilization through a crucial
+and sophisticated factor called energy harvesting. This research has
+also introduced the potential inspection of energy harvesting to offer
+eco-friendly solutions as a research gap in energy utilization for GCC.
+Later, the challenges in Green Cloud Computing (GCC) have been
+integrated to criticize significant challenges relevant to GCC. This
+criticism has introduced numerous general issues, and concerns as
+research gaps for future research commencement. This research offers
+elaborate propositions and personalized architectures corresponding to
+the available challenges as future research directions. In addition, an
+investigation of the potential influence of the emerging technologies in
+GCC has been elucidated as a research gap simultaneously.
+Eventually, the current survey-based implementations on GCC have
+a lack of taxonomical analysis of the key areas of GCC, offering prominent research questions regarding the advancements of GCC technology, presenting personalized propositions and architectures on challenges relevant to GCC, and investigation of impact analysis of emerging technologies on GCC. This proposed succinct state-of-the-art survey has mitigated mentioning all of these deficiencies required for
+the sophisticated development in GCC for accomplishing sustainable
+objectives.
+
+4. Survey methodology
+In this state-of-the-art survey-based investigation, a few of the existing approaches have been criticized considering their implementations,
+methodologies, data, findings, contributions, and limitations. In addition, this research has provided an effort to generate some research
+questions on GCC by considering the research gap between the existing
+approaches and methodologies. Moreover, a critical analysis has been
+explained on the existing literature to figure out the research gaps, and
+an elucidation has been provided to highlight the deficient subjects in
+the current research. This analytical elucidation has been performed as
+a mapping of contributions through this survey corresponding to the
+identified research gaps.
+
+4.3. Research questions
+This survey has compiled a substantial amount of papers about GCC
+and has conducted a thorough analysis of these studies of exceptional
+quality. The primary method for attaining the aforementioned contribution is to establish seven pertinent research inquiries using this survey
+investigation. Each of these questions has been carefully selected to
+ensure a comprehensive study that will facilitate an accurate appraisal
+of the indicated contributions. The inquiries are as follows:
+
+4.1. Selection of the studies
+This research has tried to perform a systematic survey on GCC to
+accomplish the mentioned contributions. In terms of selecting relevant
+studies for this review, a standard methodology has been followed. All
+the included steps have been depicted in Fig. 6.
+During the selection of the relevant studies for this systematic review implementation, the researchers considered a total of 397 papers,
+and among them, 206 papers were excluded. After considering 191 as
+the scanned records, a total of 41 papers had been completely excluded
+from the study. Then the researchers performed an eligibility evaluation on a total of 150 records and excluded about 56 papers due to
+
+• What are the prominent advancements in GCC, and how do those
+advancements cope with the earlier approaches?
+• What are the effective and efficient implementations in the GCC
+area?
+• What are the staple challenges the researchers encountered while
+developing GCC areas?
+• What are the energy-efficient mechanisms against the utilization
+of machine learning, computing systems, and artificial intelligence systems?
+7
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+Fig. 6. Selection process of studies for the proposed systematic review.
+
+• What are the implementations kept in the ongoing development,
+and how are they becoming the most demanding and promising?
+• What are the sustainable impacts of GCC on energy harvesting
+and eco-friendliness?
+• What are the issues encountered in virtualization, multi-tenancy,
+and consolidation due to the advancements of GCC?
+
+centers using peppermint and optical cloud computing networks. They
+also came up with the idea of a cloud network that lets virtual machines
+move around.
+To provide green power, Y. Jin et al. [66,70], created an integrated
+fuel cell technology and suggested a combined gas turbine and solar PV
+system with a combination of fuel cell technology based on compressed
+natural gas (CNG). The authors used sequestration to lower emissions
+of carbon dioxide.
+E. Baccour et al. [71] found that energy usage can be minimized
+by combining functions from multiple services onto one machine and
+putting down dead servers. The researchers utilize an empirical method
+to quantify the power consumption of servers with different configurations while addressing the influence of computer virtualization on
+energy consumption.
+S. Yan et al. [72] suggested an approach that would merely maintain
+the starting point, their final destination, and important communication
+notes active, lowering energy usage with a minor performance tradeoff. They also offered a power-aware navigation algorithm with an NS-3
+simulator.
+To improve network-wide energy efficiency M. Chamkhari et al.
+[25] introduced the energy-efficient Greenway solution along with
+an approach for optimizing routing and the deployment of virtual
+machines in topologies that can adapt to changes. GreenWay uses less
+energy while achieving better flow effectiveness.
+L. Xu et al. [38] developed an optimization-based revenue-maximizing strategy for massive amounts of data centers that allowed the
+assessment of profitability in both situations involving and excluding
+renewable producers. They also offered a profitability-maximizing and
+energy administration system. To minimize cloud computing energy usage and to optimize provider revenue while reducing carbon emissions,
+D. Li et al. [73] devised a framework for managing cloud computing.
+
+4.4. Reviewing state-of-the-art methodologies
+By employing environment-conscious and energy-efficient techniques, GCC aims to reduce the detrimental consequences of cloud
+computing on the environment. The expanding ubiquity of cloud computing is driving up the number of data facilities, which are major
+energy consumers. Concerns regarding the growing implications of
+cloud computing on the environment have arisen as a result. In this
+sub-section, some of the existing methodologies have been reviewed to
+summarize an outlook on GCC technology.
+To improve the database storage space in green data centers,
+A. Kiani et al. [65,66] employed storage space optimization mechanisms. The proposed models mine and exploit functional correlations in
+datasets to minimize the storage requirement for particular data. The
+implementation result indicates that a multilevel table arrangement is
+better than a pure relationship table structure to store examples in the
+proxy mappings.
+In addition to combining the infrastructure for information technology and power supply, the design of the electrical infrastructure
+made use of primary power sources like solar and wind turbines, and
+an algorithm was presented by Y. Wu et al. [66,68] to determine
+the number of IT servers that would be required to develop such an
+arrangement.
+To solve issues like central location and lowering energy costs and
+consumption, T. C. Patil et al. [69] did experiments in green data
+8
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+5. Challenges in Green Cloud Computing (GCC)
+
+Along with designing a system that organizes traffic streams in time
+dimensions that range and lets them flow only by occupying the connection bend and its routing method parts, H. Lei et al. [74] also came
+up with three good representations of data center topologies. A flow
+scheduling method known as EXR has been developed that can lower
+average flow completion times and network electricity consumption.
+Regarding energy-efficient scheduling, M. Uddin et al. [75] created a multi-objective co-evolutionary process. They also suggested
+OL-PICEA-g, which employs smart time as well as the extended oppositional best learning technique, as a way of organizing multi-objective
+tests to minimize energy usage and increase task fulfillment with energy
+from renewable sources. To recognize and organize the vectors of data
+centers into four quantifiable categories and assess their effectiveness
+with efficacy, X. Hu et al. [76], established vectors in the tire-level
+information center. The data center’s performance can be assessed using additional power consumption effectiveness findings. To maximize
+electrical consumption, ICT operations, and data center component
+tracking, a real-time energy monitoring framework has been developed
+that could assist with job shifting and power reduction.
+A. C. Ammari et al. [77] proposed a time-aware multi-application
+task scheduling technique to address the constrained nonlinear optimization problem and the challenge of maximizing profits. For all
+accepted jobs, a combination of meta-heuristic-based techniques is
+proposed that fulfills delay restrictions. T. Yang et al. [78] suggested
+a revolutionary center electrical management architecture that can
+reduce the data center’s running costs to address power changes, the
+volatility of renewable energy sources, and the need to prolong the life
+of UPS systems.
+W. Shu et al. [79] introduced an improved clonal decision-making
+algorithm that meets service level agreements, emphasizes the data
+center’s energy savings, and offers better reaction times and makespan.
+Additionally, W. Yue et al. [80] introduced an energy-efficient resource planning algorithm based on expense and power consumption
+representations in the context of cloud computing.
+S. R. Husseia et al. [81] developed an unpredictable virtual computer deployment with constant and stochastic requirements on a
+cloud environment that utilized 200 servers. The operation of virtual machines is influenced by both predictable and random requirements. MEAGLE [81] reduces the required number of servers and offers a probability-based guarantee of having sufficient resources available. To oversee the cloud-based resource systems automatically, K. I.
+Giridas et al. [82] presented an automated performance and power
+administration tool that uses simulated discrete events. The authors
+also proposed a framework that would decrease quality of service
+infringements, lower energy consumption, and spontaneously adapt to
+workload variations over time.
+Y. Lu et al. [83] presented an optimal resource allocation technique
+to reduce the probability of evaluation loss. The resource allocation
+method is ideal for processing dispersed resources and connections
+that occur on an hourly basis. An energy-efficient work scheduling
+technique called load re-balancing optimization algorithm is proposed
+to address the energy consumption problem in GCC, aiming to reduce
+electricity usage. H. M. Lee et al. [29] developed optimal allocation
+methods, including performance analysis, for distributing computing
+resources on cloud platforms. In their work, resources are allocated
+according to performance analysis to improve research usage without
+compromising the time spent managing a large number of inquiries.
+The cloud service vendors introduced an integrated optimization framework that enhances concurrency to boost network dependability and
+energy utilization in data center buildings at the same time [29].
+L. A. Rocha et al. [84] developed strategies and computations for
+managing data center energy to decide on the allocation, distribution,
+and selection of virtual machines for migration. An FRBS electronic
+machine positioning policy based on a fuzzy logic waste reduction
+algorithm has been suggested, capable of increasing efficiency by 40%
+in comparison to alternative regulations.
+
+GCC encounters several difficulties in juggling the demands of contemporary computing with environmental sustainability. Data centers
+require immense power energy, and necessitate uplifted architectures
+for enhancement and optimization [25,65,66]. Designing dynamic approaches regarding available resource allocations against the generated
+requests is another crucial challenge in terms of GCC [85]. Managing
+less operational costs except avoiding compromise in achieving sustainable objectives is challenging due to the failure of implementing
+multi-objective oriented optimal architectures [85,86].
+The increment of carbon footprint naturally due to the operations in GCC becomes an alarming challenge, and integration of energy harvesting mechanisms to minimize the detrimental influences
+of carbon-di-oxide for mitigating the challenge causes an economic
+barrier. A massive dependency on hardware resources causes e-waste
+production, and managing disposal of e-wastages through recycling
+frameworks causes difficulties due to tremendous number of obsolete
+components [29,57,63,87]. Eventually, green schemes and practices
+can be annihilated through rising these challenges due to the deficiency
+of standardized guidelines and optimal frameworks [29,57,63,85–87].
+An analytical elucidation on challenges in GCC according to the
+taxonomical categories has been decorated in Table 4. The table total contains 17 challenges on GCC, corresponding to 6 taxonomies.
+This elucidation efforts to introduce detailed, analytical, and extensive knowledge regarding each challenge. The taxonomy named energy efficiency involves optimized usage of energy in data centers
+for cloud workload parity maintaining performance developing sophisticated cooling methods, and incorporating renewable energy as an
+alternative to traditional energy utilization.
+In addition, the resource management is engaged with the efficient
+allocation of resources corresponding to the dynamic responses of
+requests from executions handling the heterogeneous composition of
+demanding resources, managing and identifying general issues of scalability [19,21,63,65]. The challenges regarding operations based costs
+are — developing optimization methods for costs except maintaining a
+high quality of services, and designing appropriate pricing models due
+to market and demand competition [12,21,22,25,65]. Three prominent
+challenges on GCC regarding carbon-di-oxide emission have been introduced in Table 4 such as accuracy in measurement due to nature and
+supply chains complexity analysis of carbon emission patterns developing reduction mechanisms and developing effective offset architectures
+for carbon reduction. The energy harvesting involves energy carrier
+deficiency during peak periods, and intermittency of natural energy
+resources [25,65,66]. The challenges concerning e-waste management
+are — safe disposal of hazardous components in waste materials,
+managing the life cycle properly due to lack of comprehensive methods,
+and regulatory servitude for complying with e-waste rules, which differ
+by nation and location [9,45,88]. Defining challenges is comparatively
+easier than introducing any solutions against a challenge. So, these
+difficulties show how ongoing research and development are necessary
+to get beyond the roadblocks and create a GCC environment that is
+economical, productive, eco-friendly, and sustainable.
+6. Existing strategies and solutions
+Conserving energy and having a smaller carbon footprint are the
+main benefits of GCC. According to an energy-efficiency standpoint,
+cloud service providers can achieve greener cloud computing in two
+ways: by increasing the cloud’s efficiency in terms of energy and by
+using energy from renewable sources [89]. Replacing powerful PCs
+with more energy-efficient models is a simple way to improve energy
+conservation for consumers who use the cloud [90]. In addition, basic
+methods of cutting down on energy utilization involve switching on
+and off cloud server hardware [45] and putting them asleep [9]. More
+sophisticated methods include using virtualization strategies to improve
+9
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+Table 4
+Detailed description of prominent challenges in GCC.
+Challenges
+
+Description
+
+Energy utilization in data centers
+Performance parity and low power
+Cooling methods
+Renewable energy incorporation
+Resource distribution
+Heterogeneity in resources
+Scalability issues
+Cost optimization
+Pricing models
+Accurate measuring
+Emission strategies
+Carbon offset
+Energy storage
+Intermittency
+Obsolete hardware
+Lifecycle management
+Regulatory servitude
+
+Managing optimized use of energy, and developing accurate algorithms for dynamic workloads.
+Availability of versatile demand levels, ensuring utmost performance with low energy consumption.
+Higher intense in energy demands, and unprecedented methods are challenging due to complexity.
+Variations, and the unavailability of continuous power sources generate complications.
+Allocating resources by considering real-time requirements corresponding to dynamic responses.
+Management of variety in demanding resources along with heterogeneous composition.
+Uplifting scale for resource arrangement to satisfy the progressive requirements.
+Diminishing operational expenses except compromising quality assurance in services.
+Developing appropriate pricing models become comparatively challenging in competitive demand.
+Nature and supply chains hinder accurate measurement of the carbon footprint of cloud activities.
+Patterns of carbon emission vary, affect service quality, and increase operational expenses.
+Developing effective offset implementations for carbon reduction as greenwashing architecture.
+Dependency on only battery, and energy carrier deficiency of harvested energy during peak periods.
+Energy harvesting become unreliable due to the intermittent behavior of natural energy sources.
+Involvement of hazardous components in waste materials cause challenges against safe disposal.
+Lack of efficient comprehensive methods, managing recycling life cycle becomes in vain.
+Global cloud functions get more complicated when it comes to complying with e-waste rules, which differ by nation and location.
+
+resource management and auto-scaling structures to build greener computing environments [88]. The GCC emergence is influenced by the
+development of green data centers. Green data centers are built with
+an all-electrical infrastructure that maximizes energy efficiency and
+minimizes environmental impact. This includes computer systems in
+addition to illumination, mechanical and electrical components, and
+architectural systems [91]. The aforementioned data centers use limited
+resources for electricity for all equipment to function and be maintained, as well as low-emission construction supplies and other forms
+of energy. Implementing eco-friendly cloud computing could be easier
+if every data center possessed these attributes [58].
+The main advantages of GCC include energy savings, lower carbon
+dioxide emissions from ICT-based equipment, increased energy efficiency, and decreased generation of e-waste [57]. Reducing e-waste
+and improving energy efficiency can be achieved by switching to
+low-powered computing devices from high-powered ones. Energy consumption can be reduced by adaptive scaling architecture and adhering
+to energy efficiency guidelines [92]. The emission of carbon dioxide can
+be decreased significantly in this way. Virtualization and the creation
+of green data centers are the two most important aspects. These two
+elements improve energetic efficiency, lessen adverse consequences and
+implications on sustainability, and exacerbate resource management
+issues [9,34,39,64,93]. This study has identified two key strategies for
+lowering server energy use in the scholarly literature: (1) the infrastructure level, which entails cutting down on one server’s power usage [64],
+and (2) data storage at the center level, which entails cutting a group
+of servers’ electrical power consumption [58]. Specific methods and
+approaches have been designed to minimize energy usage at the first
+level at the application, operational, and compiler layers. These tactics
+consist of shutting down a number of processors, decreasing CPU clock
+speeds, increasing performance per watt, devising a method to function
+in higher temperatures, improving workload management efficiency,
+and shutting down some parts of the components when not in service,
+etc. [62]. Researchers have focused on virtualization approaches for
+power consumption in a server pool in the next step. These maximize
+resource utilization while offering versatility and durability [94].
+Electricity-conscious scheduling and data center architectural optimization have the potential to save a lot of electricity. According to
+Kliazovich et al. [11] energy-efficient approaches seek to maximize
+the total quantity of resources available that can be placed in sleep
+mode by using the minimum number of resources necessary to accomplish critical tasks. Three energy-consumption components have
+been identified in their work: the energy factor associated with a data
+center’s physical infrastructure, computing energy, and transmission
+energy [62,95]. The most crucial element is cloud infrastructure, says
+Jing et al. [16]. (Servers, shelving, networking hardware, air conditioning units, lighting, etc.). For hardware improvement, researchers
+
+mostly employed dynamic voltage frequency scaling (DVFS) and energy
+management [27]. Software advancements for GCC include superior
+performance calculation, distributed and collaborative computing, and
+design tactics aimed at enhancing program efficiency and reducing
+storage resource usage [91]. In 2009, a method known as heuristics
+based on dynamical virtual machine (VM) movement technologies
+was proposed to enhance the installation approach for VMs [15]. The
+overall energy usage for these systems was 27% lower than that of
+the traditional cloud. Over the following years, more research was
+conducted on strategies for optimizing cloud resources. Shu et al. [63]
+proposed a time-efficient, cost-efficient, and energy-based approach
+for clonal selection mechanisms in the cloud environment. To reduce
+energy use, Xu et al. [49] developed a management cloud computing
+system. A genetic algorithm was suggested by Azaiez et al. [30] that
+dynamically planned customer applications, hence lowering energy
+use and CO2 emissions. Liu et al. [15], Hulkury and Doomun [9],
+and Guazzone et al. [62] all put forth different models or frameworks for the same purpose. Kolodziej and colleagues [32], Wu and
+colleagues [33], Xu and colleagues [87], Cao and colleagues [96],
+Kaur and Midha [57], Koutsandria and colleagues [79], Liu and Shu
+Zhang [97], and Zhang [98] all provided scheduling algorithms that
+effectively boosted resource usage. Interrelated components of cloud
+computing with their functionalities have been represented in Fig. 7
+and are required to be changed for GCC transformation. The increase in
+utilization with less equipment for virtualization and sharing management of resources enhances energy efficiency, along with the increment
+of e-waste and carbon dioxide [95–99].
+There are two accepted methods for cutting energy use: establishing
+different levels, like those for data centers, as well as the servers [88].
+These two levels can be implemented or completed by minimizing and
+optimizing the amount of electricity consumed [91]. The application
+development, functioning, and composition layers of servers can be
+implemented using a variety of techniques and systems [58]. Virtualization with optimal resource usage, flexibility, and dependability
+should be guaranteed with their achievement in order to adopt a level
+for information centers [100]. By dispersing workloads among renewable energy sources and requiring less energy, virtualization may be
+guaranteed. Green energy efficiency and intelligent green data centers
+can sustain workload dispersion [101]. Recirculating heat is done by
+management with a focus on thermal monitoring to address heating
+issues and thermodynamic complexity [38,57,102]. The basic functionalities and interrelated components are depicted in Fig. 7 which
+demonstrates the way of converting a cloud computing technology into
+a GCC technology.
+The goal of GCC is to create an environmentally friendly data center
+that uses less energy and emits less carbon dioxide [32] . To do so, emissions of greenhouse gases from GCC must be minimized, and renewable
+10
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+Fig. 7. Interrelated components with functionalities for GCC.
+
+energy derived from naturally occurring sources must be utilized [34].
+GCC needs to uphold environmentally friendly ICT-based principles and
+guarantee two things: service reliability and safety [11]. In GCC, operational expenses and reliance on very energy-hungry computer systems
+ought to be reduced [1]. Reliability and accuracy in computation are
+essential, and inexpensive computing systems should be used for this
+purpose [4]. GCC should provide a variety of methods for allocating
+resources that will guarantee an environmentally friendly cloud environment by lowering the consumption of electricity, cutting down
+on e-waste, improving material allocation productivity, and boosting
+energetic effectiveness [5]. Every element is interconnected in order
+to create and profit from a green environment for cloud computing.
+Reduced energy use will also result in lower operating expenses, less
+electronic waste, and fewer greenhouse gas emissions [18,26–28,38].
+Energy consumption as well as e-waste will decrease with a decrease
+in the use of equipment-based materials. Carbon dioxide production
+along with energy consumption will decline with increasing energy
+efficiency. Establishing a GCC environment can enhance energy efficiency, decrease the frequency of high-powered equipment usage, and
+minimize utilization [8,29,32,34,100]. Thermal regulation is essential
+to the optimal operation of data center facilities. It has an enormous
+effect on the ecosystem. Lowering energy costs, in this case, can be
+achieved by optimizing the data center’s hot and cold air flow through
+hardware layout changes, improving the cold air delivery through the
+use of a sophisticated controller, or situating data centers in areas
+where the annual average outside temperature falls below 13 degrees
+Celsius for a minimum of four months [32]. The GENETiC initiative’s
+researchers proposed a comprehensive system for energy management
+that maximized energy consumption by accounting for the workload
+associated with data center cooling, waste heat recovery, local electricity production, and computer system control and surveillance [3].
+Nevertheless, the two primary pillars of environmentally conscious
+energy are energy efficiency and the utilization of renewable energy
+sources. In the words of Bateman as well as Wood, cloud computing
+is ‘‘green’’ as long as it uses renewable energy suppliers [37]. Cutting
+the environmental impact is just one of the many noteworthy benefits
+of green computing via the cloud [102]. Research publications on GCC
+have addressed consumers as well as service providers whose work has
+an appetite for using and offering greener technologies. CO2 emissions
+serve as a proxy for the environmental sustainability of cloud computing, according to Garg et al. [101]. They are associated with a direct
+as well as indirect connection to energy usage [96]. As a consequence
+of improving energy efficiency, this particular problem has been solved
+rather than being handled as an independent problem [19].
+
+Utilizing renewable energy will cut CO2 emissions. Based on three
+factors: CO2 emission rate, virtual computer effectiveness, and data center power consumption are measures of the portion of the total energy
+consumed that is utilized for IT resources — Garg et al. [101] proposed
+a system designed to uniformly minimize the environmental impacts
+of the whole cloud platform (the quantity of power consumed by a
+fully operational virtual machine operating at its full capacity level).
+Wadhwa and Verma [88] suggested a two-step process for allocating
+and migrating virtual machines: first, The positioning of the virtual machine (VM) with the host that emits the least carbon dioxide from the
+data centers’ distribution; and second, the improved efficiency of VM
+allotment within every single data center [34]. Their strategy focuses
+on a spatially scattered cloud design by choosing a technique appropriate for the particular setting and selecting an application regulator to
+facilitate the decrease of greenhouse gases at the program level, which
+enhances the compromise involving Quality of Service (also known as
+QoS) along with environmental impact reduction. Williams et al. [34]
+analyzed the benefits of cloud computing adoption for medium-sized
+businesses, which are significant in terms of reduced energy use as
+well as carbon dioxide emissions. The findings suggested that if 80% of
+businesses embrace cloud computing, the ICT sector’s carbon footprint
+could be cut by 1.7% [38]. Table 5 represents the existing strategies and
+advanced solutions that reflect state-of-the-art practices on taxonomical
+parameters concerning GCC. Moreover, this comparative analysis of
+solutions and strategies introduces the effectiveness and challenges of
+implementation.
+Apart from Table 5, Anan et al. [37] introduced a dynamic approach
+to migration, concerning SLAs which maintains an agreement of service
+satisfaction in energy efficiency. Huu et al. [110] developed an actionoriented framework for resource distribution having the features of
+a greedy approach that defines a path to generate a high amount
+of revenue. Cao et al. [111] had defined a scheduling mechanism
+for jobs with the workflow procedures of efficiency of energy that
+saves 38% energy utilization, 29% resource usages, and 22% carbon-dioxide emission, 26% e-waste management. Giridas et al. [82] offered a
+technique for optimum resource distribution by analyzing the capacity
+of processing resources against responses that reduce the possibility of
+loss of the generated requests to resources by the executions.
+In addition, Mishra et al. [112] had implemented an adaptive
+resource management approach corresponding to tasks assigned in the
+CloudSim environment that lessens makespan detrimental impact for
+heterogeneous GCC environment. Mandal et al. [113] defined a policy
+for VM design to execute fewer SLA anomalies. This policy is concerned
+with the current status of VM and its workload circumstance. Ismail
+et al. [114] developed an edge computing framework to diminish
+11
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+Table 5
+Comparative analysis of the existing strategies and solutions on GCC according to taxonomical categories.
+Reference
+
+Taxonomy
+
+Environment
+
+Findings and contribution
+
+[58]
+
+Resource management
+
+NS2 GCC simulator
+
+Schemes according to performance do not compromise analyzing responses in terms
+of high-scale requests.
+
+[79]
+
+Resource management
+
+CloudSim
+
+A sophisticated CSA that offers service satisfaction, and response management
+regarding resource distribution.
+
+[81]
+
+Energy efficiency
+
+CloudSim
+
+Fuzzy logics in energy management for VM handling which improves 47% power
+optimization.
+
+[84]
+
+E-waste
+
+REAL CloudSim
+
+Coagulated optimization frameworks offer the best network service and proper
+e-waste management in VMs of GCC environment.
+
+[103]
+
+Operational cost reduction
+
+200 servers based data centers
+
+DM tools, and constraint-based auto-scaling methods to diminish issues of CO2
+
+[104]
+
+Energy efficiency
+
+GC simulator
+
+An IEMS architecture for GCC that has been able to save 42% of energy with
+thermal control.
+
+[105]
+
+Carbon-di-oxide reduction
+
+Discrete event simulator
+
+A policy for green computation, and carbon-efficient model that lessens 26% energy
+usage, and 29% CO2 footprint.
+
+[106]
+
+Resource management
+
+4 data centers
+
+ACO oriented scheduling, and ant architectural features enhance effectiveness in
+resource management.
+
+[107]
+
+Energy harvesting
+
+2000 VMs, 200 servers
+
+A hybrid productivity model that increase production of power/energy for data
+centers.
+
+[108]
+
+E-waste
+
+CloudSim 3.0.3
+
+VM migration architecture concerning to ACS that offers e-wastage management, and
+resource allocation.
+
+[109]
+
+Energy harvesting
+
+CloudSim
+
+Dynamic consolidation in VMs, ACS architecture ensures required energy in
+production timely.
+
+waste of energy, and latency as compared to a conventional approach
+called Femtolet [110]. Mohammad et al. [115] introduced an optimized
+approach called chaotic binary algorithm in CloudSim environment
+by applying the chaos principle, and a hill-climbing mechanism that
+ensures local optimization. Beik et al. [116] designed a softwareoriented architecture to assess micro mensuration and macro measurement as an energy-conscious layer. Moreover, Guazzone et al. [117]
+established a performance measurement automated mechanism for the
+dynamic adoption of workloads and violation of quality services. Fathi
+et al. [118] designed a consolidation architecture for migrations in
+ESV [114], and the maximum is 1998.29%, and the minimum is
+17.56% in terms of migrations.
+
+7.1. Energy efficiency
+The creation of ecologically friendly green clouds depends on the
+core element of GCC — energy efficiency. Effective power management techniques must be used in order to lower the consumption
+of electricity at every level of every cloud component (computers,
+data center equipment, disks, routers and switches, CPUs, etc.). Anton
+Beloglazov published a study on computing via the cloud, including
+energy-efficient data centers [5]. The authors conducted a comprehensive analysis of power consumption factors, power consumption
+modeling, dynamic and static power consumption methodologies, and
+issues related to excessive energy consumption in the current study.
+The discussion focused on the primary power-consuming components
+of cloud computing, which include construction, virtualization, in-order
+devices, and data centers, and how power management is classified at
+various levels. Dynamic power control systems ensure consistent electrical polarity by activating all cloud facilities without prior resource
+assessment, despite of high utilization demands. Recent studies [119]
+presented a dynamic electrical power management (DPM) solution to
+stop cloud environments from wasting enormous amounts of electricity.
+The system forecasts energy requirements, initiates essential cloud
+resources, and regulates power voltage based on consumption. Through
+adaptive power management techniques, any cloud resource receiving
+excessive electricity can be promptly detected and adjusted [3]. This
+strategy is referred to as adaptive power optimization. Current trends in
+this sector include component-level power management, development
+of power monitoring tools, design of power consumption simulators,
+implementation of DPM decision-making algorithms, and establishment
+of heterogeneous environments [26]. Battery optimization and management solutions need to be developed to efficiently manage power
+on multi-core CPUs seen in today’s clouds. Another important energyconsuming feature of the cloud is the data center, consisting of various
+information management systems and storage devices. Research problems in this field include developing efficient systems for measuring
+electricity usage, implementing adaptive power management structures, and creating adaptive energy systems for decision-making. To
+tackle energy efficiency challenges across all cloud architectural layers,
+we require a comprehensive and astute approach due to the rapid
+pace of IT development. This study introduces a general framework
+for energy efficiency mechanisms in GCC. The representation in Fig. 8
+has been depicted with the interaction of end users with 2 consecutive
+
+7. Future research directions
+Implementing conservation measures successfully for the benefit of
+humanity is difficult. Sustainable cloud computing represents one of
+the prominent elements of this industry and environmentally friendly
+information and communication technologies may offer an efficient
+solution [87]. Security and service quality are two aspects that have
+been taken into consideration in this context [36–96]. Security may
+be guaranteed by safeguarding information that is easily accessible,
+and quality of service can be met by guaranteeing customer satisfaction and resolving environmental protection-related concerns [63].
+There are both general as well as certain technical issues, such as
+virtualization approaches, security standards maintenance approaches,
+software capacity design approaches, and the correct application of
+security-related rules and regulations, including thermal consciousness management strategies [46–99]. A crucial and difficult task for
+cloud-based computing is creating dynamic programs that improve the
+effectiveness of energy and resource management [21]. A lesser amount
+of energy ought to be used to add materials and automatic maintenance of users’ happiness should be used to eliminate them [9]. The
+use of virtualization can be guaranteed by dividing up the workload
+among renewable energy sources and consuming fewer resources [88].
+Environmental conservation of energy and intelligent green data center
+architecture can sustain workload dispersion [58]. The task scheduling
+generates the heating issue. Recirculating heat is done by management
+with a focus on thermal awareness to address heating issues and thermal complexity [27,32,62]. Challenges to eco-friendly cloud computing
+include ensuring data security, establishing green computing standards,
+enforcing regulations, implementing fees for green data centers, and
+utilizing renewable energy sources [5,28,39,92,102].
+12
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+Fig. 8. A general proposed architecture for energy efficiency for GCC environment.
+
+Fig. 9. Basic strategical representation of virtualization techniques.
+
+cloud environments along with their components, and the offering
+mechanism of the GCC environment with the preserved carbon dioxide
+directory.
+This research offers a personalized architecture regarding energy
+efficiency in the GCC environment. Servers have a massive amount
+of resources, and they must have a dataset of logs of utilizing these
+resources corresponding to the requests and responses. The amount of
+energy consumption is comparatively more extensive than the desired
+and maintains an eco-friendly environment. A correlational formula can
+be developed to identify the major and inextricable relations between
+power consumption or energy requirement and utilization and demand
+of resources corresponding to requests. It can be a very useful aid for
+edge administrators and cloud governors to appraise energy efficiency
+in heterogeneous architectures as resources concerning servers in data
+centers.
+
+Structures, seen as the successive generations of computer systems.
+Cloud systems are typically built using advanced components, including
+RAM, processing units, drives, routers, and adapters [15]. The running
+tasks will be allocated the full capacity set before they start using conventional processing techniques. Resources assigned to a task cannot be
+interchanged with resources from other concurrent tasks. The assigned
+resources are underutilized due to a few jobs impeding their efficiency,
+resulting in a longer-than-anticipated execution procedure. Hypervisorbased virtual machines (VMs) are designed to run many applications
+concurrently on the same computer, allowing for resource sharing and
+overcoming the constraints of sequential processing [26]. Research on
+virtualization has thoroughly investigated operating systems, software,
+and hypervisor-based simulations. Virtualization leads to significant
+electricity savings during the lifespan of a cloud by utilizing resources
+efficiently and minimizing task completion time [21]. The selection
+procedure for hypervisors impacts power consumption levels, and optimizing the number of virtual computers according to workload reduces
+demand substantially. Virtualization offers benefits such as increased
+resource efficiency, reduced infrastructure spending, and optimized
+resource utilization [91]. Virtualization has significantly supported the
+development of green cloud infrastructure through efficient manufacturing, minimal power consumption, optimal resource usage, and cost
+savings. The latest advancements in green computing include the advancement of secure machine virtualization, pooling resources among
+virtual machines, dynamic work distribution using virtual machinery,
+and cost-efficient virtualization techniques [79]. Although there are
+
+7.2. Virtualization
+Virtualization enables the operation of several virtual machines
+on a single physical machine through the use of virtualization techniques [26]. Virtualization enables the creation of several virtual computers capable of doing numerous tasks simultaneously. The software
+framework, or hypervisor, communicates with the actual hardware
+based on commands from virtual machines (VMs) and acts as the
+operating system for them [98]. IT professionals are well-acquainted
+with the notion of virtualization, which was first used in older Main
+13
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+Fig. 10. Single and multiple tenant isolated and separated or shared and pooled approaches.
+
+still challenges in virtualization related to advanced optimization, most
+past studies concentrated on developing an effective approach for cloud
+virtualization. Developing new tactics using cutting-edge technologies
+to maximize the virtualization process is a critical research topic. Key
+virtualization research topics involve modifying resource distribution
+and collaboration capabilities while maintaining cloud performance,
+along with the automated creation of optimal virtual machines with
+abundant resources [45]. A general architecture for GCC has been
+depicted in Fig. 9 to demonstrate the orientation of the basic strategical
+representation of the virtualization technique.
+Virtualization can be enhanced through energy-conscious scheduling architecture on machines. Virtualization influences finance and
+energy utilization for data centers due to multi-unit combinations.
+Scheduling for machines can be optimized for virtualization through
+commandment language binding. Crucial virtual responses and requests
+can be identified and expressed through logical indications such as
+AND, NOT, OR, NAND, NOR, and so on. A time window against
+the responses and requests can be defined that is used to bid the
+requirements concerning the time interval in this case.
+
+Fig. 10). Many researches, which are centered on a thorough analysis of
+cloud computing multi-tenancy procedure, revealed that multi-tenancy
+boosts the earnings for the hosting company by enabling many apps
+on just one cloud instance [58]. However, because of concerns regarding privacy and security, most service customers are reluctant to
+participate in this multi-tenancy setting. For cloud service consumers
+to accept multi-tenancy, language proficiency must show that it is a
+safe environment for handling and conserving information [27]. Improved multi-tenancy cognitive development, improved multi-tenancy
+adjustments, and confidentiality maintained protected connectivity to
+multi-tenancy clouds are some of the newest advances in this subject
+of green cloud research. Despite being a basic feature of green clouds,
+multi-tenancy is currently impacted by security and confidentiality
+concerns [29]. The design of safe, safeguarding privacy utilization of
+multi-tenant components and safeguarding multi-tenant systems will
+present formidable challenges for subsequent studies [19].
+Integration of IoT can be a comparatively suitable technology to enhance productivity in terms of Multi-Tenancy in the GCC environment.
+Supply chain management concerning energy, deployment of sensors
+for power lines, diminishing battery constraints, and Demanding power
+for network architectures in the GCC environment can be lessened
+through the engagement of IoT modules. Since multi-tenancy does not
+alert or inform the other users about the sharing status of the resources
+to the users while working on the same resources along with responses,
+a general notification mechanism can be developed for the system
+handler to make this management automated.
+
+7.3. Multi tenancy
+To cut expenses and maximize the use of available resources, multitenancy refers to the use of a single cloud instance to service several
+tenants who belong to the same category [17]. The installation of
+cloud information often gave rise to contentious issues regarding multitenancy due to security and confidentiality concerns. NIST [45] allows
+numerous users to benefit from just one cloud instance and drastically
+cuts down on resource utilization. Multi-tenancy has been identified as
+a crucial element of GCC. The Computing Security Association (CSA)
+has recognized multi-tenancy as an essential component of GCC (CSA
+Guide 3.0) [88]. Since multi-tenancy is implemented at two different
+cloud tiers – SaaS and PaaS – it is frequently difficult for users and
+novices to understand [91]. At the SaaS level, the capabilities of
+installed applications are distributed across several tenants; for example, SaaS includes line-of-business software such as the SalesForce
+system CRM, that resides in just one instance but serves multiple firms.
+Despite belonging to separate organizations, all customers store their
+personal information in the identical tables of information that the
+CRM program makes available [2]. At the PaaS level, ‘‘multi-tenancy’’
+implies the practice of implementing dividing resources among several
+customers by employing internet-based technology (processing, the
+hard drive, memory for RAM, and so on) while software to minimize
+processing expenses and maximize utilization of resources [97] (see
+
+7.4. Consolidation
+In GCC, consolidation is the procedure of setting up numerous
+data center-related applications for processing data on a single server
+via virtualization technologies [57]. The focus is on decreasing power
+consumption, maximizing virtual system utilization, and facilitating
+load distribution at the process level. This is the primary outcome
+facilitated by virtualization. The advantages of flexible virtualization
+consolidation, the need for rearrangement, and the process were all
+covered in great depth by Anton Beloglazov et al. [29]. They discussed
+how to combine a single physical system with several distinct virtual
+machines (one-many technique) and multiple traditional servers with
+various machines (a great deal - numerous ways). To illustrate the
+process of moving virtual computers into the cloud, they offer both online determinate and indeterminate ways [63]. Using a threshold-based
+strategy to group virtual machines on an IaaS platform will effectively
+control the load and prevent issues with capacity underutilization [87].
+14
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+needs [100]. In 2010, Green Peace International issued a comprehensive report containing precise data and estimates to demonstrate
+the environmental consequences of cloud computing and its components [8]. China and India are reportedly beginning to feel the impact
+of significant carbon footprints due to the rapid growth of their ICT
+sectors, according to suggestions. This field of research largely concentrates on developing sustainable technologies, such as carbon emission
+calculators that assess the impact of clouds on the environment. To
+prioritize the clouds according to various GCC criteria, it is necessary
+to develop a complete methodology [101].
+7.6. Energy harvesting
+Energy harvesting for GCC is a promising approach that aims to
+mitigate the environmental impact of data centers and cloud computing
+services. The massive energy consumption of data centers, coupled
+with their increasing demand and carbon footprint, has raised concerns about sustainability and energy efficiency. Energy harvesting
+techniques harness renewable energy sources, such as solar, wind, or
+kinetic energy, to power cloud computing infrastructure and reduce
+reliance on fossil fuels. By integrating energy harvesting technologies
+into data centers, cloud service providers can lower operational costs,
+decrease greenhouse gas emissions, and contribute to a more sustainable IT ecosystem. This research has offered a predictive mechanism
+for energy harvesting in a GCC environment. Fig. 12 illustrates that the
+integration of energy storage and power management enables efficient
+energy harvesting for many demanding tasks, including memory management, communication, actuation, sensing, processing, and control
+management.
+This innovative approach aligns cloud computing with green initiatives, paving the way for a more eco-friendly and energy-efficient
+future in the digital era. Energy harvesting for GCC offers several
+benefits that go beyond environmental considerations. By adopting
+renewable energy sources, cloud service providers can enhance their
+energy resilience and reduce their dependence on traditional electricity
+grids. This resilience becomes crucial during power outages or grid
+instabilities, ensuring uninterrupted service availability for critical applications and users. Moreover, energy harvesting solutions can be
+deployed at various scales, from individual data centers to distributed
+cloud infrastructures, making them adaptable and scalable to different
+operational needs. This flexibility allows cloud providers to optimize
+their energy usage based on demand fluctuations and regional energy
+availability, resulting in cost savings and improved efficiency.
+Moreover, using energy harvesting technologies can stimulate innovation in the design and infrastructure of cloud computing. Efficient
+hardware and software solutions can be created to improve the allocation of resources, management of workloads, and cooling mechanisms,
+resulting in a further reduction in overall energy usage. Furthermore,
+using environmentally friendly energy practices in cloud computing
+can bolster the standing of cloud service providers, rendering them
+more appealing to environmentally concerned clients and companies
+in search of sustainable solutions. The favorable perception of green
+cloud services can result in enhanced market competitiveness and wider
+acceptance, ultimately facilitating the transition towards a more environmentally friendly and socially accountable IT business. Although
+energy harvesting for GCC offers many benefits, it is crucial to tackle
+issues such as the sporadic nature of certain renewable energy sources
+and the requirement for effective energy storage solutions. To overcome
+these problems, it is necessary to engage in ongoing research, make
+technological progress, and foster collaboration between the cloud
+computing and renewable energy industries. By actively pursuing GCC,
+it is possible to significantly diminish the carbon footprint of the digital
+environment and promote the creation of a more sustainable future.
+GCC faces suffering due to power constraints and crucial computation assignments, meanwhile, IoT can provide a facility to solve
+these issues. An efficient energy harvesting mechanism along with IoT
+
+Fig. 11. GCC eco-friendly system approaches.
+
+They presented the idea of flexible threshold percentage computation
+based on the specifications of the present-day VM and historical usage
+records, as opposed to their prior threshold number-based approaches.
+As he was merging virtual machines, academic Hosseini brought up the
+current problems [96]. To minimize server interruptions the resourceincentivized consolidation approach expects intelligence assistance. In
+order to overcome the limitations of the consolidating procedure’s
+ongoing challenges, he developed the IPFS (Innovative Power Fundamental Scalability) based virtualization consolidation technology.
+This technique saves energy by operating the computing devices at
+different voltage harmonics [19]. Currently, the most prominent topics
+in the field of greener internet virtualization consolidation include
+procedure effectiveness, threshold-based reorganization, and adaptive
+aggregation. Some prospective research issues in this field include the
+development of intelligence aid in virtual machine synthesis, multiaspect-based threshold-valued calculations, resource exploitation, and
+server outage monitoring [92].
+GCC is an advanced technology for supporting IT solutions concerning umpteen advantages such as container as a service (CaaS) [120].
+CaaS provides aid to run apps in distinct virtual environments, and
+containerization belongs to massive beneficial attributes such as scalability, portability, and so on. Designing a consolidation that will be able
+to replace the container during the replacement of virtual machines on
+the GCC environment. The method should have decision-making capability regarding concurrent container migration during replacement VM
+machines regarding multiple criteria.
+7.5. Eco-friendliness
+For individuals to successfully preserve a secure lifestyle, it is essential to consider both the environment and the economy. However,
+in reality, regulations for the environment become impediments to economic growth as the natural world deteriorates and economic activity
+rises [36]. Environmentally conscious computing promotes the integration of the environment and the economy through the use of advanced
+technology. GCC refers to the development of environmentally friendly
+cloud systems that aim to minimize activities that have a detrimental
+impact on the environment, while also preserving ecological qualities [102]. Sustainable development and its features have been depicted
+in Fig. 11 related to Eco-Friendliness.
+The investigation primarily focuses on energy efficiency since it
+helps decrease the demand for energy generation, hence contributing to reducing carbon dioxide and other greenhouse gas emissions.
+The current energy industry mostly relies on coal- and nuclear-based
+power production technologies, which release significant amounts of
+greenhouse gases into the environment, in order to meet our energy
+15
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+Fig. 12. Approach of energy harvesting.
+
+automation can introduce intelligence in computation. A personalized
+opinion is to arrange optimization in offloads, focus exhaustion on
+energy sources, consider latency, analyze the task accomplishment rate,
+and efficient use of the rest of the energy in terms of energy harvesting
+from any reliable sources that will be suitable for GCC. Moreover, deep
+neural network architecture-based reinforcement learning mechanisms
+can be developed and integrated into the system utility for enhancing
+the analysis of energy harvesting.
+
+regarding latency status, energy harvesting, power dependency [25,65,
+66]. GCC is massively influenced by QC through offering standardized
+policy guidelines, invulnerable communication among components of
+GCC, prediction on congestion rate at networking level, efficient use of
+spectrum [21,22,123,124].
+QC can integrate spectrum efficiency in sensor interconnected networks, TDMA, heterogeneous multiplexing nodes, schemes regarding
+communication in the GCC environment [65,66,123,124]. Dynamic
+behavior in duty cycle, master control, orthogonal frequency, and
+cognitive multiplexing are trending for integration in diminishing operational expenses, and e-waste management in GCC. QC introduces
+sustainable and influential practices in e-waste management through
+transformative strategies concerning the dependency on hardware resources corresponding to the requests of the workloads and calibration [29,57,63,87].
+QC encourages space–time and adaptable configuration for routing,
+the flow of traffic, cooling architectures for GCC computation, and
+energy circulation. Machine learning often merged with QC in terms
+of generating appropriate predictive analysis on costs, optimization,
+applications, power requirements, and so on [21,22]. Moreover, IoT
+integration in GCC is being optimized by QC through automation monitoring and handling in computation, garbage identification, wastage
+extraction, launching cooling operations, and carbon-di-oxide observation acutely. Eventually, the term QC has been integrating acute
+analysis on GCC to identify its exact state-of-the-art requirements,
+advancements, and development indeed [25,29,63].
+
+7.7. Impact of emerging technologies in GCC
+GCC must have been influenced by emerging and modern technologies such as the Internet of Things (IoT), data mining, machine learning,
+information retrieval, quantum computing, data center-related emerging technologies, and so on. Quantum Computing can contribute to
+dynamic revolution regarding optimization of energy, complexity of
+computations, distribution of resources corresponding to requests, and
+so on. Similarly, IoT and machine learning can enable predictive analysis, current time analysis and monitoring, prediction of operational
+expenses, and many more. Information retrieval and data mining can
+enhance identifying ways of storage optimization, data, and expense
+management prediction according to analysis. Moreover, data centerrelated emerging technologies can offer advanced and smart cooling
+architectures along with a sustainable GCC environment. A tremendous
+number of emerging technologies generate impact on GCC, however,
+this research has considered the following state-of-art technologies for
+addressing them through discussion in the following sub-subsections.
+
+7.7.2. Internet of Things (IoT)
+Internet of Things (IoT) accumulates an extensive number of current
+time data regarding energy requirement, energy consumption, number
+of requests of resources, number of executed tasks, and number of
+responses corresponding to requests in the GCC environment during executing operational workloads. Sensors integrated architectures of IoT
+enhance the monitoring facilities in e-waste management, automation
+in power requirement analysis, energy utilization, resource distribution,
+and so on [29,123,124].
+Management scheme of duty cycle in an adaptable manner that
+enhances current time congestion identification and avoidance, and
+computation processing. Combined AmBC and IRS approaches for producing vector analysis on beamforming, and iterative reflection of
+phase shifting coefficient [25,123,124]. It also lessens transmission
+energy requirements in the GCC environment at the operational access
+points. Deep learning-based IoT-edge enabling computation for offloading to ensure the privacy of operations at GCC environment through the
+integration of Q-learning and probabilistic decision features [125–127].
+
+7.7.1. Quantum computing
+Quantum Computing (QC) has immense significance in optimizing
+GCC workloads, enabling data encryption, and lowering detrimental impact through transformative strategies. QC offers innovation in
+reducing CO2 footprint while executing higher computations, and resource management [25,65,92,102]. QC can be applied in versatile
+directions, by creating indefinite binding, through creasing and suppressing signals at proper and improper directions on GCC environment
+[22,28,39]. QC can also enhance its impact on GCC by elaborating
+the neural network technology with the term ‘‘Quantum’’ as Quantum
+Neural Networks (QNN). QC-based feed forwarding approach lessening
+the complexity in terms of accomplishing non-linear computations in
+GCC [121–124].
+Resilient architectures for QC can ensure security vulnerabilities,
+and design threat dimensions along with vectors on the GCC environment due to higher response handling, and required power for it. QC
+can offer capabilities in computation with utmost accuracy except depending on maximum power dependency. Even QC handles complexity
+16
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+constraints along with enhancing computational principles, [22]. A selfadaptive architecture that can compromise 37% energy utilization, and
+this structure builds interrelated patterns for analyzing between latency
+efficiency and power requirement [63,128].
+Power monitoring and management scheme for resource scheduling through processed information from requests as queries such as
+queries on available resources, power, expenses in GCC environment
+[57,87,129]. Energy harvesting for lowering expenses for execution of
+the operations by about 29% except for maintaining service quantity
+and quality. Data-driven technologies integrated with data mining
+for energy optimization to remove contextual issues regarding GCC
+and recommend potential patterns of requirements. Even this type
+of arrangement has optimized the service quality in terms of recommendation about 46%, and regression about 74% [29,57,63,87].
+Moreover, this integration saves energy consumption, and contributes
+comparatively efficient architectures, diminishing detrimental impacts
+on the environment due to GCC activities, and operations.
+
+Rendezvous area using clustering at the center of networking architecture as a sustainable routing mechanism for reducing energy
+consumption during commencement of IoT structures [25,127]. Heterogeneous nodes arrangement in energy controlling scheme to identify
+the scarcity of nodes and its failure during operation for low energy
+supply [126]. Energy harvesting mechanism with C-IoT structure for
+making less energy required communication among resources during
+handling requests and responses in GCC [126,127].
+System architecture as green IoT that is responsible for keeping
+quality on resource management service and e-waste management aids.
+A cooperative and collaborative G-IoT network architecture for GCC as
+a preponderant link identifier and selector regarding analyzing probability of exact requirement of energy corresponding to utilization during executions [19–22,125]. A heterogeneous resource identification
+and allocation scheme as G-IoT network architecture considering multistage heuristic calculation and scheme. Spatial spectrum analysis and
+efficiency in utilization to handle request and response patterns through
+pre-caching mechanism with heuristic calculations [126]. Moreover,
+the Sharing platform of the spatial spectrum enhances efficiency in
+utilization and lifetime of network structure in GCC. All of these collaborations influence GCC for advancement in sustainability development
+through lowering CO2 emission, resource distribution management,
+automation in energy efficiency, and e-waste management [29,127].
+
+7.7.5. Data center technologies
+Data Center Technologies has a pivotal and significant impact on
+GCC in the field of power optimization, carbon dependency, e-waste
+concentration, cooling architectures, and so on. Modern data center
+architectures involve utilizing liquid filter-based cooling structure, AIintegrated cooling structure, and management of thermal issues [29,
+63]. Among the tremendous amount of potential impact, the Optimization method in spaces for data storage in GCC to convert the
+traditional databases to the green realm of data that lowers dependency
+on each other during executing functions in the GCC environment. This
+optimization offered multiple mappings on multiple values based table
+instead of the original relational arrangement of data table [121–123].
+A combination of IT infrastructure and mechanism of energy supply
+have been investigated to identify and analyze the demanding server
+resources. Even photovoltaic panels as preliminary sources, and wind
+turbines for energy harvesting had been integrated to manage electrical
+and power-oriented architectures [29,57,63,87]. Emerging technologies have the potential influence of resource virtualization such as
+servers, and other hardware concerning to energy efficiency to determine and analyze the patterns of demanding pricing models [57,87].
+Fi technology in the GCC is responsible for transforming computations, storage, and data centers into green modules as eco-friendly
+components of GCC [57,128].
+A centralized system for managing energy in GCC resources combined servers into one place in data centers, which reduced the number
+of power devices connected to GCC networks needed and made the
+best use of it [8,36,102]. A method called TrimTree has been applied
+on DCN to generate logic for operations concerning to consolidation
+of resources, and appropriate proportions of energy in terms of computations [17,45]. A migration mechanism for virtual machines has
+been implemented that handles overloading difficulties and maintains
+underloading facilities for the arrangement of data centers in GCC
+environment [129].
+SC-DAFC architecture-based cooling arrangement considers several
+climate statuses, ventilation availability, thermal issues, and recovery
+processes and techniques of heat. Further studies explore developing
+a GCC model to lower system expense, and assess the system performance [8,36,102]. In addition, a method to find the gap regarding
+energy utilization and requirements among data centers also have
+been investigated. The researchers also developed a fine-tuned architecture for distributing heterogeneous resources in GCC environment
+[17,45]. Moreover, containerization, migration, virtualization, and energy production in data centers contribute to GCC being sustainable
+globally [76].
+
+7.7.3. Machine learning
+Machine Learning (ML) can integrate predictive schemes and intelligent analysis on resource distribution during serving, upcoming
+workloads, rate of utilization of the cooling system, amount of ewaste, and operational expenses in the GCC environment. ML performs
+pattern prediction regarding energy requirements and consumption.
+Load equilibrium, latency management, task scheduling in dynamic
+scale, and so on has been enhanced through the integration of ML in
+GCC [128,129].
+Load equilibrium mechanism to handle a set of requests to serve
+efficiently as responses. Linear programming, ML, and predictive algorithms discover cost-effective ways to manage responses corresponding to requests [29,57,63,87]. Gaussian statistical measure-based augmented optimized strategy to ensure the privacy of operations at GCC
+environment through the integration of Q-learning and probabilistic
+decision features [25,65,128,129]. A set of hyperparameters that certifies accurate, best, and fair machine learning models. In addition,
+this Bayesian-based hyperparameter optimized the consumption of energy, computation complexity, and time. ML strategies according to
+knowledge dependent with PyKale programming interface to generate interpretable multimodal regression [29,63,87]. A framework that
+can analyze and examine CO2 footprint, and energy demand. The
+architecture is completely decentralized and quantifies CO2 footprint.
+Moreover, ML-involved predictive analytics helps cloud-based environments become increasingly flexible and responsive, which helps create
+a more environmentally friendly and sustainable computing ecosystem
+[57,87,128,129].
+7.7.4. Data mining and information retrieval
+Data Mining and Information Retrieval ensure optimization in energy utilization, and provide aids in analyzing patterns of request
+duplication, demanding storage, and assignment frequency of resources
+according to requests [19,22,57,63]. Information retrieval especially
+offers the identification of request-oriented information for pattern
+analysis, and it is really helpful for managing resource allocation.
+In addition, information regarding e-waste and CO2 are also filtered
+through data mining and information retrieval [22,63,128,129].
+A stream mining method of data integrated with ensemble architectures to ensure cost-effective and waste-sensitive computation, and
+management in GCC [22]. ML predictive and classification strategies
+as Pareto-optimal designs that optimize resource distribution oriented
+17
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+8. Conclusion
+
+[12] Z. Song, X. Zhang, C. Eriksson, Data center energy and cost saving evaluation,
+Energy Procedia 75 (2015) 1255–1260.
+[13] L. Ge, Z. Han, Z. Yang, Y. Zhang, B. Qiu, X. Li, Feasibility investigation on a
+novel data center cooling system based on cross-seasonal soil cool storage in
+severe cold area, J. Energy Storage 98 (2024) 113233.
+[14] S. Zhou, M. Zhou, Z. Wu, Y. Wang, G. Li, Energy-aware coordinated operation
+strategy of geographically distributed data centers, Int. J. Electr. Power Energy
+Syst. 159 (2024) 110032.
+[15] L. Liu, H. Wang, X. Liu, X. Jin, W.B. He, Q.B. Wang, Y. Chen, GreenCloud: a
+new architecture for green data center, in: Proceedings of the 6th International
+Conference Industry Session on Autonomic Computing and Communications
+Industry Session, 2009, pp. 29–38.
+[16] K. Gai, S. Li, Towards cloud computing: a literature review on cloud computing
+and its development trends, in: 2012 Fourth International Conference on
+Multimedia Information Networking and Security, IEEE, 2012, pp. 142–146.
+[17] J. Webster, R.T. Watson, Analyzing the past to prepare for the future: Writing
+a literature review, MIS Q. (2002) xiii–xxiii.
+[18] R.F. El-Gazzar, A literature review on cloud computing adoption issues in
+enterprises, in: Creating Value for All Through IT: IFIP WG 8.6 International
+Conference on Transfer and Diffusion of IT, TDIT 2014, Aalborg, Denmark, June
+2-4, 2014. Proceedings, Springer, 2014, pp. 214–242.
+[19] J.A. Aroca, A.F. Anta, Empirical comparison of power-efficient virtual machine
+assignment algorithms, Comput. Commun. 96 (2016) 86–98.
+[20] C.L. Albarracín, S. Venkatesan, A.Y. Torres, P. Yánez-Moretta, J.C.J. Vargas,
+Exploration on cloud computing techniques and its energy concern, Math. Stat.
+Eng. Appl. 72 (1) (2023) 749–758.
+[21] J. Baliga, R.W. Ayre, K. Hinton, R.S. Tucker, Green cloud computing: Balancing
+energy in processing, storage, and transport, Proc. IEEE 99 (1) (2010) 149–167.
+[22] G.B. Fioccola, P. Donadio, R. Canonico, G. Ventre, Dynamic routing and virtual
+machine consolidation in green clouds, in: 2016 IEEE International Conference
+on Cloud Computing Technology and Science, CloudCom, IEEE, 2016, pp.
+590–595.
+[23] A. Katal, S. Dahiya, T. Choudhury, Energy efficiency in cloud computing data
+centers: a survey on software technologies, Cluster Comput. 26 (3) (2023)
+1845–1875.
+[24] S. Achar, How adopting a cloud-based architecture has reduced the energy
+consumptions levels, Int. J. Inf. Technol. Manag. 13 (1) (2022) 15–23.
+[25] M. Ghamkhari, H. Mohsenian-Rad, Profit maximization and power management
+of green data centers supporting multiple SLAs, in: 2013 International Conference on Computing, Networking and Communications, ICNC, IEEE, 2013, pp.
+465–469.
+[26] A. Atrey, N. Jain, N. Iyengar, A study on green cloud computing, Int. J. Grid
+Distrib. Comput. 6 (6) (2013) 93–102.
+[27] C.-T. Yang, K.-C. Wang, H.-Y. Cheng, C.-T. Kuo, C.-H. Hsu, Implementation of
+a green power management algorithm for virtual machines on cloud computing, in: International Conference on Ubiquitous Intelligence and Computing,
+Springer, 2011, pp. 280–294.
+[28] X.-L. Xu, G. Yang, L.-J. Li, R.-C. Wang, Dynamic data aggregation algorithm
+for data centers of green cloud computing, Syst. Eng. Electron. 34 (9) (2012)
+1923–1929.
+[29] H.M. Lee, Y.-S. Jeong, H.J. Jang, Performance analysis based resource allocation
+for green cloud computing, J. Supercomput. 69 (2014) 1013–1026.
+[30] M. Azaiez, W. Chainbi, H. Chihi, A green model of cloud resources provisioning,
+in: International Conference on Cloud Computing and Services Science, Vol. 2,
+SCITEPRESS, 2014, pp. 135–142.
+[31] S. Supreeth, K. Patil, VM scheduling for efficient dynamically migrated virtual
+machines (VMS-EDMVM) in cloud computing environment, KSII Trans. Internet
+Inf. Syst. 16 (6) (2022).
+[32] J. Kołodziej, S.U. Khan, L. Wang, M. Kisiel-Dorohinicki, S.A. Madani, E.
+Niewiadomska-Szynkiewicz, A.Y. Zomaya, C.-Z. Xu, Security, energy, and
+performance-aware resource allocation mechanisms for computational grids,
+Future Gener. Comput. Syst. 31 (2014) 77–92.
+[33] B. Kaur, A. Kaur, An efficient approach for green cloud computing using genetic
+algorithm, in: 2015 1st International Conference on Next Generation Computing
+Technologies, NGCT, IEEE, 2015, pp. 10–15.
+[34] G. Koutsandria, E. Skevakis, A.A. Sayegh, P. Koutsakis, Can everybody be happy
+in the cloud? Delay, profit and energy-efficient scheduling for cloud services,
+J. Parallel Distrib. Comput. 96 (2016) 202–217.
+[35] M. Fiorani, S. Aleksic, P. Monti, J. Chen, M. Casoni, L. Wosinska, Energy
+efficiency of an integrated intra-data-center and core network with edge
+caching, J. Opt. Commun. Netw. 6 (4) (2014) 421–432.
+[36] G. Procaccianti, P. Lago, S. Bevini, A systematic literature review on energy
+efficiency in cloud software architectures, Sustain. Comput.: Inform. Syst. 7
+(2015) 2–10.
+[37] M. Anan, N. Nasser, SLA-based optimization of energy efficiency for green cloud
+computing, in: 2015 IEEE Global Communications Conference, GLOBECOM,
+IEEE, 2015, pp. 1–6.
+[38] L. Xu, C. Li, L. Li, Y. Liu, Z. Yang, Y. Liu, A virtual data center deployment
+model based on the green cloud computing, in: 2014 IEEE/ACIS 13th International Conference on Computer and Information Science, ICIS, IEEE, 2014, pp.
+235–240.
+
+Cloud computing is a sophisticated and ever-changing technology
+that integrates advanced ICT-based capabilities. With the exponential
+growth in demand for cloud services, it has become imperative to
+address the environmental impact of data centers. The use of GCC
+presents a viable method for decreasing carbon emissions, energy usage, and resource consumption in cloud infrastructures. During this
+survey, we highlighted the key issues encountered by the GCC, which
+include energy efficiency, carbon emissions, resource allocation, and
+e-waste management. Several approaches and technologies have been
+suggested to address these challenges, such as using energy-efficient
+hardware and software resources, employing dynamic resource allocation algorithms, and incorporating renewable energy sources. Moreover, there are ample opportunities for extending the scope of GCC.
+Potential avenues for future investigation include the development of
+novel algorithms, technologies, and metrics to assess the ecological
+impact, improve the efficient use of resources, and promote sustainability in cloud systems. By addressing the complex challenges of GCC
+and implementing state-of-the-art solutions, we can establish a solid
+foundation for a more sustainable future in cloud computing.
+CRediT authorship contribution statement
+Dipto Biswas: Writing – original draft, Methodology, Formal analysis, Conceptualization. Sohely Jahan: Writing – review & editing, Supervision, Methodology, Investigation, Formal analysis. Sajeeb Saha:
+Writing – review & editing, Supervision, Resources, Methodology, Formal analysis. Md. Samsuddoha: Writing – original draft, Validation,
+Investigation, Formal analysis.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to
+influence the work reported in this paper.
+Data availability
+No data was used for the research described in the article.
+References
+[1] L.M. Hilty, P. Arnfalk, L. Erdmann, J. Goodman, M. Lehmann, P.A. Wäger, The
+relevance of information and communication technologies for environmental
+sustainability–a prospective simulation study, Environ. Model. Softw. 21 (11)
+(2006) 1618–1629.
+[2] T.M. Parris, R.W. Kates, Characterizing and measuring sustainable development,
+Annu. Rev. Environ. Resour. 28 (1) (2003) 559–586.
+[3] M.N. Hulkury, M.R. Doomun, Integrated green cloud computing architecture,
+in: 2012 International Conference on Advanced Computer Science Applications
+and Technologies, ACSAT, IEEE, 2012, pp. 269–274.
+[4] Y. Jabareen, A new conceptual framework for sustainable development,
+Environ. Dev. Sustain. 10 (2008) 179–192.
+[5] S.-Y. Jing, S. Ali, K. She, Y. Zhong, State-of-the-art research study for green
+cloud computing, J. Supercomput. 65 (2013) 445–468.
+[6] H. Rasheed, Data and infrastructure security auditing in cloud computing
+environments, Int. J. Inf. Manage. 34 (3) (2014) 364–368.
+[7] L. Youseff, M. Butrico, D. Da Silva, Toward a unified ontology of cloud
+computing, in: 2008 Grid Computing Environments Workshop, IEEE, 2008, pp.
+1–10.
+[8] R. Heininger, IT service management in a cloud environment: a literature
+review, Stud. Chair Inf. Syst. Tech. Univ. München (23) (2012).
+[9] B. Wadhwa, A. Verma, Energy saving approaches for green cloud computing: A
+review, in: 2014 Recent Advances in Engineering and Computational Sciences,
+RAECS, IEEE, 2014, pp. 1–6.
+[10] R. Buyya, C.S. Yeo, S. Venugopal, J. Broberg, I. Brandic, Cloud computing and
+emerging IT platforms: Vision, hype, and reality for delivering computing as
+the 5th utility, Future Gener. Comput. Syst. 25 (6) (2009) 599–616.
+[11] D. Kliazovich, P. Bouvry, S.U. Khan, GreenCloud: a packet-level simulator
+of energy-aware cloud computing data centers, J. Supercomput. 62 (2012)
+1263–1283.
+18
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+[65] A. Kiani, N. Ansari, Profit maximization for geographically dispersed green data
+centers, IEEE Trans. Smart Grid 9 (2) (2016) 703–711.
+[66] N.A. Emran, N. Abdullah, M.N.M. Isa, Storage space optimisation for green data
+center, Procedia Eng. 53 (2013) 483–490.
+[67] K. Phasinam, T. Kassanuk, P.P. Shinde, C.M. Thakar, D.K. Sharma, M.K. Mohiddin, A.W. Rahmani, Application of IoT and cloud computing in automation
+of agriculture irrigation, J. Food Qual. 2022 (2022) 1–8.
+[68] Y. Wu, M. Tornatore, S. Ferdousi, B. Mukherjee, Green data center placement
+in optical cloud networks, IEEE Trans. Green Commun. Netw. 1 (3) (2017)
+347–357.
+[69] T.C. Patil, S.P. Duttagupta, Hybrid self—Sustainable green power generation
+system for powering green data center, in: Proceedings of the 2014 International
+Conference on Control, Instrumentation, Energy and Communication, CIEC,
+IEEE, 2014, pp. 331–334.
+[70] Y. Jin, Y. Wen, Q. Chen, Z. Zhu, An empirical investigation of the impact of
+server virtualization on energy efficiency for green data center, Comput. J. 56
+(8) (2013) 977–990.
+[71] E. Baccour, S. Foufou, R. Hamila, A guaranteed performance of a green data
+center based on the contribution of vital nodes, in: 2016 IEEE Globecom
+Workshops, GC Wkshps, IEEE, 2016, pp. 1–6.
+[72] S. Yan, S. Xiao, Y. Chen, Y. Cui, J. Liu, GreenWay: Joint VM placement and
+topology adaption for green data center networking, in: 2017 26th International
+Conference on Computer Communication and Networks, ICCCN, IEEE, 2017, pp.
+1–9.
+[73] D. Li, Y. Shang, C. Chen, Software defined green data center network with
+exclusive routing, in: IEEE INFOCOM 2014-IEEE Conference on Computer
+Communications, IEEE, 2014, pp. 1743–1751.
+[74] H. Lei, R. Wang, T. Zhang, Y. Liu, Y. Zha, A multi-objective co-evolutionary
+algorithm for energy-efficient scheduling on a green data center, Comput. Oper.
+Res. 75 (2016) 103–117.
+[75] M. Uddin, A. Shah, A. Rehman, Metrics for computing performance of data
+center for instigating energy efficient data centers, J. Sci. Ind. Res. 73 (2014)
+11–15.
+[76] X. Hu, P. Li, Y. Sun, Minimizing energy cost for green data center by exploring
+heterogeneous energy resource, J. Mod. Power Syst. Clean Energy 9 (1) (2021)
+148–159.
+[77] H. Yuan, J. Bi, M. Zhou, A.C. Ammari, Time-aware multi-application task
+scheduling with guaranteed delay constraints in green data center, IEEE Trans.
+Autom. Sci. Eng. 15 (3) (2017) 1138–1151.
+[78] T. Yang, Y. Hou, Y.C. Lee, H. Ji, A.Y. Zomaya, Power control framework for
+green data centers, IEEE Trans. Cloud Comput. 10 (4) (2020) 2876–2886.
+[79] W. Shu, W. Wang, Y. Wang, A novel energy-efficient resource allocation
+algorithm based on immune clonal optimization for green cloud computing,
+EURASIP J. Wireless Commun. Networking 2014 (1) (2014) 1–9.
+[80] W. Yue, Q. Chen, et al., Dynamic placement of virtual machines with both
+deterministic and stochastic demands for green cloud computing, Math. Probl.
+Eng. 2014 (2014).
+[81] S.R. Hussein, Y. Alkabani, H.K. Mohamed, Green cloud computing: Datacenters power management policies and algorithms, in: 2014 9th International
+Conference on Computer Engineering & Systems, ICCES, IEEE, 2014, pp.
+421–426.
+[82] K. Giridas, A.S. Nargunam, Optimal resource allocation technique (ORAT) for
+green cloud computing, Int. J. Comput. Appl. 55 (5) (2012).
+[83] Y. Lu, N. Sun, An effective task scheduling algorithm based on dynamic
+energy management and efficient resource utilization in green cloud computing
+environment, Cluster Comput. 22 (Suppl 1) (2019) 513–520.
+[84] L.A. Rocha, E. Cardozo, A hybrid optimization model for green cloud computing, in: 2014 IEEE/ACM 7th International Conference on Utility and Cloud
+Computing, IEEE, 2014, pp. 11–20.
+[85] H. Fang, B. Wang, W. Song, Analyzing the interrelationships among barriers to
+green procurement in photovoltaic industry: An integrated method, J. Clean.
+Prod. 249 (2020) 119408.
+[86] J. Liu, Y. Liu, L. Yang, Uncovering the influence mechanism between top
+management support and green procurement: The effect of green training, J.
+Clean. Prod. 251 (2020) 119674.
+[87] L. Xu, K. Wang, Z. Ouyang, X. Qi, An improved binary PSO-based task
+scheduling algorithm in green cloud computing, in: 9th International Conference
+on Communications and Networking in China, IEEE, 2014, pp. 126–131.
+[88] B. Dougherty, J. White, D.C. Schmidt, Model-driven auto-scaling of green cloud
+computing infrastructure, Future Gener. Comput. Syst. 28 (2) (2012) 371–378.
+[89] J. Das, S. Ghosh, A. Mukherjee, S.K. Ghosh, R. Buyya, RESCUE: enabling green healthcare services using integrated IoT-edge-fog-cloud computing
+environments, Softw. - Pract. Exp. 52 (7) (2022) 1615–1642.
+[90] H. Ma, P. Huang, Z. Zhou, X. Zhang, X. Chen, GreenEdge: Joint green energy
+scheduling and dynamic task offloading in multi-tier edge computing systems,
+IEEE Trans. Veh. Technol. 71 (4) (2022) 4322–4335.
+[91] J.-p. Luo, X. Li, M.-r. Chen, Hybrid shuffled frog leaping algorithm for energyefficient dynamic consolidation of virtual machines in cloud data centers, Expert
+Syst. Appl. 41 (13) (2014) 5804–5816.
+
+[39] S. Wibowo, M. Wells, et al., Green cloud computing and economics of the cloud:
+Moving towards sustainable future, GSTF J. Comput. (JoC) 5 (1) (2016).
+[40] S. Dahmani, Computational intelligence for green cloud computing and digital
+waste management, in: Computational Intelligence for Green Cloud Computing
+and Digital Waste Management, IGI Global, 2024, pp. 248–266.
+[41] S.S. Bristy, T. Azam, M.M. Islam, R. Rahman, A.W. Reza, M.S. Arefin, Green
+cloud computing: A sustainable energy-efficiency approach for business rapidity
+and the environment, in: International Conference on Intelligent Computing &
+Optimization, Springer, 2023, pp. 312–327.
+[42] N. Shrotriya, P. Thakore, A. Khang, Sustainable IT: A comprehensive guide to
+green computing and green internet of things (IoT) technologies, in: Advanced
+IoT Technologies and Applications in the Industry 4.0 Digital Economy, CRC
+Press, 2024, pp. 82–108.
+[43] M.B. Ismail, H. Hashim, Y.M. Yusof, Statistical approach toward achieving
+green cloud computing: Virtualization in single server environment, in: AIP
+Conference Proceedings, Vol. 2608, AIP Publishing, 2023.
+[44] P. He, N. Almasifar, A. Mehbodniya, D. Javaheri, J.L. Webber, Towards green
+smart cities using internet of things and optimization algorithms: A systematic
+and bibliometric review, Sustain. Comput. Inform. Syst. 36 (2022) 100822.
+[45] A. Gavrilovska, K. Schwan, H. Amur, B. Krishnan, J. Vidyashankar, C.
+Wang, M. Wolf, Understanding and managing IT power consumption: A
+measurement-based approach, Energy Effic. Therm. Manag. Data Cent. (2012)
+169–197.
+[46] T. Makela, S. Luukkainen, Incentives to apply green cloud computing, J.
+Theoret. Appl. Electron. Commer. Res. 8 (3) (2013) 74–86.
+[47] Y.S. Patel, R. Jaiswal, R. Misra, Deep learning-based multivariate resource
+utilization prediction for hotspots and coldspots mitigation in green cloud data
+centers, J. Supercomput. 78 (4) (2022) 5806–5855.
+[48] A.R. Yeruva, C.V. Durga, B. Gokulavasan, K. Pant, P. Chaturvedi, A.P.
+Srivastava, A smart healthcare monitoring system based on fog computing architecture, in: 2022 2nd International Conference on Technological Advancements
+in Computational Sciences, ICTACS, IEEE, 2022, pp. 904–909.
+[49] S. Gavaskar, A. Anisha, C. Renit, T.S. Shiney, Mobile apps for green cloud
+computing performance measure, in: 2016 International Conference on Energy
+Efficient Technologies for Sustainability, ICEETS, IEEE, 2016, pp. 865–869.
+[50] F.S. Hafez, B. Sa’di, M. Safa-Gamal, Y. Taufiq-Yap, M. Alrifaey, M. Seyedmahmoudian, A. Stojcevski, B. Horan, S. Mekhilef, Energy efficiency in sustainable
+buildings: a systematic review with taxonomy, challenges, motivations, methodological aspects, recommendations, and pathways for future research, Energy
+Strategy Rev. 45 (2023) 101013.
+[51] A. Ali, H. Shaukat, S. Bibi, W.A. Altabey, M. Noori, S.A. Kouritem, Recent
+progress in energy harvesting systems for wearable technology, Energy Strategy
+Rev. 49 (2023) 101124.
+[52] D. Biswas, M. Samsuddoha, M.R. Al Asif, M.M. Ahmed, Optimized round
+robin scheduling algorithm using dynamic time quantum approach in cloud
+computing environment, Int. J. Intell. Syst. Appl. 13 (1) (2023) 22.
+[53] L. Wang, J. Shao, Digital economy, entrepreneurship and energy efficiency,
+Energy 269 (2023) 126801.
+[54] Q. Wang, J. Sun, U.K. Pata, R. Li, M.T. Kartal, Digital economy and carbon
+dioxide emissions: examining the role of threshold variables, Geosci. Front. 15
+(3) (2024) 101644.
+[55] Y. Sun, Y.-Z. Li, M. Yuan, Requirements, challenges, and novel ideas for
+wearables on power supply and energy harvesting, Nano Energy 115 (2023)
+108715.
+[56] K. Liu, Q. Tan, J. Yu, M. Wang, A global perspective on e-waste recycling, Circ.
+Econ. 2 (1) (2023) 100028.
+[57] G. Kaur, S. Midha, A preemptive priority based job scheduling algorithm in
+green cloud computing, in: 2016 6th International Conference-Cloud System
+and Big Data Engineering, Confluence, IEEE, 2016, pp. 152–156.
+[58] Y.C. Lee, A.Y. Zomaya, Energy efficient utilization of resources in cloud
+computing systems, J. Supercomput. 60 (2012) 268–280.
+[59] R. Mandal, M.K. Mondal, S. Banerjee, G. Srivastava, W. Alnumay, U. Ghosh,
+U. Biswas, MECpVmS: an SLA aware energy-efficient virtual machine selection
+policy for green cloud computing, Cluster Comput. 26 (1) (2023) 651–665.
+[60] S. Bharany, S. Badotra, S. Sharma, S. Rani, M. Alazab, R.H. Jhaveri, T.R.
+Gadekallu, Energy efficient fault tolerance techniques in green cloud computing:
+A systematic survey and taxonomy, Sustain. Energy Technol. Assess. 53 (2022)
+102613.
+[61] S.K. Nayak, S.K. Panda, S. Das, Unconstrained power management algorithm
+for green cloud computing, in: Advances in Distributed Computing and Machine
+Learning: Proceedings of ICADCML 2021, Springer, 2022, pp. 3–14.
+[62] C. Cappiello, P. Melià, P. Plebani, Modeling CO_2 2 emissions to reduce the
+environmental impact of cloud applications, in: Advanced Information Systems Engineering Workshops: CAiSE 2016 International Workshops, Ljubljana,
+Slovenia, June 13-17, 2016, Proceedings 28, Springer, 2016, pp. 155–166.
+[63] I. Alzamil, K. Djemame, D. Armstrong, R. Kavanagh, Energy-aware profiling for
+cloud computing environments, Electron. Notes Theor. Comput. Sci. 318 (2015)
+91–108.
+[64] Z. Long, W. Ji, Power-efficient immune clonal optimization and dynamic load
+balancing for low energy consumption and high efficiency in green cloud
+computing, J. Commun. 11 (6) (2016) 558–563.
+19
+
+Sustainable Computing: Informatics and Systems 44 (2024) 101036
+
+D. Biswas et al.
+
+[111] F. Cao, M.M. Zhu, Energy efficient workflow job scheduling for green cloud,
+in: 2013 IEEE International Symposium on Parallel & Distributed Processing,
+Workshops and Phd Forum, IEEE, 2013, pp. 2218–2221.
+[112] S.K. Mishra, D. Puthal, B. Sahoo, S.K. Jena, M.S. Obaidat, An adaptive task
+allocation technique for green cloud computing, J. Supercomput. 74 (2018)
+370–385.
+[113] R. Mandal, M.K. Mondal, S. Banerjee, U. Biswas, An approach toward design
+and development of an energy-aware vm selection policy with improved SLA
+violation in the domain of green cloud computing, J. Supercomput. 76 (2020)
+7374–7393.
+[114] A.H. Ismail, N.A. El-Bahnasawy, H.F. Hamed, AGCM: Active queue
+management-based green cloud model for mobile edge computing, Wirel. Pers.
+Commun. 105 (2019) 765–785.
+[115] A. Mohammadzadeh, M. Masdari, F.S. Gharehchopogh, A. Jafarian, Improved
+chaotic binary grey wolf optimization algorithm for workflow scheduling in
+green cloud computing, Evol. Intell. 14 (2021) 1997–2025.
+[116] R. Beik, Green cloud computing: An energy-aware layer in software architecture, in: 2012 Spring Congress on Engineering and Technology, IEEE, 2012, pp.
+1–4.
+[117] M. Guazzone, C. Anglano, M. Canonico, Exploiting VM migration for the
+automated power and performance management of green cloud computing
+systems, in: Energy Efficient Data Centers: First International Workshop, E 2
+DC 2012, Madrid, Spain, Mai 8, 2012, Revised Selected Papers 1, Springer,
+2012, pp. 81–92.
+[118] M.H. Fathi, L.M. Khanli, Consolidating VMs in green cloud computing using
+harmony search algorithm, in: Proceedings of the 2018 1st International
+Conference on Internet and E-Business, 2018, pp. 146–151.
+[119] F. Cao, M.M. Zhu, C.Q. Wu, Green cloud computing with efficient resource allocation approach, in: Green Services Engineering, Optimization, and Modeling
+in the Technological Age, IGI Global, 2015, pp. 116–148.
+[120] N. Gholipour, E. Arianyan, R. Buyya, A novel energy-aware resource management technique using joint VM and container consolidation approach for
+green computing in cloud data centers, Simul. Model. Pract. Theory 104 (2020)
+102127.
+[121] H. Zavieh, A. Javadpour, A.K. Sangaiah, Efficient task scheduling in cloud
+networks using ANN for green computing, Int. J. Commun. Syst. 37 (5) (2024)
+e5689.
+[122] A.A. Zhahir, S.M. Mohd, M.I. M Shuhud, B. Idrus, H. Zainuddin, N. Mohamad Jan, M.R. Wahiddin, Quantum computing in the cloud-a systematic
+literature review, Int. J. Electr. Comput. Eng. Syst. 15 (2) (2024) 185–200.
+[123] J. Chauhan, T. Alam, Adjustable rotation gate based quantum evolutionary
+algorithm for energy optimisation in cloud computing systems, Int. J. Comput.
+Sci. Eng. 27 (4) (2024) 414–433.
+[124] M.S. Peelam, A.A. Rout, V. Chamola, Quantum computing applications for
+internet of things, IET Quant. Commun. 5 (2) (2024) 103–112.
+[125] Y. Ren, X. Zhang, G. Lu, The wireless solution to realize green IoT: Cellular
+networks with energy efficient and energy harvesting schemes, Energies 13 (22)
+(2020) 5875.
+[126] O. Said, Z. Al-Makhadmeh, A. Tolba, EMS: An energy management scheme for
+green IoT environments, IEEE Access 8 (2020) 44983–44998.
+[127] R.K. Lenka, A.K. Rath, S. Sharma, Building reliable routing infrastructure for
+green IoT network, IEEE Access 7 (2019) 129892–129909.
+[128] V. Thayananthan, O. Abdulkader, K. Jambi, A.M. Bamahdi, Analysis of cybersecurity based on li-fi in green data storage environments, in: 2017 IEEE 4th
+International Conference on Cyber Security and Cloud Computing, CSCloud,
+IEEE, 2017, pp. 327–332.
+[129] H. Li, J. Liu, Q. Zhou, Research on energy-saving virtual machine migration
+algorithm for green data center, IET Control Theory Appl. 17 (13) (2023)
+1830–1839.
+
+[92] Z. Deng, G. Zeng, Q. He, Y. Zhong, W. Wang, Using priced timed automaton
+to analyse the energy consumption in cloud computing environment, Cluster
+Comput. 17 (2014) 1295–1307.
+[93] X. Xu, L. Cao, X. Wang, Resource pre-allocation algorithms for low-energy task
+scheduling of cloud computing, J. Syst. Eng. Electron. 27 (2) (2016) 457–469.
+[94] O. Debauche, S. Mahmoudi, A. Guttadauria, A new edge computing architecture
+for IoT and multimedia data management, Information 13 (2) (2022) 89.
+[95] S. Vinoth, H.L. Vemula, B. Haralayya, P. Mamgain, M.F. Hasan, M. Naved,
+Application of cloud computing in banking and e-commerce and related security
+threats, Mater. Today: Proc. 51 (2022) 2172–2175.
+[96] J. Huang, K. Wu, M. Moh, Dynamic virtual machine migration algorithms using
+enhanced energy consumption model for green cloud data centers, in: 2014
+International Conference on High Performance Computing & Simulation, HPCS,
+IEEE, 2014, pp. 902–910.
+[97] D. Zhang, Z. Chen, L.X. Cai, H. Zhou, J. Ren, X. Shen, Resource allocation for
+green cloud radio access networks powered by renewable energy, in: 2016 IEEE
+Global Communications Conference, GLOBECOM, IEEE, 2016, pp. 1–6.
+[98] A. Khosravi, S.K. Garg, R. Buyya, Energy and carbon-efficient placement of
+virtual machines in distributed cloud data centers, in: Euro-Par 2013 Parallel
+Processing: 19th International Conference, Aachen, Germany, August 26-30,
+2013. Proceedings 19, Springer, 2013, pp. 317–328.
+[99] N. Kalyani, An energy efficient dynamic schedule based server load balancing
+approach for cloud data center, Int. J. Future Gener. Commun. Netw. 8 (3)
+(2015) 123–136.
+[100] I. Aransay, M. Zapater, P. Arroba, J.M. Moya, A trust and reputation system
+for energy optimization in cloud data centers, in: 2015 IEEE 8th International
+Conference on Cloud Computing, IEEE, 2015, pp. 138–145.
+[101] Y. Goyal, M.S. Arya, S. Nagpal, Energy efficient hybrid policy in green cloud
+computing, in: 2015 International Conference on Green Computing and Internet
+of Things, ICGCIoT, IEEE, 2015, pp. 1065–1069.
+[102] A. Horri, G. Dastghaibyfard, et al., A novel cost based model for energy
+consumption in cloud computing, Sci. World J. 2015 (2015).
+[103] V. Bindhu, M. Joe, Green cloud computing solution for operational cost
+efficiency and environmental impact reduction, J. ISMAC 1 (02) (2019)
+120–128.
+[104] J.I. Torrens, D. Mehta, V. Zavrel, D. Grimes, T. Scherer, R. Birke, L. Chen,
+S. Rea, L. Lopez, E. Pages, et al., Integrated energy efficient data centre
+management for green cloud computing-the FP7 GENiC project experience, in:
+Special Session on Tools for an Energy Efficient Cloud, Vol. 3, SciTePress, 2016,
+pp. 375–386.
+[105] S.K. Garg, C.S. Yeo, R. Buyya, Green cloud framework for improving carbon
+efficiency of clouds, in: European Conference on Parallel Processing, Springer,
+2011, pp. 491–502.
+[106] A.A.A. Ari, I. Damakoa, C. Titouna, N. Labraoui, A. Gueroui, Efficient and
+scalable ACO-based task scheduling for green cloud computing environment, in:
+2017 IEEE International Conference on Smart Cloud, SmartCloud, IEEE, 2017,
+pp. 66–71.
+[107] A. Alarifi, K. Dubey, M. Amoon, T. Altameem, F.E. Abd El-Samie, A. Altameem,
+S.C. Sharma, A.A. Nasr, Energy-efficient hybrid framework for green cloud
+computing, IEEE Access 8 (2020) 115356–115369.
+[108] M.K. Hossain, M. Rahman, A. Hossain, S.Y. Rahman, M.M. Islam, Active & idle
+virtual machine migration algorithm-a new ant colony optimization approach
+to consolidate virtual machines and ensure green cloud computing, in: 2020
+Emerging Technology in Computing, Communication and Electronics, ETCCE,
+IEEE, 2020, pp. 1–6.
+[109] F. Farahnakian, A. Ashraf, T. Pahikkala, P. Liljeberg, J. Plosila, I. Porres,
+H. Tenhunen, Using ant colony system to consolidate VMs for green cloud
+computing, IEEE Trans. Serv. Comput. 8 (2) (2014) 187–198.
+[110] T.T. Huu, C.-K. Tham, An auction-based resource allocation model for green
+cloud computing, in: 2013 IEEE International Conference on Cloud Engineering,
+IC2E, IEEE, 2013, pp. 269–278.
+
+20
+
+

@@ -1,0 +1,720 @@
+The Energy Intensity of the Internet:
+Edge and Core Networks
+Daniel Schien, Vlad C. Coroama, Lorenz M. Hilty and Chris Preist
+
+Abstract Environmental assessments of digital services seeking to take into
+account the Internet’s energy footprint typically require models of the energy
+intensity of the Internet. Existing models have arrived at conflicting results. This
+has lead to increased uncertainty and reduced comparability of assessment results.
+We present a bottom-up model for the energy intensity of the Internet that draws
+from the current state of knowledge in the field and is specifically directed towards
+assessments of digital services. We present the numeric results and explain the
+application of the model in practice. Complementing the previous chapter that
+presented a generic approach and results for access networks and customer premise equipment, we present a model to assess the energy intensity of the core
+networks, yielding the result of 0.052 kWh/GB.
+Keywords Internet
+Online news
+
+ Energy efficiency  Energy intensity  Video streaming 
+
+D. Schien (&)  C. Preist
+Department of Computer Science, University of Bristol, Bristol, UK
+e-mail: schien@cs.bris.ac.uk
+C. Preist
+e-mail: cpreist@cs.bris.ac.uk
+V.C. Coroama
+Measure-IT Research, Bucharest, Romania
+L.M. Hilty
+Department of Informatics, University of Zurich, Zurich, Switzerland
+Empa, Swiss Federal Laboratories for Materials Science and Technology,
+St. Gallen, Switzerland
+Centre for Sustainable Communications CESC, KTH Royal Institute of Technology,
+Stockholm, Sweden
+Ó Springer International Publishing Switzerland 2015
+L.M. Hilty and B. Aebischer (eds.), ICT Innovations for Sustainability,
+Advances in Intelligent Systems and Computing 310,
+DOI 10.1007/978-3-319-09228-7_9
+
+157
+
+158
+
+D. Schien et al.
+
+1 Introduction
+Assessments of individual digital services such as video, web browsing or file
+downloads delivered over the Internet need to factor in a share of the energy
+consumption by the network—called an energy footprint—as the use-phase part of
+the environmental impact from the service life cycle. Most commonly, such a
+footprint is derived from multiplying an estimate of average network energy
+intensity per bit with the data volume transferred by the digital service. The energy
+intensity for an individual network device such as a router is the ratio of its power
+consumption (measured in watts) and its throughput capacity (measured in bits per
+second). The energy intensity of the network is the sum of the energy intensity of
+all devices along a route through the network between two endpoints, usually a
+client and a server.
+Past studies, such as [1–4], have applied differing models and assumptions [5].
+This has lead to increased uncertainty and reduced transferability of assessment
+results. Meanwhile, existing standards for environmental assessment of IT services
+[6, 7] do not recommend concrete models and parameterization. Thus, those
+wanting to perform environmental assessments of digital services are left without a
+guideline on how to assess network energy consumption.
+In this text, we present a bottom-up model for the energy intensity of the
+Internet that draws from the academic state of the art and is specifically directed
+towards assessments of digital services. We present the numeric results and
+explain the application of the model in practice.
+We begin with a description of the structure of the Internet in the next section.
+Based on that we present the models and their parameterization in Sect. 3.
+Subsequently, in Sect. 4 we present the numerical results and finish with a discussion of their practical application.
+
+2 Background
+2.1 The Structure of the Internet
+Development of the Internet data network began as a service delivered on top of
+the telephone network and gradually separated from the latter as generations of
+network technology replaced one another. Our description is focused on the current state of the art in Internet Service Provider (ISP) networks. As a result, some
+legacy technology that might still be in operation is not presented here and may
+contribute to the uncertainty of the models. Interested readers are referred to
+[8–10] for more detail.
+One frequently applied decomposition of the network, and the one adopted
+here, distinguishes the four layers of access, edge, metro and long haul networks as
+displayed in Fig. 1. Metro and long haul networks are frequently referred to as
+network core. As data travels from access to core, each layer handles increasing
+
+The Energy Intensity of the Internet: Edge and Core Networks
+Previous Chp
+
+This Chapter
+
+Router
+
+Router
+
+λ
+
+λ
+λ
+
+λ
+
+λ
+
+λ
+
+λ
+
+Data Center
+
+Long Haul
+
+Metro
+
+Metro
+
+Undersea
+
+CPE Access
+
+159
+
+λ
+
+Provider
+Edge
+
+Fiber Optic
+Transmission
+Ring Topology
+
+λ
+
+Fiber Optic
+Transmission
+Mesh Topology
+
+Fig. 1 Structure of the Internet for residential customers. Customer Premise Equipment (CPE) in
+the home, such as a DSL or cable modem, connects to the access network terminals that
+aggregate data traffic in a neighborhood and connects to provider edge switches. In the metro
+network traffic from several edge network devices is aggregated and passed to the long haul
+network for long-distance transmission to the metro network connecting to the data center where
+the service provider operates servers
+
+volumes of traffic and provides aggregation of traffic from multiple links in previous layers. These networks are frequently operated by separate organizations,
+which are contract with one another and transport data traffic on one another’s
+behalf.
+Consumers operate customer premise equipment (CPE) such as modems and
+routers to connect to their broadband service provider network through a feeder
+network, also often referred to as the last mile or local loop, such as the copper
+lines of the telephone service that provide DSL connectivity, coaxial cable for
+cable connection or fiber optic cables. In the case of DSL and cable, signals from
+the customer modem are disaggregated into a data and a voice/video stream in a
+multiplexing node such as a DSLAM or a CMTS, which is connected to a metro
+network. The specific types of devices operated in the access network depend on
+the technology that is required to be supported in the access network.
+Traffic by multiple access network multiplexers is typically aggregated by
+Ethernet switches before being passed on to the next higher network hierarchy.
+These switches provide subscriber traffic management to the broadband service
+provider. The specific type of device varies depending on the access network
+technology. In the case of DSL the DSLAMs connect via switches to broadband
+remote access servers (B-RAS). In the case of cable, the CMTS provides the
+subscriber management and modem function in one device.
+Traffic then passes an Internet service provider (ISP) edge (PE) router and at
+this point enters the metro network. This part of the metro network is sometimes
+referred to as ‘‘edge network.’’ The ISP is frequently a separate organization from
+the broadband service provider. The majority of ISP networks apply multiprotocol
+label switching (MPLS) for their greater traffic management capabilities over
+earlier systems and these provider edge routers are the ingress and egress nodes to
+the MPLS network. At the PE router the decision is made which part of the traffic
+to route outside of the metro network towards the long haul network, depending on
+
+160
+
+D. Schien et al.
+
+the location of the data packet. The destination might be a server in a data center or
+another customer computer in the case of P2P traffic. Campus networks and data
+centers can connect directly to provider edge routers that manage their services.
+While the routing (i.e., finding paths between networks) in metro and long haul
+networks is performed on the IP/MPLS layer, the physical connection between
+routers is established by fiber optic cables using either time division or wavelength
+division multiplexing (TDM or WDM). In the optic core, transport is realized by
+dense wavelength division multiplexing (DWDM) networks. As [10] note, use of
+DWDM in the metro networks is less frequent, and TDM links are used instead.
+Commonly, a wrapper for TDM channels called optical transport network (OTN)
+is used to simplify the existing infrastructure and provide TDM transport in metro
+networks. The conversion of IP packets to the containers that these various protocols use is implemented in IP router line cards.
+Metro as well as long haul routers are composed of a chassis that provides slots
+for line cards, which are also called interface modules or port cards. The line card
+then hosts slot cards. Routers perform routing, in electronic circuitry, and via the
+OTN line cards connect to fiber optic cables for transport. The fiber cables then
+connect to WDM terminal systems.
+Figure 2 is an illustration of the technology stack. At the top, a router determines the destination for a (labeled) packet, then sends it out via an OTN interface
+module to the WDM system where the light wavelength containing the data is
+added to a channel. At the next WDM terminal, the wavelength is either passed on
+to the next DWDM node or dropped from the wavelength and send to the router.
+The link between two terminals is called a hop. The number of routers in a route of
+n hops is thus n + 1.1 If the distance exceeds 80–100 km, then amplifiers are
+placed on the fiber cable.
+Intercontinental traffic usually traverses undersea cables that are terminated on
+either side with a particular type of WDM terminal and amplified.
+The majority of end user traffic is directed to servers in data centers. These are
+directly connected to metro networks by edge routers.
+A model of the energy footprint takes into account the energy consumption by
+all these device types. The majority of web traffic traverses the network between a
+single source and destination, also called ‘‘unicast’’.2 The number of devices in
+each layer is then equivalent to the diameter of the network segment. The particular segments that are being traversed may differ depending on the particular
+service. For example, a significant portion of traffic to a national news website
+might be intra-continental and thus not traverse an undersea cable. Instead, such
+traffic only traverses the customer-facing access network, the metro network in the
+customer region, the long haul network, the metro network in the data center
+region and an edge router in the service provider data center.
+
+1
+
+In our model, we neglect this additional network link in order to simplify the model structure.
+As opposed to multicast or broadcast where data from one source node is directed to multiple
+destination nodes.
+
+2
+
+The Energy Intensity of the Internet: Edge and Core Networks
+Router
+Line Cards/ Switches
+
+WDM systems
+
+161
+
+IP/MPLS
+
+IP/MPLS
+
+OTN
+
+OTN
+
+DWDM
+
+DWDM
+Amplifier
+
+Fig. 2 Illustration of the device stack in core networks. IP/MPLS (Internet Protocol, Multi
+Protocol Layer Switches) routers perform routing functions (i.e., establish a route between source
+and destination across networks) and DWDM (Dense Wavelength Division Multiplexed) systems
+add or remove wavelengths to fiber cable links. The IP/MPLS devices connect to the DWDM
+systems over OTN fiber connections. Depending on the distance between network nodes, the
+signals traveling along links are amplified
+
+3 Methodology
+3.1 Bottom-Up Model
+The energy footprint of an individual service (as opposed to the total energy
+consumption of the entire network) is a share of the energy consumption of the
+network devices that carry data between end points. For any given connection
+between a user and a server, not all devices in the network will carry the connection data. This will be done only by devices in the specific route, which for
+illustration can be thought of as the shortest connection through the network
+between the end points which does not contain circles. The energy intensity is a
+metric in which the per-device energy intensity over all devices in the typical route
+between end points is summed up. The energy intensity of a device is the ratio
+between its energy consumption (including overheads for cooling and power
+transformation) and its actual data throughput. Actual data throughput differs from
+nominal data capacity as it takes actual utilization or unused capacity into account.
+The model distinguishes between metro and backhaul networks and separately
+undersea connections. The structure of the model is similar between metro and
+long haul networks. The full model including implementation details for computational simulation is available at [11].
+We exclude the access network (see previous chapter and the inter-data center
+networks). For the metro segment, the energy intensity is estimated per router and
+then summed up over all routers involved. Optical transport networks are also
+included. They too are modeled by the energy intensity per individual device,
+which is then summed up over all transport devices. The structure for the long haul
+network is assumed to be identical to the metro network, while the energy intensity
+per router is lower but the number of optic transport devices is higher. The device
+energy intensity is multiplied by a PUE value, and overheads for utilization and
+redundancy are applied. For illustration, the energy intensity of the metro transmission network is estimated as:
+
+162
+
+D. Schien et al.
+
+IMTM ¼ R  nMR ðcON  ION þ nMOA IOA Þ
+where R is redundancy, nMR the number of metro routers, cON the ratio of WDM
+systems relative to routers, ION energy intensity per WDM system, IOA the energy
+intensity per optical amplifier and nMOA the number of metro network optical
+amplifiers per hop.
+
+3.2 Parameterization
+Accuracy of model-based assessments depends on the amount of uncertainty
+contained in the model assumptions. A structured approach to identifying such
+sources of uncertainty distinguishes between aleatory and epistemic uncertainty.
+Aleatory uncertainty refers to non-reducible statistical variance in the processes
+modeled, which is typically described with random variables that in turn can
+optionally be represented by average values. While such uncertainty prevents
+precise prediction, it does not affect the accuracy of model results inside the
+combined bounds of the underlying uncertainty variables.
+An example of aleatory uncertainty is deciding on capacity for servers in
+response to anticipated demand, which depends on the time users access the service: For some services, such as reading news on a tablet, it might not be possible
+to predict when a particular customer will access the service. Nonetheless, the
+service provider can collect time series data on the basis of which he can make a
+statistical inference the accuracy of which only depends on the accuracy of the
+underlying random variable. Although the service provider might not be able to
+predict a visit by a specific user, his model might be accurate enough to predict
+demand most of the time.
+If the model fails to predict occasional spikes of demand, for example as a
+response to political events, this would be a form of epistemic uncertainty, as
+knowledge about the system was inaccurate. Models for which the predictions can
+be tested against some empirically measured data become corroborated, and
+confidence in their accuracy increases. In the example above, corroboration occurs
+when actual demand is within the predicted bounds.
+If empirical data to corroborate models is lacking, then epistemic uncertainty can
+result in significant discrepancies between predicted and actual system performance.
+Therefore, it is necessary to improve understanding of the system by including
+expert opinion and corroboration of model parts where possible. These efforts can
+be directed by performing sensitivity analyses: identifying those model parts that
+contribute most strongly to the model result and are thus most relevant. Computation models can evaluate the overall variance through Monte Carlo-style sampling simulations. It is however important to note that sensitivity analysis does not
+express epistemic uncertainty—it makes no statements about how closely a model
+parameter is to the actual system property but only how strongly certain
+assumptions affect the prediction result.
+
+The Energy Intensity of the Internet: Edge and Core Networks
+
+163
+
+Once a sensitivity analysis has identified the most relevant variables, experts
+can be consulted for the calibration of the model. For example, ISPs could report
+the model and configuration of all network equipment to a central database where
+each model was listed with energy consumption on which to base calculations.
+Similarly, the capacity and utilization of devices could be learned.
+In the model presented here, the parameters are selected from recent peerreviewed academic works as well as manufacturer specification, notably [12–15].
+Edge Switch Energy Intensity. Devices in the edge network include switches that
+connect devices but also routers that provide services to the access network and are
+more energy intensive. For the switch we assume an energy intensity of 8 Joule per
+Gigabit (J/Gb) and for the router we apply a triangular distribution with a min of
+16 J/Gb, mode of 40 J/Gb and max of 137 J/Gb, resulting in an average of 64 J/Gb.
+Router Energy Intensity. The mean energy intensity of the entire population of
+metro routers in our model is 39 J/Gb. OTN router interface modules are accounted for
+as part of the router energy efficiency such that when added together they result in an
+intensity of 16.1 J/Gb for metro routers. For long haul routers the average value energy
+intensity is assumed to be between 17.2 J/Gb and 50 J/Gb for the most and least
+efficient configurations with either all or only one line card slot filled, with an average
+intensity of 26.7 J/Gb. Given the relatively close range of the sample points with only
+two outliers, we parameterize our model by resampling from a Gaussian kernel density
+estimated distribution over all values for both long haul and metro routers.
+Route Length and Router Count. For the average route length representing connections from both residential setups as well as campus networks, we assume that the
+value of 6 routers plus aggregation switch on the edge to the access network is representative. In our simulation we evaluate the sensitivity of the energy intensity by
+applying a triangular distribution with a min value of 3, a mode of 6 and a maximum of
+8 routers. Long haul Networks. For connection within the same continent or country, a
+value of 4 is likely to be representative. For transcontinental connections, the count of
+long haul routers is likely to be higher. In our model we apply a triangular distribution
+with a minimum of 4, mode value of 6 and maximum of 8 routers with a mean of 6.
+WDM Terminals and Amplifiers in Edge and Core. We assume all interoffice
+transmission is via WDM systems. We assume a cumulative, nominal energy
+intensity of the optical transmission system to vary between 230, 147 and 316 J/Gb
+(average, 25th, 75th percentile) for metro and 1593, 893 and 2292 J/Gb (average,
+25th, 75th percentile) for core networks, respectively. On top of this nominal
+energy intensity, overcapacity will be allocated for as described below.
+Network Utilization. Results from the bottom-up model are strongly influenced
+by assumptions of the network utilization or overcapacity. This refers to the difference between maximum capacity, which serves as the basis for the calculation
+of the devices’ energy intensity, and the actual use of capacity. We assume that
+long haul networks are utilized to around 33 % on average (utilization factor of 3).
+We assume the same value for fiber optic links. For the sensitivity analysis we
+
+164
+
+D. Schien et al.
+
+apply a triangular distribution with a min of 2 (50 %), mode of 3 (33 %) and max
+of 5 (20 %), which results in a mean of 3.33 (30 %).
+For the metro networks, we assume that utilization values are lower and use a
+triangular distribution with a min of 4 (25 %), mode of 6 (16.67 %) and max of 10
+(10 %), resulting in an average value of 6.67 (15 %).
+PUE and Redundancy. We follow the existing studies that all assume a PUE of
+2.0. We further assume that commercial ISPs operate redundant nodes and apply a
+factor of 2.0.
+Undersea Traffic. We model undersea traffic by intensity per distance and vary the
+intensity parameter uniformly between 0.026 J/Gb*km and 0.123 J/Gb*km with an
+average of 0.0745 J/Gb*km. We vary the distance uniformly between 6,000 and
+12,000 km. The portion of traffic that crosses an undersea cable varies depending on
+the location of the user. For users from the US, on average fewer content and
+services will be delivered via undersea cable than for users in other parts of the
+world. In order to evaluate the influence of this value, we vary it over a uniform
+distribution with min of 10 %, a maximum 50 % and a resulting average of 30 %.
+
+4 Results
+4.1 Absolute Results
+Given the above variable values and model structure, the average energy intensity
+of data traffic through edge, metro and long haul networks including an undersea
+cable link, but excluding access networks, evaluated to Kilowatt-hours per
+Gigabyte (kWh/GB) 0.052 kWh/GB. The contributions by the route segments in
+edge, metro and long haul network are 0.0043 kWh/GB, 0.02 kWh/GB and
+0.028 kWh/GB, respectively.
+Figure 3 shows a whisker plot of the distribution of network energy intensity as
+result of the Monte Carlo simulation. The first and third quartiles are positioned at
+0.039 kWh/GB and 0.064 kWh/GB, respectively.
+
+4.2 Sensitivity Analysis
+In order to understand how strongly the uncertainty of each parameter affected the
+overall result, a sensitivity analysis based on Monte Carlo style resampling was
+applied. Based on the resulting distribution, Spearman ranks for the model
+parameters were calculated. These rank values are correlation scores that represent
+the direction in which the total result changes with a change of a model variable on
+an interval between -1 and 1. A score of 0 means that there is no correlation at all,
+1 means perfect correlation and -1 means perfect anti-correlation.
+
+The Energy Intensity of the Internet: Edge and Core Networks
+
+165
+
+Fig. 3 Whisker plot of the distribution of total energy intensity and its components from the
+Monte Carlo simulation of the results. The red line represents the median values. The top and
+bottom borders of the boxes represent the first and third quartiles, respectively. Outliers are those
+points that are more than 1.5 standard deviations from average and are marked with crosses
+
+Table 1 shows the Spearman ranks of the most relevant model variables
+(rho greater than 0.1). The table contains subcomponents (italics) as well as
+subcomponent variables.
+According to this, long haul networks are more significant than metro networks.
+For both long haul and metro networks, the optic transmission layer (transmission
+system and fiber terminals) is more energy intensive than the routing layer.
+Figure 4 shows the model results in comparison with the three models that are
+the most relevant sources for parameters and model structure. In order to make
+these studies comparable, we set the system boundaries to include a path that each
+study covers: only one leg of the edge, metro and long haul networks. In this way,
+we can calculate network paths. Depending on the number of segments included,
+the model will be more or less representative for regional specificities.
+The results of the current model are displayed in column 2. The study [12] finds
+that long haul transmission networks are far more relevant to the overall energy
+intensity than long haul routers. The studies by [13, 14] on the other hand reach the
+opposite conclusion. The parameterization of the current model is a combination
+of both perspectives. The disagreement indicates the need for more investigation.
+
+5 Discussion
+An energy footprint of a digital service is a share of the energy consumption of the
+network. The energy intensity provides a metric that yields this share when
+multiplied by the data volume per service. The energy intensity metric presented
+
+166
+Table 1 Spearman ranks
+of model components with a
+rank greater than 0.1.
+Italic titles denote entire
+network layers. Normal font
+denotes variables representing device characteristics
+
+D. Schien et al.
+Component
+
+Spearman rank
+
+Long haul
+
+0.77
+
+Long haul optic component
+
+0.73
+
+Long haul transmission
+
+0.67
+
+Metro
+
+0.54
+
+Metro IP component
+
+0.50
+
+Metro router energy intensity
+
+0.44
+
+Long haul IP component
+
+0.27
+
+Long haul overcapacity
+
+0.26
+
+Metro optic component
+
+0.22
+
+Long haul router efficiency
+
+0.21
+
+Metro overcapacity
+
+0.18
+
+Metro transmission
+
+0.16
+
+Number metro routers
+
+0.11
+
+Fig. 4 Relative composition of energy intensity of Internet data traffic in this model (2nd
+column) and relevant previous studies
+
+here can be used to calculate a balanced account of energy consumption: if the
+assumed values for the energy intensity are correct, then the sum of the energy
+footprints of all services equals the total network energy consumption if no double
+counting of data volumes occurs.
+The energy intensity depends on the network layers taken into account. For the
+majority of cases this will include all layers presented in Sect. 2: the metro network twice, the long haul network and optionally a leg of undersea transport. The
+
+The Energy Intensity of the Internet: Edge and Core Networks
+
+167
+
+undersea transport might be excluded for a share of traffic that is known to be
+intra-continental.
+A necessary step in the calculation of the footprint is thus the collection of all
+data traffic that is part of a service in an inventory. Separate inventories of data
+volumes might be appropriate for traffic in separate network segmentations. Care
+must be taken that all data sources are accounted for. Specifically, many online
+services draw data not just from the servers of the service provider but also include
+data from third parties.
+The energy footprint is then calculated from the product of energy intensity and
+the data volume. For a full assessment, the energy intensity of access networks (see
+previous chapter), campus network and in-data center network devices (including
+firewalls and load balancers) must be added to this.
+In our model we estimate the total energy intensity of the typical route through
+the Internet between two endpoints, typically user and server, mainly based on the
+energy intensity per router and optical terminal, by dividing their power consumption by the average data throughput of the device. This step is a form of
+allocation that is supposed to provide an apportioning of a flow with a significant
+environmental impact (here energy consumption) between multiple outputs (here
+all Internet connections world-wide) when necessary. Because energy consumption in network devices is highly inelastic [16, 17], the energy intensity should not
+be used for change-oriented assessments of energy footprints.
+For the estimation of carbon footprints from energy footprints, we suggest using
+per-continent average carbon intensity values for electricity because of the high
+uncertainty around the location of core network devices.
+The update of these results is strongly encouraged. If new expert knowledge
+becomes available, for example for a specific region, the parameter values should
+be adjusted. The modular structure of the model should accommodate this. For
+example, the submarine cable component is completely additive and can be
+excluded if it is known that a service reaches an intra-continental audience
+exclusively.
+
+6 Example Footprint Calculation
+As an illustration of the use of the energy intensity metrics described in this and
+the previous chapter, we compare the network energy consumption from watching
+1 h of video stream in HD quality from the BBC iplayer service to browsing an
+online news service such as The Guardian website for 1 h and reading articles. We
+assume that the user is based in the UK and that content is consumed with an iPad
+connected via WiFi to a DSL Modem with integrated WiFi router, which is in turn
+connected to a DSLAM and then the rest of the Internet. In our example, we
+exclude the energy consumption of the server.
+Given the model of the access network presented in the previous chapter
+[18] and this one, we estimate the energy consumption by time for the access
+
+168
+
+D. Schien et al.
+
+Table 2 Input data and results for video and web browsing scenarios
+Input data
+
+Video
+
+Text
+
+Unit
+
+Time per page
+60
+s
+Pages
+60
+Page size
+2
+MB
+Bit rate
+278
+KB/s
+Data volume
+1
+0.12
+GB
+Time
+3,600
+3,600
+s
+Energy intensity
+0.052
+0.052
+kWh/GB
+Power DSLAM
+2
+2
+W
+PUE
+2
+2
+Power CPE
+8
+8
+W
+Idle overhead
+6
+6
+Power iPad
+2.4
+2.4
+W
+Energy consumption
+Internet
+0.052
+0.00624
+kWh
+DSLAM
+0.004
+0.004
+kWh
+CPE
+0.048
+0.048
+kWh
+iPad
+0.0024
+0.0024
+kWh
+Total
+0.1064
+0.06064
+kWh
+Time is given in seconds s, page size in megabyte MB, data volume in gigabyte GB, video bit rate
+in kilobyte per second KB/s, internet energy intensity in Kilowatt-hours per gigabyte kWh/GB.
+Power consumption values are stated in Watt W. Energy consumption in Joule J and kilowatt-hour
+kWh
+
+network and by data volume for the metro and long haul networks. Given the
+parameters provided for customer premise network equipment and the DSL
+access multiplexer, and allowing for overheads for idle standby of customer
+equipment, we estimate that the effective power consumption per subscriber
+household is about 52 W. Thus, the total energy consumption of a service can
+be described as:
+EðSÞ ¼ tðSÞ  52 W þ GBðSÞ  0:052 kWh=GB
+where t(S) is the time of the service, 52 W the estimate for the average consumption of access networks and CPE, GB(S) the amount of data sent and received
+by the service (measured in GB), and 0.052 kWh/GB the estimate for the average
+energy intensity of long haul and metro networks.
+In order to emphasize the varying intensity of the network parts, we assume that
+the duration of both activities is identical. During that 1 h, the user is assumed to
+continuously visit different articles at an average rate of one article per minute or
+continuously receive the video stream. The news web pages are assumed to have
+an average size of about 2 MB per page. Table 2 contains the input data for our
+calculation. We assume the video stream results in a total data volume of 1 GB
+
+Energy Consumption
+[kWh]
+
+The Energy Intensity of the Internet: Edge and Core Networks
+
+169
+
+0.09
+0.08
+0.07
+0.06
+0.05
+0.04
+0.03
+0.02
+0.01
+0
+
+iPad
+CPE
+DSLAM
+Internet
+
+Internet
+
+DSLAM
+Video
+
+CPE
+Text
+
+iPad
+
+Total
+Video
+
+Total
+Text
+
+Fig. 5 Comparison of total energy consumption and system components when streaming 1 h of
+HD video or browsing a news website for 1 h
+
+being downloaded during the 1 h duration. We further assume that the iPad
+consumes 2.4 W while showing video and browsing the web.
+We assume the power consumption is constant during that time and estimate
+that the total energy consumption is 0.11 kWh for 1 h of video watching and
+0.06 kWh for 1 h of browsing news.
+Figure 5 illustrates the results. While the energy consumption by the access
+network equipment and the user device does not vary, as these are independent of
+the data volume transferred, the estimated energy consumption by the network
+varies substantially. For relatively low data volumes, most energy is consumed by
+the customer premises equipment. As the data volume transferred by the service
+grows, the long haul and metro routers become the dominating factors.
+
+7 Conclusion
+In order to estimate use-phase energy footprints and carbon footprints of digital
+services, estimates of energy intensity of the Internet can be of use. In this text we
+have combined the current empirical evidence and insight into the structure of the
+Internet to estimate the energy intensity of the Internet for environmental
+assessments of digital services. The energy intensity metric we propose is based on
+a model segmented into metro, long haul and undersea traffic and, combined with
+digital service data volume, yields estimates of a service energy footprint.
+
+References
+1. Moberg, Å., Johansson, M., Finnveden, G., Jonsson, A.: Printed and tablet e-paper newspaper
+from an environmental perspective—a screening life cycle assessment. Environ. Impact
+Assess. Rev. 30, 177–191 (2010)
+2. Weber, C.L., Koomey, J.G., Matthews, H.S.: The energy and climate change implications of
+different music delivery methods. J. Ind. Ecol. 14, 754–769 (2010)
+
+

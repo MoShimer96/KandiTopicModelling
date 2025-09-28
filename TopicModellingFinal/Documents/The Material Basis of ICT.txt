@@ -1,0 +1,634 @@
+The Material Basis of ICT
+Patrick A. Wäger, Roland Hischier and Rolf Widmer
+
+Abstract Technologies for storing, transmitting, and processing information have
+made astounding progress in dematerialization. The amount of physical mass
+needed to represent one bit of information has dramatically decreased in the last
+few years, and is still declining. However, information will always need a material
+basis. In this chapter, we address both the upstream (from mining to the product)
+and the downstream (from the product to final disposal) implications of the
+composition of an average Swiss end-of-life (EoL) consumer ICT device from a
+materials perspective. Regarding the upstream implications, we calculate the
+scores of the MIPS material rucksack indicator and the ReCiPe mineral resource
+depletion indicator for selected materials contained in ICT devices, namely
+polymers, the base metals Al, Cu, and Fe, and the geochemically scarce metals Ag,
+Au, and Pd. For primary production of one kg of raw material found in consumer
+ICT devices, the highest material rucksack and resource depletion scores are
+obtained for the three scarce metals Ag, Au, and Pd; almost the entire material
+rucksack for these metals is determined by the mining and refining processes. This
+picture changes when indicator scores are scaled to their relative mass per kg
+average Swiss EoL consumer ICT device: the base metals Fe and in particular Cu
+now score much higher than the scarce metals for both indicators. Regarding the
+downstream implications, we determine the effects of a substitution of primary raw
+materials in ICT devices with secondary raw materials recovered from EoL consumer ICT devices on both indicator scores. According to our results, such a
+substitution leads to benefits which are highest for the base metals, followed by
+scarce metals. The recovery of secondary raw materials from EoL consumer ICT
+P.A. Wäger (&)  R. Hischier  R. Widmer
+Empa, Swiss Federal Laboratories for Materials Science and Technology,
+St. Gallen, Switzerland
+e-mail: patrick.waeger@empa.ch
+R. Hischier
+e-mail: roland.hischier@empa.ch
+R. Widmer
+e-mail: rolf.widmer@empa.ch
+ Springer International Publishing Switzerland 2015
+L.M. Hilty and B. Aebischer (eds.), ICT Innovations for Sustainability,
+Advances in Intelligent Systems and Computing 310,
+DOI 10.1007/978-3-319-09228-7_12
+
+209
+
+210
+
+P.A. Wäger et al.
+
+devices can significantly reduce the need for primary raw materials and subsequently the material rucksacks and related impacts. However, increased recycling
+is not a panacea: the current rapid growth of the materials stock in the technosphere necessitates continuous natural resource depletion, and recycling itself is
+ultimately limited by thermodynamics.
+
+
+
+Keywords ICT
+Material rucksack
+metals Materials recovery
+
+
+
+
+
+Mineral resource depletion
+
+
+
+Scarce
+
+1 Introduction
+Technologies for storing, transmitting, and processing information have a material
+basis. Modern ICT is based on a multitude of hardware devices with specific,
+complex materials compositions. The average materials composition of a consumer
+ICT device at the end of its useful life (reference year 2010) in Switzerland has the
+following characteristics: the majority of the mass of such a device consists of the
+base metals iron (Fe), aluminum (Al), and copper (Cu), polymers (mainly ABS, PC,
+PC/ABS, PE, PS, and SAN1) and glass [1–3] (see Fig. 1). Besides the three base
+metals, consumer ICT devices also contain a large number of scarce metals,2
+including, among others, gold (Au), indium (In), platinum group metals (PGM) such
+as palladium (Pd) and platinum (Pt), rare earth elements (REE) such as dysprosium
+and neodymium, silver (Ag), and tantalum (Ta) (see Fig. 1 for selected scarce
+metals occurring in consumer ICT devices). In the last few decades, an increasing
+number of elements represented in the periodic table has found its way into ICT [5],
+which requires devices for infrastructure (e.g., servers, routers, switches, base stations, and optical fiber cables) in addition to consumer devices (Fig. 2).
+However, the material composition of ICT devices (see Fig. 1 for end-of-life
+consumer (EoL) ICT devices) tells only part of the story about the material basis of
+ICT. Both ‘‘upstream’’ processes (mining, refining, and production of the raw
+materials; production and assembly of the components; and the product itself) and
+‘‘downstream’’ processes (product use, materials recovery, and final disposal)
+associated with an ICT device generate a multitude of material flows which are not
+obvious to its user [3, 6, 7].
+In the following two sections, we will address up- and downstream implications
+of the average materials composition of EoL) consumer ICT devices (reference
+year 2010) in Switzerland, focusing mainly on metals.
+1
+
+ABS: acrylonitrile butadiene styrene; PC: polycarbonate; PC/ABS: polycarbonate/acrylonitrile
+butadiene styrene blend; PE: polyethylene; PS: polystyrene; SAN: styrene acrylonitrile.
+2
+A metal is called geochemically scarce if it occurs at an average concentration below 0.01
+weight percent in the earth’s crust [4]. In this chapter, we use ‘‘scarce’’ as a synonym for
+‘‘geochemically scarce.’’
+
+The Material Basis of ICT
+
+Gold
+0.0002%
+
+211
+
+Silver
+0.0012%
+Copper
+4%
+
+Aluminium
+5%
+
+Palladium
+0.0001%
+Other
+6%
+
+Iron
+36%
+Glass
+19%
+
+Polymers
+30%
+Fig. 1 Relative mass distribution of the materials contained in EoL consumer ICT devices in
+Switzerland (reference year 2010) [1, 3]
+
+Downstream
+
+Upstream
+
+Extraction
+&
+Mining
+
+Refining
+
+• energy
+carriers
+• auxiliary
+materials
+• waste
+
+• energy
+carriers
+• auxiliary
+materials
+• waste
+
+concentration
+
+Component
+& module
+production
+• energy
+carriers
+• auxiliary
+materials
+• waste
+
+dilution
+
+Product
+assembly
+
+• energy
+carriers
+• auxiliary
+materials
+
+Use
+Product
+
+Material
+composition
+
+Recovery
+&
+Disposal
+
+• energy
+• energy
+carriers
+carriers
+• auxiliary
+• auxiliary
+materials
+materials
+• consumables • waste
+
+dilution
+
+concentration
+
+Fig. 2 Processes and material flows (focus: metals) contributing to the material basis of an ICT
+device, including the perspectives applied in this chapter (upstream and downstream) and metal
+concentration and dilution phases along the life cycle
+
+212
+
+P.A. Wäger et al.
+
+2 Upstream Issues
+2.1 ICT Raw Material Rucksacks
+Each of the materials determining the composition of an average ICT device is
+associated with a material ‘‘rucksack’’ that includes all material flows connected to
+their extraction/mining, refining, incorporation into components and modules, and
+assembly of these components and modules to the final product. The calculation of
+the material rucksack requires data on the material and energy flows of all processes involved. Figure 3 shows the material rucksack per kg of selected raw
+materials found in ICT (polymers, the base metals Al, Co, and Fe, and the scarce
+metals Au, Ag, and Pd) as material input per unit of service (MIPS) scores [8].
+In addition to these material rucksacks, Fig. 3 also shows the implications for
+mineral resource depletion. Mineral resource depletion is one of the issues typically addressed in the ongoing discussion on supply risks of mineral raw materials,
+which have become a major issue due to emerging technologies’ increased demand
+for scarce metals [9]. The new concept of criticality, which seeks to capture both
+the raw material supply risks and the vulnerability of systems (e.g., companies,
+sectors, economies, societies) to a potential raw material supply disruption,
+emerged only some years ago [10, 11]. The criticality concept has meanwhile been
+applied in several studies, showing that many scarce metals, among others gallium,
+germanium, indium, PGM, REE, or Ta, are to be considered ‘‘critical.’’ Most of
+these studies address long-term geological availability, some of them including
+mineral deposit3 information. The criticality study commissioned by the European
+Union [12], which is currently being updated, does not address geological availability because of the time horizon of the study (10 years) as well as reservations
+with regard to the use of concepts such as ‘‘reserve’’,4 ‘‘reserve base’’,5
+‘‘resource’’6 and the ‘‘static lifetime’’7 as indicators for geological availability.
+In Fig. 3, the implications for mineral resource depletion per kg of raw materials found in ICT are represented by the ReCiPe8 life cycle assessment minerals
+
+3
+
+A deposit is any accumulation of a mineral or a group of minerals that may be economically
+valuable [12].
+4
+A reserve is the part of the resource which has been fully geologically evaluated and is
+commercially and legally mineable [12].
+5
+The reserve base is the reserve of a resource plus those parts of the resource that have a
+reasonable potential for becoming economically available within planning horizons beyond those
+that assume proven technology and current economics [12].
+6
+A resource is a natural concentration of minerals or a body of rock that is, or may become, of
+potential economic interest as a basis for the extraction of a mineral commodity [12].
+7
+The static lifetime is the ratio between reserve or reserve base and annual mine production [12].
+8
+The authors chose the acronym ‘‘ReCiPe’’ because the method is expected to provide a recipe
+for calculating life cycle impact category indicators and at the same time represent the initials of
+the institutes that were main contributors to this project [13].
+
+The Material Basis of ICT
+
+213
+
+1.0E+07
+1.0E+06
+
+kg/kg
+
+1.0E+05
+1.0E+04
+1.0E+03
+1.0E+02
+1.0E+01
+1.0E+00
+Polym.
+
+Fe
+
+Al
+
+Cu
+
+Ag
+
+Au
+
+Pd
+
+100%
+80%
+60%
+40%
+20%
+0%
+
+Mining & Refining
+
+Production & Assembly
+
+1.0E+05
+
+kg Fe-Eq/kg
+
+1.0E+04
+1.0E+03
+1.0E+02
+1.0E+01
+1.0E+00
+1.0E-01
+Polym.
+
+Fe
+
+Al
+
+Cu
+
+Ag
+
+Au
+
+100%
+80%
+60%
+40%
+20%
+0%
+Mining & Refining
+
+Production & Assembly
+
+Pd
+
+214
+
+P.A. Wäger et al.
+
+b Fig. 3 Material rucksack and mineral resource depletion scores per kg of selected raw materials
+
+found in ICT. Upper two diagrams MIPS scores in kg of total material input per kg of material
+and corresponding shares of mining & refining and production & assembly. Lower two diagrams:
+ReCiPe mineral resource depletion (primary resources) scores in kg Fe equivalents per kg of
+material and corresponding shares of mining & refining and production & assembly. Data source
+ecoinvent v3.01 [17]
+
+resource depletion midpoint indicator (primary resources) [13]. This indicator
+monetizes the energy requirements of resource extraction, with the marginal
+increase of extraction cost per kg of extracted resource as a base for the model.
+Other mineral resource depletion indicators used in life cycle impact assessment
+calculate the ratio between use and deposits/reserves (CML method9), the surplus
+energy required for mining resources with a decreased ore grade at some point in
+the future (Eco-indicator method10), or exergy [16].
+Both the MIPS score and the minerals resource depletion indicator in Fig. 3
+were calculated with ecoinvent v3.01 data, using the allocation-based attributional
+system model [17]. As shown in Fig. 3, the material rucksacks per kg of raw
+materials found in ICT are significantly higher (by a factor of 1,000–10,000) for
+the scarce metals Ag, Au, and Pd than for the polymers and the base metals Al and
+Fe; Cu has a score that is closer to the three scarce metals than the two other base
+metals. Almost the entire material rucksack for the scarce metals is determined by
+the mining and refining processes (i.e., the process of concentrating them into raw
+materials for production), while for all three base metals, the material rucksack is
+partly (5–10 %) and for the polymers mainly (about 70 %) determined by the
+production and assembly processes (i.e., dilution of the raw materials into products). Ag, Au, and Pd also score highest on the ReCiPe mineral resource depletion
+indicator. The difference between Au and Pd, the two materials with the highest
+scores for both indicators, is smaller for ReCiPe than for MIPS. Al has a higher
+MIPS score than Fe, but a lower ReCiPe score. Compared to the material rucksack
+indicator MIPS, the relative contribution of the production and assembly processes
+(i.e., dilution of raw materials into products) as expressed by ReCiPe is considerably larger for polymers and Al and smaller for Fe.
+Figure 4 shows the scores for the same materials, however with indicators
+scaled to their relative mass per kg average EoL consumer ICT device. This
+provides a completely different picture than Fig. 3 since the mass fractions of the
+materials in the device are orders of magnitude apart from each other. The
+
+9
+
+The CML method is a problem-oriented impact assessment method developed at the Center of
+Environmental Science (CML) of Leiden University (NL) and described in their ‘‘operational
+guide to the ISO standards.’’ [14].
+10
+The Eco-Indicator ’99 method is an endpoint method that aggregates all impacts into three
+different damage categories (damage to human health, to ecosystem quality, and to the available
+resources). The method was developed in the Netherlands and is among the most often used life
+cycle impact assessment methods in Europe [15].
+
+The Material Basis of ICT
+
+215
+
+material rucksack scores are now by far the highest for Cu, followed by Fe,
+polymers, and Au, while for the ReCiPe mineral resource depletion indicator,
+the scores are highest for the base metals Cu and Fe, followed by the polymers
+and Au.
+
+3 Downstream Issues
+3.1 Effects of Materials Recovery on Material Rucksacks
+and Resource Depletion
+In this chapter, we do not consider energy carriers, auxiliary materials, and consumables required in the use phase, as our focus is on the implications of the
+material composition of a consumer ICT device. We therefore skip the use phase
+in our downstream perspective and address the effects of materials recovery from
+EoL consumer ICT devices. In particular, we elaborate on the effects of a substitution of primary raw materials with secondary raw materials recovered from
+EoL consumer ICT devices on MIPS and ReCiPe mineral resource depletion
+indicator scores, assuming that the recovered materials are used solely for the
+production of new ICT devices. Two recovery rates are considered: rates currently
+achieved in Switzerland and technically achievable rates. Concerning the recovery
+of plastics, it has to be considered that their recycling potential is limited by
+brominated flame retardants and other problematic additives [18]; when recycling
+metals, significant quality and dilution losses might occur [19, 20]. The effects of
+recycling are calculated as the difference between the scores resulting from
+recycling activities and the (avoided) scores from primary production of the
+material replaced by recycling. In the case of substitution of primary copper by
+copper recovered from EoL consumer ICT devices, the scores obtained for the
+process ‘‘Copper market for primary production only’’ are subtracted from the
+scores calculated for the process ‘‘Metal part of electronics scrap, in blister copper
+| treatment of, by electrolytic refining.’’
+As shown in Fig. 5, the recovery of selected raw materials results in a
+reduction of the material rucksack and resource depletion indicator scores shown
+in Fig. 4. The environmental benefits are greatest for the base metals, with estimated current recovery rates of 90 % for Fe and 85 % for Al and Cu, followed by
+scarce metals, with 80 % for Ag, Au, and Pd, and finally polymers with 40 %
+[21]. Assuming technically achievable recovery rates of 70 % for plastics, 88 %
+for Ag, Au, and Pd as well as 95 % for Fe, Al, and Cu [21], the improvement
+potentials are highest for polymers with regard to the material rucksack indicator,
+followed by Cu for both indicators, and Al, again with regard to the materials
+rucksack indicator.
+
+216
+
+P.A. Wäger et al.
+
+kg/kg ICT Device
+
+40
+32
+24
+16
+8
+0
+Polym.
+
+Fe
+
+Al
+
+Cu
+
+Ag
+
+Au
+
+Pd
+
+Cu
+
+Ag
+
+Au
+
+Pd
+
+kg Fe -Eq/kgICT Device
+
+3.2
+2.4
+1.6
+0.8
+0
+Polym.
+
+Fe
+
+Al
+
+Fig. 4 Material rucksack and mineral resource depletion scores for selected raw materials,
+scaled to their relative mass in 1 kg average Swiss EoL consumer ICT device. Top MIPS scores
+in kg total material input per kg ICT device. Bottom ReCiPe mineral resource depletion (primary
+resources) scores in kg Fe equivalents per kg ICT device. Data source ecoinvent v3.01 [17]
+
+3.2 Scarce Metals Recovery
+Despite the concentrations of scarce metals in EoL devices typically being much
+lower than those of the base metals Al, Cu, and Fe, post-disassembly concentrations can be considered high compared to minimum profitable ore grades [5]. Yet
+recovery rates of several scarce metals, such as gallium, germanium, indium, REE,
+and Ta from EoL products have been shown to lie below 1 %, while the recovery
+rates for ‘‘precious’’ scarce metals such as Ag, Au, Pd or Pt exceed 50 % [22].
+Scarce metal recovery rates are a function of the efficiencies of the processes
+determining the recycling chain, i.e., collection, pre-processing, and end-processing
+[23].
+
+The Material Basis of ICT
+
+217
+
+0%
+-20%
+-40%
+-60%
+-80%
+-100%
+Polym.
+
+Fe
+
+Al
+
+Cu
+
+Ag
+
+Au
+
+Pd
+
+additional effects from potential recovery
+effects of current recovery
+0%
+-20%
+-40%
+-60%
+-80%
+-100%
+Polym.
+
+Fe
+
+Al
+
+Cu
+
+Ag
+
+Au
+
+Pd
+
+additional effects from potential recovery
+effects of current recovery
+
+Fig. 5 Effects of the substitution of primary raw materials in ICT devices with secondary raw
+materials recovered from EoL consumer ICT devices on material rucksack and mineral resource
+depletion scores with current and potential (technically achievable) recovery rates. Top Reduction
+of MIPS scores relative to primary production. Bottom Reduction of ReCiPe mineral resource
+depletion indicator scores relative to primary production. 100 % corresponds to the scores
+reported in Fig. 4
+
+Collection efficiency for waste electrical and electronic equipment (WEEE)
+depends on how well the collection systems in place are adapted to the habits of the
+owners of the EoL product to be collected and how well they are informed about the
+collection systems. The efficiency of pre-processing depends on the specific
+implementation and combination of the different steps involved, namely sorting,
+dismantling, and physical and chemical separation. In order to optimize their costs,
+recyclers in countries such as Switzerland increasingly pre-process WEEE with
+automatized, mechanical processes, manual dismantling being limited to separating
+hazardous materials and disturbing materials before mechanical processing.
+However, this may lead to mixing materials in a way that negatively affects the
+recovery rates of certain materials. For example, scarce metals may end up in fine
+
+218
+
+P.A. Wäger et al.
+
+plastic fractions sent to energy recovery processes, resulting in dissipation11 of the
+metals [24, 25]. Several projects are currently investigating options to better exploit
+the potential of manual dismantling of WEEE in view of higher scarce metals
+recovery rates, including concepts aiming at integrating ‘‘best’’ pre-processing in
+developing countries and ‘‘best’’ end-processing in international state-of-the-art
+end-processing facilities (‘‘best-of-two-worlds approach’’) [26–30]. Other projects
+aim at optimizing the allocation of output fractions from pre-processing to endprocessing [31]. It should be kept in mind for all of them that end-processing is
+ultimately limited by thermodynamics, which is why certain metal combinations
+cannot be successfully recycled [20, 32]. Accordingly, not only the actors determining the design of the collection, pre-processing, and end-processing systems
+will have to take their responsibilities seriously to increase scarce metals recovery,
+but also product designers.
+
+4 Conclusion and Outlook
+ICT is driving the rapid expansion of the material substrate contained in countless
+devices in use, in terms of both absolute volumes and number of elements,
+specifically scarce metals. This requires an accelerating intake of primary raw
+materials, mainly minerals from the lithosphere, which is coupled with rapidly
+growing material rucksacks. The recovery of secondary raw materials from EoL
+devices can significantly reduce the need for primary raw materials and subsequently the material rucksacks and mineral resource depletion. However, increased
+recycling is not a panacea:
+• The materials stock in the technosphere is growing rapidly, which entails
+continuing natural resource depletion. For substitution of primary resources by
+secondary raw materials to become relevant, steady state conditions have to be
+reached.
+• The recovery rates of the majority of the elements, in particular scarce metals,
+are very low. Some may be increased considerably, but many cannot, due to
+thermodynamic limits in the established metallurgic processes of metal refining. Hence, considerable leakage from the envisioned ‘‘closed-loop economy’’
+and dissipation to the environment seem unavoidable.
+• In a closed loop economy, faster materials turnover due to e.g. shorter residence times of ICT devices leads to increased material losses into inaccessible
+stocks. Primary raw materials are required to compensate for these losses.
+
+11
+
+‘‘Dissipation’’—in this context—refers to the dilution of a material in the technosphere or
+ecosphere in such a way that its recovery is made practically impossible. The ‘‘technosphere’’
+includes all objects and associated material flows that have been created by humankind and are
+under its control [9].
+
+The Material Basis of ICT
+
+219
+
+• The material rucksacks for raw materials production tend to increase with
+decreasing ore grades, which most of the remaining deposits and mineral mines
+are facing.
+• Not only are the primary ore grades decreasing, but the secondary deposits
+are also becoming less accessible as a result of continued miniaturization,
+augmenting substrate complexity, and a forceful trend towards ‘‘pervasive
+computing’’ [33].
+• Some of the materials are being phased out from ICT, in particular some toxic
+heavy metals such as Hg, Pb, and Cd. For example, under the recent UN
+Minamata Convention on Mercury [34], Hg must no longer be recycled in the
+technosphere. Therefore, disposal facilities that provide long-term safety are
+needed, which may require new financing mechanisms.
+In view of these perspectives, we draw the following conclusions:
+• In the short term, recycling rates should be systematically maximized for the
+specific elements contained in ICT devices, not just for their total mass. The
+material turnover in a leaking loop economy needs to be slowed down, i.e.,
+active residence time has to be maximized.
+• In the medium term, raw materials production, ICT devices as well as recycling
+processes have to be designed to achieve minimal material dissipation and
+minimal material rucksacks.
+• In the long term, the material substrates of ICT (as well as all other technologies) need to be changed toward the use of more abundant elements and
+bio-compatible substances.
+
+References
+1. SWICO Recycling: Activity Report. In. Zürich, Switzerland (2011)
+2. Haig, S., Morrish, L., Morton, R., Wilkinson, S.: Electrical product material composition.
+Waste and Resources Action Programme, Branbury, Oxon (2012)
+3. Müller, E., Widmer, R., Coroama, V., Orthlieb, P.: Material and energy flows and
+environmental impacts of the Internet in Switzerland. J. Ind. Ecol. 17(6), 814–826 (2013)
+4. Skinner, B.: Earth resources. Proc. Natl. Acad. Sci. USA. 76(9), 4212–4217 (1979)
+5. Johnson, J.: Dining at the periodic table: metals concentrations as they relate to recycling.
+Environ. Sci. Technol. 41(5), 1759–1765 (2007)
+6. Stamp, A., Wäger, P.A., Hellweg, S.: Linking energy scenarios with metal demand
+modeling—the case of indium in CIGS solar cells. Submitted to Resources, Conservation &
+Recycling (2014)
+7. Hischier, R., Coroama V.C, D., S., Ahmadi Achachlouei, M.: Grey energy and environmental
+impacts of ICT hardware. In: Hilty, L.M., Aebischer, B. (eds.) ICT Innovations for
+Sustainability. Springer, Germany (2014) (working Title)
+8. Saurat, M., Ritthoff, C.: Calculating MIPS 2.0. Resources 2, 581–607 (2013)
+9. Wäger, P.A., Lang, D.J., Wittmer, D., Bleischwitz, R., Hagelüken, C.: Towards a more
+sustainable use of scarce metals. a review of intervention options along the metals life cycle.
+GAIA 21(4), 300–309 (2012)
+
+

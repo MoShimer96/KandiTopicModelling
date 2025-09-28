@@ -1,0 +1,41 @@
+* Aebischer, B. et al. (2015) ICT Innovations for Sustainability. [Online]. Cham: Springer International Publishing.
+    ICT for Sustainability: An Emerging Research Field
+    The Energy Efficiency Benefits and the Economic Imperative of ICT-Enabled Systems
+    Actors for Innovation in Green IT
+    The Energy Demand of ICT: A Historical Perspective and Current Methodological Challenges
+    Semiconductor Technology and the Energy Efficiency of ICT
+    The Energy Demand of Data Centers
+    Consolidation, Colocation, Virtualization, and Cloud Computing: The Impact of the Changing Structure of Data Centerson Total Electricity Demand
+    The Energy Intensity of the Internet: Home and Access Networks
+    The Energy Intensity of the Internet: Edge and Core Networks
+    Grey Energy and Environmental Impacts of ICT Hardware
+    Sustainable Software Engineering: Process and Quality Models, Life Cycle, and Social Aspects
+    The Material Basis of ICT
+    Addressing the Obsolescence of End-User Devices: Approaches from the Field of Sustainable HCI
+    Recycling of ICT Equipment in Industrialized and Developing Countries
+    Software Support for Sustainable Supply Chain Configuration and Management
+    Dematerialization Through Electronic Media?
+    Social Practices, Households, and Design in the Smart Grid
+    Gamification and Sustainable Consumption: Overcoming the Limitations of Persuasive Technologies
+    The Interdependency of Energy, Information, and Growth
+    Rebound Effects and ICT: A Review of the Literature
+    Modeling the Effects of ICT on Environmental Sustainability: Revisiting a System Dynamics Model Developed for the European Commission
+* Ruth, S. (2009). Green IT More Than a Three Percent Solution? IEEE Internet Computing, 13(4), pp.74–78. doi:https://doi.org/10.1109/mic.2009.82. 25.7
+* Patel, Y.S., Mehrotra, N. and Soner, S. (2015). Green cloud computing: A review on Green IT areas for cloud computing environment. [online] IEEE Xplore. doi:https://doi.org/10.1109/ABLAZE.2015.7155006.
+* Chapa, B. P. & Rao, G. S. (2020) Green Mobile Communications in India: Emerging Technologies and Challenges. IUP journal of telecommunications. 12 (1), 7–16.
+* Strinati, E., De Domenico, A. and Herault, L. (n.d.). Green Communications: An Emerging Challenge for Mobile Broadband Communication Networks. [online] Available at: https://www.riverpublishers.com/journal/journal_articles/RP_Journal_1904-4720_134.pdf [Accessed 22 Jul. 2025].
+* Hasan, Z., Boostanimehr, H. and Bhargava, V.K. (2011). Green Cellular Networks: A Survey, Some Research Issues and Challenges. IEEE Communications Surveys & Tutorials, 13(4), pp.524–540. doi:https://doi.org/10.1109/surv.2011.092311.00031.
+* Debbarma, T. & Chandrasekaran, K. (2016) ‘Green measurement metrics towards a sustainable software: A systematic literature review’, in ICRAIE : 2016 International Conference on Recent Advances and Innovations in Engineering : 23-25 December 2016. [Online]. 2016 IEEE. pp. 1–7.
+* Bozelli, P. & Gu, Q. & Lago, P. A systemic literature review on green software metrics
+* Johann, T. et al How to Measure Energy-Efficiency of Software: Metrics and Measurement Results
+* Tomlinson, B. (2010) ‘Introduction to Green IT’, in Greening Through IT. [Online]. United States: The MIT Press. p.
+    Introduction to Green IT
+* Sharma, P. et al. (2017) Design and Operational Analysis of a Green Data Center. IEEE internet computing. [Online] 1–1.
+------------------------------------------------
+* Charfeddine, L. & Umlai, M. (2023) ICT sector, digitization and environmental sustainability: A systematic review of the literature from 2000 to 2022. Renewable & sustainable energy reviews. [Online] 184.
+* Biswas, D. et al. (2024) A succinct state-of-the-art survey on green cloud computing: Challenges, strategies, and future directions. Sustainable computing informatics and systems. [Online] 44.
+* Almalki, Faris. A. et al. (2023) Green IoT for Eco-Friendly and Sustainable Smart Cities: Future Directions and Opportunities. Mobile networks and applications. [Online] 28 (1), 178–202.
+* Sakshi et al. (2021) – “A comprehensive survey on Green ICT with 5G-NB-IoT: Towards sustainable planet”
+* Singh, R. et al. (2025) Enabling Green Cellular Networks: A Review and Proposal Leveraging Software-Defined Networking, Network Function Virtualization, and Cloud-Radio Access Network. Future internet. [Online] 17 (4), 161.
+* Adebayo, T. S. et al. (2025) Exploring the role of ICT adoption technologies and renewable energy consumption in achieving a sustainable environment in the United States: an SDGs-based policy framework. Environmental sciences Europe. [Online] 37 (1), .
+

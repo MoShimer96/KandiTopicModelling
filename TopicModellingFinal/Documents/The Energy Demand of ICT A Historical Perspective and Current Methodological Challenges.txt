@@ -1,0 +1,1268 @@
+The Energy Demand of ICT: A Historical
+Perspective and Current Methodological
+Challenges
+Bernard Aebischer and Lorenz M. Hilty
+
+Abstract This chapter provides an overview of energy demand issues in the field
+of ICT with a focus on the history of measuring, modelling and regulating ICT
+electricity consumption and the resulting methodological challenges. While the
+energy efficiency of ICT hardware has been dramatically improving and will
+continue to improve for some decades, the overall energy used for ICT is still
+increasing. The growing demand for ICT devices and services outpaces the efficiency gains of individual devices. Worldwide per capita ICT electricity consumption exceeded 100 kWh/year in 2007 (a value which roughly doubles if
+entertainment equipment is included) and is further increasing. Methodological
+challenges include issues of data collection and modelling ICT devices and services, assessing the entire life cycle of ICT devices and infrastructures, accounting
+for embedded ICT, and assessing the effect of software on ICT energy
+consumption.
+
+
+
+
+
+
+
+
+Keywords ICT energy consumption ICT life cycle Energy policy Regulation
+Standby power Energy conversion Green ICT Green software
+
+
+
+
+
+
+
+B. Aebischer (&)
+Zurich, Switzerland
+e-mail: baebischer@retired.ethz.ch
+L.M. Hilty
+Department of Informatics, University of Zurich, Zurich, Switzerland
+e-mail: hilty@ifi.uzh.ch
+Empa, Swiss Federal Laboratories for Materials Science and Technology, St. Gallen,
+Switzerland
+Centre for Sustainable Communications CESC, KTH Royal Institute of Technology,
+Stockholm, Sweden
+ Springer International Publishing Switzerland 2015
+L.M. Hilty and B. Aebischer (eds.), ICT Innovations for Sustainability,
+Advances in Intelligent Systems and Computing 310,
+DOI 10.1007/978-3-319-09228-7_4
+
+71
+
+72
+
+B. Aebischer and L.M. Hilty
+
+1 Introduction
+Since the first electronic computer was built in 1946, the energy needed for a
+computer operation has been halved about every 19 months through technological
+progress [1]. Yet today the energy consumption of digital ICT is an issue because the
+demand for ICT performance has increased even faster than its energy efficiency.
+As an introduction to Part II of this book, The Energy Cost of Information
+Processing, this chapter describes the history of systematic research and political
+regulation of ICT’s energy demand (Sect. 2). It draws on research at ETH Zurich,
+where the power demand of ICT devices has been researched since the 1980s,
+since 1994 in the framework of the Competence Centre for ICT and Energy (lead
+by the first author), which has been part of the newly founded Centre for Energy
+Policy and Economics (CEPE) since 1999. This perspective is supplemented by
+the experience of the second author, who launched the program Sustainability in
+the Information Society at Empa in 2001, which researches ecological and social
+issues surrounding ICT. Since 2004 these activities have continued at Empa’s
+Technology and Society Lab.
+Over the decades, methodological challenges have emerged in determining
+the energy consumption of ICT services, including problems of definition and
+modelling as well as assessing the effect of software on the hardware’s energy
+consumption. We will describe and discuss these challenges in Sect. 3.
+The issues discussed in this chapter are taken up in other chapters of this book,
+which discuss solutions based on the current state of research.
+
+2 The History of ICT Energy Demand and Its
+Measurement
+2.1 Energy as a Key Topic Since the Early Beginnings
+of Computing
+Figure 1 shows how the number of computations a typical processor can perform
+per unit of energy has changed since the first electronic computer, ENIAC, in
+1946. Roughly, this number has doubled every 1.57 years [1]. The unequaled1
+
+1
+
+For most technologies, the reduction in the energy needed per unit of delivered service) is on
+the order of a few percent per year. For lighting, the reduction rate since the candle and the gas
+light of 200 years ago until today’s LED has been about 3.2 % per year; the reduction rates of
+household appliances in Switzerland between 1970 and 2000 were between 2.7 % per year for
+electric ovens and 5.9 % per year for freezers. For ICT, the mean improvement rate (CAGR)
+between 1950 and 2010 of the specific energy consumption (measured in kWh/computation) was
+much higher: between 36 and 39 % per year [2], corresponding roughly to a reduction by a factor
+of 100 in 10 years.
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+73
+
+Fig. 1 Computing energy efficiency (in computations per kWh) from 1945 to 2010 (Source [1],
+reprinted with permission of IEEE Computer Society)
+
+improvement in computing energy efficiency (if defined as computations per
+kilowatt-hour) has been the precondition for the extraordinary importance of ICT
+in today’s society. Indeed, had the improvement rate been only half as large, but
+the diffusion of ICT unchanged, just Switzerland’s (current) stock of installed
+computers would need more electricity than produced globally today.
+It is not clear how long this trend of the past 60 years can be maintained before
+physical limits are reached. Assuming a constant improvement rate, the three-atom
+
+74
+
+B. Aebischer and L.M. Hilty
+
+transistor, also known as ‘‘Feynman’s limit,’’ will be reached in 2041. However,
+there are reasons to assume that even smaller transistors can be built in the future
+[4]. Today’s problem is not the physical limit, but the engineering feasibility
+discussed in [5]. A slowdown of the improvement rate of the computing energy
+efficiency would dramatically alter the projections of future computing capacity—
+or of ICT’s future energy demand. In the so-called trend-scenario, EPA’s projections [6] for data centers show an expected increase in electricity demand from
+60 TWh/y in 2005 to 250 TWh/y in 2017. Absent continued technology
+improvement, the assumed increase in computing capacity would lead to almost
+five times as much electricity demand, i.e. 1,200 TWh/y [7].
+Some insight into the physical and engineering innovations and improvements
+that lead to the fantastic progress in the past is offered in Kaeslin’s chapter
+‘‘Semiconductor Technology and the Energy Efficiency of ICT’’ in this volume
+[5]. There he also discusses possible ways to improve computing energy efficiency
+in the future.
+One such means is miniaturization (called downscaling in microchip production). The observation that over the history of computing hardware, the number of
+transistors on integrated circuits doubles approximately every 2 years is known as
+‘‘Moore’s Law.’’
+The overall impact of ICT on society was recognized early on by philosophers,
+historians, futurologists, economists and energy analysts. The impact on overall
+energy demand has usually not occupied a central place in these debates. The few
+projections of ICT’s effects on total national energy demand published starting in
+the 1980s covered a spectrum between accelerated increase and substantial
+reduction.
+• In 1983, Tokio Ohta warned that industrial robots and general-purpose computers could together account for 34 % of the total electricity demand in Japan
+[8]. Five years later, Uekusa predicted percentages of 8 % in 1990 and 11 % in
+2000 (Fig. 34 in [9]). Besides direct electricity demand, Uekusa mentioned
+possible ripple effects and concluded: ‘‘Advancing ‘informationization’ … also
+has broad and crucial impacts on economic activities, corporate management,
+working modes, life-style, social systems, and energy … From an overall
+viewpoint, energy demand is thought to demonstrate strong vector toward
+increases’’ [9], p. 54 and p. 60f.
+• In 1985 and 1986, William Walker discussed in two papers [10, 11] the possible consequences of ICT on the energy system. He emphasized the potential
+of ICT to increase energy efficiency:
+Information technology can affect energy consumption both directly and indirectly…
+Information technology will therefore be directly applied on an increasing scale to the task
+of reducing energy costs in the economy. But its capacities to raise simultaneously the
+productivity of all inputs to production will tend to increase energy efficiencies across the
+board; and the structural changes it initiates may have significant but largely unintended
+consequences for patterns and efficiencies of energy use [10, p. 465].
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+75
+
+Fig. 2 ICT-driven electricity use in the residential, commercial, and industrial sectors,
+2001–2021. Electricity savings (e.g., from EMSs) are shown as negative values. The ‘‘net’’
+lines show the sum of the negative and positive components. (Source [15, Fig. 4.9, p. 73],
+reprinted with permission of RAND Corporation)
+
+He concluded: ‘‘… the rate of growth of energy demand seems likely to remain
+below that of economic output, although how far below is again difficult to
+assess. Indeed, the possibility cannot be entirely ruled out that energy demand
+will fall with economic growth in advanced countries’’ [10, p. 475].
+• In a bottom-up simulation of energy demand in Switzerland from 1985 to 2025,
+a scenario ‘‘communication technology’’ resulted in an energy demand in 2025
+no higher than in 1985, whereas in the ‘‘business as usual’’ case, energy
+demand in 2025 was about 30 % higher than in 1985 [12]. This scenario
+calculation was based on a comprehensive description of a world in which ICT
+is purposefully used to save energy and natural resources [13] and on a technoeconomic analysis of energy demand in the information society [14].
+• Baer et al. [15] investigated in four scenarios the links between future ICT
+growth and electricity demand in the US. They estimated through 2020 the
+electricity demand of ICT equipment as well as electricity savings by ICT.
+They concluded that even large growth in the deployment and use of digital
+technologies will only modestly increase electricity consumption (Fig. 2).
+• Laitner [16] published a moderately optimistic view regarding the impact of ICT
+on US energy consumption in 2003: ‘‘Although we may not yet be able to
+generalize about the future long-term energy needs associated with the information economy, the evidence points to continuing technical changes and the
+
+76
+
+B. Aebischer and L.M. Hilty
+
+growing substitution of knowledge for material resources. These interrelated
+trends will likely generate small decreases in energy intensity and reduce subsequent environmental impacts relative to many baseline projections.’’ In a paper
+published in 2009 Laitner and colleagues evaluated a ‘‘semiconductor-enabled
+efficiency scenario’’ resulting in 2030 in 27 % less electricity consumed than in
+the reference case, and 11 % less than in the starting year 2007, even though the
+economy is assumed to grow by 70 % from 2009 to 2030. [17]. The current
+update of this estimate can be found in the chapter by Laitner [18] in this volume.
+• Energy saving potentials by ICT have also been presented in more recent
+studies by the Global eSustainability Initiative (GeSI) [19, 20], and the
+American Council for an Energy Efficient Economy (ACEEE) [21]. The possible net energy savings2 by ICT are typically estimated at 10–20 % of the
+world’s energy consumption.
+• ‘‘Spreng’s Triangle’’ [22, 23] explained the spectrum of potential impacts of
+ICT on total energy demand using the idea that information can be substituted
+for time or for energy. For an update of Spreng’s approach, see his Chapter [24]
+in this volume.
+The effect of ICT on energy demand in other fields, also called an indirect or
+enabling effect of ICT, is certainly one of the most important impacts of ICT in the
+context of sustainability. It is further discussed in the following chapters of this
+volume:
+• Höjer and Wangel [25] discuss the role of ICT in future cities, where it is
+interlinked with issues of transportation, mobility, and energy use in many
+ways.
+• Sonnenschein et al. [26] provide insights into the enabling role of ICT for
+integrating renewable energy sources into the power grid.
+• Katzeff and Wangel [27] discuss design issues related to the role of households
+as energy managers in a smart grid context.
+• Huber and Hilty [28] discuss the role of ICT in motivating users to change
+behaviors in support of sustainable consumption.
+• Maranghino et al. [29] introduce an information system supporting organization-internal cap-and-trade schemes for CO2 emissions permits and other
+scarce resources.
+• Gossart [30] provides a review of the literature on rebound effects counteracting ICT-induced progress in energy efficiency.
+Although it has been argued that energy consumed by ICT and energy saved by
+ICT should be studied together (but for specific types of ICT, see [31]) in order to
+treat costs and benefit the same way, we will continue our analysis by focusing
+again on the cost side and the perception of it in research and policy.
+2
+Net energy savings are usually defined as the savings enabled by ICT (compared to a baseline)
+minus the energy used by ICT. There is no general rule for defining the baseline, which makes
+‘‘net energy savings’’ a somewhat arbitrary concept. See also [32].
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+77
+
+2.2 ICT Energy Demand as an Emerging Issue
+After the two oil price shocks in 1973 and 1979, building codes were strengthened
+in many countries, and monitoring and auditing of energy consumption in buildings became a widely used practice. It was observed that despite important efficiency improvements in the traditional energy usages (HVAC, lighting), electricity
+consumption in many new commercial buildings was growing, which could be at
+least partly explained by the increased use of computers.
+Utilities observed a fast growth of electricity demand in the commercial sector,
+and ICT was identified as one of the possible drivers for this growth:
+The rapid rise in service sector employment has driven up computer use, because the
+commercial sector is more computer-intensive than the manufacturing sector. Further, the
+fastest service sector growth has occurred in business-related services. For example, from
+1977 to 1982, business-related services claimed the top six spots in the large and fast
+growing subsectors (over $10 billion in 1982 sales; more than 100 % growth). This is
+important because it is exactly these business-related services that are most likely to use
+computers. Historically, most growth in commercial sector electricity sales has come from
+new uses. Many of today’s important uses began as small new loads, and computers may
+be the latest example [33].
+
+Bottom-up Studies: Commercial Sector. At the annual conference of the
+American Council for an Energy Efficient Economy (ACEEE) in 1988, Norford
+et al. presented an estimation of electricity demand in the US by office equipment
+[34]. An improved and extended version of the paper was included in the proceedings of the ‘‘Electricity Conference’’ in Stockholm [35]. The authors analyzed
+the technical specifications and the use of office equipment, gathered statistical
+data on equipment installed and looked for potential energy savings. The main
+results of this study were the following:
+• One important observation was the fact that the true electric load of a device
+was typically only 20–40 % of the nameplate rating. The latter is an indication
+of the load supported by the power supply. This fact—a 2–3 times overdimensioning of the power supply—was later recognized as a main reason for
+the high energy losses in the power conversion of most ICT equipment (both
+for office and entertainment use).
+• A surprise was the finding that office equipment other than computers (such as
+printers and copiers) consumed as much electricity as the PCs. It was also
+recognized that electricity consumption of equipment in standby mode was
+important and could be reduced by better software. Improvements in software
+were promulgated as one important way to reduce the energy demand of ICT
+equipment.
+• In an outlook to 1995 (7 years ahead), they presented a steady increase of
+electricity consumption by office equipment in the commercial sector between
+15 and 25 % per year [35]. This evaluation was further developed and presented a few years later in a 1991 report of the Lawrence Berkeley National
+Laboratory (LBNL) by Piette et al. [36].
+
+78
+
+B. Aebischer and L.M. Hilty
+
+Fig. 3 Energy-use intensity (in kWh/ft2 9 year) of office equipment in US office buildings
+1983–2010. (Source [35, Fig. 7, p. 44], reprinted with permission of Lawrence Berkley National
+Laboratory)
+
+• The researchers did not overlook the enabling effects of ICT on energy savings
+but did not quantify this potential.
+In 1991, Piette et al. expected electricity use intensity (EUI) of ICT in office
+buildings (defined in [36] as electricity consumption by ICT per unit of floor area)3
+to grow mainly due to the diffusion of PCs and other office equipment (copiers,
+printers) (Fig. 3). On the other hand, the EUI of central computers (mainframe and
+mini computers) was forecasted to stay more or less stable until 2010 and its share in
+EUI of total ICT would decline from almost 100 % to around 1/3 in less than
+20 years. The EUI of all other ICT equipment was expected to grow from 1990 to
+2010 by 200 % or 5.6 %/year. This implies that the total electricity demand of ICT
+in all office buildings (sectoral electricity demand) would grow even faster because
+the building stock would increase as well.
+Piette et al. expected ICT electricity demand to grow in all commercial
+buildings (not only office buildings, but also hospitals, schools, and shopping
+centers), but at a slower pace than in office buildings. For the total commercial
+sector in the ’’Pacific Gas and Electric’’ Service Territory (US), they estimated the
+growth of ICT electricity demand from 1989 to 2011 at between 125 and 235 %
+(or 3.7–5.6 % per year) [36].
+3
+
+This metric is defined on the level of final energy and does not include energy carriers other
+than electricity.
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+79
+
+These first projections by Norford et al. and Piette et al. have to be regarded as
+parts of Business-As-Usual (BAU) scenarios, which assume that no technological
+breakthroughs or policy interventions would happen. However, both became
+reality shortly after these studies were published: Laptop computers and flat
+screens (mainly based on LCD technology) and the Energy Star Program and other
+policy interventions substantially reduced the energy demand of PCs and other
+office equipment. On the other hand, the triumphant adoption of the Internet
+drastically increased the demand for networking infrastructure, and the rapid
+diffusion of small servers changed the structure of central computing.
+Bottom-up Studies: Household Sector. In the 1980s, energy analysts looked
+closely at the electricity consumption of household appliances. Entertainment
+electronics, telephone and office equipment were at that time included in a nonspecific group of appliances termed ‘‘miscellaneous.’’ Electricity consumption by
+this group was observed to grow and expected to increase further.
+Meier et al. [37] estimated in 1992 that televisions used about 3 % of total
+electricity consumption of households in the US. At that time computers were used
+in only 10–20 % of homes and their consumption was on the order of 0.2 % of
+total electricity use. In 1995 this fraction of computers was estimated at 0.3 %
+(3.3 TWh/y) and expected to reach 0.4 % (6.0 TWh/y) in 2010 [38]. This relatively modest electricity demand by computers was corrected on the basis of a
+2005 survey of usage intensity of residential computers in the US by Roth et al.
+[39]: Electricity consumption by laptop and desktop computers in 2005 was now
+estimated at 22.5 TWh/y or 1.7 % of total residential electricity in the US.
+Standby Losses and Inefficiencies in Power Conversion. These early studies
+were complemented, extended and enhanced by investigations in other places and
+other countries. In Europe, the ‘‘Electricity’’ Conference in Stockholm [35] acted
+as a catalyst for these kinds of studies. Politicians and civil society became
+interested in the field, which made funding available and boosted research. Most of
+the studies in the period from 1990 to 2005 were commissioned by government
+agencies and utilities. The results were usually published as research reports, i.e. as
+‘‘grey literature.’’ Nevertheless, they were distributed widely and had a high
+impact worldwide. Many of these papers and reports can be found in the electronic
+literature database ‘‘IT and Energy Library’’ [40]. An overview of the activities in
+Europe and in the US was given by Aebischer and Roturier [41] and in less detail
+in [42]. Research activities in Switzerland are described in [43].
+Understanding how and for what purpose energy is used in devices increased
+fast thanks to technical studies, surveys and measurement campaigns. The central
+message was simple (and has roughly remained true until today): A very large
+fraction of electricity is consumed while the equipment is idling and no service is
+delivered. ‘‘Reduction of Standby Losses’’ became in the 1990s the leitmotif for
+policy activities in the field of ICT (see Sect. 2.3 below). The ICT industry (both
+hardware and software producers) participated voluntarily in these activities. They
+had already tackled the problem for the market for mobile computers. The open
+
+80
+
+B. Aebischer and L.M. Hilty
+
+questions were ‘‘how low’’ and ‘‘how fast.’’ The radical request of ‘‘1 Watt’’
+standby power by Molinder in 1993 [44] is almost reality today, 20 years later. As
+an interim solution, accessory kits were proposed to power down computers,
+copiers, printers and fax machines.
+A related question was the performance of the power supplies transforming the
+electric power down from 110 V or 230 V AC to typically 12 V and 5 V DC. The
+roughly 1 V level required by the processors is reached by DC-DC converters
+situated on the motherboard or even directly on the chip. After 1990 the traditional
+bulky and heavy transformers were hardly used in ICT equipment any more,
+except in the audio segment and for about 10 additional years in external power
+supplies. The new switch-mode power supplies might have been more efficient
+than the old transformers, but they were typically 2–3 times over-dimensioned for
+the standard configuration of a PC and for most other equipment. As a consequence, up to 50 % of the electricity was lost in the transformation chain from 110/
+230 V AV down to the 1 V DC level at the processor [45–47]. In the low power
+modes (e.g. standby), the losses could reach as high as 90 %. As long as no
+measures were taken at the level of the power supply, the standby power could
+therefore not be reduced substantially below the 30 W or 10 W level.
+Furthermore, switching-mode power supplies generate so-called harmonic
+pollution, i.e. if the input signal is a pure sine wave, the output signal is distorted
+and composed beside the fundamental frequency by other harmonics (overtones).
+Harmonic pollution leads to an increase in total current and to a decrease in the
+quality of the electric current. The quality is described by the power factor, which is
+defined as the ratio of the real power flowing to the load to the apparent power in the
+circuit. The power factor is a dimensionless number between -1 and 1. In the early
+1990s, the typical power factor for PCs and other office equipment was as low as 0.6
+[48]. Because of the danger of fire due to the high electric current, insurance
+companies became concerned as well as government agencies and professional
+associations that were impelled to revise recommendations for the dimensioning of
+electric wiring in office buildings. First recommendations were formulated, and
+later voluntary standards were established to improve the power factor.
+Reduction of standby losses, higher efficiency of power supplies and power
+factor correction were the three main measures considered by the Energy Star
+program and other energy efficiency programs for over 15 years, starting in 1992.
+These policies are discussed further in Sect. 2.3 ‘‘Energy Efficiency Policy’’ below.
+Bulk Electricity Consumers. Until 1990, central computers (mainframes and socalled minis) dominated the electricity used for computing in US office buildings
+as shown in Fig. 3 above. An estimation of electricity use by different types of
+computers confirmed this observation in Switzerland: At about 50 % the mainframes were the largest electricity users; medium and small computer systems
+followed with 40 % and the personal computers’ share in 1988 was a modest 10 %
+of the total electricity demand of computers (Table 1).
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+81
+
+Table 1 Electricity demand of computers in Switzerland in 1988, adapted from [49]
+Type of computer
+
+No. of
+devices
+
+Personal computer
+
+900,000
+
+Power
+[kW]
+
+Use
+[h/day]
+
+Electricity demand
+[GWh/year]
+
+Fraction of
+total (%)
+
+0.125
+
+3
+
+120
+
+11
+
+2
+
+6
+
+50
+
+4
+
+Micro-system
+
+12,200
+
+Mini-system
+
+18,100
+
+5
+
+6
+
+190
+
+17
+
+2,600
+
+10
+
+17
+
+160
+
+14
+
+660
+
+100
+
+24
+
+600
+
+54
+
+Medium system
+Mainframe
+Total
+
+1,120
+
+100
+
+In the city of Zurich, mainframes were at that time even more dominant because
+of the importance of the financial sector. In some companies, more than 50 % of
+the electricity was used by their in-house data center [50].
+From this electricity used by data centers, typically 50 % or more was used by
+the central infrastructure—cooling, power transmission/transformation, and power
+security (UPS)—needed to run the computers. Additional losses for heat evacuation and power transformation occurred inside the machines, and finally only
+25 % of the energy was typically available for calculations, transfer and storage of
+data [51]. Based on this analysis, a group of data center managers in Zurich
+introduced the indicator
+K ¼ electric power of IT=total electric power of data center
+to compare the efficiency of the central infrastructure of their respective data
+centers [55, p. 75]. The inverse of this indicator corresponds to the Power Usage
+Effectiveness (PUE) proposed in 2009 [52] by the Green Grid and subsequently
+adopted worldwide as a measure of the energy efficiency of the infrastructure of a
+data center [53, 54].
+Optimization of the cooling system in existing data centers and innovative
+solutions (e.g. free cooling) were demonstrated and resulted in electricity savings
+of up to 20 %, but greater relief came from the IT side. For a large Swiss bank, a
+new generation of computers together with completely new software led to electricity savings of 2/3 and to a reduction in floor area of more than 50 %—despite
+an increase in processing and storage capacity. But in this example, these tremendous savings in electricity demand in the early 1990s were compensated for
+after only a few years by new additional computers needed to cover the everincreasing demand for processing power and storage capacity.
+In these early years of the 1990s, the financial sector, research institutions and
+universities, a few industries and some governmental agencies were the only
+important users of large computers. Electricity demand of these machines was a
+concern for these organizations but was barely registered by policy makers or the
+
+82
+
+B. Aebischer and L.M. Hilty
+
+general public. Less than 10 years later, the world of ICT in general and of data
+centers in particular had completely changed. The use of the Internet was
+expanding fast: E-mail, new emerging social media, and audio/video downloading/
+streaming became common activities. Small servers were popular; hosting became
+an interesting business case. Huge data centers with tens of thousands of servers
+were built and many others planned.
+The projected power demand of the data centers planned in the Geneva region,
+for example, would have increased the electricity demand of the canton of Geneva
+by 20 %. This potential increase was in conflict with the cantonal government’s
+energy plan to stabilize electricity consumption. Drastic efficiency improvements
+to the infrastructure of these data centers would have been necessary to slow down
+the increase; but this time relief came from the implosion of the ‘‘dot-com bubble’’
+in March 2000. Only one of four planned data centers was built in Geneva. Similar
+events occurred worldwide.
+But the improved understanding of electricity use in data centers, e.g. [55, 56],
+was not lost. Incentives for limiting the growth of electricity consumption in data
+centers were increasing. Fast growing heat density, rising electricity prices in some
+countries, and increasing pressure from utilities and governments (e.g., the US
+EPA’s Report to Congress on Server and Data Center Energy Efficiency [6]) led to
+a revival of interest in that field [57]. Old ideas were taken up by new players, such
+as The Green Grid [58], and new approaches such as virtualization of servers were
+successfully promoted and supported by programs such as the European Code of
+Conduct for Data Centers [59], Energy Star in the US and the ‘‘CRC Energy
+Efficiency Scheme’’4 in the UK [60] (more in Sect. 2.3 below).
+Despite these efforts, growing demand for communication and storage capacity
+led to a growing number of data centers and steadily increasing electricity consumption [3].
+A technical overview of energy use in data centers is provided in the chapter by
+Schomaker et al. [61] in this volume. The chapter by Hintemann [62] highlights
+the changing structure of data centers and its impact on electricity demand.
+From the end users’ point of view, data centers are an element of the infrastructure needed to use services provided via the Internet. With the proliferation of
+the Internet and mobile devices, end-user equipment was no longer stand-alone
+equipment. In the early years, electricity was needed only for the end-user devices
+(PC). Today, communication networks and data centers providing content and
+services are essential parts of the computing environment and account for a significant part of the energy demand (for the network part, see the chapters by
+Coroama et al. [63] and Schien et al. [64] in this volume). And, as was earlier true
+for end-user equipment, standby losses in the mobile telecommunication networks
+and in switches, routers or servers in the Internet infrastructure are partly
+responsible for the energy consumption.
+
+4
+
+Formerly the Carbon Reduction Commitment, which is part of the UK government activities
+seeking to cut carbon emissions by 80 % of 1990 levels by 2050.
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+83
+
+2.3 Energy Efficiency Policy
+The news that ICT was an important driver of the growth of electricity demand
+made politicians think about regulating ICT equipment in the same way as
+household appliances. But ICT equipment is much more complex and heterogeneous than a refrigerator or a washing machine. Fast technical progress, evolving
+services, new types of equipment and global markets are reasons why standard
+setting was not an appropriate approach [65].
+The finding that standby was a major energy consumer opened the way to an
+appropriate policy program. Electricity consumption in standby mode is (in most
+cases) useless, does not interfere with the specific service of the equipment and
+does not touch on technical characteristics of the equipment (e.g., specific energy
+of delivered service, capacity of equipment and chosen technology, e.g., desktop
+vs. laptop); reduction of standby losses is technically feasible (and already
+implemented in mobile equipment) and not too costly. Manufacturers agreed to
+collaborate. The reduction of ‘‘standby losses’’ (also called ‘‘vampire power’’ or
+‘‘leaking electricity’’) was understandable to consumers and supported by public
+opinion. The questions were how (mandatory or voluntary; national or international/global), how fast and how ambitious?
+In the US, the Energy Star Program, a voluntary program, was started as early
+as 1992. The required maximum standby power negotiated with industry was
+30 watts for PCs. In a short time, the large majority of models on the market
+fulfilled the requirement. A major factor for the success of the program was the
+market power of the US federal administration. A 1993 Executive Order in the US
+directed all federal agencies to purchase only energy-efficient computers and office
+equipment that qualified for the Energy Star label [66]. In Switzerland, the E2000Label was introduced on a voluntary basis in 1993. In this first year, the specification was very similar to the Energy Star, but it was conceived of as a dynamic
+program with annually strengthened requirements in order to signalize the best
+25 % of models on the market. Similar programs were started in many countries
+[67–70].
+In its early years, the Energy Star Program was not ambitious, but it demonstrated how to craft a successful voluntary program and became international,
+adopted by the EU and Canada in 2001; Japan in 2005; Australia, Taiwan and
+other countries at about the same time; and Switzerland in 2009. These new
+participants strengthened the supporters of a more ambitious program, and the
+requirement to get certified was more frequently adapted to market response.
+‘‘Experience has shown that it is typically possible to achieve the necessary balance among principles by selecting efficiency levels reflective of the top 25 % of
+models available on the market when the specification goes into effect’’ [71, p. 2].
+‘‘As a general rule, product specifications will be reviewed for possible revision at
+least once every 3 years or when the market share of qualified products reaches
+about 35 %. For products that evolve rapidly in the market, such as displays,
+ENERGY STAR specifications are reviewed every 2 years’’ [71, p. 6].
+
+84
+
+B. Aebischer and L.M. Hilty
+
+Energy Star also tackled the problem of power conversion. The 80 PLUS
+initiative launched in the US in 2004 was adopted in 2006. Energy Star added 80
+PLUS requirements to their then-upcoming Energy Star 4.0 computer specifications: The efficiency had to be at least 80 % (for a load between 20 and 100 %)
+and the power factor (cos phi) had to be 0.9 or higher. In 1992, The Energy Star
+Program started with PCs and monitors and has covered all major office equipment
+and TVs since 1998. In 2009, servers were integrated as well. The impact of the
+program is difficult to evaluate, since it is not known how the automatic power
+management (APM) essential in mobile devices would have been adopted in
+desktop computers and other equipment without political pressure. But Energy
+Star certainly accelerated the general adoption of APM, and a substantial fraction
+of the reduction of standby energy, estimated for computers and monitors at
+32 TWh/y or 45 % of the actual electricity consumption by computers and
+monitors in the US 2012 [72, 73], can be attributed to the policy program.
+The International Energy Agency (IEA) played an important role in propagating energy efficiency and in particular measures to reduce standby losses
+throughout all OECD countries [69, 74, 75].
+On a global level, the World Summit on the Information Society [76] brought
+together representatives from governments at the highest level, participants of all
+relevant UN bodies and other international organizations, non-governmental
+organizations, private sector, civil society, and media to develop and foster a clear
+statement of political will and take concrete steps to establish the foundations for
+an information society for all [41, 42].
+
+2.4 Trends in ICT Energy Demand Since the 1990s
+In the mid-1990s, ICT was established as a relevant electricity consumer, and the
+explosive diffusion of the Internet around the turn of the millennium led to
+speculations of an excessive growth of future energy demand of ICT. Detailed
+bottom-up studies the world over showed that electricity demand of ICT was
+indeed growing, but in industrialized countries the growth rates were not expected
+to exceed 5 % and could possibly be dampened by policy measures. We compared
+results of three studies and the official outlook of the Department of Energy (DoE)
+in the US [39, 77–79] and two studies in Germany [80, 81]. We report on two
+indicators: the fraction of ICT electricity in sectoral electricity consumption and
+ICT electricity per capita.
+The analysis was done separately for residential and commercial ICT. Residential ICT includes proper IT (e.g., PCs) as well as entertainment electronics5
+(e.g., TVs). Commercial ICT comprises all IT at work as well as the infrastructure
+
+5
+
+Roth et al. [39] do not include entertainment electronics. The corresponding data points
+(denoted by ‘‘TIAX_IT’’) are therefore not directly comparable with the other data.
+
+Fraction of commercial electricity
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+ICT in the Commercial Sector
+
+85
+diff
+
+25%
+
+ADL
+20%
+
+ADL ubiq.
+ADL PC
+
+15%
+
+ADL green
+10%
+
+EIA-2013
+Cremer
+
+5%
+
+Stobbe basis
+0%
+1985
+
+Stobbe green
+1990
+
+1995
+
+2000
+
+2005
+
+2010
+
+2015
+
+2020
+
+Fig. 4 Fraction of ICT electricity in the commercial sectors in the US and Germany. Data from
+different sources: Data for the US ‘‘diff’’ = [33, 82–84], all cited from [77, Figs. 2, 3, 4, 5];
+‘‘ADL’’ = [85]; ‘‘ADL ubiq’’, ‘‘ADL PC’’, and ‘‘ADL green’’ = [77, Figs. 2, 3];
+‘‘EIA_2013’’ = [79]. Data for Germany ‘‘Cremer’’ = [80]; ‘‘Stobbe basis’’ and ‘‘Stobbe
+green’’ = [81]
+
+(data centers, networks) needed to run the networked end-use equipment at home
+and at work.
+The fraction of ICT electricity steadily increased in both the residential and
+commercial sectors until 2010. For the US the official outlook of the Energy
+Information Administration (EIA) predicts a stabilization (by 2020) at about 10 %
+in the residential and the commercial sectors, corresponding to 7 % of total
+electricity demand [79]. In Germany, the fraction of ICT electricity is much higher
+and an increase to more than 25 % in the residential sector and to about 20 % in
+the commercial sector is expected by 2020. This corresponds to 12 % of total
+electricity demand in 2020. The important difference between the US and Germany is primarily due to a higher electricity consumption per capita in the US: In
+2000, residential electricity consumption per capita in the US was 2.7 times as
+high as in Germany. The corresponding factors for the commercial sector and for
+the total electricity demand are 2.8 and 1.8. We conclude that the fraction of ICT
+electricity is not a good indicator for making comparisons between countries.
+Using ICT electricity per capita as an indicator, the differences between the US
+and Germany disappear (this is clearly visible in Figs. 4 and 5). What remains is
+the uncertainty regarding the absolute level of the ICT electricity demand. But the
+trends in both residential and commercial ICT use are very similar in the American
+and in the German studies: steady growth to this day and more or less constant ICT
+electricity demand per capita of 0.8 MWh/y 9 cap6 (0.35 MWh/y 9 cap for
+commercial and 0.45 MWh/y 9 cap for residential ICT) by 2020.
+
+6
+
+0.8 MWh per year and capita is a relatively small fraction of the total electricity used in
+industrialized countries, but in many developing countries this would exceed the total
+consumption [42].
+
+86
+
+B. Aebischer and L.M. Hilty
+
+ICT in the Commercial Sector
+
+diff
+
+0.5
+MWh/a x cap
+
+ADL
+0.4
+
+ADL ubiq.
+
+0.3
+
+ADL PC
+ADL green
+
+0.2
+
+EIA-2013
+
+0.1
+
+Cremer
+Stobbe basis
+
+0.0
+1985
+
+1990
+
+1995
+
+2000
+
+2005
+
+2010
+
+2015
+
+2020
+
+Stobbe green
+
+Fig. 5 ICT electricity per capita in the commercial sectors in the US and Germany. Data from
+different sources (see Fig. 4)
+
+It is important to note that in the past and in the near future, growth in ICT
+electricity has been held down and is expected to be further dampened by:
+• the reduction of standby losses of end-user equipment,
+• improvements in the energy efficiency of the infrastructure of data centers and
+networks, and
+• virtualization of servers in data centers.
+These saving potentials are finite and ICT electricity demand may again increase
+faster in some years. This is particularly likely to happen should the rapid increase
+in the energy efficiency of computing come to an end.
+A closer look at the evolution of ICT electricity in Germany (Fig. 6) reveals
+that residential end-user equipment is the largest consumer. TVs alone are
+responsible for roughly 50 % of this consumption. Within the commercial ICT, the
+electricity demand of the end-user equipment has declined slightly since 2001,
+whereas the infrastructure (data centers and networks) has become the dominant
+electricity consumer. It is interesting to note that standby losses are declining—
+even in absolute terms (Fig. 6).
+An estimate of electricity consumption by ICT on the global level was provided
+by Malmodin et al. in 2010 [86] for 2007: 1,286 TWh/y or 0.19 MWh/y9cap
+(Fig. 7). The largest segment is entertainment and media equipment, which is
+dominated by TVs. The next largest is telecom/networks with almost  of the
+electricity consumption by fixed telecom, IT end-user equipment (desktop and
+laptop computers), and finally data centers including the infrastructure (such as
+cooling) to run the servers.
+Lannoo’s more recent estimations published in 2013 [87] for the same year do not
+include entertainment and media equipment. The results for the other segments do
+not differ significantly from Malmodin’s figures: slightly higher electricity consumption of data centers and lower consumption of telecom/networks and end-user
+equipment. On the other hand, telecom/networks are expected to grow much faster
+(10.1 %/year) than end-user equipment (5.2 %/year) and data centers (4.3 %/year).
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+87
+
+ICT electricity demand in Germany, in MWh/year x cap
+1.0
+0.8
+0.6
+0.4
+0.2
+0.0
+Enduser
+Enduser Server, data Network
+ICT total
+residential commercial centers access, core
+network
+2001
+
+2004
+
+2007 forecast
+
+2007
+
+2020 basis
+
+thereof
+standby
+
+2020 green
+
+Fig. 6 ICT electricity demand per capita in Germany 2001–2020, estimated in 2009. (Source
+authors‘chart based on data from [81])
+
+Global ICT electricity demand, in MWh/year x cap
+0.20
+Entertainment, Media
+
+0.15
+
+Data Centers
+
+0.10
+
+Desktop, Laptop
+Computers
+
+0.05
+
+Telecom, Networks
+
+0.00
+2007
+Malmodin
+
+2007 Lannoo 2012 Lannoo
+
+Fig. 7 Worldwide ICT electricity consumption per capita, in MWh/cap9year. (Source authors‘
+chart based on data from Malmodin [86] and Lannoo [87])
+
+Looking in detail at the electricity consumption of end-user equipment (Fig. 8),
+we can see that LCD screens surpass CRTs in electricity consumption in 2012, and
+electricity consumption of laptops has more than doubled in 5 years, whereas
+desktops have been roughly stable. Without these two structural changes, the
+electricity growth rate of end-user equipment would be at least 8.3 %/year (instead
+of 5.2 %/year).
+
+88
+
+B. Aebischer and L.M. Hilty
+Global ICT electricity demand, in MWh/year x cap
+0.14
+Data centers
+
+0.12
+0.10
+
+LCDs
+
+0.08
+
+CRTs
+
+0.06
+
+Laptops
+
+0.04
+
+Desktops
+
+0.02
+
+Telecom, Network
+
+0.00
+2007
+
+2012
+
+Fig. 8 Worldwide ICT electricity consumption per capita in still greater detail, in MWh/
+cap9year. (Source authors‘ chart based on data from [87])
+
+For the effects of changing media use on energy consumption and CO2 emissions, see also the chapter by Coroama et al. [88] in this volume.
+
+2.5 Energy Demand Throughout the Life Cycle of ICT
+Devices
+Thus far, we have focused on the energy demand of ICT devices during the use
+phase. The life cycle of an ICT device from cradle to grave, however, includes
+other phases that consume relevant amounts of energy as well, such as the
+extraction of raw materials, the production of the devices and the end-of-life
+treatment (recycling or final disposal) of the equipment after it has become
+obsolete. The method of Life Cycle Assessment (LCA) can be used to analyze all
+relevant environmental impacts of a product throughout its whole life cycle.
+The first LCA studies of ICT devices were conducted in the 1990s. The primary
+energy demand for the production of a desktop PC was then estimated to be in the
+range of 10–12 GJ (2,778–3,333 kWh), which was more than that of an (analog)
+color TV set (2.8 GJ) and less than that of an average refrigerator (13 GJ) [89]. A
+study conducted by Grote in 1994 [90, 91] estimated the energy demand of the
+production of a PC to be much higher, namely 37.5 GJ. For technically more
+powerful workstations, a study done by the Microelectronics and Computer
+Technology Corporation (MCC) in 1993 estimated the production-related energy
+demand to be 25 GJ [92]. The two chapters by Hischier et al. [93, 94] in this
+volume provide detailed updates on LCA studies of desktop, laptop and tablet
+computers, including comparisons between production and use phase impact.
+The communications aspect of ICT got the attention of LCA research much
+later. The first LCA studies on fixed line [95] and mobile telephone networks
+[96–100] were published after 2000.
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+89
+
+In 2001, Empa started the 4-year research program ‘‘Sustainability in the
+Information Society’’ (SIS) which aimed to create a comprehensive picture of the
+effect of the ongoing ‘‘informatization’’ of society on sustainability, including
+positive and negative impacts. The program first focused on substitution effects,
+such as electronic media substituted for print media [101], or videoconferencing
+substituted for travel [102] and their counteracting induction and rebound effects
+[103]. The chapter by Coroama, Moberg, and Hilty [88] in this volume provides an
+update on the substitution of electronic for traditional media.
+A part of the SIS program focused on the end-of-life phase of electronic
+devices, including a global perspective. An overview is provided in the chapter by
+Böni et al. [104] in this volume. An LCA study of e-waste recycling showed that
+the energy needed for industrial electronic waste recycling is clearly more than
+offset by avoided environmental impact, mainly due to the avoided primary production of the metals recovered [105].
+Technology Assessment (TA) studies conducted in the SIS program (e.g.,
+[106]) added a prospective part to the research on the effects of ICT on society and
+the environment. One result was that smaller, embedded ICT (such as RFID labels
+[107]) could in the future negatively affect established recycling processes, such as
+those of paper, plastics or textiles [108–111].
+Although this chapter is written from an energy perspective, it is obvious that
+ICT is a field of technology closely related to material issues as well, both in its
+substitution potentials (e.g., replacing print media by electronic media) and
+through the raw materials needed to produce ICT devices. The latter aspect is
+covered in the chapter by Wäger et al. [112] in this volume.
+
+2.6 The Influence of Software on the Hardware Life Cycle
+The SIS research program at Empa also made an attempt to empirically investigate
+the influence of software products on the hardware life cycle. In 2003, a controlled
+experiment was conducted that confirmed that increasing processing power of PCs
+was overcompensated for by new software versions in terms of user productivity,
+at least for the basic tasks of file handling and text editing. New versions of
+operating systems and text processors not only forced users to buy new PCs
+because of their higher demand of computing power (and therefore shortened
+lifetime of hardware), they also increased the time users would spend at the
+machine to perform the same task as before [103, 113].
+This trend, known as ‘‘software bloat’’, came to a temporary halt with the
+emergence of small mobile devices, in particular smartphones and tablets—thanks
+to the limitation of the energy density of their batteries.
+The mobile app has created a new paradigm for software design and distribution. Mobile apps are highly efficient, as they are reduced to the most important
+functions and because they are intended to run with limited hardware resources. At
+the same time, energy-consuming tasks are shifted from end-user devices to the
+
+90
+
+B. Aebischer and L.M. Hilty
+
+cloud. The trend towards Web-based application software in combination with
+cloud computing has complex implications for the energy demand of ICT devices
+and services. This trend may enable end-user devices with low storage and processing capacities (even stationary devices, so-called thin clients) to become
+attractive because operations requiring large processing capacities can be carried
+out on the web server without burdening the client, and this can typically be a
+cloud-based service [114]. On the other hand, the energy consumption caused in
+the Internet and in data centers must be taken into account. Several chapters in this
+volume [61–64] elaborate on these aspects.
+
+3 Methodological Challenges
+3.1 Defining ICT
+ICT is the result of a convergence of three lines of technological development.
+First, technologies bridging space, i.e., extending the spatial range of communication, from flags and fires used for transmitting messages over some distance to
+the wires and electromagnetic waves we use today. The second one is the
+development of technologies for bridging time, i.e., extending the temporal range
+of communication, from carving messages to future generations into stone, writing
+and printing on paper to today’s digital electronic storage. The third line, finally,
+runs from using the abacus and mechanical calculators to the digital computer.
+During this convergence, which is still ongoing, many types of devices and
+infrastructures emerge and vanish again from the markets. It is therefore easier to
+enumerate specific types of devices, such as laptop computers, smartphones, IP
+routers or web servers, than to give a comprehensive and precise definition of ICT.
+Conceptual boundaries are, however, crucial because they imply the system
+boundaries explicitly or implicitly used in studies on energy consumption, which
+are then non-comparable.
+In our tour through the history of ICT energy consumption, we encountered
+studies in which residential ICT was restricted to computers and their peripherals;
+other studies include ‘‘entertainment’’ devices such as TV sets. Today, the
+boundaries between computers and TV devices are blurring. Commercial ICT may
+or may not cover ICT infrastructure (data centers and networks). Data centers’
+energy use may comprise the infrastructure (cooling, uninterruptible power supply) needed to run the servers; in some studies these 50 % of energy used by the
+infrastructure are not considered.
+Estimates of the energy intensity of the Internet diverge by a factor of 20,000, a
+part of which can be explained by different definitions of ‘‘the Internet’’ (for details
+see the two chapters on Internet energy intensity [63, 64] in this volume). By
+means of an explicit definition of the system boundary of each study in this field,
+unnecessary confusion can be avoided.
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+91
+
+However, two ongoing developments will always make it challenging to draw
+clear conceptual boundaries around ICT:
+• An increasing number of microprocessors (95 % according to Rejeski [115] or
+even 98 % according to Broy and Pree [116]) are not used in dedicated ICT
+devices but are embedded in other objects, such as cars, household appliances,
+buildings, or industrial processes [117]. A compilation of the world’s technological installed capacity to compute information by Hilbert and Lopez in 2011
+[118] showed that the computing capacity of digital signal processors (DSP) and
+microcontroller units (MCU), which are mainly not used in dedicated devices, is
+of the same order of magnitude as the computing capacity of personal computers
+and one or two orders of magnitude higher than that in servers, mainframes and
+supercomputers [119, Table S A-3, p. 8]. The amount of energy used by this
+embedded ICT is unknown, and estimates are difficult. In official energy statistics,
+their consumption is usually included in that of the ‘‘host’’ object, e.g. the fuel
+consumption of a car. This can create inconsistencies in statistical analyses. Very
+often, the monetary value of ICT sales is taken as a basis for estimating the
+installed capacities. While production figures of the manufacturing ICT industry
+include the embedded electronics, sales of ICT and investments in ICT cover
+mainly the ‘‘electronic devices’’ but not the ‘‘embedded electronics.’’ Macroeconomic studies relying on ICT investment data may therefore be flawed.
+• ICT products are changing their nature from owned goods to services; cloud
+computing is only one of the trends that opens the door to a world of complete
+service-orientation. This is not surprising, because it is in the end always a service
+(and not a device or infrastructure) the user is seeking and paying for. From a life
+cycle perspective, it has always been challenging to define a functional unit that
+truly reflects what the user wants to get from an ICT device or infrastructure.
+Given the inherent multi-functionality of ICT, the related problem of allocating
+impacts (such as energy consumption) to functional units has been known for a
+long time. This methodological challenge will increase with the cloud computing
+paradigm. It will be easier to define the immaterial ICT service that is provided to
+the user, but more difficult to define the material infrastructure producing it.
+
+3.2 Data Collection and Modelling Methodology
+Estimating the electricity demand of a set of devices does not need a complex
+model but requires much input data, not all of which are available or statistically
+significant. Electricity consumption in the use phase is usually evaluated with a
+bottom-up approach:
+EnergyðtÞ ¼ Rijk ni ðtÞ  eij ðtÞ  uijk ðtÞ
+with
+
+n: number of devices of type i
+e: electric power load in functional state j
+u: intensity of use by user k
+
+92
+
+B. Aebischer and L.M. Hilty
+
+For some types of equipment, the number of equipment can be deduced from
+statistics based on surveys (such as the ‘‘Information Society’’ indicators for
+Switzerland, [120]). But these data are usually not adequately detailed and must be
+complemented by sales statistics. With assumptions about the lifetime of the
+equipment, it is possible to deduce the number of equipment in use. Assumptions
+about ‘‘lifetime’’ are highly uncertain even when combined with data from electronic waste collection because devices can be stored in homes for years or have a
+‘‘second life’’ before they enter the waste stream.
+Furthermore, sales statistics do not tell us where the equipment is used, whether
+in an office or at home. And they do not cover all distribution channels. One
+example is discussed by Koomey [3, footnote 1 to Table 4, p. 23]: ‘‘Because
+Google creates its own custom servers, the company is treated as a server ‘selfassembler’ so its servers are not included in the IDC world totals.’’ Koomey
+estimates the electricity consumption of Google’s data centers to be on the order of
+1 % of all data centers worldwide. Whether all supercomputers and mainframes
+are covered by the sales statistics has not yet been investigated.
+The power in the different functional states is nowadays declared for standard
+models, but not for more specific configurations.
+By far the largest uncertainty affects the intensity of use of the device. This
+begins with the question of whether the user has changed the settings of the
+automatic power management and ends with the uncertainty of switching off the
+devices when not used. What about the second or third computer at home: Is it
+used at all? Is it used for watching TV? Even extensive surveys and metering
+campaigns (some of which have been conducted) are outdated quickly because of
+the fast innovation cycles in ICT.
+The resulting estimation of the electricity demand of ICT is highly uncertain.
+The fact that most of the studies show rather compatible results—the rare outliers,
+e.g. the papers by Mills [121, 122], are mostly implausible—may be less a sign of
+accuracy than the consequence of using the same or similar data and making
+similar assumptions. The uncertainty is highest for the absolute levels of electricity
+consumption. The calculated trends (temporal development) are more reliable,
+because the variation of the number of devices is quite well known and changes in
+the electric power load due to different functional states and changing intensity of
+use are rather slow.
+If we extend the system boundary from the use phase to the entire life cycle of
+ICT hardware (as described above in Sect. 2.5), there are even more challenges in
+collecting the inventory data [123] and modelling the production and end-of-life
+stages of the life cycle as well.
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+93
+
+3.3 Quantifying the Effect of Software on ICT Energy
+Demand
+Although software products are immaterial goods, their use can induce significant
+material and energy flows. Software characteristics determine which hardware
+capacities are made available and how much electric energy is used by end-user
+devices, networks and data centers. The connection between software characteristics and the demand for natural resources caused by the manufacture and use of
+ICT systems has not been the object of much scientific study to date (see the
+chapter by Naumann et al. [124] in this volume for a current overview).
+Quantifying the effect of a software product on energy demand and defining
+criteria for ‘‘green’’ software has proven to be methodologically challenging
+because each software product considered in isolation fulfills its function only as
+part of a complex ICT system, and therefore only in interaction with other software
+and hardware components (as well as the user). But it is the total required hardware capacity that determines the demand for natural resources in the form of
+electricity consumption and the hardware life cycle. In addition, the innovation
+cycles in the realm of ICT are so short that results based on snapshots in time
+quickly become outdated. Therefore, the focus of the analysis has to be on qualitative causal relationships and the dynamics of developments in the field. The
+following discussion is based on [114].
+Figure 9 shows the ICT product system, which includes the life cycles of
+application software, system software, and hardware. In the use phase these three
+product types combine in an ICT system, which provides the desired performance.
+This depiction is highly simplified, since these days ICT systems are normally a
+distributed system in which a number of connected hardware and software components interact over a network.
+Conducting an LCA of a software product, even if the scope of the study were
+restricted to the use phase of the software, would have to quantify the following
+causal relationships between software and hardware:
+1. Power consumption: How much power consumption by the hardware does the
+software cause during its execution—not only in local end-user devices but also
+in network components, servers, and other devices involved in the process?
+2. Hardware load: How much of the available hardware capacity is used by the
+software product during its execution? Since during this time this capacity
+cannot be used for other purposes, a corresponding portion of the overall life
+cycle of the hardware is attributable to the software. From an economic perspective, these are opportunity costs which are independent of power consumption attributable to use.
+
+94
+
+B. Aebischer and L.M. Hilty
+
+user
+
+ICT system
+
+application
+software
+(development)
+
+uses
+
+application
+software
+(use phase)
+uses
+
+system software
+(development)
+
+provides
+service to
+
+provides
+service to
+
+system software
+(use phase)
+uses
+
+application
+software
+(phasing out)
+
+system software
+(phasing out)
+
+provides
+service to
+
+hardware
+(production)
+
+hardware
+(use phase)
+
+raw materials
+energy
+emissions,
+supply chain supply chain
+waste
+
+energy
+supply chain
+
+hardware
+(end of life)
+
+energy
+supply chain
+
+emissions, secondary
+waste
+materials
+
+Fig. 9 Simplified representation of the IKT product system. Grey block arrows stand for the
+most important material and energy flows. (Source Translated from [114])
+
+3. Hardware Management: Software can influence the operating states of the
+hardware, especially by using or preventing power-saving modes. In addition, it
+can distribute the computing or memory load in networks. In this way, a
+software product may influence the extent and the timing of power consumption by the hardware as well as the efficiency of hardware usage. How can this
+kind of influence be quantified?
+4. Useful life of hardware: Software products can influence the timing of the
+decommisioning (obsolescence) of hardware products. For example, new
+versions of software products may require replacing functioning hardware
+sooner with more powerful hardware; or the reverse may take place through the
+installation of smaller or more efficient software versions, enabling the continued use of older hardware. How can such properties of software products be
+quantified? (See also the chapter by Remy and Huang [125] in this volume.)
+ICT’s future energy demand will also depend on how successfully solutions to
+these methodological problems can be found, as well as on the extent to which
+awareness can be raised of the considerable influence software properties can have
+on the energy flows triggered by the software.
+
+The Energy Demand of ICT: A Historical Perspective and Current …
+
+95
+
+4 Conclusions
+The history of ICT energy demand shows a dynamic balance between two
+amazingly rapid developments:
+• Increasing demand for ICT services, including the performance per device as
+well as the number of devices in use and of components embedded in other
+objects.
+• Increasing energy efficiency of ICT, including progress in semiconductor
+technology as well as policies stimulating the use of efficient technologies, as
+the history of the reduction of standby losses and inefficient power conversion
+clearly shows.
+This dynamic balance should not be taken for granted. The total amount of energy
+that society devotes to ICT could grow much faster than today if progress in
+efficiency slows down or comes to an end for some technological or political
+reason.
+Research into the socio-technical system of ICT and its energy consumption
+currently faces several methodological challenges:
+• The distributed nature of the ICT systems providing the final service to the user
+and the increasing share of embedded ICT make the definition of the system
+boundary of a study a non-trivial task with decisive consequences for the
+results.
+• There is an increasing need to consider the life cycles of end-user devices,
+network components, servers and supporting infrastructures, spanning the
+extraction of raw materials to end-of-life treatment of obsolete hardware. The
+collection of data on the life cycle of each component, the creation and validation of models for each phase of the life cycle (including user behavior in the
+use phase) are issues calling for interdisciplinary efforts.
+• Understanding ICT energy demand also requires a better understanding of the
+influence of software products on the demand for hardware capacity, on usephase energy consumption and on the obsolescence of ICT components.
+We hope that the research described in the present book helps overcome these
+challenges and will stimulate future research.
+
+References
+1. Koomey, J.G., Berard, S., Sanchez, M., Wong, H.: Implications of historical trends in the
+electrical efficiency of computing. IEEE Ann. Hist. Comput. 33(3), 46–54 (2011). doi:10.
+1109/MAHC.2010.28
+2. Aebischer, B.: ICT and energy. Paper presented presentation at ICT for a global sustainable
+future, symposium Paradisio foundation and Club of Rome EU chapter at KVAB, Palace of
+Academies, Brussels, 15 Dec 2011
+
+

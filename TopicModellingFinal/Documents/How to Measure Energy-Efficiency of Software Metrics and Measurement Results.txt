@@ -1,0 +1,376 @@
+How to Measure Energy-Efficiency of Software: Metrics and Measurement Results
+Timo Johann, Markus Dick, Stefan Naumann, Eva Kern
+Trier University of Applied Sciences, Germany
+(t.johann, m.dick, s.naumann, e.kern)@umwelt-campus.de
+Abstract—In the field of information and computer technology (ICT), saving energy has its focus set on energy
+efficient hardware and its operation. Recently, efforts have
+also been made in the area of computer software. However,
+the development of energy efficient software requires metrics,
+which measure the software’s energy consumption as well as
+models to monitor and minimize it. In software and software
+development processes they hardly exist. In this work we
+present a generic metric to measure software and a method to
+apply it in a software engineering process.
+Keywords-Energy Efficiency, Green Software, Metrics
+
+I. I NTRODUCTION
+Activities in the field of Green IT set new standards for the
+requirements of information and communication technology.
+Generally, these requirements primary concern the energy
+consumption of ICT. The developments in Green IT, which
+primarily focus on computer hardware, led to the understanding that “the most strategic aspect of energy efficient
+computing will be the evolution of application software
+to facilitate system-wide energy efficiency” [1, p.58]. This
+paper presents a method to develop and apply metrics and
+measurement methods to measure the energy consumption
+that is directly related to the software. The method presented
+here should enable software developers to continuously
+measure and monitor the energy consumption of the software
+during the development process. It seamlessly integrates into
+the GREENSOFT Model (cf. figure. 1), a reference model for
+Green and Sustainable Software [2].
+
+Figure 1.
+
+methods of energy efficiency measurement. Benchmarking
+methods are able to measure a system as a black box
+and can generate a statement on how the entire system
+(software and hardware) performs on the whole. When it
+comes to measuring a given software, one cannot apply
+these benchmarks because each of them is customized for
+one specific group of tasks (database benchmarks, graphic
+benchmarks, etc.). The approach of Dick et al. [4] defines
+individual scenarios for a specific group of software (e.g.
+Browsers) and then measures concrete occurrences with the
+same scenario, which can give a better statement about the
+software’s energy consumption. These approaches can be
+categorized as black box measurements because they do not
+allow to take a look inside, which is their main disadvantage.
+That is why we propose a kind of white box measurement
+to tell in which part of software there is potential for energy
+savings. A white box method is better suited to find resource
+intensive parts of programs and to improve them. To do so,
+we will use a known technique: source code instrumentation,
+which is often used in the context of software profiling, e.g.
+for runtime analysis.
+
+II. D EVELOPMENT OF C USTOM M ETRICS
+Metrics for energy efficient software rely on its useful
+work done [3]. Since, modern software consists of manifold
+modules that all have a special purpose, there can be more
+than just one metric. The software parts can be measured
+individually or combined. For a proper comparison of software the measured modules should be as similar as possible.
+Basically a generic metric can be defined as
+EnergyEf f iciency =
+
+U sef ulW orkDone
+.
+U sedEnergy
+
+III. M EASURING THE E NERGY C ONSUMPTION
+
+The experimental set-up to perform a white box
+measurement consists of a set of components (cf. figure
+3). The system under test runs an instrumented application
+and is connected to a power meter. The power meter
+is connected to the measuring system, where an Energy
+
+There already exist approaches for measuring software energy consumption, mostly as black box measurement. White
+box measurements, relying on source code instrumentation,
+are hardly used. Figure 2 intends to classify the known
+
+978-1-4673-1832-7/12/$31.00 c 2012 IEEE
+
+The Greensoft Model [2, p. 270]
+
+51
+
+GREENS 2012, Zurich, Switzerland
+
+Figure 2.
+
+task. For the instrumentation, we declared two counters; one
+counter counts the items that are already sorted, the other
+counter is used as a phase counter and is only meant to
+generate a positive edge when sorting starts and a negative
+edge when sorting ends. Bubble Sort uses double nested
+for-loops. The outer loop goes over the array from 0 to
+n once. Every time the loop reenters the counter increases
+and an item is sorted. Counting the sorted items in Heap
+Sort is similar. After transforming the array into a binary
+heap, a for-loop goes over it and after every pass the counter
+increases and an item is sorted.
+Since the system performs several background processes and
+services, which cause some peaks in the processor time (red)
+and in the energy consumption (green), we measured the
+average idle consumption which is about 65 Watt.
+Then the actual measurement of the algorithms with
+bubble sort is started, which is shown in figure 4. The
+algorithms sort 200,000 double values. The phase counter
+(blue) indicates the start of sorting, which instantly stresses
+the CPU (red) and increases the consumed energy (green).
+When all items are sorted (b lack), the phase counter generates the negative edge which is the end of the measurement.
+The sorting time was 110 seconds and the average energy
+consumption was 100 Watts.
+
+Methods to Measure Energy Efficiency
+
+Server converts the values to performance counters. The
+instrumented application also writes performance counters.
+These can be read, e.g. by logging or monitoring tools
+to analyze the software regarding its energy consumption.
+To accomplish the instrumentation the set-up builds on
+an API provided by Intel to perform the source code
+instrumentation [3]. Using this set-up, existing source code
+can be expanded by counters. These numerical values can
+be used e.g. for counting loop cycles, marking entry and
+exit points of code fragments, counting the amount of how
+often parts of software are frequented, etc.
+
+100W × 110s = 11000W s = 3W h = 11000J
+
+The whole algorithm consumed 10,800 Joule for the
+sorting of 200,000 double values, which results in
+SortedItems
+200, 000
+= 18
+10, 800J
+Joule
+
+Figure 3.
+
+The Heap Sort algorithm also sorted 200,000 double
+values and the result is shown in figure 4, where it is obvious
+that the algorithm worked - as expected - much faster. The
+values were sorted in five seconds. Due to the resolution
+(1 second) the power consumption line (green) did not
+immediately follow the phase counter, but here the average
+power consumption during processing was 100 Watts, which
+results in 100W × 5s = 500W s = 0.14W h = 500J.
+For a better comparison it is rational to give the algorithms
+the same time frame and calculate the power consumption
+of the idle time of the faster algorithm and add it to the total
+power consumption. Since the idle time is 110 − 5 = 105,
+and the idle power consumption is 65, the power consumption is 65W × 105s = 6825W s = 1.89W h = 6825J.
+Adding the energy consumed during sorting the result is
+7325 J.
+SortedItems
+200, 000
+= 27.3
+500J + 6825J
+Joule
+The algorithm with the better asymptotic run time seems
+to also have the better energy efficiency, which corroborates
+the assumption that an algorithm with a higher performance
+also has a higher energy efficiency.
+
+Measurement Environment
+
+IV. E XAMPLE E NERGY E FFICIENCY M ETRICS
+A. Sorting Application
+Since sorting is a common task in computer science, and
+is easy enough to quickly find the useful work, it is good
+as a first example. Here it is obvious that the useful work is
+sorting items and it follows that the metric is SortedItems
+U sedEnergy . To
+make it a little bit more exciting we will use two different
+implementations of sorting algorithms that basically differ
+in their complexity. Thus, we have something to compare.
+Therefore, we picked Bubble Sort with a complexity of
+O(n2 ) and Heap Sort with a complexity of O(n · log(n)).
+The sorting application is implemented to generate an array
+with n randomly generated double values. Then the array
+should be sorted using Bubble Sort; make a break and remix
+the array values, and then use Heap Sort to perform the same
+
+52
+
+Table I
+E NERGY PER U SER
+User Count
+Energy
+Consumption
+Average
+Response Time
+
+15 Users
+
+25 Users
+
+Joules
+7, 3 DeliveredChart
+
+Joules
+5.5 DeliveredChart
+
+0.5 seconds
+
+0.8 seconds
+
+set-up, one can use a third system that generates the load.
+Here, we will try to demonstrate how the energy efficiency
+changes when serving different amount of users.
+
+Figure 4.
+(Bottom)
+
+In a first testrun a load of 15 users was generated.
+The result is shown in figure 5. After the ramp-up period
+the users that are waiting for their response (blue) even
+out at approximately six users. In this phase the average
+power rating of the server is about 110 Watts (green),
+while simultaneously serving 15 users with a waiting time
+way under one second. In one hour the system with 15
+simultaneous users consumes 110 Wh = 396kJ.
+The same measurement is performed with 25 simultaneous served users (cf. figure 5), whereas the average queued
+users is approximately 17, which means that users have to
+wait a little bit longer than in the measurement with 15 users,
+but still get their response under one second. The energy
+consumed is also 110 Watts and users can still be served at a
+satisfactory time. As one can see, the claimed response time
+plays a key role: the higher the demand for fast response,
+the lower is the energy efficiency. Table I shows the average
+consumption after one hour in both cases.
+
+Energy Consumption of Heap Sort (Top) and Bubble Sort
+
+B. Multi User Web Application
+As a second example we chose a web-based information
+system. Usually there are parts such as browser, web-server
+and database involved. Therefore, we chose a client/server
+application, which is used in productive operations at the
+Environmental Campus Birkenfeld. Its purpose is to collect,
+process and visualize consumption data of the campus
+buildings (like: energy, water, etc). The server stores the
+data in a database that is managed by a web interface. For
+demonstration purposes only a cut-out of the software is
+used. One of its capabilities is to visualize the consumption
+data as a line graph over a time period. The charts are
+dynamically generated for each request.
+When looking at the description of the chart feature,
+Joules
+a useful metric is: DeliveredChart
+. This metric can be
+expanded to other parts of the chart generation, e.g.
+database queries, the image generation, and the complete
+request/response cycle. We assume that this is a good way
+to represent the energy consumption of this part of the
+software. It must be kept in mind that there is no ’one size
+fits all’ metric and applications can be split up into more
+or less fine-grained modules, which have their own metrics.
+The load for the measurement will be simulated and is
+generated by a fixed number of users, which send multiple
+requests to the server. Therefore, the source code must be
+instrumented at the point where the request comes in and
+where the response goes out. The counters must increase
+with an incoming request and decrease when the response
+is sent. Thus, we know how many requests are currently in
+progress. In addition to the two systems described in the
+
+Figure 5.
+
+53
+
+Energy Consumption Serving 15 (Top) and 25 (Bottom) Users
+
+V. C ONCLUSION AND O UTLOOK
+The procedure that we discussed and presented in this
+paper works and produces beneficial results. This means
+that energy consumption of specific parts of software can
+be measured with a white box method and programmers are
+able to find resource intensive code, which is an advantage
+compared to black box methods. From the programmer’s
+point of view, there is yet a lot of additional work.
+Not only the exemplary set-up, also the development of
+adequate metrics and the instrumentation cause a significant
+overhead when the application becomes more complex.
+There is by now no ready-to-use software or library for
+source code instrumentation in context of energy efficiency
+measurement. Furthermore, a professional power meter is
+needed, which can be very expensive depending on the
+desired application. In larger software projects maybe more
+than one power meter will be necessary which causes
+additional costs. After all the overhead for setting up a
+measure environment and instrumenting source code, the
+measurement itself is circumstantial. To conclude, we
+evaluate the procedure as feasible for research but yet too
+complex for every-day use in software projects.
+
+for developers. Automated instrumentation or at least semiautomated instrumentation would be a large enhancement.
+When instrumenting the code, the possibility to use the IDE
+to set counters just like adding a breakpoint for debugging
+would have been an enormous benefit.
+Modern open source IDEs have the ability to have add-ons or
+plug-ins developed. To our knowledge, such an extension for
+energy measurement of desktop and server CPUs does not
+yet exist. Besides the additional effort, another disadvantage
+of the method is the need for hardware devices that measure
+energy consumption. In the future, measurement should
+be centralized and the results of measurements should be
+aggregated to have more efficient power models that can be
+used by others. Profilers would be able to use these models
+to estimate energy consumption of software. A specific
+function on a specific system would use approximately
+the same amount of energy. Therefore, an instrumentation
+on compiler level is needed where the compilers add information for energy debugging into the code. The more
+systems are measured, the better the power models will
+become. In combination with the power models, the profiler
+should then be able to give an accurate prediction of energy
+consumption. It has yet to be proven, if these energy models
+supersede hardware-based measurement of software. Based
+on robust metrics and measuring methods, the development
+of seals of quality will be an important step for sustainable
+software. As known from the application of other seals, they
+create user awareness and encourage software vendors to
+develop energy saving software products.
+
+The measurements and the metrics presented in this paper
+should take place in a software development project as
+early as possible. In principle, this means that even early
+executable software artifacts should be examined regarding
+energy efficiency issues. Due to the high affinity of the
+method regarding performance measurements, its workload
+can be re-used for this purpose and vice versa. In this way,
+it is possible to combine performance and energy efficiency
+measurement efforts. In accordance with continuously integration paradigms, we propose that the measurement runs
+are automatically executed by build tools e.g. during nightly
+builds. This leads to a database of measures that can be
+used for an ongoing optimization of the software product.
+Regarding metrics, an initial or preceding measure is used
+as a reference value for succeeding measures, which enables
+those responsible to calculate delta values, which can be
+used as a distance metric for the optimization or to visualize
+the outcomes of the energy optimization efforts in charts.
+The amount of publications in the fields of green and
+sustainable software, and the resulting demand for metrics
+to measure sustainability aspects, show the importance of
+the development of tools and guidelines for developers and
+users of software. The small number of sophisticated industrial solutions demands an increased effort in developing
+tools. In industry some pioneer projects, such as Intel’s
+Energy Checker SDK, already exist, but it is still not a
+widespread topic. Manual source code instrumentation is a
+way to measure software, but is an additional expenditure
+
+R EFERENCES
+[1] Brown David and Reams Charles, “Toward Energy- Efficient
+Computing: What will it take to make server-side computing
+more energy efficient?” Communications of the ACM, vol. 53,
+no. 3, pp. 50–59, 2010.
+[2] S. Naumann, M. Dick, E. Kern, and T. Johann, “The
+GREENSOFT Model: A Reference Model for Green and
+Sustainable Software and its Engineering,” Sustainable
+Computing: Informatics and Systems, vol. 1, no. 4, pp.
+294–304, 2011. [Online]. Available: doi:10.1016/j.suscom.
+2011.06.004
+[3] J. Tayeb, K. Bross, B. S. Chang, L. Cong, and S. Rogers,
+“Intel Energy Checker Software Development Kit User
+Guide,” 2010-12-15. [Online]. Available: http://software.intel.
+com/file/32957/
+[4] M. Dick, E. Kern, J. Drangmeister, S. Naumann, and T. Johann, “Measurement and Rating of Software-induced Energy
+Consumption of Desktop PCs and Servers,” in Innovations in
+sharing environmental observations and information, W. Pillmann, S. Schade, and P. Smits, Eds. Aachen: Shaker, 2011,
+pp. 290–299.
+
+54
+
+

@@ -1,0 +1,395 @@
+Addressing the Obsolescence of End-User
+Devices: Approaches from the Field
+of Sustainable HCI
+Christian Remy and Elaine M. Huang
+
+Abstract The progress of technological development and the resulting rapid
+replacement of end-user devices has brought increasing issues of electronics waste
+upon our society. Interaction designers and researchers within the field of humancomputer interaction have begun to tackle issues of environmental sustainability in
+recent years, including the problem of obsolescence. By considering the experiential aspects of obsolescence and the ways in which interaction design could have
+an impact on experience, the field presents promising approaches with potential to
+contribute to and complement current materials-focused solutions. In this chapter,
+we report on a survey of sustainable human-computer interaction research that
+investigates or addresses issues of obsolescence, presenting challenges as well as
+opportunities for interaction designers to contribute to solving these issues.
+Keywords Human-computer interaction
+interaction design Consumer electronics
+
+
+
+ Sustainable
+ Obsolescence
+
+HCI
+
+
+
+Sustainable
+
+1 Introduction
+The term obsolescence is used to describe the conditions of objects to become
+outdated and lose their usefulness—they become obsolete. While the term is often
+wrongly used as synonym for ‘‘planned obsolescence,’’ a concept introduced by
+marketers in the beginning of the 20th century [1], the traditional meaning of the
+word does not imply any planned action or bad intent. For the domain of consumer
+electronics, obsolescence can simply be used to describe the logical conclusion of
+C. Remy (&)  E.M. Huang
+Department of Informatics, University of Zurich, Zürich, Switzerland
+e-mail: remy@ifi.uzh.ch
+E.M. Huang
+e-mail: huang@ifi.uzh.ch
+ Springer International Publishing Switzerland 2015
+L.M. Hilty and B. Aebischer (eds.), ICT Innovations for Sustainability,
+Advances in Intelligent Systems and Computing 310,
+DOI 10.1007/978-3-319-09228-7_15
+
+257
+
+258
+
+C. Remy and E.M. Huang
+
+the rapid development of technology. Therefore, we consider obsolescence in its
+broader definition which includes, both planned obsolescence as well as obsolescence resulting from a more natural loss of functionality. Although the progress
+of technology is inevitable, as can be observed through the applicability of
+Moore’s Law [2] to decades of development, this does not imply helplessness
+towards obsolescence: Research in the domain of interactive technology has
+influenced and will continue to influence the future of technological development,
+and subsequently have an impact on obsolescence as well.
+The field of human-computer interaction (HCI) has become increasingly
+interested in leveraging the potential of HCI research to make an impact in
+environmental sustainability [3, 4]. In particular, the proposal of a rethinking of
+interaction design towards a new paradigm of sustainable interaction design (SID)
+[5] marked the starting point for a plethora of research in the following years.
+Blevis proposes that ‘‘sustainability can and should be a central focus of interaction design’’ [5], and argued that—among other efforts—obsolescence can be
+addressed if ‘‘things are designed and constructed with sufficient quality and
+modularity’’. In subsequent years, sustainable HCI (SHCI) evolved from an
+emerging topic to an established, well-published sub-community within the field of
+HCI, appealing to a variety of environmental sustainability issues, among them the
+issue of technology obsolescence.
+Various researchers working in sustainable HCI have argued to counter
+obsolescence by tackling the issue by its core definition—making products less
+prone to obsolescence. For example, this can be achieved by making sure the
+product itself comprises durable materials [5], lasting for at least ten years minimum [6]. Similarly, another approach that considers the hardware of devices is to
+enable upgradability [5–9]; a common example is that of modular phones as
+explored several years ago (e.g., WILLCOM WP0041) and again more recently
+(e.g., Project ARA2). This notion of upgradability does not only apply to hardware,
+but has also been proposed for software [5]. By allowing software upgrades or the
+installation of new applications, otherwise obsolete devices can even be repurposed for other uses, e.g., by turning PDAs into ebook readers or GPS trackers
+[10].
+All these approaches target the device’s hardware or software directly, and as
+such can be considered as conceptually straightforward, but difficult-to-realize
+solutions to obsolescence. HCI research, however, considers not only the design of
+technology itself, but also the implications of the design on the user experience.
+In the following, we will present an overview of SHCI literature that investigates
+or addresses issues of obsolescence by focusing on the implications for user
+experience and how influencing the user experience might change the pathway to
+obsolescence. We provide a brief overview of important SHCI research streams
+and elaborate on our literature selection process. The main part of this work
+
+1
+2
+
+http://www.engadget.com/2007/04/13/willcom-shows-off-customizable-wp004-handset/.
+http://motorolaara.com/.
+
+Addressing the Obsolescence of End-User Devices …
+
+259
+
+presents a variety of design considerations that have emerged from work in this
+field, highlighting the diversity and potential of interaction design to contribute to
+sustainability and reduce or slow technology obsolescence. By categorizing the
+obsolescence-related work in the field of SHCI we hope to enable researchers and
+practitioners from other fields to make use of insights from SHCI research and
+build upon this work to discover new research avenues that tackle the problem of
+obsolescence.
+
+2 Sustainable HCI: Background
+The field of SHCI is a rather young field, but has seen a tremendous amount of
+activity in recent years. The SIGCHI conference3 2007 is widely regarded as the
+event that established SHCI as a major area with two highly influential landmark
+works [4, 5]. In the years since, SHCI has grown into a large research field with
+several different directions, uncovering a variety of potential pathways via which
+HCI can contribute to issues of sustainability. In a survey analyzing the existing
+work in the field, DiSalvo et al. [3] highlighted the potential of HCI research in this
+area. There are two major streams to distinguish or classify work in SHCI:
+sustainability through design and sustainability in design [4].
+Sustainability through design denotes the study and development of technology
+that can be leveraged to pursue sustainable goals. Various approaches have been
+presented that attempt to influence the decision-making process, induce behavior
+change, persuade people to engage in sustainable actions, or simply raise awareness through feedback technology, often referred to as eco-feedback (for surveys
+of the research in this field, see [11–13]).
+Sustainability in design strives to reduce the material effect of hardware or
+software itself, making a direct impact for sustainability in the design itself,
+regardless of its application and use. It is strongly connected with the primary
+intention of Blevis’s seminal paper that fueled the field in 2007, introducing the
+term sustainable interaction design [5]. He argues that it is not sufficient to just
+apply sustainability to existing solutions or add sustainability principles somewhere in the process of interaction design, but that sustainability has to become the
+central focus of interaction design to be successful in making an impact for sustainability. The paper concludes with the hope that sustainable interaction design
+can in fact overcome issues of obsolescence: ‘‘If things are designed and constructed with sufficient quality and modularity, people may be inclined to look
+after them and selectively update them, creating the effect of achieving longevity
+of use.’’
+Although sustainability in design deals directly with problems of obsolescence, sustainability through design also provides important insights by looking
+
+3
+
+http://www.sigchi.org/conferences.
+
+260
+
+C. Remy and E.M. Huang
+
+at the issues and proposing solutions from a different perspective. The definition
+of interaction design supports the diversity of potential opportunities of HCI
+research: ‘‘designing interactive products to support the way people communicate and interact in their everyday and working lives’’ [14]. Since products can
+refer to both hardware and software, sustainable interaction design does not only
+apply to the design of physical objects, but also digital artifacts that support
+people’s interaction and communication in everyday life to become more
+sustainable.
+In this chapter, we analyze the current state of SHCI research that has dealt with
+and appealed to the problem of obsolescence for technology. Our approach was to
+consider all publications related to both HCI and sustainability that address
+obsolescence directly or indirectly. In the literature review process, our focus was
+to gather insights through two primary approaches: first, identifying common
+themes in the solutions proposed for interaction design; second, highlighting
+challenges mentioned in SHCI research emerging from previous work. In the
+following sections, we present the results of our analysis of the field, categorized
+by three themes that emerged as high-level categories in our analysis: values in
+design, re-use, and longevity. These three categories represent three equally
+important dimensions along which obsolescence-related SHCI research can be
+oriented. For each of these themes, we highlight a number of design considerations
+that have emerged from SHCI research and discuss them in light of their significance to issues of obsolescence and potential challenges in application.
+
+3 Design Considerations in Sustainable HCI Research
+Addressing Obsolescence
+3.1 Values in Design
+Many approaches to address obsolescence can be attributed to conveying value in
+design. The common idea is that an object whose design expresses or comprises a
+certain quality (e.g., in terms of aesthetics, interaction, or usefulness) is less likely
+to be replaced, thus creating an innate resistance to obsolescence. In his definition
+of sustainable interaction design, Blevis incorporates values as one important
+aspect in design [5], highlighting different aspects of design values as presented in
+previous literature and design practice. For example, design can be about ‘‘features
+and functions of objects’’, ‘‘affective aspects of objects’’, ‘‘interactions between
+people and environments’’, or ‘‘choices that lead to sustainable futures’’. Similarly,
+SHCI research presents different concepts of values in design.
+Pleasure Engineering. Even before sustainability became a major subject within
+the domain of HCI, Woolley [8] related the rapid replacement of products with a
+shift from pleasure (upon purchase) to dissatisfaction (long-term use). He therefore
+
+Addressing the Obsolescence of End-User Devices …
+
+261
+
+calls out for pleasure engineering, creating designs that enable long-term pleasure,
+and ultimately defer or even avoid the dissatisfaction over time. Four strategies are
+proposed to achieve such a long-term satisfaction: future-proof design in functionality and appearance; price reduction incentives; no incremental changes but
+fewer and larger steps in technological advancement (cf. Moore’s Law—contracting steps); and as a last resort, governmental regulations. Some of these
+strategies, e.g., regulations or a product’s price, cannot be addressed by HCI
+approaches directly. The design of services and technology that support everyday
+work practices of various stakeholders outside of HCI offers opportunities for
+interaction designers to indirectly achieve an impact on practices that lead to more
+sustainable actions.
+Achieving Heirloom Status. The research of Hanks et al. [15] considers the
+attitudes of young adults towards sustainability, specifically regarding ownership
+of objects. Through a survey of college students, they discovered that students did
+not believe that they would pass electronic devices down to their children. They
+argue that interaction design should strive to achieve heirloom status, turning
+electronics into objects that are worthwhile not only to keep, but even to inherit.
+While heirloom status is a design value mentioned by many researchers in SHCI
+[5, 16, 17], it is difficult to design for and difficult to study as it only develops over
+time. Studies of objects that people hold on to for a long time can provide hints as
+to how design technology to achieve a similar impact [18, 19]. In the specific case
+of electronics, heirloom status might not only apply to physical material, but also
+the digital dimension of products (see value of the content, not the device as reason
+to keep objects [20]). This interplay of physical and digital properties might create
+new opportunities for HCI to support the process of establishing heirloom status, if
+not only the physical product itself becomes a heirloom, but the software, applications, or content on it is perceived so valuable that people want to pass it on.
+Ensoulment. By studying people’s attachment to objects they would not discard,
+Odom et al. [18] identified histories as one reason for holding on to products—the
+object helps the owner to preserve a memory. In a study focused around electronic
+waste, Zhang and Wakkary [21] made a similar observation by highlighting emotional connections as one reason why owners do not dispose of their electronics.
+Those are two examples of ensoulment in practice; a term introduced to HCI by
+Nelson and Stolterman [22] and later on applied to SHCI [23]. It refers to the notion
+that a product, due to its design, is perceived by the owner as having a soul,
+establishing an emotional bond that prevents disposal and encourages longer
+ownership. Related terms are emotional design [24] and attachment [18–20]. Furthermore, Odom and Pierce [18] suggest to foster such a connection through narratives and character, and provide the example of an MP3 player resembling a
+musical passport which, each time the owner enters a new country, allows to virtually ‘‘stamp’’ it, creating a memory and accumulating a travel history over time.
+
+262
+
+C. Remy and E.M. Huang
+
+Slow Design. Based on the slow movement which proposes a cultural shift
+towards a new lifestyle with slower pace and increased awareness of one’s environment, slow design is an approach that targets a people’s everyday life beyond
+just the interaction with one product. Slow design aims to slow the metabolism,
+resource consumption, and flows of people’s life, engendering a positive behavior
+change. It can be seen as not only addressing obsolescence through the design of
+products itself, but calling for a change in people’s lifestyle in general. Hallnäs and
+Redström [25] argue that products conveying slow design cause their owners to be
+more reflective of their interactions and practices, and Strauss and Fuad-Luke [26]
+pointed out that slow design principles have a positive impact on the design
+process itself as they open up new perspectives about the potential of designs and
+their message. A recent slow design case study supported these insights with
+similar responses from both designers and evaluators [27]. The core idea is that
+products conveying slow design contribute to a lifestyle resembling more reflection and awareness, ultimately increasing individual wellbeing, both on an individual as well as on a societal and cultural level.
+New Luxury. Blevis et al. [9] discuss new luxury as an additional opportunity for
+sustainable interaction design to promote a shift to a more sustainable design of
+consumer electronics. The concept of new luxury as a contrast to more expensive
+and exclusive definition of traditional luxury is defined as ‘‘products and services
+that possess higher levels of quality, taste, and aspiration than other goods in the
+category but are not so expensive as to be out of reach’’ [28]. Blevis argues that
+this level of quality introduced by new luxury can contribute to SHCI efforts, for
+example, by promoting ‘‘services over new physical materials’’, ‘‘upgrades of
+existing products’’, or ‘‘concern for secondary markets’’. Several authors have
+noted that luxury and material success are obstacles in tackling obsolescence [9,
+15, 29] since some consumers—commonly referred to as early adopters—always
+like to have the most novel technology [15]. New luxury might be leveraged to
+turn this traditional notion of material success and luxury against itself to promote
+more a more sustainable behavior, for example, by shifting the societal paradigms
+such that owning a device for a longer amount of time becomes more desirable
+than buying a new one.
+
+3.2 Re-use
+Another approach to extending the lifetime of electronics—partially or for the
+whole device—is to design for reuse. These concepts all have in common that
+some aspect of the relationship between the owner and its device changes, such as
+changing the owner of the device (transferring), changing the device itself
+(repairing or recycling), or changing the way people interact with it (repurposing).
+While the conceptual design of the device itself can encourage and support reuse,
+observations and studies show that it is often difficult to anticipate what will lead
+
+Addressing the Obsolescence of End-User Devices …
+
+263
+
+to successful practices. However, interaction designers can also offer support for
+reusing existing devices, such as by creating tools to share ideas and examples or
+encourage and support practices of reuse.
+Transferability. The lifetime and usage of consumer electronics can be extended
+if the design of such devices supports and encourages transferal of ownership.
+Hanks et al. [15] propose a rethinking of design such that electronics keep their
+value of functionality, similar to automobiles. Blevis’s rubric [5] also names
+transferability as an important aspect of sustainable interaction design, calling for
+‘‘reuse as is’’. In a study comparing mobile phone transferability in three different
+countries, Huang et al. [30] discovered that there are different attitudes towards
+transferal of ownership. While in Japan privacy concerns were an issue, leading
+people to manually destroy and discard their phones rather than selling them,
+several Northern American participants were unable to transfer their phone due to
+them being locked to one service or contract. This highlights that depending on
+context there are different barriers to transferability and different ways of
+addressing the issue; for example, while the issue of privacy is a matter of
+decoupling digital contents from a device and making this trustworthy and
+transparent to people, contract or service issues are an external issue that can only
+be addressed indirectly by interaction designers. In the same study [30], German
+participants mentioned that it was economically advantageous and thus often
+preferred to pass on phones to acquaintances or sell them upon acquisition of a
+new phone, showcasing an example of encouraging transferal of ownership.
+Interaction designers can leverage this knowledge by designing services to support
+these ownership transfers, creating a desire for more opportunities for transferability and thus indirectly making an impact on existing policies and roadblocks to
+transferability such as contract or service locks. Additionally, designers to support
+transferability explicitly through the design of devices themselves and their
+software.
+Repair. One of the innate characteristics of obsolescence is that devices break
+and stop functioning—be it through purposeful design or through unintended
+malfunctioning. Maestri and Wakkary [31] studied how laypeople repair broken
+objects, including but not limited to electronics. They argue that interaction design
+should support the manufacturing of products that allow for them to be repaired
+without specialized knowledge; a concept they call everyday design; the implication is that everyone is a designer or, in the context of their study, a repairer. In
+an extension to the first study Wakkary et al. [32] provide additional examples and
+conclude that the material of a product should allow for repair by laypeople based
+on people’s expected competence in repair, and the product’s design should allow
+for repair without the requirement of special tools.
+Re-use of Materials. Through an online survey about electronic waste re-use
+examples, Kim and Paulos [33] developed an extensive design reuse vocabulary
+for material properties, shape properties, and operation properties of electronic
+
+264
+
+C. Remy and E.M. Huang
+
+waste. Their framework provides designers with actionable guidelines for the
+design of electronics that allow for re-use through partial or complete disassembly.
+But it is not only the materials themselves that are important to consider for re-use
+of technology; in a study of electronic waste recycling practices, Zhang and
+Wakkary [21] identify that the disposal of electronics and the information about
+available electronic waste for re-use needs to be organized. They suggest local
+recycling information networks to support electronic waste re-use practices. In a
+framework for sustainability assessment by Dillahunt et al. [6], several criteria call
+out for a better re-use support as well, such as modular devices that can be taken
+apart easily, materials that can be replaced, reused, or recycled. The latter two
+criteria also appear in Blevis’s rubric [5] as recycling and remanufacturing for
+reuse.
+Augmentation. A rather difficult design proposal but one that, as studies show,
+can be very successful to extend the lifetime of a product, is to allow for an object
+to be augmented beyond its intended use. Odom et al. [18] call this augmentation;
+further examples for augmentation can be found in the follow-up study by Gegenbauer and Huang [19], e.g., ‘‘an alarm clock to which the owners had attached
+a light’’ or an embroidered chair. An impressive and exceptional example in the
+domain of consumer electronics is that of a combination of 30-year-old computer
+technology currently being used by children in Indian communities [34]; this use is
+only possible due to the design of the original technology itself that did not prevent
+or constrain such repurposing of the device. Huh et al. [10] present a similar
+observation for more recent devices, when PDAs acquired through eBay were used
+as ebook readers or a cheap alternative to GPS devices. Note that both these
+examples resemble aspects of transferability as well since they include change of
+ownership; but the key aspect that enables an extended lifetime is the repurposing
+and augmentation of devices beyond their intended use.
+
+3.3 Longevity
+One theme in SHCI to address obsolescence is that of achieving real durability and
+longevity. This differs from reusability as it aims for longer ownership without
+changes in the relationship, tackling obsolescence at its core. Therefore its largest
+barrier is planned obsolescence, which is the exact opposite of durability; instead
+of designing a device to break, durability argues that a device should be designed
+to last longer. Interaction designers can contribute to solutions for issues of
+obsolescence by laying the foundation of longevity through functionality and
+motivating longevity of use among consumers.
+Longevity of Functionality. Gegenbauer and Huang propose a design principle
+called sufficiency, defined as the ‘‘extent to which an object continues to be used or
+kept because it is capable of serving its intended purpose’’ [19]. Odom et al. [18]
+
+Addressing the Obsolescence of End-User Devices …
+
+265
+
+present a similar notion by defining the design criteria of perceived durability,
+encouraging the design of long-lasting objects due to their functionality, simply
+inherent longevity, or both. Designing for longevity is particularly challenging as it
+require thinking about not only whether design is usable and useful now, but also
+predicting whether it will be in the future. However, the important premise of this
+approach is to make sure that the core functionality of the object will work in the
+long-term, as this is a requirement to achieve longevity in the first place.
+Intrinsic Motivation for Longevity. Another aspect of longevity is that of
+raising awareness of the benefits of holding on to one object rather than engaging
+in a rapid replacement process. The concept of slow design as highlighted by an
+exemplary design concept study [27] creates an intrinsic motivation for people to
+continue using a device, as it causes people to reflect on their interaction with
+technology [26] and ultimately can contribute to a change in lifestyle with regard
+to their attitude towards technology. Similarly, Hanks et al. [15] argue that some
+people prefer longevity of use for devices, fully aware of and making reference to
+the environmental concerns connected with rapid replacement. The combination of
+awareness of longevity and incentives (often intangible, almost metaphysical) can
+lead to a strong appeal of longevity.
+
+4 Conclusion
+The obsolescence of end-user devices is an issue that concerns many research
+fields and needs to be tackled on many different levels. The domain of HCI
+research, due to its focus on user-centered design, can contribute to solutions by
+addressing obsolescence by considering the user experience, the interaction
+between the device and its owner, and the influence of these factors on ownership,
+use, and disposal. We highlighted a variety of design considerations that open up
+opportunities to engage in new efforts to overcome the rapid replacement of
+consumer electronics. The categorization of obsolescence-related SHCI research
+allows us to identify potential solutions to the problem of obsolescence that have
+been repeatedly found to hold promise. Furthermore, it serves as a design space
+that highlights under-explored areas that offer new opportunities for research.
+Although some of the approaches described in this chapter offer illustrative
+examples of their application to product design, many of them have yet to be
+applied in real-world practice. Therefore, future research needs to investigate how
+these concepts can be applied to the design of end-user devices in practice.
+We believe that in order to be successful, a concerted effort is necessary that makes
+use of design knowledge accumulated in SHCI in cooperation with researchers
+from other domains and stakeholders in practice.
+
+

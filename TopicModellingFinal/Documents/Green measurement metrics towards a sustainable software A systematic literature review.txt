@@ -1,0 +1,958 @@
+IEEE International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2016), December 23-25, 2016, Jaipur, India
+
+Green Measurement Metrics Towards a
+Sustainable Software: A Systematic Literature
+Review
+Tribid Debbarma
+Computer Science and Engineering Department
+National Institute of Technology Agartala
+Barjala, Tripura, India
+
+Abstract— With the advancement in computing hardware’s the
+complexity and energy consumption of software has increased
+largely. There are various primary studies which uses different
+software measurement metrics in green and sustainable software
+development. In this paper we systematically reviewed and analyzed
+different green measurement metrics in sustainable software. Our
+objective is to find the recent studies in green metrics and find the
+different state-of-the-art measures that is taking place in green
+software development and engineering. We reviewed 14 studies with
+different aspects of green metrics and sustainable software. This
+review summarizes different green metrics and methods proposed in
+the recent years.
+Keywords—green
+metrics;
+sustainable
+software;
+measurement
+
+I. INTRODUCTION
+The Green House Gas(GHG) and CO2 emission is matter of
+great concern for environmental sustainability. These
+emissions are having different sources of origin. One of the
+major reason is electricity power generation using nonrenewable sources (e.g. coal, gas). ICT is among one of the
+major consumer of electrical energy [1]. The most important
+components of ICT is it’s hardware and software. Though
+software’s directly do not consume power but they are
+indirectly responsible for power consumption due to its
+execution in hardware’s. Now with the development of
+hardware the complexity of software’s running in those
+systems has increased in manifolds. Poorly designed and
+developed software’s makes it difficult to maintain and
+increases the power consumption of hardware’s.
+Sustainability in terms of energy efficiency is one of the
+area where studies are taking place in the software engineering
+research field at present. Many software based empirical
+studies has been conducted and being carried out to make
+software’s more energy efficient. These studies has considered
+many metrics to measure greenness of the software and to
+develop an energy efficient, sustainable software.
+It is necessary to have a cumulative view of those works to
+find their effectiveness and what metrics has been worked on
+to address the energy consumption issues. Also what aspects
+have been considered, what degree of effectiveness the studies
+have, what are their limitations and what aspects are there that
+is yet to be addressed.
+
+K Chandrasekaran
+Computer Science and Engineering Department
+National Institute of Technology Surathkal
+Mangalore, India
+A. Related Reviews
+[3] in their systematic review have searched and analyzed
+the green metrics used in software field for the period of 2000
+to 2012. They have shown how metrics can be classified in
+terms of resource, types of results and application domain
+basis.
+There has been some reviews on green metrics in software
+but the field is changing rapidly and new proposals are made
+to keep the energy consumption as low as possible with the
+implementation of green metrics in software.
+With this systematic literature review we have reviewed
+different and recent primary studies on green software metrics
+that are considered for development of energy efficient and
+sustainable software systems. We considered primary studies
+published from 2011 to 2015 and partially 2016.
+We considered [2][10] guidelines on systematic review in
+software engineering for conducting this review work.
+[4][6][8][9][11]-[15] were studied for different guidelines and
+suggestions. Fig. 1 shows the review structure and it’s flow of
+steps from top towards bottom. In some cases the steps works
+iteratively.
+B. Structure of the Review
+This review has three main phase and sub-phase within the
+phases. It’s phase and sub phase is as given below1) Phase 1- Planning:
+ Need for Review
+ Research Question
+ Review Protocol
+2) Phase 2-Conducting Review:
+ Search Relevant Works
+ Study Selection
+ Data Extraction
+ Synthesis of Collected Data
+3) Phase 3- Reporting:
+ Specify the Reporting Strategy
+ Formatting the Review Report
+
+[978-1-5090-2807-8/16/$31.00 ©2016 IEEE]
+
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:34:28 UTC from IEEE Xplore. Restrictions apply.
+
+IEEE International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2016), December 23-25, 2016, Jaipur, India
+
+
+
+Documentation of the Report
+
+limitations of these metrics can drive us towards working on
+new metrics.
+B. Research Questions
+
+RQ1. What are the proposed metrics for green
+and sustainability in software engineering?
+
+RQ2. What methods are proposed for
+measurement of these metrics?
+
+RQ3. What are the limitations of the proposed
+methods?
+
+RQ4. Which domain area has been addressed?
+
+RQ5. What evidence are available against the
+solutions?
+C. Review Protocol
+The studies on green software has increased in the recent
+years, from the review report [3], it is found that most of the
+green metrics has been proposed in the first decade of twenty
+first century. In the recent years there has been increase in
+Conferences e.g. Software Engineering for Sustainability
+(SE4S) and Green and Sustainable Software (GREENS),
+which specifically publishes research articles on green and
+sustainable software and Information and Communication
+Technology (ICT) domain. This review protocol will find the
+metrics and measurement methods that has been considered/
+proposed in green and sustainable software in the recent years.
+We discussed the steps of the review in the following
+subsections.
+
+Fig. 1
+
+Review framework (adopted from [10])
+
+II. RESEARCH METHOD
+The review method is discussed in 3 steps. The first step is
+research question for the review, which defines the aim of
+research, second step is review protocol to be followed for
+conducting the literature review. The review protocol is
+further divided in subsection which defines what data sources
+to be searched, the Strategy for searching the primary studies
+with the search strings, study selection based on inclusion
+exclusion criteria, than data extraction and synthesis process
+for the selected studies.
+A. Need for Review
+Software sustainability and energy efficiency in software is
+the need of the hour in the current ICT ecosystem. Systematic
+review on the state of the art of different primary studies in
+green Software measurement can lead us to the metrics and
+methods most used and their degree of effectiveness in
+achieving the green software sustainability. Also the
+
+The subsection data source discusses about the source of
+the studies, section search strategy discusses about how the
+search of studies in different online venues to be carried out
+that relevant studies must not missed out. The subsection
+inclusion and exclusion criteria discusses the inclusion of
+studies on the basis of criteria set with respect to the research
+questions of this review work, exclusion criteria is set on the
+basis of research question criteria fulfillment and other criteria
+set for quality review, data extraction section gives the
+details on the data collection process from the selected studies
+for further synthesis of the studies and synthesis section
+analyses the extracted data on a set of questions to answer the
+review questions in a summarized way.
+1) Data Sources: In Computer Science field most of research
+article/literature is published in online venues. So,
+choosing of reputed journal and conference publication
+sources will cover most of the literatures in the software
+engineering field. Major conference venues and journal
+venues, that publishes studies in the field and related fields
+will be searched. The major online literature database and
+search engines have been utilized to find the relevant
+studies with the specified keywords. The online sources of
+TABLE I. has been searched for finding the study articles.
+TABLE I.
+Data sources
+ACM Digital Library
+IEEEXplore
+ISI Web of knowledge
+
+SEARCHED ONLINE VENUES
+Website
+http:// dl.acm.org
+http://ieeexplore.ieee.org
+http://www.sciencedirect.com
+
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:34:28 UTC from IEEE Xplore. Restrictions apply.
+
+IEEE International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2016), December 23-25, 2016, Jaipur, India
+Scopus
+SpringerLink
+Wiley Interscience
+
+http://www.scopus.com
+http://link.springer.com
+http://onlinelibrary.wiley.com
+
+The above source venues publishes and stores most of the
+reputed Journal and Conference proceedings in the software
+engineering field.
+2) Search Strategy: Present database of research literature is
+very large. The search engines can return large number of
+search results if the search keywords and other
+information’s are not provided properly. e.g. searching
+only the titles may miss out some studies which may be
+relevant to search field and the number of results may be
+restricted but choosing of the whole literature would return
+huge number of results which would make the review
+process difficult. Most literatures describe about the study
+in the abstract section, by including the abstract filed for
+search will return relevant studies and the number will not
+be too large. The search process of the review work is
+discussed below.
+We have considered only online sources for our search, as
+most of the software literatures are available online and search
+in hardcopy is a time consuming process. With generic
+keywords it returns a huge number of results, which are not
+related to the metrics and its measurement methods. Most of
+the related work in the software sustainability field took place
+only after 2000 (as mentioned in [3]) and it has gained
+considerable attention in the recent years. We considered our
+search from 2011 to 2016, to find the recent advancements in
+green measurement metrics and methods that has been
+proposed in the sustainable software field.
+As discussed in the Introduction section, the objective of
+this systematic review is to find information on green metrics
+used in sustainable software engineering. To search the
+relevant studies stored in different databases we formulated
+search key strings based on the keyword terms and their
+related words and synonyms that are used in the literature with
+similar meanings.
+In software engineering the term/keyword metrics is
+associated with different methods for measuring of resources
+related to software e.g. the software energy consumption.
+The term sustainable is used in context to software energy
+efficiency, reusability and minimal impact on the
+environment, from software engineering perspective, green,
+sustainability, environmental are used synonymously in
+similar context. Software engineering term relates to software
+development phases and functions in the computing systems.
+The main keywords/terms in this literature survey are :
+Green, Metric, Sustainable, Software Engineering. Here the
+term green and sustainable are used in same context so we
+will use three instead of four keyword terms. In TABLE II. the
+terms with related words are grouped, words in same column
+
+will have logical OR relation and between the columns it will
+be logical AND relation.
+TABLE II. represents the index terms and related terms
+used in the software engineering field.
+TABLE II. USED KEYWORDS
+metrics
+measurement
+
+sustainable
+sustainability
+
+method
+measure
+
+green
+environmental
+
+software
+software
+development
+software engineering
+
+The search will create a structure as following : The search
+terms within the same column have logical OR relationship
+and between the columns/groups they have AND relationship.
+Combination of the terms with logical operators would form a
+search string which would be able to search most relevant
+studies in the particular search area.
+Considering the terms associated with the online databases
+have different search options, in the most basic one it takes
+simple words and returns results having any of the words in
+the article. This type of search can result in huge number of
+article against the simple search term. Using the advanced or
+command search options it allows combining of terms with
+logical operators (OR, AND, NOT) and would make the
+search scope limited to the search subject and other filter
+options such as year range and topic that would help in
+minimizing the search result and returns relevant to the topic.
+Search String(SS) is the combination of words, related
+terms and synonyms with logical relations to find different
+relevant articles. With the defined search terms we formed the
+following search string and searched in ACM Digital library.
+[SS1] : (metrics OR measure OR measurement) AND (method
+OR process OR system) AND (sustainable OR green OR
+environmental) AND (“software engineering” OR “software
+development” OR computing)
+This search string with publication year range 2011
+onwards returned a total of 751 different articles. It is not
+possible to review this large number of studies. So, we further
+modified the search string and executed the search in the same
+online site with [SS2] : (metrics OR measurement OR method)
+AND (sustainable OR green OR “energy efficient”) AND
+(“software engineering” OR “software development OR
+Computing”). With [SS2] it returned a total of 139 articles
+and further with the filter (only ACM proceedings) it has
+reduced to 82 items. This number of studies is manageable and
+we proceeded with this search string for further search in other
+databases.
+In our further search process with the [SS2], it returns
+higher number of results. To further reduce the search results
+and filter out the previous literature review works in that we
+
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:34:28 UTC from IEEE Xplore. Restrictions apply.
+
+IEEE International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2016), December 23-25, 2016, Jaipur, India
+
+included logical NOT with “systematic review”. This search
+when conducted in Wiley Interscience database returned a
+total of 100 articles, for the publishing year 2011 onwards. For
+springerlink the previous search string was changed to the
+below form to adapt its search command format, [SS3]:
+“metric AND OR AND method AND AND AND sustainable
+AND OR AND green AND OR AND energy AND efficient
+AND AND AND software AND engineering AND NOT
+(systematic AND review)”
+We scoped our search, to articles published 2011 onwards
+to cover only the recent studies related to sustainable software
+and green metrics.
+3) Selection of Studies: Search results with the search
+string and other process can return a large number of
+articles, which might contain articles not relevant to
+the search. The selection of relevant studies has to be
+performed on the articles collected with the search
+strategy. Different criteria for selection and exclusion
+of studies are performed on the set of searched
+preliminary studies.
+The inclusion, exclusion criteria is designed to cover the
+research questions and certain level of quality articles.
+Different conditions for the study selection are discussed
+below:
+Inclusion Criteria(IC)
+IC1 : Primary studies on green, sustainable software and
+metrics
+IC2 : Studies with proposed systems and methods for
+sustainable software
+IC3 : Studies published in reputed publication venues
+Exclusion Criteria(EC)
+EC1 : Studies with no results and evidence.
+EC2 : Studies that are not based on metrics, measurement of
+software’s
+EC3 : Studies which does not satisfy the research question
+EC4 : Study not peer reviewed
+A study is selected if it satisfies all the inclusion criteria
+and no exclusion criteria is satisfied. During the checking for
+exclusion criteria if a study is failed in the first criteria itself
+than the study can be excluded without checking for other
+exclusion criteria. All this process is conducted in a
+spreadsheet for each of the studies found after search strategy.
+After applying the selection criteria finally 14 number of
+studies were selected for detailed final review.
+4) Data Extraction: The selected studies data must be
+collected for later synthesis with relevant fields that
+collects the required information based on Research
+question. The information was extracted from the
+selected studies with a data collection form as in the
+Table III. Data extraction is performed to all the
+
+selected study, and record is maintained in a
+spreadsheet with individual study details.
+TABLE III. DATA EXTRACTION/COLLECTION FORM
+Sl No.
+S1
+S2
+S3
+S4
+
+Field
+Author
+Study Title
+Year
+Venue
+
+S6
+S7
+S8
+S9
+S10
+S11
+S12
+S13
+
+Metrics considered
+Measurement method
+Measured resources
+Metric purpose
+Level of tool support
+Evidence level
+Limitations
+Domain area
+
+Description/Question
+Name of the author
+Title of the selected study
+Publication year
+publication venue (Conference or
+Journal name)
+RQ1
+RQ2
+RQ1
+RQ2
+RQ3
+RQ5
+RQ3
+RQ4
+
+5) Data Synthesis:
+After the data extraction is
+performed on the selected studies the extracted data
+in different field of the data extraction form must be
+processed to bring out information from each of the
+field. The term Study Title is the name of the
+article/study selected for the review, Year signifies
+the year of publication for that study. The collection
+of all the publication years can give us information
+on year wise publication pattern for the particular
+area. The term Venue is the name of the conference
+or journal the study is published. This can identify in
+which venues most of the publication in the particular
+area is taking place. Metrics considered term refers
+to the metric that has been used in the study, e.g.
+“energy consumption” by software can be a metric
+used in software sustainability measurement.
+The data extraction terms collects individual studies data
+which in combination with other terms and collectively
+number of studies can provide a significant information or
+pattern that we are looking for. “Measurement method” term
+collects the different ways of measuring a particular metric
+e.g. “power consumption” measurement can be measured
+using estimation method or using a device, where the quality
+and accuracy of the method can make difference in the results.
+Metrics purpose is meant for the purpose of using the metric
+i.e. for measurement, estimation and Measured resources is
+the resources that are measured by the metric e.g. CPU usage,
+memory usage etc. Level of tool support and Evidence level
+terms are used whether the study uses any tool, has results to
+support the claims made in the study, and what extent they
+have been used by other research community or industry
+respectively.
+A single study cannot fulfill all the desired research
+objectives it may have some limitations, the term Limitations
+has to be filled with the conclusions and analysis of a study
+and by making certain query to the study. For example
+simulation methods only mimics a system, it is not the actual
+execution of a system, in real execution the results may
+
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:34:28 UTC from IEEE Xplore. Restrictions apply.
+
+IEEE International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2016), December 23-25, 2016, Jaipur, India
+
+significantly vary if not performed correctly. The Domain
+area term is to extract where studied software metric is to be
+used, e.g. in Datacenters, Networks or Mobile computing etc..
+III. REVIEW RESULTS
+This section discusses about the results collected after the
+review process conduction of different phases as listed in the
+review protocol section. The first step of the review is search
+for the primary studies for systematic review against the
+research question and objective of this review method. Results
+of different phases are discussed belowA. Search results
+With the search string defined in the search strategy
+section we conducted searches on the previously identified
+online databases.
+With the search string [SS1] conducted on IEEE Explore
+online database it returned 230 numbers of article. We further
+applied filters e.g. “conference and journal publications only”,
+to remove the non relevant studies. With the search year 2011
+onwards it returned 118 number of articles. For Sciencedirect
+database the search string ((metrics OR measurement OR
+method ) AND (sustainable OR green OR ”energy efficient”)
+AND (”software engineering” OR ”software development OR
+Computing”)) search resulted a total of 4517 number of
+articles. This number of article is not feasible to be reviewed.
+To filter and remove the non relevant articles and fields we
+have chosen only specific journal publications related to
+software field such as “Journals of Systems and Software”.
+With this filters it retuned 82 articles.
+We further conducted search on other database-ACM
+Digital Library, Scopus, Wiley Interscience, Springerlink and
+ISI Web of Knowledge. TABLE IV. represents the results
+acquired from different online sources after executing the
+search strings.
+The total number of studies for all the search result was
+522 studies/articles. We also searched using Google to find
+any relevant articles. This search results contain duplicate
+searches. Using the reference managers “Mendley” and
+“JabRef” we removed the duplicate search results.
+TABLE IV.
+
+SEARCHED STUDY NUMBERS AFTER INITIAL SEARCH
+
+Online Sources
+ACM Digital Library
+IEEEXplore
+Sciencedirect
+Scopus
+Springerlink
+Web of knowledge
+Wiley InterScience
+
+Search Results
+82
+118
+82
+78
+46
+16
+100
+
+B. Selection of Studies Result
+The search results has many articles which are not related
+
+to the research question. We performed the selection of studies
+in phases.
+Selection phases are:
+ Title reading
+ Abstract Reading
+ Full text Reading
+ Apply Inclusion and Exclusion criteria
+At first, we read the study title for all the searches, titles
+which do not relate to software sustainability and metrics were
+discarded from the list. Secondly, we considered the abstract
+for selection of probable studies. Abstract provides the
+information on the objective and solutions. The studies with
+no relevant information were further discarded and the
+abstracts having related information are chosen for further
+full-text reading.
+In total 55 articles were chosen for review after full-text
+reading. We further applied the Inclusion and Exclusion
+Criteria and total 14 primary studies were selected for the final
+review. TABLE V. is list of the included studies/articles.
+TABLE VI. is list of studies not selected for final review.
+TABLE X. provides details of selected studies source and
+venue.
+TABLE V. SELECTED STUDIES FOR REVIEW
+
+Study
+ID.
+A1
+
+Ref.
+no.
+[17]
+
+A2
+
+[18]
+
+A3
+
+[19]
+
+A4
+A5
+
+[20]
+[22]
+
+A6
+
+[23]
+
+A7
+
+[24]
+
+A8
+
+[25]
+
+A9
+
+[28]
+
+A10
+
+[29]
+
+A11
+
+[30]
+
+A12
+A13
+A14
+
+[31]
+[33]
+[32]
+
+TABLE VI.
+
+Title
+EACOF: A framework for providing Energy
+Transparency to enable Energy-Aware Software
+Development
+How to measure Energy-Efficiency of Software:
+Metrics and Measurement results
+Towards Power Reduction Through Improve Software
+Design
+Runtime Monitoring of Software Energy Hotspots
+SEFLab: A Lab for Measuring Software Energy
+Footprints
+A first Approach on legacy system energy
+consumption measurement
+Is Software green? Application development
+environments and energy efficiency in open source
+application
+Green Software requirements and measurement:
+random decision forests-based software energy
+consumption profiling
+An Approach to Measuring Kernel Energy in
+Software Applications
+Measuring Software Sustainability from a Process
+Centric Perspective
+An
+Algorithm-Centric Energy-Aware Design
+Methodology
+Towards Sustainable Software Engineering
+Towards a Green and Sustainable Software
+Evaluation of Software Product Quality Attributes and
+Environmental Attributes using ANP Decision
+Framework
+STUDIES NOT INCLUDED FOR FINAL REVIEW
+
+Studies not selected for
+final review
+
+Ref. no.
+[5], [7], [16], [21], [26],
+[27]
+
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:34:28 UTC from IEEE Xplore. Restrictions apply.
+
+IEEE International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2016), December 23-25, 2016, Jaipur, India
+
+C. Data Extraction
+After selection of the primary studies, different
+information were collected using the Data Extraction form in
+a spreadsheet. This form has different fields. The results for
+different term/field of the extraction form are given belowTABLE VII. METRICS CONSIDERED
+Metrics
+Energy/Power Consumption
+Environmental
+Performance
+
+Studies
+A1, A2, A3, A4, A5, A6
+A14, A10
+A14
+
+Most of the studies are based on energy or power
+consumption metrics. Some studies are studied in context of
+environmental measures of the software. [17] proposed an
+energy aware software development framework, it uses
+Resource Utilization Model (RUM), it measures CPU usage
+on execution of applications using the Power API. [24]
+proposed energy efficient open source software development
+systems and a support tool based on statistical measurement of
+applications energy consumption.
+[31] in their study considered the environmental metric of
+software sustainability. Using the tool GreenTracker different
+applications CPU Usage can be measured which can help in
+choosing the software with lesser power consumption and
+environmentally more suitable.
+TABLE VIII. USED MEASUREMENT METHODS
+Measurement
+methods
+
+Description
+
+Studies
+
+Estimation
+
+Estimates based
+some model
+
+Measurement
+
+Actual
+measurement
+using device
+
+A5
+
+Statistical
+
+prediction based on use
+of pattern
+
+A7
+
+on
+
+A7, A9, A11, A12
+
+In most of the studies estimation based measuring methods
+are used. [33] in their study proposed a tool TEEC to measure
+the an applications energy usage. It measurement of energy
+usage is estimation based on a power model.
+It is found from the studies that system resource CPU is
+the most measured resource. Besides that memory, network
+usage, and applications are also measured. TABLE IX. shows
+measured resources in different studies.
+
+TABLE X.
+Study ID
+A1
+A2
+A3
+A4
+A5
+A6
+A7
+A8
+A9
+A10
+A11
+A12
+A13
+A14
+
+SELECTED STUDIES SOURCE AND VENUE
+
+Venue
+SAC
+GREENS
+ENERGYTECH
+ASE
+GREENS
+ICGSE
+IST
+Requirements Engg.
+ICEAC
+ICSPPM
+IEEE Transactions on VLSI
+Systems
+ICSE
+Concurrent Engg.
+RE4SuSy
+
+Source
+ACM
+IEEE
+IEEE
+ACM
+IEEE
+Elsevier
+Springer
+IEEE
+IEEE
+IEEE
+IEEE
+Techrepublic
+
+Year
+2014
+2012
+2012
+2012
+2013
+2015
+2011
+2015
+2011
+2012
+2014
+2012
+2015
+2014
+
+D. Synthesis of Extracted Data
+Based on the selected studies the review protocol was
+carried out. Which we further synthesized as per the
+requirements set in our review rules. We perform synthesis on
+the data collected by during the data extraction. To answer the
+research questions the extracted data was processed.
+What are the proposed metrics for green and sustainability in
+software engineering?
+Different metrics e.g. energy, performance, environment
+are the metrics that are being studied most. TABLE VII. is list
+of metrics.
+What methods are proposed for measurement of these
+metrics?
+For measurement of metrics, estimation based method are
+mostly used which depends on power models and Statistical
+calculations. TABLE VIII. summarizes the used measurement
+methods by different studies.
+What are the limitations of the proposed methods?
+Most of the studies are conducted in the academia with no
+proper evidence of acceptance in the industry it is hard to
+validate the methods quality. The tool “GreenTracker”
+developed by [21], [31] is adopted in Mac OS and Windows
+OS system, which makes it evident that the system has certain
+standard.
+IV. ANALYSIS
+
+TABLE IX.
+Measured resources
+CPU
+Software code
+System components
+
+MEASURED RESOURCES
+Studies
+A1, A6, A8, A11
+A2,
+A3, A7
+
+From the extracted and processed data it is found that
+green metrics in sustainable software area considers energy
+metrics as one of the best measure for achieving sustainability
+in software. Other metrics like the environmental attributes
+and qualities are not considered in many studies. It is observed
+that studies are conducted and proposed to make energy
+
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:34:28 UTC from IEEE Xplore. Restrictions apply.
+
+IEEE International Conference on Recent Advances and Innovations in Engineering (ICRAIE-2016), December 23-25, 2016, Jaipur, India
+
+efficient application by creating energy-aware software.
+Studies are also considered for software sustainability in
+different domains such as Mobile, Network and Datacenters.
+The metrics energy and performance are the most studied
+ones, there is less study in other aspect of software
+sustainability such as pollution, recycling of software. Study
+in this less researched aspects of sustainable software along
+with the energy aspects can help in achieving long-term
+solution for sustainability in software development.
+V. CONCLUSION
+From the review it is observed that most of the studies
+related to green metrics in the sustainable software field is on
+energy consumption metric. The measurement methods for
+energy consumption are based on mostly estimation based.
+There is few studies on software code profiling for energy
+efficient and energy aware based software design methods. In
+our future work we will conduct a review on larger scale to
+cover all the scopes of software sustainability measures and
+there adoption in the industry.
+REFERENCES
+[1]
+
+National Renewable Energy laboratory, http://www.nrel.gov/publications.
+[2] B. Kitchenham, and S. Charters, “Guidelines for Performing Systematic
+Literature Reviews in Software Engineering”, Software Engineering
+Group, School of Computer Science and Mathematics, Keele University,
+EBSE Technical Report Version 2.3, July 2007.
+[3] P. Bozzelli, Q. Gu, and P. Lago, “A systematic literature review on
+green software metrics” Technical report, VU Amsterdam, 2013.
+[4] M. S. Ali, M. A. Babar, L. Chen, K. Stol “A Systematic Review of
+Comparative Evidence of Aspect-Oriented Programming”, Information
+and Software Technology, vol. 52, no. 9, pp. 871-887, 2010.
+[5] A. Kansal, F. Zhao, J. Liu, N. Kothari, and A.A. Bhattacharya, “Virtual
+machine power metering and provisioning,” In Proceedings of the 1st
+ACM symposium on Cloud computing, SoCC 10
+[6] P. Brereton, B. A. Kitchenham, D. Budgen, M. Turner, and M. Khalil,
+“Lessons from applying the systematic literature review process within
+the software engineering domain,” J. Syst. Softw., 80(4):571583, Apr.
+2007.
+[7] E. Capra, C. Francalanci, and S.A. Slaughter, “Is software green?
+Application development environments and energy efficiency in open
+source applications,” Inf. Softw. Technol., 54(1):6071, Jan. 2012.
+[8] B.A. Kitchenham, T. Dyba, and M. Jorgensen, “Evidence-based
+software engineering,” Proceedings of the 26th International Conference
+on Software Engineering, 2004, pp. 273-281.
+[9] V. Alves, N. Niu, C. Alves, “Requirements Engineering for Software
+Product Lines: A Systematic Literature Review,” Information and
+Software Technology, vol. 52, no. 8, pp. 806-820, Aug. 2010.
+[10] B. Kitchenham and S. Charters, “Guidelines for Performing Systematic
+Literature Reviews in Software Engineering,” Technical Report EBSE2007-01, Software Eng. Group, Keele Univ. and Dept. of Computer
+Science, Univ. of Durham, UK, 2007.
+[11] D. I. K. Sjoberg, T. Dyba, and M. Jorgensen, “The future of empirical
+methods in software engineering research,” Proceedings of the Future of
+Software Engineering, 2007, pp. 358-378.
+
+[12] A. Kofod-Petersen, “How to do a Structured Literature Review in
+computer science Version 0.2,” August 13, 2014.
+[13] B. Kitchenham, “Procedures for performing systematic reviews,” Joint
+Technical Report, Keele University Technical report TR/ SE-0401,
+ISSN: 1353-7776. NICTA Technical Report 0400011T.1, 2004.
+[14] M. Jorgensen, and M.Shepperd, “A Systematic Review of Software
+Development Cost Estimation Studies,” IEEE T Software Eng, 33, 1
+(Jan. 2007), pp. 33-53.
+[15] B. Kitchenham, O. P. Brereton, D. Budgen, and Z. Li, “An Evaluation of
+Quality Checklist Proposals A Participant-Observer Case study,” Proc.
+13th Intl Conf. Evaluation and Assessment in Software Eng. (EASE),
+pp. 1-10, 2009.
+[16] G. Dhiman, G. Marchetti, and T. Rosing, “vGreen: A System for
+Energy-Efficient Management of Virtual Machines,” ACM Trans.
+Design Autom. Electr. Syst., 16(1):6, 2010.
+[17] H. Field, G. Anderson, and K. Eder, “EACOF, A Framework for
+Providing Energy Transparency to Enable Energy-aware Software
+Development,” Proceedings of the 29th Annual ACM Symposium on
+Applied Computing, ACM, 2014, 1194 -1199
+[18] T. Johann, “How to measure Energy-Efficiency of Software: Metrics
+and Measurement results,” GREENS 2012
+[19] C. Sahin, “Towards Power Reduction Through Improve Software
+Design,” ENERGYTECH 2012
+[20] A. Nouredine, “Runtime Monitoring of Software Energy Hotspots,”
+ASE, 2012.
+[21] N. Amsel, and B. Tomlinson, “Green tracker: a tool for estimating the
+energy consumption of software,” Proceedings of the 28th of the
+international conference extended abstracts on Human factors in
+computing systems - CHI EA ’10, (2010), 3337.
+[22] M. A. Ferreira, “SEFLab: A Lab for Measuring Software Energy
+Footprints,” GREENS 2013.
+[23] V. Cordero, “A first Approach on legacy system energy consumption
+measurment,” IEEE 10th ICGSE workshops, 2015.
+[24] E. Capra, “Is Software green? Application development environments
+and energy efficiency in open source application,” Information and
+Software Technology journal , Elsevier, 2011.
+[25] M. A. Beghoura, “Green Software requirements and measurement:
+random decision forests-based software energy consumption profiling,”
+Requirements Engg., Springer, 2015.
+[26] A. Hindle, “Green Mining: a methodology of relating software change
+and configuration to power consumption,” Empirical Software
+Engineering, springer, 2013.
+[27] L. Corral, “Can Execution Time Describe Accurately the Energy
+Consumption of Mobile Apps? An Experiment in Android,” GREENS
+2014.
+[28] M. Dabbagh, H. Hajj,W. E. Hajj “An Approach to Measuring Kernel
+Energy in Software Applications,” International Conference on Energy
+Aware Computing (ICEAC), IEEE, 2011.
+[29] G. Lami, “Measuring Software Sustainability from a Process Centric
+Perspective,” 2012 Joint Conference of the 22nd International Workshop
+on Software Measurement and the 2012 Seventh International
+Conference on Software Process and Product Measurement. 2012.
+[30] H. Hajj, “An Algorithm-Centric Energy-Aware Design Methodology,”
+IEEE Transactions on Very Large Scale Integration (VLSI) Systems,
+2014.
+[31] N. Amsel, “Towards Sustainable Software Engineering” (NIER Track),
+2011, ICSE 2012.
+[32] S. A. Kocak , G. I. Alptekin , A. B. Bener, “Evaluation of Software
+Product Quality Attributes and Environmental Attributes using ANP
+Decision Framework,” International Workshop on Requirements
+Engineering for Sustainable Systems (RE4SuSy), 2014.
+[33] H. Acar, G. I. Alptekin, Jean-Patrick Gelas, P. Ghodous, “Towards a
+Green and Sustainable Software,” Concurrent Engineering 2015, Jul
+2015, Delf, Netherlands. pp.471- 480.
+
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:34:28 UTC from IEEE Xplore. Restrictions apply.
+
+

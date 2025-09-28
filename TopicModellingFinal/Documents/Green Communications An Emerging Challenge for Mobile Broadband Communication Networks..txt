@@ -1,0 +1,1623 @@
+Green Communications: An Emerging
+Challenge for Mobile Broadband
+Communication Networks
+E. Calvanese Strinati, A. De Domenico and L. Herault
+CEA, LETI, MINATEC, 38000 Grenoble, France;
+e-mail: {emilio.calvanese-strinati, antonio.de-domenico, laurent.herault}@cea.fr
+Received: 7 February 2011; Accepted: 20 March 2011
+
+Abstract
+Worldwide mobile broadband communications networks are increasingly
+contributing to global energy consumption. In this paper we tackle the important issue of enhancing the energy efficiency of cellular networks without
+compromising coverage and users perceived Quality of Service (QoS). The
+motivation is twofold. First, operators need to reduce their operational energy
+bill. Second, there is a request of environmental protection from governments
+and customers to reduce CO2 emissions due to information and communications technology. To this end, in this paper we first present the holistic system
+view design adopted in EARTH (Energy Aware Radio and neTworking tecHnologies) project. The goal is to ensure that any proposed solution to improve
+energy efficiency does not degrade the energy efficiency or performance on
+any other part of the system. Then, we focus on technical solutions related to
+resource allocation strategies designed for increasing diversity order, robustness and effectiveness of a wireless multi-user communication system. We
+investigate both standalone and heterogeneous cells deployment scenarios. In
+standalone cells deployment scenarios, the challenge is to reduce the overall
+downlink energy consumption while adapting the target of spectral efficiency
+to the actual load of the system and meeting the QoS. Then, with heterogeneous deployment scenarios, different cell scales that ranges from macro to
+
+Journal of Green Engineering, 267–301.
+c 2011 River Publishers. All rights reserved.
+
+
+268
+
+E. Calvanese Strinati et al.
+
+micro, pico and even femto cells, potentially may share the same spectrum in
+a given geographical area. In such scenarios interference is the most limiting
+problem to achieve the desired performance. Our analysis reveals how proposed methodologies permit to achieve notable energy gain over traditional
+resource allocation techniques especially in not saturated scenarios.
+Keywords: EARTH, green communications, energy efficiency, femtocells,
+interference, radio resource management.
+
+1 Introduction
+Telecommunication has experienced a tremendous success causing proliferation and demand for ubiquitous heterogeneous broadband mobile wireless
+communications. Up to now, innovation aimed at improving wireless networks coverage and capacity while meeting the QoS requested by users
+admitted to the system. Nowadays, the number of mobile subscribers equals
+more than half the global population. Forecast on telecommunication market
+assumes an increase in subscribers, per subscriber’s data rate, and the roll
+out of additional base stations for next generation mobile networks. An undesired consequence is the growth of wireless network’s energy consumption
+that will cause an increase of the global carbon dioxide (CO2 ) emissions,
+and impose more and more challenging operational cost for operators. Communication Energy Efficiency (EE) presents indeed an alarming bottleneck
+in the telecommunication growth paradigm. Motivated by this scenario, we
+outline the main investigation axes that may significantly improve the EE of
+broadband cellular networks, thereby reducing the cost and environmental
+impact of mobile broadband services. Today’s mobile networks have a strong
+potential for energy savings. The design of mobile networks has until now
+been focused on reducing the energy consumption of terminals, whose battery
+power imposes stringent requirements on energy consumption. This has led to
+a situation where terminal energy consumption is only a fraction of the energy
+consumption of the mobile network. For example, NTT DOCOMO [1] has
+calculated that, for their 52 million subscribers in 2006, the energy consumption of their network per mobile user per day was 120 times greater than the
+daily energy consumption of a typical user’s mobile phone. The increase in
+energy consumption of NTT DOCOMO’s network over the years from 2002
+to 2006 is shown to be directly related to the increase in number of base
+stations installed. Consequently, the optimization of energy-consumption of
+radio base stations should have a large impact on the overall EE of the net-
+
+Green Communications and Mobile Broadband Communication Networks
+
+269
+
+work. As a matter of fact, recent increasing maturity of mobile technology in
+combination with the growing amount of equipment deployed each year have
+woken up the need to innovate in the field of energy efficient communications.
+Three main federative projects that face the challenge of enhancing the EE in
+mobile wireless broadband networks are: the core 5 Green Radio programme
+of mobile Virtual Center of Excellence (MVCE) [2, 3], GreenTouch [4], and
+EARTH [5, 6].
+Energy efficient enhancement in wireless communication can be achieved
+only if improvements are experienced in the whole communication chain for
+different operational load scenarios. Several investigations are carried out in
+this research area, ranging from energy efficient cooling of base stations to innovative energy efficient deployment strategies, and frequency planning. The
+EARTH project sets a very innovative challenge: development of an holistic
+methodology to characterize the energy consumption of cellular networks
+including suitable metrics. Today, there exists no widely agreed methodology
+to evaluate the energy efficiency of cellular networks. Similarly, meaningful
+energy efficiency metrics are currently lacking. Both, in conjunction with reference scenarios, will enable a successful evaluation of the energy efficiency
+of networks. Such agreed methodology will be the enabler of a fair comparison of different concepts and technologies. EARTH’s holistic methodology
+is presented in Section 2.
+The objective of this paper is threefold. First, we present in detail the
+holistic system view proposed in the EARTH project, which may allow us
+to ensure that any proposed radio EE improvement does not degrade EE or
+performance on the terminal side or any other part of the system. To this end,
+in Section 2 we present and comment on a unified approach to improve the EE
+of the whole communication system. We focus on how energy consumption
+of mobile broadband networks may be significantly reduced in representative
+traffic scenarios. We consider LTE like systems which face a very challenging
+multi-user communication problem: many users in the same geographic area
+require high on-demand data rates in a finite bandwidth with a variety of
+heterogeneous services such as voice (VoIP), video, gaming, web browsing
+and others. We will present a holistic optimization methodology that includes
+socio-economic impact of broadband communication, definition of reference
+scenarios, and targets and evaluation metrics.
+Second, we present and benchmark the EE effectiveness of a novel energy efficient Radio Resource Management (RRM) algorithm for OFDMA
+based systems. Since wireless is a shared medium, the system EE is affected not only by the single user efficiency, but also by the combination
+
+270
+
+E. Calvanese Strinati et al.
+
+of time and frequency allocation according to the momentary instances of
+the frequency selective channel between the downlink base station and the
+receiving user equipments. Hence, in order to achieve EE, a system approach
+is required. In our vision, the multi-user scheduler should indeed allocate
+time and frequency resources to minimize the transmission energy cost while
+meeting QoS requirements of all active users admitted by a base station. The
+momentary system load plays an important role in the overall optimization
+design. Currently deployed base station are commonly designed so that they
+can accommodate the traffic demand at peak times. Nevertheless, cell traffic
+load notably varies during the day. Several researches pointed out that to
+save energy, base stations should perform a dynamic load and energy state
+arrangement, which balances extra load on a determined optimal set of base
+stations, thus maintaining minimum energy consumption. In this paper we
+do not propose novel dynamic sleep mode of base station components. We
+focus on resource allocation of active phases of base stations during downlink transmission. We propose a simple algorithm to trade off momentary
+spectral efficiency for downlink transmission power while meeting the QoS
+constraints of active users admitted in the cell. To this end, we propose a
+scheduling algorithm which splits the resource allocation process into four
+steps. In the first step we identify which entities (packets) are rushing and
+which are not rushing. Then in step two we deal with urgencies: we assign
+resources only to entities that have an high probability of missing their QoS
+requirements regardless to their momentary link quality and their potential
+to save energy. Then, if any resources (here chunks) are still unscheduled,
+in the third step we allocate resources to users (non-rushing) with highest
+momentary link quality, regardless to their QoS constraints. In the fourth
+step we perform energy efficient link adaptation to save downlink energy. We
+trade off throughput (lowering the transmission spectral efficiency and allocating a larger number of chunks to UEs) for downlink power by limiting the
+power budget on each chunk. In this way we attempt to minimize downlink
+transmission power over a time window, which provides significant additional
+flexibility to the scheduling algorithm. In addition to throughput, both latency
+and spectral efficiency enter in the tradeoff. In an extreme case of latency
+tolerance or low load scenarios, the scheduler could simply wait for the user
+to get close to the base station before transmitting or allocate all frequency
+resource to a single packet transmission with significant lowered power. We
+call the proposed algorithm a Green Adaptive Scheduler (GAS) [7].
+Third, we propose an RRM algorithm to improve the EE of a heterogeneous cellular network where macrocells and femtocells [8] share the same
+
+Green Communications and Mobile Broadband Communication Networks
+
+271
+
+spectrum in a given geographical area. In such heterogeneous deployment
+scenario, interference is the most limiting problem to achieve the desired performance, in terms of both spectral efficiency and energy efficiency. Macro
+users (M-UEs) close to femtocells experience femto-to-macro interference
+that may drastically corrupt the reliability of communications. Similarly,
+neighbour femtocells belonging to the same operators may also interfere with
+each other, thus creating femto-to-femto interference.
+Recent economical investigations claim that femtocell deployment might
+reduce both the Operational Expenditure (OPEX) and Capital Expenditure
+(CAPEX) for cellular operators (see, for instance, [9]). A recent study [10]
+shows that expenses scale from $60000/year per macrocell to $200/year per
+femtocell. However, according the ABI Research [11, 12], by the end of 2012
+more than 36 million of femtocells are expected to be sold worldwide with
+150 million of customers. Thus, interdependence between energy efficiency,
+service constraints and deployment efficiency are not straight forward. Recently some researchers have faced these challenges. In [13], the authors carry
+out an energy efficiency comparison between different size cells. In [14],
+a theoretical study that describes the effectiveness of NodeB deployment
+and the system energy efficiency is presented. In [15], the authors present
+an energy saving procedure that allows femtocell Base Station (also named
+FAP or HeNB) to completely switch off its radio transmissions and associated
+processing when not involved in active calls. In [16], the authors cope with the
+problem of interference proposing a time division duplexing underlay scheme
+in which femtocells reuse the uplink macrocell bandwidth. In [17], an RRM
+algorithm that trades off frequency resource for energy is proposed to reduce
+the interference perceived at both macro and femto users. In [18], we come
+out with the design of a simple and effective RRM algorithm (RRM Ghost ),
+which permits to drastically improve the overall network performance. The
+proposed algorithm efficiently profit of the unusual communication context
+of femtocells for which locally few UEs compete for a large amount of transmission resource. In this paper, we investigate the system energy efficiency
+obtained if the RRMGhost algorithm is implemented at femtocells. A detailed
+description of the algorithm and numerical results are presented in Section 7
+
+272
+
+E. Calvanese Strinati et al.
+
+Figure 1 Green networks innovation axes.
+
+2 Holistic EE Optimization Methodology for a Broadband
+Cellular Network
+A unified approach to improve the EE of the whole communication system
+is still missing. Nevertheless, the potential offered by joint optimizations is
+in our vision the most promising one. Joint optimizations are represented by
+cross layer optimizations that take component and node architectures as well
+as radio interface technologies and network architecture into account. We
+present here the holistic optimization methodology proposed in the EARTH
+project that is composed of three major investigation axes:
+• EE Optimization Methodology Framework
+• EE Design of Green Networks
+• EE Design of Green Radios
+These three investigation axes will be the background knowledge for the
+design of new green network architecture. Figure 1 summarizes the concepts
+that should be investigated at network level.
+
+3 Definition of an EE Optimization Methodology
+Framework
+Today running broadband cellular networks have been designed to maximize
+coverage areas and spectral efficiency of communication systems. In such
+networks EE optimization has not yet played a prime role. Hence, metrics
+like spectral efficiency, capacity or throughput have been used to characterize usefulness and differences of investigated solutions. Nevertheless, these
+metrics are not sufficient to judge the EE of a communication system. A fun-
+
+Green Communications and Mobile Broadband Communication Networks
+
+273
+
+Figure 2 Framework to enhance the EE of broadband cellular networks.
+
+damental analysis of key radio technologies in terms of their EE is lacking.
+This is partly due to the fact that there are neither suitable methodologies
+nor metrics established to enable a fair and objective comparison of these
+techniques. Thus, an important prerequisite for efforts to enhance the EE of
+cellular networks is to provide a framework to evaluate these technologies. In
+Figure 2 we summarize the proposed working framework.
+First, the socio-economic impact of broadband communication system
+permits to define and forecast targets of energy efficient optimization. Then,
+the definition of reference scenarios characterizes the specific framework
+for which some specific EE enhancements are envisioned. Eventually, to
+evaluate the effectiveness of the EE optimization, targets and evaluation
+metrics are defined. Today there is not common view on such EE metrics in the wireless community and, a wide range of metrics are used by
+vendors operators and academia. Since 2009, standardization of energy efficiency metrics has started. One of the major bodies of standardization that
+is working on the topic is the ETSI Technical Committee on Environmental
+Engineering (ETSI-TC-EE) [19]. ETSI-TC-EE has started working on the
+specification of energy efficiency metrics for mobile cellular networks. Up to
+now, ETSI-TC-EE focuses only on EE metric specifications at component
+
+274
+
+E. Calvanese Strinati et al.
+
+level. Furthermore, criteria related to the quality-of-service are neglected.
+Nevertheless, to achieve the goal of a holistic network design, EE metrics
+should also take the following into account:
+• The input power required to generate a specific output power at the
+antennas.
+• Energy consumed by digital signal processing equipment (interference
+cancelation techniques, complex decoding, etc.). With this type of metrics, the tradeoff between EE improvement of specific signal processing
+algorithms and their consumed energy can be understood.
+• Specific metrics on EE of RRM schemes and their related control signalling cost. These types of metrics are worth when the EE analysis
+of the system considers not only the single-user optimization problem
+but also the multi-user case. With such a type of metrics we can understand the tradeoff between EE improvement due to multi-user RRM
+algorithms (such as frequency and packet scheduling, power allocation
+and power control, etc.) and additional control signalling cost.
+• The energy to deliver data to the base station (backhaul power consumption).
+The subject of EE metrics is presented more extensively in [20]. The EARTH
+European project is providing an extensive overview on this topic.
+
+4 Design of Green Networks
+Until now, several Radio Access Technologies (RATs) have been deployed
+in a parallel way, accommodating different service requirements over the
+same area and providing multi-RAT handovers. Nevertheless, such solutions
+have stand-alone network planning and resource management methodologies.
+In our method, the common network design goal has been to optimize the
+system’s capacity and coverage while meeting QoS requirements of different types of applications in very different communication scenarios, ranging
+from large macro to femto cells for different environmental characteristics.
+Solutions have been optimized for the high load system operating point.
+Nevertheless, systems are most of the time offloaded. Very recently efforts
+are originated for joint management of the multi-RAT technologies focusing on common capacity and coverage optimization [21]. These previous
+efforts did not include EE considerations and not necessarily resulted in
+optimal deployment or performance from an energy consumption point of
+view. Moreover, cellular networks exhibit slowly changing daily load patterns
+
+Green Communications and Mobile Broadband Communication Networks
+
+275
+
+as well as highly dynamic traffic fluctuations. However, currently networks
+are configured rather statically. Since most of the energy wastage occurs
+during low load situations, these load variations can be effectively exploited
+to reduce network energy consumption. Therefore, dynamic load variations
+should be addressed by energy efficient RRM strategies. Innovative design of
+green networks would require to innovate in the following three topics:
+• Network Deployment.
+• Network Management.
+• Radio Resource Management.
+4.1 Network Deployment
+While a lot of work has been performed on developing throughput, capacity or coverage enhancing concepts for cellular networks, little insights
+have been gained which techniques can be applied to improve the energy
+efficiency resulting in less optimal strategies for overall network energy
+consumption. Moreover, recently the heterogeneous radio access networks
+(HetNets) concept is under investigation by both academics and industry.
+The HetNet deployment proposes a flexible and open architecture for a large
+variety of wireless access technologies, applications and services with different QoS demands as well as different protocol stacks. Wireless networks
+differ from each other by air interface technology, cell-size, services, price,
+access, coverage and ownership. The complementary characteristics offered
+by the different RATs make possible to exploit the deployment diversity gain
+leading to higher overall performance than the aggregated performances of
+the standalone networks. Actually, the biggest advantages of a heterogeneous
+network are the significant gains in network capacity and coverage via aggressive spatial spectrum reuse of available bands. This gain can be exploited
+to drastically reduce the overall energy consumption of the network. To this
+end, it is first fundamental to determine the theoretical and practical limitations on energy efficiency of HetNets deployment scenarios. The goal is to
+understand how to reduce system energy consumption based on deployment
+strategies using different cell sizes, network topologies, coordination between
+radio access technologies and investigates network deployments including
+macro base stations, femto cells, relays and repeaters that share the same
+spectrum in the same geographical area. Then, the second challenge will be
+to define how to reduce overall system energy consumption by combining
+and coordinating different sites and radio technologies. This is the object of
+EE RRM techniques. Eventually, there is the challenge of designing meth-
+
+276
+
+E. Calvanese Strinati et al.
+
+odologies for energy efficient radio network deployments including femto
+cells, relays, repeaters, distributed antennas, etc. Indeed, an energy efficient
+network deployment can be design by defining the optimal mix of cell size,
+share of the common spectrum and, the set of adaptive resource allocation
+methods that may drive to large EE gains.
+4.2 Network Management
+In our vision, innovative network management concepts will lead to large
+network’s energy consumption savings. The challenge is to understand how
+to tune the radio network nodes in order to achieve gains from coordination
+between different functions and nodes in the radio network, including the
+backbone network. The studied mechanisms should enable self EE optimization of the network, requiring only minimal human intervention. The concept
+is that the system autonomously and dynamically changes the cellular layout
+of the mobile network according to, e.g., the daily traffic profile.
+To this end, the design of novel EE network management functions
+requires to investigate theoretical limits of energy efficient network management algorithms. Then, it is required to understand how overall system
+energy consumption can be reduced through proper configuration and tuning
+of radio network nodes, including interaction and cooperation between network elements (including radio, transport and backbone network elements).
+Furthermore, network management methods for EE multi-RAT coordination
+should be investigated.
+4.3 Energy Efficient RRM
+RRM algorithms have been designed to maximize the system capacity while
+overcoming the mismatch between requested QoS and limited network resources under full system load. However, system load in mobile systems is
+dynamic in nature and, traditional RRM schemes are not necessarily efficient
+at different operating conditions. Novel RRM schemes developed, in addition
+to load variation, should take into account the characteristics of RF front-end
+such as Power Amplifiers (PA) as well as uplink and downlink power and
+bandwidth constraints. This is further enhanced by the development of RRM
+schemes considering multi-cell cooperation for power control and scheduling
+transmissions. Moreover, schedulers could attempt to minimize the energy
+required per correctly delivered information bits, while meeting the QoS
+of admitted heterogeneous active users. Information theorists have studied
+
+Green Communications and Mobile Broadband Communication Networks
+
+277
+
+energy-efficient transmission for at least two decades [22, 23]. More recently,
+several researchers have designed solutions to trade spectral and energy efficiency. Single user EE optimization is a vivid investigation topic. In [24] the
+authors propose to trade off energy for transmission delay. Actually, Shannon
+theory indicates that it is desirable to transmit a packet over a longer period of
+time to save transmit energy. The authors consider a single user scenario with
+single type homogeneous traffic and, propose to scale the modulation down to
+conserve energy when its buffer is under loaded. When the buffer starts to fill
+up, the modulation order is increased to avoid long queuing times or buffer
+overflow. This proposal assumes that power consumption monotonically increases when transmission power increases. Under this assumption, as far as
+single user QoS constraints are met, power can be minimized by reducing the
+information rate at the expense of delay. Actually, as wireless is a shared medium, the overall system EE is affected not only by the single user efficiency,
+but also by the combination of time and frequency allocation according to the
+momentary instances of the frequency selective channel between the downlink base station and the receiving selected user equipments. Hence, in order
+to achieve EE, a system approach is required. In our vision, RRM methods
+such as the multi-user scheduler should indeed allocate time and frequency
+resources to minimize the transmission energy cost while meeting QoS requirements of all active users admitted by a base station. Up to now this is
+not the current optimization target. Traditional packet scheduling algorithms
+are designed to increase the maximum system capacity, subject to QoS constraints and fairness. Nevertheless, most of the time, wireless systems are
+only moderately loaded. With state of the art priority scheduling algorithms,
+the exploitation of available time and frequency resources is typically not
+optimized from an energy perspective.
+Earliest Deadline First (EDF) [25] schedulers do not profit much from
+time diversity as much as they should do. Maximum Channel to Interference
+ratio (MCI) [26] schedulers aim at maximizing the cell throughput regardless of the user QoS and the actual system load, and consequently they are
+totally insensitive to any time constraints of the data traffic. In not saturated system load scenarios, the exploitation of available time and frequency
+resources is typically not optimized from a energy perspective. Several researches pointed out that to save energy, base stations should perform a
+dynamic load and energy state arrangement, which balances extra load on
+a determined optimal set of base stations, thus maintaining minimum energy
+consumption. In [7] a simple algorithm is presented to trade off momentary
+spectral efficiency for downlink transmission power while meeting the QoS
+
+278
+
+E. Calvanese Strinati et al.
+
+constraints of active users admitted in the cell. The authors propose a novel
+scheduler, the GAS This is one example of what we can do if we change the
+optimization paradigm from optimization of spectral efficiency to a balanced
+tradeoff between energy efficiency and spectral efficiency. Moreover, in case
+of a multi-user scenario, power consumption of base station can be rateindependent if the system is not heavily loaded. Actually, information rate
+depends on transmission power but also on the momentary link quality on
+frequency resources allocated to scheduled users. In [27], it is recalled that
+the lowest order modulation should always be used while accommodating the
+delay constraint to minimize energy consumption.
+Concluding, EE for RRM algorithms is a vivid research area. Nevertheless there is still a large room for improvement. In our vision it is required to
+the theoretical limits of energy efficient Radio Resource Management (RRM)
+algorithms and identification of their main parameters. The fundamental EE
+versus spectral efficiency tradeoff has not been solved yet. Furthermore, with
+the introduction of HetNets, an additional dimension to the tradeoff has to be
+considered: deployment efficiency. Finally, it is necessary to understand how
+highly dynamic RRM principles can reduce overall system energy consumption in practical systems where signalling overhead can drive to significant
+EE gain limitations.
+
+5 Design of Green Radios
+Additionally, novel technologies and components, as well as energy efficient
+radio interface techniques must be holistically investigated. Innovative design
+of green radios would require innovation of the following three topics:
+• Reduction of dissipated power of base station hardware components.
+• Design of link interfaces and application of innovative radio transmission techniques.
+• Energy efficient RRM.
+Figure 3 summarizes the concepts that we propose to investigate at node and
+single cell levels.
+5.1 Reduction of Dissipated Power of Base Station Hardware
+Components
+In a green network, depending on the coverage range and momentary utilization ratio of base stations, different peak output power levels will be
+
+Green Communications and Mobile Broadband Communication Networks
+
+279
+
+Figure 3 Green radios innovation axes.
+
+required. State of the art Power Amplifier (PA) do not full fill these requirements. Currently available solutions are optimized regarding the power
+efficiency in maximum load scenarios. However, the maximum load scenario
+is a rather rare case in typical network deployments of operators. That means
+that most of the time, the network infrastructure is operated with sub-optimal
+EE thus leading to a significant waste of energy resources. Therefore, power
+efficiency of base stations components has significant further improvement
+potential. Radical new approaches should be envisaged to realize fundamental efficiency improvement. To this end, new configurations of PA should
+be investigated. Actually, PA should be able to tune the output power for
+different operating conditions in real time. For instance, power variations at
+the output of the PA cause impedance variations resulting in antenna mismatch and thereby in power wastage of the overall system. In our vision, joint
+optimization of PA and antenna networks should be introduced to achieve
+reconfigurable/tuneable interstate matching networks. Moreover, transceivers
+should support the scaling of the consumed energy in order to enable the
+adaptation of energy consumption to actual performance requirements. Such
+energy scalability [28] should be present in all components (analogue RF
+front-end, baseband) and in all devices. Furthermore, transceivers should en-
+
+280
+
+E. Calvanese Strinati et al.
+
+able dynamic power management in order to keep active only their necessary
+modules during sleep modes. Indeed, at component level, a key investigation axe is the design of traffic load adaptive base station components, with
+harmonized solutions for EE control on system level and energy efficient
+base station components unlocking solutions for EE operation of cellular
+networks.
+5.2 Design of Link Interfaces and Application of Innovative
+Radio Transmission Techniques
+State of the art radio link designs (such as beam forming, MIMO, adaptive
+antennas arrays, coordinated multi-point transmission and, advanced retransmission schemes) have been designed to achieve high peak data rates, good
+coverage and low latencies. As consequence, mobile terminals require to
+operate periodic control messages and reference signals from base stations.
+This limits the possibilities for base station sleep intervals in low load scenarios. Consequently, a significant amount of energy today is wasted by not
+having appropriate base station sleep mechanisms in place. Some researchers
+have started proposing solutions on isolated aspects and mainly non-cellular
+systems [29–32]. A similar embracing analysis of the EE of radio link technologies for cellular is lacking, despite cellular systems represent the major
+energy consumers due their universal proliferation. In particular, the aspects
+of the radio link operation in low load scenarios have not been addressed
+so far. In order to progress the state of the art on energy efficient radio link
+technologies, several investigation axes should be explored. First, innovation
+should achieve joint optimization of energy efficient radio link operation
+strategies for all load regimes. Second, the specific case of low load and
+short range coverage such as in femto cells deployment should be extensively
+investigated.
+
+6 Green Adaptive Scheduling for OFDMA Based Systems
+Traditional packet scheduling algorithms are designed to increase the
+maximum system capacity, subject to QoS constraints and fairness.
+Nevertheless, most of the time, wireless systems are only moderately
+loaded. With state of the art priority scheduling algorithms, the exploitation
+of available time and frequency resources is typically not optimized
+from an energy perspective. The goal of our investigation is to design an
+energy efficient scheduling algorithms which meets the QoS constraint
+
+Green Communications and Mobile Broadband Communication Networks
+
+281
+
+of an heterogeneous population of UEs. In system load scenarios that are
+not saturated, the exploitation of available time and frequency resources
+is typically not optimized from an energy perspective. Based on these
+observations, we propose to split the resource allocation process into four
+steps:
+Step 1: The Rushing Entity Classifier (REC) classifies entities (packets of
+UEs) waiting to be scheduled as rushing or non-rushing.
+With real-time (RT) traffic, packets are classified as rushing if T hrush ·
+TTL + η ≥ RTTL , where T hrush is a threshold on the QoS deadline that depends on the traffic type, TTL is the time to live of the packet, η is a constant
+which takes into account both retransmission interval and maximum allowed
+number of retransmissions, and RTTL is the remaining TTL.
+With non-real-time (NRT) traffic, flows and not packets are classified by
+the REC. Therefore, the ith user equipment (U Ei ) is classified as rushing
+if one of its NRT flows has been under-served during T Wi . More precisely,
+every Transmission Time Interval (TTI) the REC checks for each U Ei if
+(T Wi − tnow,i ) ≤ (QoSi − txdata,i)/Rmin , where tnow,i is the elapsed time
+since the beginning of T Wi , QoSi the QoS requirements of the UE class of
+traffic, txdata,i the total data transmitted by user i during (T Wi − tnow,i ) and
+Rmin the minimum active transmission rate of the system (always larger than
+zero). Note that T hrush, η and T Wi are scheduler design parameters.
+Step 2: Resources (chunks) are allocated to rushing entities with an EDF-like
+scheduler which allocates best chunk(s) to entities with higher deadline
+priority. Deadline priority metrics differ between RT and NRT traffics:
+while with RT traffic deadline priority depends on RTTL , with NRT traffic it
+depends on the under served data rate experienced by U Ei during T Wi .
+Step 3: All unscheduled resources (chunks) are assigned to users which
+maximize spectral efficiency, regardless to any QoS constraints. Priority
+is granted indeed to UEs selected by standard MCI ‘matrix-based chunk
+allocation’ described in [33]. Actually, the matrix contains the metrics
+λk,n (i) of all possible user-chunk pairs (only for previously unscheduled
+chunks), where at time i, UE k has a metric for chunk n which is given
+by λk,n (i) = Rk,n (i). Rk,n (i) is the instantaneous supportable rate for
+UE k at chunk n, depending on each UE’s Channel Quality Indicator
+(CQI). At each time i, given an unscheduled chunk n, the scheduled UE
+is Un (i) = argmaxk λk,n (i). Indeed, the Adaptive Modulation and Coding
+
+282
+
+E. Calvanese Strinati et al.
+
+(AMC) algorithm suggests for each U Ek assigned to chunk n the most
+spectral efficient Modulation and Coding Scheme (MCS), MCS∗k,n , which
+meets PERtarget .
+Step 4: We trade off UE’s throughput for downlink power by limiting the
+power budget on each non-rushing allocated chunk. Therefore, in order to
+meet the QoS constraints while lowering the transmission power budget,
+a lower MCS order has to be selected for transmission. Two solutions are
+possible. Either power is lowered to a given low power level, or a target low
+power MCS is fixed: MCSlow−power . Such MCSlow−power can be for instance
+suggested by the admission control based on the actual traffic load of the cell.
+Then, for each U Ek assigned to chunk n, the scheduler scales down MCS∗k,n
+to low power MCS (MCSlow−power ) only if MCS∗k,n > MCSlow−power . Downlink transmission power is indeed reduced for chunks allocated to non-urgent
+UEs.
+6.1 Simulation Results
+In this section we assess the effectiveness of our proposed GAS algorithm
+(see Section 6) comparing it with two scheduling algorithms often investigated in the literature: MCI, and EDF. Schedulers are compared in different
+traffic load scenarios in terms of the following power efficiency metric i :
+KiUE
+i =
+
+j =1
+
+RB
+Ni,j
+· Pi,j
+
+KiUE
+j =1
+
+(1)
+
+ρi,j
+
+RB
+where at TTI i, KiU E , Ni,j
+, Pi,j and ρi,j are respectively the number of active
+UEs in the cell, the number of chunk allocated to user j , the downlink power
+for transmission on each chunk and the throughput of user j .
+Schedulers are compared in three traffic scenarios:
+
+• Scenario A (single real-time traffic): unique VoIP [34] or NRTV [35]
+traffic type in the cell for all UEs.
+• Scenario B (mixed real-time traffic): coexistence of VoIP and NRTV
+traffic in the same cell.
+• Scenario C (heterogeneous mixed traffic): coexistence of VoIP and
+HTTP [35] traffic in the same cell.
+Simulation results are given for the system and traffic models summarized
+in Table 1. Note that we simulate the traffic of the central cell, while others
+
+Green Communications and Mobile Broadband Communication Networks
+
+283
+
+Table 1 Main system model parameters.
+Network
+Parameter
+Value
+Carrier frequency
+2.0 GHz
+Bandwidth
+10 MHz
+Inter-site distance
+500 m
+Minimum distance
+35 m
+TTI duration
+1 ms
+Cell layout
+Hexagonal grid, 19 three-sectored cells
+Link to System interface
+EESM
+Traffic model
+VoIP, NRTV
+Nb of antennas (Tx, Rx)
+(1,1)
+Access Technique
+OFDMA
+Total Number of Sub-carriers
+600
+Nb of Sub-carriers per PRB
+12
+Total Nb of Chunks (PRB)
+50
+Propagation Channel
+Fast fading
+Typical urban 6-tap model, 3 km/h
+Interference
+White
+UE
+Channel estimation
+ideal
+Turbo decoder
+max Log-MAP (8 iterations)
+Dynamic Resource Allocation
+Nb of MCS
+12 (from QPSK 1/3 to 64-QAM 3/4)
+10 %
+AMC PERtarget
+CQI report
+Each TTI, with 2 ms delay
+Packet Scheduling
+EDF, MCI, and GAS
+Sub-carriers Allocation Strategy Chunk based allocation
+
+BSs are used for down-link interference generation only. Results are averaged
+over 100 independent dynamic runs, where at the beginning of each run UEs
+are randomly uniformly located in the central cell. Each run simulates 50
+seconds of network activity and at each TTI channel realizations are updated.
+We check if QoS is met based on the metrics defined in [34, 36]. Real-time
+VoIP and NRTV UEs are satisfied if more than 95% of the UEs have a residual Packet Error Rate (PER) below 2% and their TTL is respectively 50 and
+100 ms.
+In Figure 4 we show our simulation results for scenario A with single
+VoIP traffic and we consider a number of active UEs in the cell that ranges
+between 20 to 540. Three scheduling algorithms are investigated under this
+scenario: EDF (dashed curve), MCI (dotted curve) and GAS (solid curve).
+Note that 540 satisfied VoIP UEs is the limit with any of the investigated
+
+284
+
+E. Calvanese Strinati et al.
+
+schedulers. The highest system load (540 satisfied active UEs) is achieved
+with EDF and GAS only. MCI can satisfy up to 450 coexistent active UEs.
+Such maximum load gap between EDF and MCI is not surprising. Actually,
+since MCI allocates resources to UEs with better momentary link quality
+regardless of the user time QoS constraints, with the increasing number of
+real-time flows, many users may face momentary service starvation and consequently, exceed the maximum delivery delay (50 msec). This is not the case
+with EDF since it allocated best chunk(s) to entities with higher QoS deadline
+priority. From an EE point of view, we observe that EDF performs slightly
+better than MCI. Actually, UEs served with MCI experience an higher average transmission spectral efficiency. This causes an higher energy loss caused
+by the transmission of padding bits added when a UE has not enough data to
+entirely fill the allocated chunk(s). Our simulation results show how GAS
+algorithm permits to notably improve the energy effectiveness. We observe
+that in low load scenarios (20 active UEs), the  reduction is up to 32.5%,
+and it decreases as expected for higher number of active UEs, having up to
+31, 29, 26 and 21% of energy cost reduction with respectively 50, 100, 200
+and 350 (up to 550) active UEs.
+In Figures 5 and 6 we show our simulation results for scenario B and
+C, respectively when 75 NRTV (or 100 HTTP in Figure 6) UEs are active
+and the number of active VoIP UEs ranges between 0 and 250 (or between
+0 and 450 in Figure 6). This is a more challenging scenario since the system
+is heavily loaded and heterogeneous QoS constraints have to be taken into
+account in the scheduling rule. As in Figure 4, we compare  performance of
+EDF (dashed curve), MCI (dotted curve) and GAS (solid curve). In case of
+Figure 5 while MCI cannot satisfy any additional VoIP UEs when 75 NRTV
+UEs are present in the system (therefore only a dot is represented in the figure), EDF and GAS can satisfy respectively up to 220 and 250 additional VoIP
+UEs. Simulation results show that comparing EDF and GAS, GAS improves
+ performance respectively of 18, 16, and 10.5%, with respectively up to 50,
+150 and 200 VoIP active UEs. With 250 VoIP UE only GAS can satisfy all
+active UEs since it is more flexible and effective in mixed traffic scenarios.
+Finally, in Figure 6 we show our simulation results for scenario C, when
+100 HTTP UEs are active and the number of active VoIP UEs ranges between
+0 and 450. Again, heterogeneous QoS constraints have to be taken into account in the scheduling rule. With the same trend of results, in Figure 6, while
+EDF and MCI perform slightly the same (MCI can serve more VoIP UEs),
+best performance is obtained with GAS. We observe with GAS scheduling
+a  performance improvements of respectively 30 and 15% with 100, and
+
+Green Communications and Mobile Broadband Communication Networks
+
+285
+
+5
+4.75
+4.5
+4.25
+4
+3.75
+Γ [W/Kbit/s]
+
+3.5
+3.25
+3
+2.75
+2.5
+2.25
+2
+
+MCI
+
+1.75
+
+EDF
+
+1.5
+
+GAS
+
+1.25
+1
+
+50
+
+100
+
+150
+
+200
+250
+300
+350
+Number of Voip UEs
+
+400
+
+450
+
+500
+
+Figure 4 Scenario A (single traffic):  performance evaluation with EDF, MCI and GAS
+schedulers varying the load of VoIP UEs.
+
+200 VoIP active UEs. Furthermore, in scenario C GAS is able to serve up
+to 450 VoIP, while EDF and MCI can satisfy respectively up to 150 and
+250 VoIP UEs. Note that GAS presents some steps in its performance since
+increasing the number of active users, a smaller room for modulation scaling
+of non-urgent UE is experienced.
+
+7 Ghost Femtocells for Energy Efficient Heterogeneous
+Cellular Network
+In our view, femtocells should be invisible in terms of interference generated
+to neighbour cellular users. Nevertheless, femtocells deployment presents a
+very challenging issue: while HeNBs power consumption and interference
+range should be small, the coverage range at which UEs can meet their
+QoS constraints should be large. Based on this observation, we propose
+a novel RRM algorithm designed to strongly lower the HeNBs downlink
+transmission power. We come out with the design of an RRM algorithm,
+the Ghost Femtocells (RRM Ghost ), which trades off transmission energy for
+
+286
+
+E. Calvanese Strinati et al.
+
+4.8
+4.7
+
+MCI
+
+4.6
+
+EDF
+
+4.5
+
+GAS
+
+4.4
+4.3
+4.2
+4.1
+Γ [W/Kbit/s]
+
+4
+3.9
+3.8
+3.7
+3.6
+3.5
+3.4
+3.3
+3.2
+3.1
+3
+2.9
+2.8
+
+0
+
+25
+
+50
+
+75
+
+100
+125
+150
+Number of VoIP UEs
+
+175
+
+200
+
+225
+
+250
+
+Figure 5 Scenario B (mixed traffic):  performance evaluation with EDF, MCI and GAS
+schedulers with 75 NRTV UEs varying the load of VoIP UEs.
+
+frequency resources. The detailed description of the proposed algorithm is as
+follows:
+Step 1 (Classification of Interferers): H-UEs overhear the Broadcast CHannel
+(BCH) and estimate which neighbour HeNBs are currently strong interferers.
+A interferer is strong, if its sensed power level is larger than a predefined
+threshold.
+Step 2 (Feedback to HeNB): H-UE feedbacks to the HeNB its QoS
+constraints, the momentary Channel State Indicator (CSI) measurements,
+and the cell-IDs of the HeNBs perceived as strong interferers.
+Step 3 (Feedback to Control Unit): Each HeNB within the femtocell network
+(i.e. the group of femtocells placed in a block of apartments) reports this
+information to the Control Unit (CU). For each user i in the network, the CU
+stores the set of its neighbours Vi . The elements of this set are the users that
+are served by the HeNB of user i (HeNBi ) and the users that are served by
+the HeNBs that are indicated as strong interferers by HeNBi .
+
+Green Communications and Mobile Broadband Communication Networks
+
+287
+
+5.5
+
+5
+
+4.5
+
+Γ [W/Kbit/s]
+
+4
+
+3.5
+
+3
+
+2.5
+
+MCI
+EDF
+
+2
+
+1.5
+
+GAS
+
+0
+
+50
+
+100
+
+150
+
+200
+250
+Number of Users
+
+300
+
+350
+
+400
+
+450
+
+Figure 6 Scenarios C (mixed traffic):  performance evaluation with EDF, MCI and GAS
+schedulers with 100 HTTP UEs varying the load of VoIP UEs.
+
+Step 4 (Computing Scheduling Matrices): According to the CSI measurements and the selected scheduler algorithm, the CU computes scheduling
+j
+metric λi for every user i on every RB j .
+In this paper, the RRMGhost implements a proportional fair based scheduler, that is
+K
+
+j
+j
+λi = SINRi
+SINRki ,
+(2)
+k=1
+j
+
+where SINRi represents the instantaneous channel condition of the RB j
+K
+k
+observed at user i and
+k=1 SINRi is the sum of SINR of K RBs that
+have been already allotted to user i. RRM Ghost uses this metric to build the
+Nf
+Nk × NRB ], where
+scheduling matrices M T x and M Rep of dimension [ k=1
+Nf is the number of active HeNBs in the network, Nk is the number of users
+served by the femtocell k, and NRB is the number of available RBs. Based on
+M T x , the scheduler allocates to each user the minimum number of RBs that
+meets QoS and power constraints. Then, the proposed scheduler sorts matrix
+
+288
+
+E. Calvanese Strinati et al.
+
+M Rep to allocate to the served users additional available RBs.
+Step 5 (Scheduling): The CU selects the minimum number of RBs that meets
+QoS and power constraints for each user to be served. It schedules in three
+steps:
+Step 5-a: The controller selects the best user-available RB pair (i, j ) with the
+best metric in M T x .
+Step 5-b: For each user-available RB pair (i, j ), the algorithm checks the set
+
+of RBs allotted to user i (R
+Bi ) and selects the highest possible Modulation
+
+and Coding Scheme (MCSi ), accordingly. The overall available power at user
+i served by the HeNB k is P̂i = P T /Nk , where P T and Nk are the power
+budget and the number of users of the HeNB k, respectively. The controller
+
+Bi .
+equally splits P̂i in the set R
+Step 5-c: Then, the controller estimates the sum of the Mutual Information I
+ i.
+
+given by set R
+Bi and MCS
+• When I = 0, the selected user-RB pair cannot be served in this scheduling period so the values of the i-rows in both M T x and M Rep are set to
+zero.
+• When I ≥ Rtg , user i is served. The values of the i-row in M T x and
+M Rep (i, j ) are set to zero and the values of the i-row in M Rep are updated
+according to the scheduler rule (see Eq. (2)). Moreover, M T x (k, j ) and
+M Rep (k, j ), where k ∈ Vi , are set to zero.
+• If I < Rtg , the user i is not served yet. The values M T x (i, j ) and
+M Rep (i, j ) are set to zero and the values of the i-rows in M Rep and
+M T x are updated according to the scheduler rule (see Eq. (2)). Moreover,
+M T x (k, j ) and M Rep (k, j ), where k ∈ Vi , are set to zero.
+
+Step 6 (MCS Scaling): Given the set of RBs (R
+Bi ) allocated each served
+∗
+user i, the algorithm finds the MCS of the minimum order that meets the
+ i , the MCS of user i (MCSi ) is
+QoS target. If MCS∗ is different from MCS
+∗
+set equal to MCS . The goal of this process is twofold. First, it improves the
+transmission robustness. Second, it reduces the padding thus improving the
+spectral efficiency.
+Step 7 (Spreading):
+The CU allocates unused RBs to spread the original message and improve
+
+Green Communications and Mobile Broadband Communication Networks
+
+289
+
+the transmission robustness. Scheduling is done in three steps:
+Step 7-a: The scheduler selects the user-available RB pair (i, j ) that has the
+best metric in M Rep .
+Step 7-b: For each user-available RB pair (i, j ), the algorithm checks the
+Mutual Information I given by the entire set of RBs allocated to user i and
+MCSi :
+• If I < Rtg , exploit further RBs would cause outage, hence the values of
+the row corresponding to user I in M Rep are set to zero.
+• When I ≥ Rtg , the original message is spread in the additional RB and
+M Rep (i, j ) as well as M Rep (k, j ), where k ∈ Vi , are set to zero.
+Moreover the values of the i-row in M Rep are updated according to the
+scheduler rule.
+Step 7-c: The scheduler process terminates when no more user-RB pairs are
+available.
+Step 8 (Power Scaling): The algorithm estimates the SINR perceived at each
+served user and reduces the allocated transmission power to meet the SINR
+threshold given by the target PER and the selected MCS.
+Step 9 (Message Reception): Finally, each user collects the information received in each of its allotted RBs and combines these RBs using the chase
+combining scheme [37].
+7.1 Deployment of Femtocells and System Model
+In our analisys, we assume that femtocells are deployed according to the
+3GPP grid urban deployment model [38] (see Figure 7). This model represents a single floor building with 10 m × 10 m apartments placed next to each
+other in a 5 × 5 grid. The block of apartments belongs to the same region
+of a macrocell. Moreover, we assume that six additional M-BSs surround the
+central macrocell generating additive interference for both macro and femto
+users. Each HeNB can simultaneously serve up to four users. In order to
+consider a realistic case in which some apartments do not have femtocells,
+we use a system parameter ρd called a deployment ratio that indicates the
+percentage of apartments with a femtocell. Furthermore, the 3GPP model
+
+290
+
+E. Calvanese Strinati et al.
+
+Figure 7 3GPP femtocell grid urban deployment model.
+
+includes ρa , another parameter called an activation ratio defined as the percentage of active femtocells. If a femtocell is active, it will transmit with a
+certain power over data channels. Otherwise, it will transmit over the control
+channel.
+We use two different models to capture the signal propagation effect based
+on the 3GPP specifications [38]:
+1. Transmissions from femto and macro users to M-BSs:
+PL(dB) = 15.3 + 37.6 log10 d + Low ,
+where d is the distance between the transmitter and the receiver (in
+meters) and Low is the penetration losses of an outside wall equal to
+20 dB.
+2. Transmissions from femto and macro users to HeNBs:
+PL(dB) = 38.46 + 20 log10 d + 0.7d2D,indoor
++ 18.3n((n+2)/(n+1)−0.46) + q · Liw ,
+where d is the distance between the transmitter and the receiver (in
+meters), d2D,indoor is the two dimensional separation between the trans-
+
+Green Communications and Mobile Broadband Communication Networks
+Table 2 Main system model parameters.
+Parameter
+Carrier frequency
+Carrier bandwidth
+Total number of Resource Blocks
+Inter-site distance
+Access Technique
+M-BS Tx power
+M-BS antenna gain after cable loss
+HeNB maximum Tx power
+HeNB antenna gain after cable loss
+Shadowing distribution
+Shadowing standard deviation in the interfering links
+Shadowing standard deviation in the femto/macro user useful link
+Autocorrelation distance of shadowing
+Fast fading distribution
+Thermal noise density
+
+291
+
+Value
+2.0 GHz
+10.0 MHz
+50
+500 m
+OFDMA
+16 dBW
+13 dB
+–17 dBW
+0 dB
+Log-normal
+8 dB
+4/8 dB
+50 m
+Rayleigh
+N0 = −174 dBm/Hz
+
+mitter and the receiver (in meters), n is the number of penetrated floors,
+q is the number of walls that separate the user apartments and the transmitting HeNB apartment, Liw is the penetration loss of walls within the
+grid of apartments equal to 5 dB. The third term in the above expression
+represents the penetration loss due to walls inside an apartment. This
+attenuation is modeled as a log-linear value equal to 0.7 dB/m. The
+fourth term represents the penetration loss within different floors. In the
+single floor building scenario considered, we have d = d2D,indoor and
+n = 0.
+Table 2 shows key model parameters including shadowing, fast fading, the
+macrocell antenna gain, and the transmission power.
+7.2 Simulation Results
+In this section, we assess the effectiveness of the proposed RRM Ghost by
+comparing its performance with a reference algorithm (RRMclassic). The main
+differences between these schemes are:
+1. In RRM classic, there is no coordination within the femtocell network.
+Hence, HeNBs are not aware of the presence and allocation strategy of
+neighbour HeNBs.
+2. RRM classic aims to maximize the spectral efficiency of femtocells while
+minimizing the probability that users that belong to different cells access
+
+292
+
+E. Calvanese Strinati et al.
+
+to same RBs. Thus, the RRM classic attempts to limit the number of RBs
+allotted to each H-UE.
+3. RRM classic algorithm does not implement MCS and Power scaling (Steps
+6 and 8 in RRM Ghost algorithm).
+We present simulation results for the system model and its parameters presented in Section 7.1. RRM algorithms are compared in terms of the efficiency
+metric defined in Section 6.1, Eq. (1).
+The results are averaged over 100 independent runs. For each run 103
+independent TTIs are simulated and at each TTI channel fading instances
+are updated. At the beginning of each run, we randomly place two blocks of
+apartments where HeNBs, H-UEs, and M-UEs are randomly deployed. Note
+that in the presented simulations, we consider that all deployed HeNBs are
+active (ρa = 1) with four H-UEs per HeNB. Moreover, indoor M-UEs are
+randomly distributed in the apartments where HeNBs are not deployed.
+In our simulations, solid and dashed lines, respectively, correspond to the
+performance of RRM classic and RRM Ghost schemes.
+Figure 8 shows the H-UEs performance as  versus the power budget P T
+at each femtocell. We have set ρd equal to 0.3 and considered four different
+traffic scenarios:
+Scenario Traf.1: H-UE throughput target Ttg = 300 kbit/s, square marked
+curves.
+Scenario Traf.2: H-UE throughput target Ttg = 600 kbit/s, circle marked
+curves.
+Scenario Traf.3: H-UE throughput target Ttg = 1 Mbit/s, star marked curves.
+Scenario Traf.4: H-UE throughput target Ttg = 2 Mbit/s, diamond marked
+curves.
+From Figure 8 we can observe that the proposed RRM Ghost improve the
+performance of H-UEs compared to RRM classic in all considered traffic scenarios. For instance, considering a HeNB power budget equal to 10 mW, the
+proposed RRM Ghost gain up to 94.5% with respect to RRM classic in Scenario
+Traf.1, up to 90% in Scenario Traf.2, up to 85% in Scenario Traf.3, and up
+to 75.4% in Scenario Traf.4. Moreover, results outline how the gain increases
+in lightly loaded scenarios (Scenario Traf.1 and Scenario Traf.2) where our
+
+Green Communications and Mobile Broadband Communication Networks
+
+18
+
+293
+
+RRMclassic−Sc. Traf1
+RRM
+
+−Sc. Traf
+
+RRM
+
+−Sc.Traf
+
+classic
+
+16
+
+classic
+
+2
+
+3
+
+RRMclassic−Sc. Traf4
+
+14
+
+RRMGhost−Sc. Traf1
+RRMGhost−Sc. Traf2
+
+12
+
+RRM
+
+−Sc. Traf
+
+Γ [mW/Mbit/s]
+
+Ghost
+
+3
+
+RRMGhost−Sc. Traf4
+
+10
+
+8
+
+6
+
+4
+
+2
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+Power budget at each HeNB [mW]
+
+Figure 8 Average  measured at H-UEs as function of power budget at each HeNB in different
+traffic scenarios.
+
+algorithms permit to strongly reduce the transmission power by improving
+the femtocell energy efficiency. In this cases, our schemes takes advantage
+of the lower throughput targets to decrease the downlink transmission power
+and spreading over RBs.
+Figures 9 and 10 show the improvement in M-UE performance under
+RRMGhost . In the co-channel femtocell deployment, indoor M-UE performance is limited by femto-to-macro interference. Some recent research introduced cooperation within M-BSs and HeNBs in order to coordinate the access
+to the radio medium and avoid the cross-tier interference [39, 40]. However,
+following the 3GPP Release 10 [41], we do not implement this coordination
+in our system. Hence, the M-BS scheduler is not aware of the RBs exploited
+by the interfering HeNBs. When the M-BS assigns an RB to an indoor user
+which is used by a neighbour HeNB, this M-UE can be exposed to a high level
+
+294
+
+E. Calvanese Strinati et al.
+
+of interference. We aim to evaluate the effect of this interference on M-UE
+when femtocells use the reference RRM classic and the proposed scheme.
+In order to compare these algorithms, we have set the M-UE throughput
+target equal to 300 kbit/s, the H-UE throughput target equal to 600 kbit/s and
+considered three different femtocell deployment scenarios:
+Scenario δL : low density – ρd = 0.3, circle-marked curves.
+Scenario δM : medium density – ρd = 0.5, triangle-marked curves.
+Scenario δH : high density – ρd = 0.8, plus-marked curves.
+In Figure 9 we show the indoor M-UE performance as  versus the power
+budget P T at each femtocell. Results indicate that RRMGhost permit to limit
+the impact of the femto-to-macro interference in all scenarios. For instance,
+considering P T equal to 20 mW (20 mW is often indicated by researchers and
+industries as the current downlink power target for HeNBs), the proposed
+RRMGhost gains up to 10.6, 16.2, and 21.5% with respect to RRMclassic in
+Scenarios δL , δM , and δH . In low/medium density scenarios, the probability
+that neighbour HeNBs allocate the same RBs at the same time is fairly small
+under RRMclassic. Hence, RRMGhost improvements mainly come from steps
+6, 7, and 8 of the proposed schemes (MCS scaling, spreading, and power
+scaling) that permit to reduce the HeNB downlink power transmission in each
+RB. However, in Scenario δH , several neighbour HeNBs may access same
+RBs in the same TTI resulting in high peak of interference on some RBs. In
+RRMGhost , the CU coordinate the access of neighbouring femtocells to further
+limit the overall interference perceived at end-users of both macro and femto
+cells.
+Figure 10 shows the M-UE performance as a function of distance between
+the end-user and the M-BS for different femtocell deployment scenarios and
+for P T equal to 20 mW. M-UEs that are located far away from the M-BS
+perceive low average SINR due to path loss and interference generated by
+surrounding M-BSs. Hence, it is fundamental to limit the femto-to-macro
+interference to satisfy these macro users’ QoS constraints. Simulation results
+show that the proposed algorithm strongly enhance the performance of MUEs placed at the border of the cell. Furthermore, the observed gain increases
+with higher density of femtocells and larger distance between the M-UE and
+its M-BS.
+
+Green Communications and Mobile Broadband Communication Networks
+
+5.5
+
+295
+
+RRMclassic−Sc.δH
+RRM
+
+−Sc.δ
+
+classic
+
+M
+
+RRMGhost−Sc.δH
+RRM
+
+5
+
+−Sc.δ
+
+Ghost
+
+M
+
+RRMclassic−Sc.δL
+
+Γ [mW/Kbit/s]
+
+RRMGhost−Sc.δL
+4.5
+
+4
+
+3.5
+
+3
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+Power budget at each HeNB [mW]
+
+Figure 9 Average  measured at M-UEs as a function of the power budget at each HeNB in
+different traffic scenarios.
+
+In Scenario δL , under RRMclassic, the M-BS needs 5.8 mW/Kbit/s to serve
+a M-UE placed at 225 meters far away, while only 4.6 mW/Kbit/s are necessary with the proposed RRM Ghost . In Scenario δM , under RRMclassic, the M-BS
+needs 7.7 mW/Kbit/s to serve a M-UE placed at 225 meters far away, while
+only 5.5 mW/Kbit/s are necessary with the proposed RRM Ghost . In Scenario
+δH , under RRM classic, the M-BS needs 10.9 mW/Kbit/s to serve a M-UE
+placed at 225 meters far away, while only 7.1 mW/Kbit/s are necessary with
+the proposed RRM Ghost .
+This improvements result in higher macrocell coverage and capacity. The
+maximum number of indoor M-UEs placed at the border of the cell that can
+be served simultaneously is
+NM−U E =
+
+T
+PM−BS
+
+ · TtgM−U E
+
+,
+
+(3)
+
+296
+
+E. Calvanese Strinati et al.
+
+11
+
+10
+
+9
+
+RRMclassic−Sc.δH
+RRMclassic−Sc.δM
+RRMGhost−Sc.δH
+RRMclassic−Sc.δL
+RRMGhost−Sc.δM
+RRM
+
+Γ [mW/Kbit/s]
+
+8
+
+−Sc.δ
+
+Ghost
+
+L
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+45
+
+75
+
+105
+
+135
+
+165
+
+195
+
+225
+
+Distance between M−BS and M−UE [m]
+
+Figure 10 Average  measured at M-UEs as a function of the distance between the end-user
+and the M-BS.
+Table 3 Maximum number of indoor M-UEs placed at the border of the macrocell that can be
+contemporary served by an M-BS.
+ρd \ RRM algorithm RRMclassic RRMGhost
+0.3
+19
+21
+0.5
+13
+18
+0.8
+9
+14
+
+T
+where PM−BS
+and TtgM−U E are respectively the M-BS downlink available
+power and the M-UE throughput target. Table 3 shows the values of NM−U E
+T
+under the discussed algorithms and in different deployment scenarios (PM−BS
+M−U E
+and Ttg
+are set equal to 16 dBW and 300 Kbit/s, respectively).
+
+Green Communications and Mobile Broadband Communication Networks
+
+297
+
+8 Conclusion
+Communication Energy Efficiency (EE) presents indeed an alarming bottleneck in the telecommunication growth paradigm. In this paper, we first
+detailed the holistic energy efficient optimization methodology for broadband
+cellular networks proposed by the EARTH project. We discussed the new
+research activities that are currently investigated in the vivid area of Green
+Communications. The topics of energy efficiency metrics, network deployment strategies, network management, and energy efficient radio resource
+management have been introduced. Then, we investigated downlink power
+effectiveness of two reference scheduling algorithms MCI and EDF, in a systems that implements a realistic OFDMA air interface where no full-queued
+traffic and unlimited number of control channel per TTI is assumed. We underlined that while EDF does not profit from multi-user diversity, MCI targets
+at maximizing the cell throughput regardless of the user’s QoS constraints
+even in low load scenarios for which spectral efficiency can be traded with
+energy efficiency. Then, we came up with the definition of a novel scheduler,
+the GAS algorithm. We evaluated the effectiveness of the proposed GAS
+algorithm comparing it with the above reference schedulers. Our simulations
+substantiated how GAS is a highly flexible and effective scheduler for a variety of traffic scenarios and it drives to notable energy cost reductions while
+meeting the Quality of Service (QoS) of UEs active admitted in the system. In
+the third part of the paper, we presented the RRM Ghost , a novel radio resource
+management scheme that efficiently uses the available wireless spectrum in
+a two-tier network. In this scenario, a large population of heterogeneous interferers shares the overall cellular bandwidth. The proposed algorithm limits
+the undesired effects of interference and allows a drastic reduction of the
+downlink energy per information bit required to satisfy the QoS constraints
+of both macro and femto users.
+We expect that both the holistic system methodology and the proposed
+energy efficient resource allocation algorithms presented in this paper will
+encourage the research community to investigate into innovative solutions in
+order to achieve a sustainable increase of broadband communication system.
+
+Acknowledgements
+The authors gratefully acknowledge the contribution of the EARTH consortium to the technical definition of the project. The work leading to this paper
+
+298
+
+E. Calvanese Strinati et al.
+
+has received funding from the European Community’s Seventh Framework
+Programme [FP7/2007-2013] under Grant No. 247733 project EARTH.
+
+References
+[1] M. Etoh, T. Ohya, and Y. Nakayama. Energy consumption issues on mobile network systems. In Proceedings of the International Symposium on Applications and the Internet,
+SAINT 2008, pp. 365–368, July–August 2008.
+[2] S. Fletcher. Green radio-sustainable wireless networks. Mobile VCE Core, 5, February
+2009. Online: http://www.mobilevce.com/dloadspubl/mtg284Item1503.ppt.
+[3] Mobile VCE, http://www.mobilevce.com/.
+[4] GreenTouch, http://www.greentouch.org/.
+[5] M. Gruber, O. Blume, D. Ferling, D. Zeller, M.A. Imran, and E. Calvanese Strinati.
+EARTH – Energy Aware Radio and Network Technologies. In Proceedings of IEEE
+20th International Symposium on Personal, Indoor and Mobile Radio Communications
+(PIMRC 2009), pp. 1–5, 2009.
+[6] Energy Aware Radio and neTworking tecHnologies European Community’s Seventh
+Framework Programme, https://www.ict-earth.eu/.
+[7] E. Calvanese Strinati and P. Greco. Green resource allocation for ofdma wireless cellular
+networks. In Proceedings of IEEE International Symposium on Personal, Indoor and
+Mobile Radio Communications, Instanbul, Turkey, September 2010.
+[8] V. Chandrasekhar, J. Andrews, and A. Gatherer. Femtocell networks: A survey. IEEE
+Communications Magazine, 46(9):59–67, September 2008.
+[9] Airvana Inc. How femtocells change the economics of mobile service delivery,
+http://www.airvana.com/.
+[10] M. Heath et al. Picocells and femtocells: Will indoor base stations transform the telecoms
+industry? http://research.analysys.com, 2007.
+[11] S. Carlaw. IPR and the potential effect on femtocell markets. FemtoCells Europe,
+ABIresearch, 2008.
+[12] S. Carlaw and C. Wheelock. Femtocell market challenges and opportunities. ABI
+Research, Research Report, Vol. 23, 2007.
+[13] B. Badic, T. O’Farrrell, P. Loskot, and J. He. Energy efficient radio access architectures
+for green radio: Large versus small cell size deployment. In Proceedings of IEEE 70th
+Vehicular Technology Conference Fall (VTC 2009-Fall), pp. 1–5, 2009.
+[14] Y. Chen, S. Zhang, and S. Xu. Characterizing energy efficiency and deployment efficiency relations for green architecture design. In Proceedings of IEEE International
+Conference on Communications Workshops (ICC 2010), pp. 1–5, 2010.
+[15] I. Ashraf, L.T.W. Ho, and H. Claussen. Improving energy efficiency of femtocell base
+stations via user activity detection. In Proceedings of IEEE Wireless Communications
+and Networking Conference (WCNC 2010), pp. 1–5, 2010.
+[16] C.H.M. de Lima, M. Bennis, K. Ghaboosi, and M. Latvaaho. Interference management
+for self-organized femtocells towards green networks. In Proceedings of IEEE 21st International Symposium on Personal, Indoor and Mobile Radio Communications Workshops
+(PIMRC2010), pp. 352–356, 2010.
+
+Green Communications and Mobile Broadband Communication Networks
+
+299
+
+[17] A. De Domenico and E. Calvanese Strinati. A radio resource management scheduling algorithm for selforganizing femtocells. In Proceedings of IEEE 21st International Symposium on Personal, Indoor and Mobile Radio Communications Workshops
+(PIMRC2010), pp. 191–196, 2010.
+[18] Emilio Calvanese Strinati, Antonio De Domenico, and Andrzej Duda. Ghost femtocells:
+A novel radio resource management scheme for OFDMA based networks. In Proceedings of IEEE Wireless Communications and Networking Conference (WCNC 2011),
+Cancun, Mexico, March 2011.
+[19] B. Gorjni. ETSI work programme on energy saving. In Proceedings of 29th International
+Telecommunications Energy Conference (INTELEC2007), pp. 174–181.
+[20] G. Auer, I. Gódor, L. Hvizi, M.A. Imran, J. Malmodin, P. Fazekas, G. Biczók, H.
+Holtkamp, D. Zeller, O. Blume, and R. Tafazolli. Enablers for energy efficient wireless
+networks. In Proceedings of IEEE 72nd Vehicular Technology Conference Fall (VTC
+2010-Fall), pp. 1–5, 2010.
+[21] Ambient Networks, EU FP6 IP, phase 1 2004–2005, phase 2 2006–2007,
+http://www.ambientnetworks.org/.
+[22] R.G. Gallager. Power limited channels: Coding, multiaccess, and spread spectrum. In
+Proceedings of 1988 Conference Information Sciences and Systems, March 1988.
+[23] S. Verdu. On channel capacity per unit cost. IEEE Transactions on Information Theory,
+36(5):1019–1030, 1990.
+[24] C. Schurgers, O. Aberthorne, and M.B. Srivastava. Modulation scaling for energy aware
+communication systems. In Proceedings of International Symposium on Low Power
+Electronics and Design, 2001.
+[25] F.M. Chiussi and V. Sivaraman. Achieving high utilization in guaranteed services
+networks using early deadline-first scheduling. In Proceedings of Sixth International
+Workshop on Quality of Service (IWQoS1998), pp. 209–217, May 1998.
+[26] A. Pokhariyal, T.E. Kolding, and P.E. Mogensen. Performance of downlink frequency
+domain packet scheduling for the UTRAN long term evolution. In Proceedings of IEEE
+17th International Symposium on Personal, Indoor and Mobile Radio Communications
+(PIMRC2006), pp. 1–5, 2006.
+[27] F. Meshkati, H.V. Poor, S.C. Schwartz, and N.B. Mandayam, An energy-efficient
+approach to power control and receiver design in wireless data networks. IEEE Transactions on Communications, 53(11):1885–1894, 2005.
+[28] L. Benini, A. Bogliolo, and G. De Micheli. A survey of design techniques for systemlevel dynamic power management. IEEE Transactions on Very Large Scale Integration
+(VLSI) Systems, 8(3):299–316, 2000.
+[29] Jui-Hung Yeh, Jyh-Cheng Chen, and Chi-Chen Lee, Comparative analysis of energysaving techniques in 3GPP and 3GPP2 systems. IEEE Transactions on Vehicular
+Technology, 58(1):432–448, 2009.
+[30] Shuguang Cui, A.J. Goldsmith, and A. Bahai. Energy efficiency of MIMO and cooperative MIMO techniques in sensor networks. IEEE Journal on Selected Areas in
+Communications, 22(6):1089–1098, 2004.
+[31] A.J. Goldsmith and S.B. Wicker. Design challenges for energy-costrained ad hoc
+wireless networks. IEEE Wireless Communications, 9(4), 2002.
+
+300
+
+E. Calvanese Strinati et al.
+
+[32] G. Miao, N. Himayat, Y.G. Li, and A. Swami, Crosslayer optimization for energyefficient wireless communications: A survey. Wireless Communications and Mobile
+Computing, 9(4):529–542, 2009.
+[33] V. Ramachandran, V. Kamble, and S. Kalyanasundaram. Frequency selective OFDMA
+scheduler with limited feedback. In Proceedings of IEEE Wireless Communications and
+Networking Conference, pp. 1604–1609, April 2008.
+[34] 3GPP TSG-RAN1#48. Orange Labs, China Mobile, KPN, NTT DoCoMo, Sprint, TMobile, Vodafone, and Telecom Italia, R1-070674, LTE physical layer framework for
+performance verification, v7.1.0, February 2007.
+[35] 3GPP TR 25.892 V6.0.0. Feasibility study for Orthogonal Frequency Division Multiplexing (OFDM) for UTRAN enhancement, June 2004.
+[36] 3GPP TSG RAN, 3GPP TR.25814. Physical layer aspects for evolved UTRA (Release
+7), v7.1.0, September 2006.
+[37] D. Chase. Code combining – A maximum-likelihood decoding approach for combining an arbitrary number of noisy packets. IEEE Transactions on Communications,
+33(5):385–393, May 1985.
+[38] 3GPP TSG-RAN4#51. Alcatel-Lucent, picoChip Designs, and Vodafone, R4-092042,
+Simulation assumptions and parameters for FDD HENB RF requirements, May 2009.
+[39] B. Zubin, S. Andreas, A. Gunther, and H. Harald. Dynamic resource partitioning for
+downlink femto-to-macro-cell interference avoidance. EURASIP Journal on Wireless
+Communications and Networking, 2010.
+[40] M.E. Sahin, I. Guvenc, Moo-Ryong Jeong, and H. Arslan. Handling CCI and ICI
+in OFDMA femtocell networks through frequency scheduling. IEEE Transactions on
+Consumer Electronics, 55(4):1936–1944, 2009.
+[41] 3GPP TSG-RAN1#62, R1-105082. Way forward on eICIC for non-CA based HetNets,
+August 2010.
+
+Biographies
+Emilio Calvanese Strinati obtained his Masters degree in 2001 from the
+University of Rome La Sapienza and his PhD in Engineering Science in
+2005 on “Radio link control for improving the QoS of wireless packet
+transmission”. He started working at Motorola Labs in Paris in 2002. Then
+in 2006 he joined the Centre for Atomic Energy (CEA) in Grenoble as a
+research engineer. Since 2004 Emilio Calvanese Strinati has been giving
+lectures at ENST, the University of Rome La Sapienza, and INPG-Grenoble
+on physical and MAC layer topics. His main research topics are information
+theory, advanced coding schemes, cooperative communications, scheduling,
+resources allocation and green ICT for wireless mobile networks. In 2007 he
+became a PhD supervisor. Emilio Calvanese Strinati has published around
+50 papers in international conference proceedings and book chapters, and is
+the main inventor or co-inventor of more than 20 patents. Since 2009 he is
+
+Green Communications and Mobile Broadband Communication Networks
+
+301
+
+the Deputy Head of Telecommunication program in CEA.
+Antonio De Domenico obtained his Masters degree from the University of
+Rome La Sapienza, Rome, Italy, in 2008. He is currently working on his PhD
+degree at the CEA/LETI Labs – MINATEC, Grenoble, France. Furthermore,
+he is involved in the Inter-Carnot TEROPP and ICT-FP7 BeFEMTO
+projects that respectively aim to successfully develop opportunistic radio
+and femtocell technologies in order to enable a cost-efficient provisioning of
+ubiquitous broadband services.
+Laurent Herault was born in Tours, France, in 1964. He received his BS
+degree in electrical engineering and MS degree in control engineering from
+the Institute National Polytechnique de Grenoble (INPG) in 1987, and his
+PhD degree in computer science from INPG in 1991. He won the Best Junior
+Researcher Award from the University of Grenoble, France, in 1990. He is an
+‘International Expert’ at CEA. From 2004, he is Director of the Telecommunications Program of CEA. Since 2010, he is Head of Wireless & Security
+Labs in CEA-LETI.
+
+

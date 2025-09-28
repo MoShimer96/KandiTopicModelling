@@ -1,0 +1,447 @@
+Consolidation, Colocation, Virtualization,
+and Cloud Computing: The Impact
+of the Changing Structure of Data Centers
+on Total Electricity Demand
+Ralph Hintemann
+
+Abstract The IT industry in general and data centers in particular are subject to a
+very dynamic development. Within a few years, the structure and components of
+data centers can change completely. This applies not only to individual data
+centers (see [27], in this volume), but also to the structure of the data center market
+at the national or international level. The sizes, types, and locations of data centers
+are changing significantly because of trends such as the consolidation of data
+centers, the increasing use of colocation data centers, virtualization, and cloud
+computing. The construction of large cloud data centers, for example Google in
+Finland, Facebook in Sweden, or Microsoft in Ireland, is an example of these
+developments. In consequence, there is an impact on the overall energy demand of
+data centers. This chapter discusses these developments and the impact on the
+overall energy consumption of data centers using the example of Germany.
+
+
+
+
+
+Keywords Data center Energy consumption Consolidation
+Hosting Cloud computing Virtualization Typology
+
+
+
+
+
+
+
+ Colocation 
+
+1 Introduction
+Data centers account for a considerable share of electricity consumption. Koomey
+assumes that they consumed 1.1–1.5 % of global electricity in 2010 and estimates
+that the figure for the US is between 1.7 and 2.2 %. What is more, global electricity consumption increased by 56 % from 2005 to 2010 [1]. The Borderstep
+Institute calculated that data centers are responsible for 1.8 % of total electricity
+consumption in Germany [2]. In places with a very high density of data centers,
+such as the Frankfurt area, their share of power consumption is even on the order
+R. Hintemann (&)
+Borderstep Institute, Berlin, Germany
+e-mail: hintemann@borderstep.de
+ Springer International Publishing Switzerland 2015
+L.M. Hilty and B. Aebischer (eds.), ICT Innovations for Sustainability,
+Advances in Intelligent Systems and Computing 310,
+DOI 10.1007/978-3-319-09228-7_7
+
+125
+
+126
+
+R. Hintemann
+
+of 20 % [3]. The power consumption of major data centers, such as Facebook’s in
+Finland or Microsoft’s in Chicago, is more than 50 MW [4, 5]. These figures and
+examples reveal two things:
+• Data centers are of high significance with regard to total electricity
+consumption;
+• Besides total power consumption, the development of the structure of data
+centers is important, e.g. are more large or small data centers added, what is the
+purpose of the data centers, and where are they located geographically?
+IT trends such as data center consolidation, virtualization, and cloud computing, as
+well as increasing use of colocation opportunities are giving rise to changes in the
+structure of data centers. This chapter deals with the impacts of these structural
+changes on the energy consumption of data centers overall.
+Such an analysis must first confront three major challenges. Firstly, in some cases
+it is not quite clear how the term ‘‘data center’’ is defined. To date, there is no
+uniform definition accepted by scholars and practitioners alike [6]. Various definitions exist, depending on how data centers are used [7, pp. 5–6]. An important
+reason for this is that the sizes and purposes of data centers vary considerably. At
+one end of the scale, there are small entities with a few elements, e.g. the server room
+in a medium-sized engineering company with, say, twenty servers. At the other, we
+find factory buildings the size of a soccer field housing tens of thousands of servers,
+storage systems, and network devices and involving comprehensive infrastructure
+such as equipment for cooling and climate control, power distribution, uninterruptible power supply, emergency generators, fire safety, access control, etc.
+The second challenge is the high speed of investment in ICT in general and in
+data centers in particular. The structure of data centers is changing very rapidly
+because of new hardware and software technologies, new IT concepts such as
+cloud computing, and new approaches with regard to infrastructure, such as direct
+free cooling. Studies and publications on data centers prepared 4–5 years ago
+[8–12] no longer reflect current reality adequately.
+The third challenge when analyzing the structure of data centers is obtaining
+up-to-date information about them. There are no official statistics concerning data
+centers. The opportunities to obtain information by means of surveys are also
+limited because data center operators consider them to be ‘‘critical infrastructure.’’
+Failures or malfunctions would have strong economic impacts on the company
+which could even threaten its existence. From the perspective of data center
+operators, it is therefore rational to provide as little information as possible about
+the location, components, and structures of their data centers. A further methodological problem is the fact that data centers are not economic entities of their
+own. In many cases, they merely have a supporting function, for example within
+companies of a particular sector (engineering, finance, chemistry, etc.). What is
+more, the quality of the relatively small amount of information available about
+data centers is difficult to assess. The results of analyses are often contradictory.
+One reason for this is surely that there are different definitions of what constitutes a
+data center.
+
+Consolidation, Colocation, Virtualization, and Cloud Computing …
+
+127
+
+It can be said that hardly any robust data and statistics on the structure of data
+centers are available. Therefore, studies to date on the energy use of data centers
+usually focus on analyzing individual data centers (e.g. [13–16]) or determining
+the total electricity consumption of a country or region [1, 2, 8–10, 12, 17, 18].
+Despite these challenges, I attempt to analyze and evaluate the relevance of the
+structure of data centers for total energy use in this chapter, using the following
+approach. First, the methodology will be described, followed by an introduction of
+a typology of data centers. This typology permits more detailed analysis of the
+structure of data centers as well as the determination of implications of structural
+changes on energy consumption. Finally, some structural changes will be presented, using the development from 2008 to 2013 as an example, and impacts on
+data centers’ energy consumption will be discussed. In order to illustrate the data,
+which are valid overall, with empirical data, and to provide a foundation for the
+results, I have selected Germany as an example, as comprehensive data are
+available at the Borderstep Institute.
+
+2 Methodology
+For this chapter, a data center is defined as follows [12, pp. 13]:
+A data center is a building or space which houses the central data processing technology of
+one or more organizations. It must consist at least of a room of its own with a secure
+electricity supply as well as climate control.
+
+Various information sources were used to obtain valid information about the
+current structures and components of data centers and their changes:
+• A model of the structure of data centers in Germany is available at the
+Borderstep Institute. The model forms groups of data centers according to size
+and describes the average IT hardware equipment for each group as well as
+infrastructure elements such as climate control solutions, uninterruptible power
+supply, etc. The model was elaborated for the base year 2008 in a study
+commissioned by the German Federal Environment Agency [12] and has been
+developed further and updated annually in the context of the project Adaptive
+Computing for Green Data Centers (AC4DC, www.ac4dc.com). Above all, the
+model uses current sales figures for servers as well as storage and network
+components compiled by the market analysis firm Techconsult [19] and other
+available data from market studies (e.g. [20–23]). In addition, interviews with
+experts in the field have been conducted several times a year as well as annual
+surveys of data center equipment suppliers and data center operators.
+• A database of the major data centers in Germany was established at the
+Borderstep Institute in order to test the model and develop it further. Using the
+model, the number of data centers with more than 500 m2 of IT floor space was
+estimated at approximately 300. Internet and literature searches and especially
+
+128
+
+R. Hintemann
+
+confidential information obtained directly from operators, planners, and
+equipment suppliers of data centers have made it possible to identify and
+describe two-thirds of them with regard to their location, operator, and purpose.
+The following deliberations are based on the results of the data center model as
+well as the existing database on data centers.
+
+3 Typologies of Data Centers
+Before analyzing the structure of data centers, we must first clarify which types of
+data centers are to be differentiated. In the project AC4DC, a typology of data
+centers was developed which was used for this chapter as well. The typology
+(see Fig. 1) is oriented toward the type of IT use and includes two dimensions: the
+data centers’ size and their purpose. The purposes of data centers include colocation data centers, cloud and hosting data centers, private data centers, and public
+data centers. As data centers may serve several of these purposes, they are allocated according to their main purpose. The gray areas show which sizes are typical
+of the various data center purposes. Data center size is differentiated between the
+categories ‘‘server closet,’’ ‘‘server room,’’ ‘‘small data center,’’ ‘‘medium data
+center,’’ and ‘‘large data center.’’
+
+Fig. 1 Typology of data centers (overview) (Source Borderstep)
+
+Consolidation, Colocation, Virtualization, and Cloud Computing …
+
+129
+
+Commercial providers rent out infrastructure capacity for outsourcing or situating
+servers in colocation data centers. The spectrum of services offered there includes
+providing floor space or rack space for IT hardware, electricity supply, cooling,
+access control, fire protection, etc. as well as connections to existing telecommunications networks. Colocation data centers’ customers are companies and institutions
+that, for various reasons, cannot or prefer not to operate their own infrastructure.
+Cloud computing and hosting data centers offer their customers services via the
+Internet, e.g. providing IT infrastructure (e.g. virtual or dedicated servers, storage
+space on the Internet), platform services, or software as a service. Many experts
+see a difference between cloud computing and hosting with regard to the type of
+customer relationship. As a rule, hosting companies have one-on-one relationships
+and longer-term contracts with their customers, whereas typical cloud services are
+offered to large numbers of customers simultaneously as standard products. Usage
+of cloud services can vary greatly, both in terms of time and amount [20]. There
+are no clear boundaries between cloud computing and hosting, and in practice, the
+two types of data centers are very similar. For this reason, they are considered as a
+single category in this chapter.
+Private data centers are data centers used by companies for their own purposes.
+These data centers run services such as e-mail, database systems, Internet platforms,
+software to support business processes, e.g. bookkeeping, controlling, distribution,
+procurement, production, warehousing, and human resources, or software employed
+for research and development. The components and structures of the data centers
+and the types of services differ widely, depending on the company’s activities. This
+category also includes data centers whose operators offer their customers complex
+services on the basis of their (the data centers’) IT infrastructure.
+Public data centers are data centers run by public institutions or state-owned
+companies. They often run services similar to those in private data centers. The
+public data centers also include data centers at universities and municipal or
+regional data centers offering services for public-sector customers. These services
+range from colocation to cloud and hosting to taking on entire business processes.
+
+4 Implications of Various Types of Data Center
+on Electricity Demand
+4.1 Colocation Providers’ Data Centers
+There are more than 200 providers of colocation facilities in Germany, and they
+are often very large—roughly 45 % of the data centers in the category ‘‘large data
+centers’’ are colocation data centers. The biggest colocation data centers in
+Germany have more than 50,000 m2 of IT floor space and power consumption on
+the order of 50 MW. Large colocation space providers generally operate internationally and offer sizable data center capacities in practically all major German
+cities.
+
+130
+
+R. Hintemann
+
+According to Borderstep Institute surveys, IT floor space in colocation data
+centers in Germany increased by 25 % between 2008 and 2013 and now accounts
+for approx. 18 %, or about 320,000 m2, of total data center space in Germany.
+In the future, the space provided by colocation data centers is expected to increase
+significantly. The Broadgroup assumes that gross data center floor space offered by
+third-party data center providers will grow by 33 % between 2012 and 2016 [21].
+With regard to the implications of colocation data centers as a type of data
+center on energy consumption, three important factors must be mentioned. First,
+electricity costs are a very significant factor for colocation data center providers,
+and for some colocation providers, they account for approx. one-third of total
+costs. As a result, operators of colocation data centers are highly interested in
+improving energy efficiency. Therefore, newly built colocation data centers are
+planned for high efficiency. Second, colocation providers’ strong interest in energy
+efficiency is countered by the fact that they have no direct influence on their
+customers’ IT usage. This largely rules out comprehensive optimization of IT
+hardware and data center infrastructure, for example. Third, colocation providers
+are not entirely free to act when implementing modernization measures for
+improving efficiency, since they serve several customers in a single data center and
+must generally guarantee continuous operation. While data centers with just a
+single IT user can modernize their infrastructure relatively well when replacing IT
+components, this is practically impossible if many customers are involved, as they
+will replace their IT hardware at various different times.
+
+4.2 Data Centers Operated by Cloud Computing
+and Hosting Providers
+There are more than 2,000 hosting providers in Germany. With few exceptions
+(1und1, Strato, and Hetzner), the providers whose only service is hosting are small
+or medium-sized companies. In addition, there are also a number of large and
+internationally operating providers such as IT manufacturers (HP, IBM, Fujitsu,
+etc.), service providers (T-Systems, Atos, Unisys, Capgenimi, etc.), and cloud
+providers established specifically to provide these services (Amazon, Google,
+Salesforce, etc.) [20]. Some cloud and hosting data centers are very large. More
+and more mega-data centers with tens of thousands of servers are being established
+around the globe, e.g. by Google, Facebook, or Microsoft. According to Borderstep surveys, roughly one-quarter of the large data centers in Germany are cloud
+and hosting data centers. Their IT floor space is constantly increasing. For
+example, Deutsche Telekom built a cloud data center in Magdeburg measuring
+24,000 m2 [24]. Overall, high growth is forecast for the market in cloud services.
+The Experton Group expects annual growth of 40 % from 2011 to 2015 [20].
+Borderstep Institute surveys show that the IT floor space of cloud and hosting
+data centers in Germany increased by approx. 25 % from 2008 to 2013, and that
+
+Consolidation, Colocation, Virtualization, and Cloud Computing …
+
+131
+
+these 250,000 m2 account for approx. 14 % of all IT floor space in Germany. It is
+safe to assume that this market will continue to develop dynamically in the future,
+especially because of the strong growth in cloud computing.
+The most important implications of this type of data center on the development
+of energy efficiency can be summarized as follows. Energy costs account for a
+high proportion of the total costs of cloud and hosting data centers, usually
+between 10 and 20 %. Therefore, there is a relatively strong incentive to implement energy-efficiency measures. Hosting and cloud data centers often have a
+relatively homogeneous IT structure. This makes more extensive efficiency measures possible, ranging from efficient cooling technologies such as direct free
+cooling to sourcing hardware constructed specifically for this purpose, as in the
+case of Google, for example [11, pp. 6]. Thus, modern cloud data centers attain
+power usage effectiveness (PUE) figures on the order of 1.1–1.2 [4, 25]. PUE is a
+measure of the efficiency of data center infrastructure, indicating the ratio between
+energy use of the entire data center per year and the IT hardware’s energy use. The
+closer the PUE value is to 1, the more efficient the data center’s infrastructure.
+
+4.3 Data Centers Used by Companies Themselves
+(‘‘Private Data Centers’’)
+The category with the largest number of data centers comprises data centers used
+by companies for their own purposes. Almost 90 % of data centers in the categories server closet and server room fall into this category. Private data centers
+account for just under 60 % of total data center space in Germany. The components and structures of the data centers and the types of services provided vary
+greatly, depending on the company’s activities.
+In Germany, large data centers with power consumption in the megawatt range
+are operated by companies in the financial, telecommunications, or automobile
+sectors, for example. Approx. 20 % of the large data centers fall into this category.
+When considering implications of data center type on the development of
+energy efficiency, it is important to note that smaller data centers often have only
+minor incentives to increase energy efficiency. Especially because of the higher
+proportion of management costs in smaller data centers, the fraction accounted for
+by electricity is relatively low, often on the order of 5 % or less. In relation to the
+total costs of a company in which operating the data center accounts for just a
+small share of the company’s activities, the energy costs for running the data
+center are generally very low. In addition, the expertise and resources for introducing energy efficiency measures in a data center are often not available in the
+case of small locations.
+
+132
+
+R. Hintemann
+
+4.4 Data Centers in Public Agencies and Other Public
+Institutions (‘‘Public Data Centers’’)
+The category of public data centers also includes a large number of locations that
+tend to be smaller. It is reasonable to assume approx. 5,000 public data centers in
+Germany in 2013. They account for approx. 10 % of the total space of all data
+centers. The majority of public data centers is operated by municipalities. At the
+federal level, there are approx. 1,000 data centers.
+In recent years, public data centers have seen a trend toward concentration.
+Public-sector service providers are now operating larger data centers in which the
+tasks of the various municipal and regional authorities are concentrated. They
+provide comprehensive IT services, but also hosting and colocation services.
+Universities and research institutions usually also have a high demand for computing capacity, both for research in the natural sciences and engineering and for
+operating their own websites as well as communication and online learning platforms. This capacity can be provided by means of high-performance computers
+and computer clusters in data centers.
+Concerning the implications of this type of data center on energy efficiency, it
+can be stated that the operations of public data centers are often influenced by
+goals that are not purely economic in nature, for example, the requirement to store
+data within Germany. As increasing energy efficiency is a politically endorsed
+goal, politics may also directly impact data center operations. For example, public
+calls for tender often accord high importance to the issue of energy efficiency in
+the procurement of new goods. Another example of direct political influence is the
+goal adopted by the federal government to reduce the absolute amount of energy it
+uses for IT by 40 % between 2008 and 2013 [10].
+
+5 Development of Data Center Structure and Energy
+Demand: The Example of Germany
+What are the impacts of the structure of data centers on their energy consumption?
+Answering this question involves considering how the distribution of data centers
+by size has developed, using the example of Germany. Figure 2 shows the
+development of IT floor space in the various categories of data centers. Growth of
+data center space was relatively low through 2010, especially because of the
+economic crisis, and has shown significant growth only since then. The growth
+from 1.54 million m2 in 2008 to 1.76 million m2 in 2013 (annual average: approx.
+2.7 %) is due almost exclusively to the increasing space provided in larger data
+centers. The space in small locations such as server closets and server rooms has
+even decreased. As mentioned above, a major part (approx. 51 %) of growth was
+in colocation data centers and in cloud and hosting data centers.
+
+Consolidation, Colocation, Virtualization, and Cloud Computing …
+
+133
+
+Fig. 2 Development of IT floor space in German data centers by group according to size (Source
+Borderstep)
+
+The development of energy consumption by servers and data centers in
+Germany changed distinctly in 2008 (see Fig. 3). Total energy consumption
+declined slightly from 10.1 TWh (terawatt hours) in 2008 to approx. 9.7 TWh in
+2013. There are two main reasons for this: First, the growth in data centers’ energy
+use was slower because of the economic crisis, similar to the development in other
+fields of economic activity. Second, initial successes in energy efficiency have
+been achieved—especially as a result of the increasing discussions about data
+centers’ energy needs [1]. In particular the newly built large data centers are
+distinctly more efficient than legacy data centers. According to a Borderstep survey conducted in February 2014, the PUE of good, new data centers in Germany is
+currently between 1.2 and 1.5. Thus, they require over 25 % less energy than a
+comparable legacy data center with a PUE of approx. 2, simply because of
+increases in infrastructure energy efficiency.
+Unfortunately, the available data does not yet permit detailed analysis of the
+development of electricity consumption in the individual data center types broken
+down by size and purpose of the data center. Further research is required here. Yet
+there are many indications that a significant part of the efficiency gains were
+attained by building new, large data centers—especially in the fields of colocation
+as well as cloud and hosting. The federal government’s Green IT Initiative is also
+responsible for a part of the reduction in data centers’ energy use. It can be
+estimated on the basis of available data [26] that 25 % of the calculated absolute
+decline in data centers’ energy use is due to the federal government’s data centers
+alone.
+
+134
+
+R. Hintemann
+
+Fig. 3 Development of energy consumption by servers and data centers (Source based on [12],
+updated)
+
+6 Summary, Discussion, and Outlook
+The structure of data centers in Germany is changing, and this chapter has shown
+the extent of this shift. The number of small locations has clearly decreased since
+2008, while the number of larger data centers is increasing. The segment of data
+centers with more than 5,000 m2 IT of floor space is growing particularly rapidly.
+This growth is due especially to the increase in colocation as well as cloud and
+hosting data centers. Since the proportion of electricity costs in relation to total
+costs is relatively high for these two types of data centers, they have a major
+incentive to use efficient technologies. It can be assumed that the colocation as
+well as cloud and hosting market segments will continue to grow in the future. Yet
+is is questionable whether this will result in a decrease in data centers’ total energy
+use. First, there are certain limits to a further increase in energy efficiency in
+colocation data centers, as discussed. Second, one must assume that cloud data
+centers in particular will grow so much that their energy use will increase overall
+in spite of improved efficiency. In light of the development to date, one must doubt
+that the computing capacity in private data centers will be reduced to the same
+extent as it is expanded in cloud data centers. Therefore, a significant rebound
+effect in cloud computing is to be expected.
+The deliberations in this chapter have clearly shown that there is a substantial
+relationship between the structure of data centers and their energy consumption.
+Research in this field is still in its infancy. Above all, it is necessary to continue
+
+Consolidation, Colocation, Virtualization, and Cloud Computing …
+
+135
+
+improving the availability and quality of data on the components and structure of
+data centers. Studies similar to this one for Germany must be conducted for other
+countries and regions as well. The international distribution of data centers in
+different locations is expected to be of major importance, not least because of the
+different climatic conditions.
+
+References
+1. Koomey, J.G.: Growth in data center electricity use 2005–2010. A report by Analytics Press,
+completed at the request of The New York Times. www.analyticspress.com/datacenters.html
+(2011). Accessed on 2 Mar 2012
+2. Hintemann, R., Fichter, K.: Server und Rechenzentren in Deutschland im Jahr 2012. http://
+www.borderstep.de/pdf/Kurzbericht_Rechenzentren_in_Deutschland_2012__09_04_2013.
+pdf (2013). Accessed 9 Feb 2014
+3. Mainova.: Zukunft: Eine Nahaufnahme (Imagebroschüre). http://www.mainova-unterneh
+men.de/imagebroschuere/data/download/ Mainova_Imagebroschuere_022013_dt.pdf (2013).
+Accessed 20 May 2013
+4. Melanchthon, D.: Die Microsoft Rechenzentren. Basis für den Erfolg in der Wolke. http://
+techday.blob.core.windows.net/techsummitcloud/TechSummit_2011_-_Die_Microsoft_
+Rechenzentren.pdf (2011). Accessed 2 Feb 2014
+5. Windeck, C.: Facebook nimmt schwedisches Rechenzentrum in Betrieb. http://www.heise.
+de/ix/meldung/Facebook-nimmt-schwedisches-Rechenzentrum-in-Betrieb-1886765.html
+(2013). Accessed 2 Feb 2014
+6. Cremer, C., Eichhammer, W., Friedewald, M., Georgieff, P., Rieth-Hoerst, S., Schlomann, B.,
+Zoche, P., Aebischer, B., Huser, A.: Energy consumption of information and communication
+technology (ICT) in Germany up to 2010, Zusammenfassung des Endberichts für das
+Bundesministerium für Wirtschaft und Arbeit (heute Bundesministerium für Wirtschaft und
+Energie) (Summary for the German Federal Ministry for Economy and Energy). Karlsruhe/
+Zürich, Jan 2003
+7. Fichter, K.: Zukunftsmarkt energieeffiziente Rechenzentren (Future market energy efficient
+data centers), Studie im Auftrag des Bundesministeriums für Umwelt. Naturschutz und
+Reaktorsicherheit, Berlin (2008)
+8. Koomey, J.G.: Estimating total power consumption by servers in the U.S. and the world.
+Final Report, Feb 2007
+9. Koomey, J.G.: Worldwide electricity used in data centers. Environ. Res. Lett. 3, 034008
+(2008). http://23.23.215.240/libraries/about-extreme/1748-9326_3_3_034008.pdf. Accessed
+8 May 2014
+10. BMWi.: Bundesministerium für Wirtschaft und Technologie (ed.): Abschätzung des
+Energiebedarfs der weiteren Entwicklung der Informationsgesellschaft. Abschlussbericht
+erstellt vom Fraunhofer-Institut für Zuverlässigkeit und Mikrointegration (Fraunhofer IZM)
+in Kooperation mit dem Fraunhofer-Institut für System—und Innovations Forschung.
+Fraunhofer ISI, Berlin, Karlsruhe (2009)
+11. TU Berlin–Technische Universität Berlin, Innovationszentrum Energie (IZE). (ed.):
+Konzeptstudie zur Energie—und Ressourceneffizienz im Betrieb von Rechenzentren.
+Berlin (2008)
+12. Hintemann, R., Fichter, K.: Materialbestand in deutschen Rechenzentren—Eine
+Bestandsaufnahme zur Ermittlung von Ressourcen—und Energieeinsatz. Herausgegeben
+vom UBA. http://www.umweltdaten.de/publikationen/fpdf-l/4037.pdf (2010). Accessed 9
+Feb 2014
+
+

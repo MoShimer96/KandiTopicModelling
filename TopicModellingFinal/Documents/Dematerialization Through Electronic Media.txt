@@ -1,0 +1,743 @@
+Dematerialization Through Electronic
+Media?
+Vlad C. Coroama, Åsa Moberg and Lorenz M. Hilty
+
+Abstract While the traditional roles of the computer as a machine for scientific
+calculations, text editing, and graphic design are still significant, computers are
+increasingly perceived as means of accessing information and interacting with other
+people—i.e., as electronic media. The aim of this chapter is to analyze digital
+electronic media and their effects on environmental sustainability. Two fields of
+application are addressed: electronic media that may replace or augment traditional
+print media such as newspapers or magazines, and videoconferencing as a potential
+substitute for traveling to a face-to-face meeting or conference. In both cases, the
+environmental costs of the electronic media are compared to those of their conventional counterparts. The examples show that electronic media can represent an
+energy-efficient alternative to traditional activities such as long-distance travel. But
+they can also be added on top of existing activities instead of replacing them. In such
+cases, a net increase in the environmental impact results. The availability of small,
+energy-efficient devices being used as electronic media does not guarantee dematerialization. The overall resource use and emissions throughout the life cycle of the
+media product systems and, more importantly, at the macro level of total global
+V.C. Coroama (&)
+Measure-IT Research, Bucharest, Romania
+e-mail: vlad.coroama@measureit-research.eu
+Å. Moberg
+Division of Environmental Strategies Research FMS, KTH Royal Institute of Technology,
+Stockholm, Sweden
+Centre for Sustainable Communications CESC, Stockholm, Sweden
+e-mail: asa.moberg@abe.kth.se
+L.M. Hilty
+Centre for Sustainable Communications CESC, KTH Royal Institute of Technology,
+Stockholm, Sweden
+e-mail: hilty@ifi.uzh.ch
+Department of Informatics, University of Zurich, Zurich, Switzerland
+Empa, Swiss Federal Laboratories for Materials Science and Technology, St. Gallen,
+Switzerland
+ Springer International Publishing Switzerland 2015
+L.M. Hilty and B. Aebischer (eds.), ICT Innovations for Sustainability,
+Advances in Intelligent Systems and Computing 310,
+DOI 10.1007/978-3-319-09228-7_24
+
+405
+
+406
+
+V.C. Coroama et al.
+
+production and consumption need to be considered. To achieve the dematerialization
+potential of new electronic media solutions, their efficiency needs to be combined
+with sufficiency; thus additional measures are necessary to turn the dematerialization
+potential of electronic media into environmental relief.
+
+
+
+
+
+
+
+Keywords Electronic media Print media Videoconferencing Virtual meeting
+Life cycle assessment Environmental assessment
+
+
+
+
+
+1 Introduction
+Today’s electronic media are the result of a convergence of three lines of technological evolution. The first one is the development of technologies bridging
+space, i.e., extending the spatial range of communication, from flags and fires used
+for transmitting messages over some distance to the wires and electromagnetic
+waves we use today. The second one is the development of technologies for
+bridging time, i.e., extending the temporal range of communication, from carving
+messages to future generations into stone, writing and printing on paper to today’s
+digital electronic storage. The third line, finally, runs from making calculations by
+moving limestone pebbles on a board (calculi in Latin, the origin of the verb
+calculate), using the abacus and mechanical calculators to the digital computer.
+The final convergence of these three lines to digital Information and Communication Technology (ICT) created a new form of media we use to communicate, characterized by the possibility to transport information at almost zero cost
+through space and time. Before the convergence (roughly, before the emergence of
+the World Wide Web that made the Internet spread to every home), computers
+were machines we used for many other purposes, from solving numerical problems
+to playing chess and editing texts, but not for transporting messages through them
+to other people. The older role of the computer that dominated the pre-Internet age
+is of course still relevant but seems to be losing ground in the public perception.
+Most of the electronic media devices used today, such as smartphones or tablets,
+although they are computers with certain specific built-in peripherals and software,
+are no longer even perceived as computers by their users.
+In this chapter, we will address two fields of media application:
+• The media sector as the traditional domain of unidirectional media, delivering
+content in one direction, usually from one sender to many receivers.
+• Videoconferencing as an application of bidirectional (or multidirectional)
+media, connecting two or more people in either direction.
+The division into uni- and bidirectional as used here is also under transition and the
+media sector is today moving towards more bi- and multidirectional communication as well, with social media leading the way and more traditional media
+trying to make the best use of the possibilities provided.
+
+Dematerialization Through Electronic Media?
+
+407
+
+In both cases we will investigate the environmental cost involved in the use of
+ICT-based media compared to that of their conventional counterparts (such as print
+media and face-to-face meetings). This cost can be assessed by investigating the life
+cycle of each medium, from the extraction of material resources and production of
+the consumer devices and the communication infrastructure used, to their use and
+disposal, including the effects of providing the energy needed in each phase.
+The convergence to digital ICT has dramatically changed media use and has
+created opportunities for, as well as threats to, sustainable development. Careful
+analysis of the current situation and future options is necessary to steer the development in the direction of sustainable (in particular dematerialized) media use.
+
+2 Electronic Media and the Media Sector
+2.1 ICT Solutions for the Media Sector
+The media sector is an early adopter of ICT solutions. Over the 20th century, TV
+and radio were the major electronic media, but now a considerable increase and
+diversification of electronic distribution of content can be seen through desktop and
+laptop computers, followed by tablet computers and smartphones. These consumer
+devices are forming media content in new ways and also have considerable impact
+on people’s media use practices. The yearly statistics for Sweden 2012 [1] show that
+one-third of the population (9–79 years) accesses newspapers, magazines, radio or
+TV (so-called traditional media) via the Internet on an average day [1]. In addition,
+almost 50 % use social media and 21 % watch video clips on the Internet [1].
+In 2001, during the evening (7–10 pm), 73 % of the Swedish population
+(9–79 years) watched television and 9 % used the Internet; in 2012 the figures
+were 63 and 33 % respectively, which clearly illustrates ongoing changes in media
+use practice (see Fig. 1).
+Changes taking place may offer opportunities for transitions towards sustainable media use practices. With the fast introduction and development of new ICT
+solutions for the media sector, an opportunity—and a major challenge—is to yield
+from this transition a positive result from an environmental perspective. The
+potential for ICT solutions to facilitate sustainable media practices needs to be
+actively developed. This implies that we learn about what the potential actually is
+and also about the possible disadvantages of an increased use of ICT solutions.
+
+2.2 Environmental Impacts of Electronic Media
+Several Life Cycle Assessment (LCA) studies of print media (e.g., [2–4]) and
+music on CDs [5] indicate that pulp and paper production for print media as well
+as the distribution of media products and potential personal transport needed to
+
+408
+
+V.C. Coroama et al.
+100
+80
+60
+TV
+40
+
+Internet
+
+20
+0
+2001
+
+2012
+
+Fig. 1 A change in media use practice is illustrated here by the share of the Swedish population
+aged 9–79 who watched TV and used the internet (based on [1] ) between 7–10 pm
+
+purchase or collect them are important contributors to their overall environmental
+impact. With the introduction of new dematerializing solutions where printed
+copies and CDs can be avoided, easily achieved environmental benefits could be
+anticipated by changing to electronic media. However, early comparative studies
+of traditional printed and new electronic media solutions indicated that the picture
+was more complicated (e.g., [6–9]). In spite of data gaps and rough assumptions,
+these assessments have offered analyses of the potential environmental impacts
+related to electronic media, which are in some sense less visible than those of
+traditional print media where the content needs its own physical substrate for
+distribution and the waste papers accumulate. The negative environmental impacts
+of electronic media were shown to be relevant as well and in some cases
+comparable or even larger than those of the traditional print media. This was an
+eye-opener to the media sector.
+The direct environmental impacts of the electronic media solutions are to a
+large extent due to the manufacturing of the end-consumer devices and/or their
+usage [10]. These direct impacts, their magnitudes and their main causes are
+changing with the rapid development of ICT hardware. For the media sector, this
+is clearly illustrated by large and energy-demanding desktop computers with
+Cathode-Ray Tube (CRT) screens having been a common setting in the early
+2000s, while only 10 years later we carry one of the typical devices used for media
+content, the smartphone, in our pockets. Desktops, laptops and screens on the
+market in 2005 had the following electric power consumption in idle mode:
+desktop 78 W; laptop 32 W; CRT screen 70 W; and LCD screen 31 W [11]. Some
+illustrative figures for the current 2014 consumption are for tablets around 3–5 W
+and laptops 6–17 W [12]. The consumption of e-readers lies in the sub-Watt
+region, as they only consume 3 W while ‘‘turning the page’’ (i.e., while refreshing
+the screen) and have zero consumption most of the time while text is being read.
+Even though the effect varies and can be higher or lower than in these examples, a
+trend can be observed towards lower input power for electronic devices used for
+accessing media, as they are to a greater extent mobile devices facing demand for
+
+Dematerialization Through Electronic Media?
+
+409
+
+longer battery life, while the energy density of batteries is limited. Furthermore,
+the manufacturing of smaller devices is generally causing less impact per device
+produced (see also the chapter by Hischier and Wäger [13] in this volume.)
+However, the lifetime of devices is also a very important parameter, and the
+trend in this case is less beneficial. Remy and Huang ([14], in this volume) analyze
+the possibilities for the research field of Human-Computer Interaction (HCI) to
+provide solutions addressing obsolescence, which could be one way of counteracting this negative trend.
+The trend towards decreasing lifetimes of products is in line with the overall
+increase in consumption in society, and a major problem with electronic media lies
+in the increasing diversity of devices being put on the market. We use several
+different electronic devices for consuming media content; in many cases we may
+use them for the same purpose/content, but in different locations or related to
+different activities. Together with decreasing lifetimes this leads to increased
+production and higher amounts of e-waste that have to be processed using methods
+that minimize environmental and social impacts (see the chapter by Böni et al. [15]
+in this volume). This makes the benefits less clear cut.
+In assessing the direct environmental impacts of new electronic media solutions, these can be compared to those of traditional media products which they
+may substitute, such as printed books, newspapers and magazines. Some devices
+are specially designed to substitute for these, for example e-book readers which
+cannot be used for surfing the Internet. Others, such as smartphones and tablets, are
+multi-functional, and consuming media content is only one of several options for
+use. In the latter case the environmental impacts related to manufacturing and
+disposal are consequently allocated to several different activities. Also, the traditional media products have different characteristics, which are relevant to their
+environmental impact. Newspapers are printed on thin, low-weight paper, in
+contrast to magazines, which often have thicker and sometimes even glossy paper
+grades. Not all of the content in daily newspapers is read; the reader skips parts
+that are not interesting or for which he has no time, whereas in a book the reader
+tends to read the entire text.
+Comparative environmental assessments have shown that different types of
+media products and different circumstances may imply a greater or smaller benefit,
+or drawbacks, from the introduction of ICT solutions. This can be, at least partly,
+explained by the characteristics mentioned above, e.g., a difference in total paper
+utilization in relation to overall reading time for printed media. The environmental
+impact related to electronic media increases as the use time increases, unlike
+printed media whose environmental impact is independent of reading time (if the
+light needed when reading is not accounted for).
+Using the example of a daily newspaper, printed versions generally result
+in higher environmental impacts than the electronic version (e.g., [4, 7, 10]).
+A newspaper that is purchased or subscribed to implies a certain environmental
+impact related to the manufacturing, distribution and disposal of that newspaper.
+This impact is caused irrespective of whether the reader spends 1 or 45 min
+reading the paper. However, in considering the amount of time spent on printed or
+
+410
+
+V.C. Coroama et al.
+
+Kg CO2e / book read
+
+3
+
+E-book
+Trad. paper book, 1 reader / book
+Trad. paper book, 2 readers / book
+
+2
+
+1
+
+0
+0
+
+20
+
+40
+
+60
+
+80
+
+100
+
+120
+
+140
+
+160
+
+180
+
+200
+
+Total number of books read
+
+Fig. 2 Estimated greenhouse gas emissions per e-book as a function of total amount of e-books
+read on an e-book reader [9]. The books assessed are a 360-page hardcover novel and a 1.5 MB
+PDF file, respectively. The books are bought, read and disposed of in Sweden. The impact of the
+paper book is shown for one and two readers per book
+
+electronic newspapers, the environmental impacts of an electronic version may
+come close to or even be larger than those of the printed version, at least if the
+online newspaper is read from a desktop computer [4].
+Similarly, in a study that compared the reading of e-books on an electronic
+reader with e-ink versus hardback literary books, the results clearly indicated a
+draw between the two options [9]. In this case, the reading time per book would be
+similar in both cases. As illustrated in Fig. 2, the result is very much dependent on
+the number of printed books that are being substituted by the electronic reader.
+Other studies of scholarly books have yielded quite contradictory results, with
+Enroth [8] presenting results in favor of printed books and Kozak [3] the opposite.
+The assessments differed in geographical scope as well as the characteristics of the
+books’ studied. Enroth assumed each printed scholarly book to be used by five
+different pupils, and thus to be compared with 400 h of the use of a laptop or a
+desktop computer for reading an electronic version. With the assumption of only
+one pupil using the printed book, Kozak compared it with 32 h of reading the
+electronic version. Furthermore, in Kozaḱs case it was read from an e-reader
+device with LCD screen. This aptly illustrates the variation in the potential benefits
+or drawbacks from introducing ICT solutions for media content.
+An LCA of two newspapers published by a Finnish media company clearly
+illustrated a source of difference between electronic newspapers [16]. One newspaper, with an emerging online version with rather few readers, showed that
+content production was important for the overall environmental impact. The other
+newspaper with a rather mature online version had higher downloads. Thus, the
+electronic distribution proved to influence the environmental impacts together with
+the manufacturing and the use of end-consumer devices, while the content production in this case was a minor factor [16]. Figure 3 shows the cumulated impact
+for all copies of the emerging and the mature online newspapers. For the mature
+e-paper with more copies, content production is roughly the same in absolute
+terms, but less important relative to the other sources of impacts.
+
+Dematerialization Through Electronic Media?
+2.5E+06
+
+2.0E+06
+
+Kg CO2e / Year
+
+Fig. 3 Greenhouse gas
+emissions caused by two
+different Finnish online
+newspapers (based on [16])
+
+411
+
+1.5E+06
+
+User device
+
+1.0E+06
+
+E-distribution
+
+User electricity
+Content production
+5.0E+05
+
+0.0E+00
+Ahmulehti.fi
+
+Iltalehti.fi
+
+Studies that distinguished between emerging and mature versions of electronic
+media [16, 17] pointed out that when electronic media is produced for a small
+number of consumers, the environmental impacts related to the content production
+become more important. This is because the impact is allocated to only a few
+consumers, and because at the same time the electronic end-user devices are
+getting smaller and more energy-efficient. With new media solutions making it
+possible to produce and distribute more diverse types of media to smaller audiences, the relatively large weight of the content production phase may become
+commonplace [16, 17].
+As devices become more efficient and if they are used sensibly, the environmental impacts from the electronic storage and distribution of the content may
+well become important too. In a study of a tablet magazine, the size of the electronic version was comparatively large and the average reading time per copy low;
+thus, the environmental impact of the electronic storage and distribution had a
+large influence on the overall environmental performance of the average tablet
+magazine [17]. In their comparison of this tablet magazine and its printed version,
+Ahmadi Achachloui and Moberg [18] illustrate that even with an efficient endconsumer device such as a tablet, the environmental impact may be higher for the
+electronic version than the printed one. This was the case when the overall number
+of readers of the tablet version was low. Large file size and low overall use of the
+tablet in this study also resulted in a higher impact for the tablet version compared
+to the printed one [18].
+In addition, the early and widespread implementation of ICT solutions in the
+media sector may represent positive learning in terms of social practices and
+structural change, which may also be seen as a positive impact related to emerging
+technologies [19]. The introduction of new electronic devices triggered new media
+content and new media producers. Media content diversified and media content
+platforms are additionally used for communication. As Westlund [20] indicates, a
+smartphone today is used for personal and mass communication as well as
+to access information distributed personally or to a mass of people. If the use of
+ICT-solutions for media content encourage the use of ICT-solutions for other
+purposes and in other sectors (as people become comfortable with the tools and
+
+412
+
+V.C. Coroama et al.
+
+activities), many effects may ensue, both positive and negative. In this wider sense
+that includes induced behavior [21], the long-term environmental effects of the
+new media solutions and media practices are therefore difficult to foresee.
+
+2.3 Assessment Challenges
+Thus far, most of the existing environmental assessments focused on product-level
+direct impacts, challenging future studies to cover longer-term effects as well. For
+product-level assessments, many studies of electronic media have used rather
+uncertain inventory data due to lack of specific data [10, 22]. This means that
+available, often generic, data are used and assumptions need to be made. This can
+result in both the underestimation and overestimation of impacts. Hischier et al.
+[23] distinguish between a ‘‘lab based’’ and a ‘‘desk based’’ strategy for modeling
+an ICT device. The former is based on dismantling the device and treating each
+component individually, while the latter makes use of available information on the
+component composition. Hischier et al. conclude that the ‘‘lab based’’ approach
+provides a more complete description of components. Still, if the data availability
+is insufficient for the components identified, estimations and assumptions will need
+to be made in any case in the next step. In a study of an e-magazine read from a
+tablet device, for example, the dismantling of an iPad2, identification of components, and connection to data available in the ecoinvent database lead to a result of
+36.2 kg CO2-eq. per device, while Apple reported 63 kg CO2-eq. per device [17].
+Assessments thus far have focused to a large extent on greenhouse gas emissions and energy use [10]. Energy-related resources and emissions are in general
+better covered in LCAs than are process-specific and material-specific impacts.
+This is an important limitation in the use of LCA for ICT solutions, where there are
+many different processes throughout the manufacturing of devices and components
+and where there are in many cases special requests for high purity of raw materials
+[24]. Assessments often note the high uncertainty or data gaps surrounding the
+disposal of the obsolete devices. Specific processes are used to handle e-waste, and
+a substantial part is handled informally in developing countries with considerable
+negative human and environmental impacts (e.g., [25, 26] and Böni et al. [15] in
+this volume). Generally, toxic emissions are relatively poorly covered in LCA
+[27], as are impacts related to biodiversity and land use, for example. This is a
+general difficulty in LCA, and one that is highly relevant to the assessment of
+electronic media solutions. This means extra efforts are needed to get a more
+complete understanding of the environmental impacts related to, for example,
+toxicological impacts, which are relevant for electronic media solutions.
+Despite flaws and limitations in assessments of electronic media, especially
+when compared to paper media [22], increased knowledge has been gained.
+Drawbacks identified in the existing data have also encouraged the development of
+improved data sources, even though this development needs to be continued and
+intensified. One example where data is becoming more easily accessible and
+
+Dematerialization Through Electronic Media?
+
+413
+
+transparent is the energy intensity of the Internet (see the chapters by Coroama
+et al. [28] and Schien et al. [29] in this volume).
+Some of the difficulties in assessing electronic media are related to user practices. The challenge here is inherent, as user practices cannot be foreseen and vary
+among users. This can be handled for example through sensitivity analyses or by
+presenting results for different persons. In so doing, the variation of environmental
+performance related to user practices can be made visible. This may also be one
+way of trying to illustrate how the potentials of new ICT solutions can be achieved
+and trying to encourage the development and use of devices facilitating sustainable
+practices.
+
+3 Virtual Meetings Substituting for Physical Meetings
+3.1 Transporting Bits Instead of Atoms
+The technological convergence mentioned in Sect. 1 also opens the possibility of
+replacing physical meetings with virtual ones. From a sustainability perspective, it
+seems immediately plausible that sending images and sounds over fiber optics
+across the world is energetically more efficient than having people travel via cars
+and airplanes. Moving bits is easier than moving atoms.
+This substitution effect is thus prominently mentioned as one of the main
+promises of ICT-induced energy efficiency and reduction of anthropogenic
+greenhouse gas (GHG) emissions. An optimistic industry vision, for example,
+predicted in 2008 that ICT could induce by 2020 a worldwide GHG reduction of
+7.8 Gt CO2e, which corresponds to 15 % of humankind’s estimated business-asusual emissions in 2020 [30]. These reductions were to stem mainly from three
+domains: (i) as a result of improved energy efficiency in the domains of smart
+engines, buildings, and logistics; (ii) due to ICT-supported novel paradigms for the
+generation and distribution of electricity (i.e., smart grids); and (iii) due to substitution effects, where ICT partly replace energy-intensive activities. Within this
+third domain, substituting data transfer for transportation to meetings (i.e., videoconferencing) and to work (i.e., telecommuting [31], not considered in this
+chapter) is seen as the substitution with the highest reduction potential. Studies on
+the energy intensity of the necessary data transmission have shown that such a
+substitution (apart from possible rebound effects) usually leads to dramatic energy
+and related GHG emission savings, as argued below.
+Given the fact that the cost of virtual meetings is lower in terms of energy, the
+question should be asked if the benefit is the same as that of face-to-face meetings,
+in particular in terms of what may be termed ‘‘quality of communication.’’ Varying
+qualities of communication between virtual and physical meetings, as well as
+among different technologies used for virtual meetings, could explain people’s
+varying preferences for the types of meetings and the technologies used.
+
+414
+
+V.C. Coroama et al.
+
+Takahashi et al. [32] analyzed the environmental effects of replacing business
+trips with videoconferencing, complementing the LCA of the two with a ‘‘value
+factor’’ for the quality of communication. Assuming that a virtual meeting is not a
+perfect replacement for a face-to-face meeting, they assigned a value factor of 0.6
+to it, while using 1.0 for the face-to-face encounter. Even under this condition, the
+virtual meeting was only responsible for 20 % of the emissions of the business trip
+for which it was substituted (400 kg instead of 2000 kg CO2). The assessment of
+Toffel and Horvath [33] came to an even stronger conclusion, estimating that CO2
+emissions for a business meeting held via teleconferencing are lower by 1–3 orders
+of magnitude compared to physical meetings. For obvious reasons, the number of
+participants and geographic distance are sensitive parameters in all studies of this
+type, and they largely account for the variation of the results.
+Which ICT equipment is deployed for teleconferencing, how this equipment is
+used, and whether the use actually leads to less overall travel are nevertheless
+crucial factors for the net environmental effects. Borggren et al. [34] compare six
+teleconferencing scenarios (three different technologies combined with two usage
+intensities) with three types of physical travel (plane, car, and train). While for
+most cases, substituting videoconferences for travel leads to net energy and GHG
+savings, when high-end telepresence technology is used to substitute relatively
+short train travel (in Sweden roughly 450 km one-way), the energy use and
+greenhouse gas emissions may increase. This effect, however, only appears in two
+cases: First, in the low-usage scenario, when the telepresence system is used for
+only 2 h per week and the production phase burden is thus distributed over a low
+usage for the entire lifespan.
+Secondly, the effect also appears for the more intensive usage scenario of the
+telepresence system, but only in a sensitivity analysis using an Internet energy
+intensity value of 3.5 kWh/GB instead of the 0.42 kWh/GB from the baseline
+scenario. With this 3.5 kWh/GB assumption (adapted from [5, 35] for 2010) the
+use-phase energy needed for data transmission dominates the Cumulative Energy
+Demand (CED) of the teleconference. As [36] shows, however, the top-down
+estimates in [5] and [35] include not only Internet network devices, but also data
+centers and LAN network devices in their calculations. The Internet energy intensity
+value used for the sensitivity analysis in [34] was thus unrealistically high.
+Other studies examined the effect at the macro level for entire countries or
+regions. For all of Australia, for example, a replacement of one-third of the
+business trips by high-quality telepresence systems was estimated to reduce
+emissions by 2.4 Mt CO2e or around 0.4 % of Australia’s total emissions at that
+time [37]. If 30 % of business trips worldwide were replaced by teleconferencing,
+it would lead to an estimated reduction of 500 Mt CO2e [30]—roughly 1 % of
+global emissions.
+These macro-level estimates usually assume that a 1:1 substitution takes place,
+i.e., they do not take into account rebound effects that may (partly) compensate for
+the substitution effect, because people will spend the time or money saved on trips
+either for additional trips or for other activities with relevant environmental
+impacts (see also Gossart [38], in this volume).
+
+Dematerialization Through Electronic Media?
+
+415
+
+3.2 The Case of Large International Conferences
+Hischier and Hilty [39] looked at the case of large international conferences. As a
+compromise between a traditional conference and a totally virtualized conference
+with participants sitting at their computers without the opportunity to enjoy the
+social aspects of conferencing, they suggested dividing a large international
+conference into several conferences, in particular with the aim of reducing the
+number of intercontinental flights.
+This type of international conference was then organized in 2009, simultaneously in Switzerland and in Japan, and investigated with regard to its impact on
+participants and emissions [40].
+Attendees could choose to travel to either one of the two venues: Davos,
+Switzerland, or Nagoya, Japan. Due to the time difference between the two
+regions, only part of the program could be shared; the morning workshops in Japan
+and the afternoon workshops in Switzerland were used for activities of more local
+interest. In the common 4-h slot, however, all plenary sessions were shared among
+the two locations during the three conference days. The locations were connected
+via four high-definition ‘‘telepresence’’ streams, which included real-time audio,
+video, and slide sharing of the speaker, the audience of the other site, coffee break
+areas, and a small conference room that could be used, for instance, for workgroup
+meetings. This organization mode enabled not only the talks to be followed on the
+remote site, but also cross-continental Q&A sessions, the creation of small
+workgroups across both sites, and informal chats during coffee breaks [40].
+Figure 4 shows how the remote audience was seen by the local audience and the
+speaker. Figure 5 depicts how participants engaged in discussions during the
+breaks.
+After the conference, all attendees were invited to participate in a survey. They
+were asked about their satisfaction with the conference format (see [40] for the
+results) and the means of transportation they took to the conference. In order to
+assess their travel emissions, they were requested to precisely describe the legs of
+their journey and the respective means of transportation. A typical description was,
+for example, ‘‘airplane New York—Paris; airplane Paris—Zurich; train Zurich
+Airport—Davos.’’ For each participant, the distances traveled on each leg and the
+resulting emissions could thus be computed. The participants were further invited
+to estimate whether they would have attended the conference had it been organized
+in a traditional mode only at the remote site (the site they had not traveled to). The
+hypothetical emissions for the travel to the remote site were computed conservatively assuming that attendees would have taken a train from their point of
+departure to the closest international airport, from there a direct flight to Zurich or
+Tokyo, respectively, and finally a train to Davos or Nagoya.
+Three alternatives could thus be compared: the two-site conference as it was
+held and the two hypothetical alternatives ‘‘Davos-only’’ and ‘‘Nagoya-only.’’ The
+results are summarized in Fig. 6:
+
+416
+
+V.C. Coroama et al.
+
+Fig. 4 The speaker engaging the local and the remote audience at a 45  angle each
+
+Fig. 5 Typical cross-site interaction during coffee breaks
+
+Dematerialization Through Electronic Media?
+
+Nagoya-only
+conference
+189 t CO 2
+
+800
+
+700
+
+600
+
+kg CO2 /participant
+
+Fig. 6 Number of attendees
+and average per-capita
+emissions in the three
+possible conference
+scenarios. The surface of each
+rectangle represents the
+respective scenario’s overall
+travel emissions. The
+multiple-site conference
+saved travel emissions as
+compared to both traditional
+alternatives, despite more
+overall attendees
+
+417
+
+Davos - only
+conference
+235 t CO2
+
+500
+
+400
+
+300
+
+two-site
+conference
+119 t CO 2
+
+200
+
+100
+
+0
+0
+
+100
+
+200
+
+300
+
+400
+
+500
+
+600
+
+participants
+
+• The Davos-Nagoya multiple-site conference had a total of 531 participants, 372
+in Davos and 159 in Nagoya. Their travel caused 119 t of CO2 emissions, 84 t
+for Davos and 35 t for Nagoya.
+• In the ‘Davos-only’ scenario, 448 attendees (the 372 from Davos plus another
+76 from the Nagoya public) would have induced 235 t CO2
+• (84 t from the former participants plus a disproportionate 151 t from the new
+attendees), almost double the CO2 emissions of the real scenario.
+• In the ‘Nagoya-only’ scenario, a considerably reduced number of 238 attendees
+(159 ‘Nagoyans’ and another 79 from Davos) would have produced 154 t CO2,
+still more than those of the real scenario. Next to the 35 t that would continue to
+be caused by the 159 Nagoya participants, the 79 new attendees would be
+responsible for another 154 t. This disproportionate impact would be due to
+their mainly international travel.
+Compared to traditional organization modes, the distributed conference allowed on
+average quicker and less expensive travel for attendees. A significant rebound
+effect in terms of the number of participants was the unsurprising effect. Despite
+this rebound effect, the overall CO2 emissions caused by the travel of attendees
+were significantly reduced compared to the single-site alternatives. The relatively
+few avoided intercontinental flights (of participants in Europe or Asia who would
+have traveled to the remote site as well but had an alternative close to home) more
+than made up for the short trips of the many new participants who only took part
+because they had a venue close to home.
+Allowing more attendees to take part while lowering the overall energetic costs
+meant that the reductions per participant were even higher—by a factor of 2.3 and
+
+418
+
+V.C. Coroama et al.
+
+Travel CO2
+Total tons
+
+Kg / attendee
+794.1176471
+
+524.5535714
+
+235
+
+224.1054614
+
+189
+
+119
+
+Davos only
+
+Davos + Nagoya
+
+Nagoya only
+
+Fig. 7 Per participant and overall travel emissions in the three scenarios
+
+3.5 as compared to a ‘Nagoya-only’ and ‘Davos-only’ conference, respectively.
+Figure 7 summarizes the emissions per participant as well as the overall emissions
+for the three alternative organization modes.
+
+4 Conclusion and Outlook
+In introducing electronic media as a possible means of reducing environmental
+impact, it is important that these new solutions replace some other product or
+activity whose environmental impact can then be avoided. Even with some substitution taking place, numerous electronic media solutions are just added to what
+was there before. New types of media and new devices are continuously being
+created that can be used to consume media content as well as to communicate with
+others. More energy-efficient devices and communication networks need to be
+combined with sufficiency, not with increasing consumer demands [41].
+Some new media solutions seem to inherently fulfill this condition. As it turns
+out from the field experiment presented in Sect. 3.2, the GHG emissions caused by
+an international conference can be reduced substantially by organizing it at multiple sites and thus reducing the average travel distance of the attendees. Even
+accounting for the rebound effect of increased participation, the overall CO2
+emissions caused by the travel of attendees were significantly reduced compared to
+traditional alternatives.
+For other types of new media (e.g., alternatives to print media), the picture is
+more complex. Even with increasingly energy-efficient devices, it is clear that
+considerable substitution is necessary to gain benefits, as well as increased utilization of devices over their lifetime and a decrease of the fast obsolescence of ICT
+
+Dematerialization Through Electronic Media?
+
+419
+
+gadgets. It is also important to consider environmental impacts other than
+greenhouse gas emissions.
+As the main aim of a transition to new electronic media solutions is not to
+achieve more sustainable practices, the opportunity that this provides needs to be
+seized and actively managed. Action needs to be taken at different levels of society
+to achieve this, as ‘‘consumption choices are based not only on individual choices
+but also on existing and available infrastructure and on established social norms’’
+[41, p. 21]. In order to foster environmental benefits from electronic media based
+on their dematerialization potential, the overall resource use and emissions
+throughout the life cycle of media product systems and more importantly at the
+macro level of total global media production and consumption need to be lowered.
+Adequate incentives are necessary and a variety of actors need to engage through
+policy-making in society and industry. Conscious design choices for hardware and
+software as well as increased awareness and informed choices among actors need
+to be encouraged. Electronic media is not a straightforward solution for dematerialization, but it can facilitate it if its potential is actively sought and unleashed.
+
+References
+1. Nordicom: Nordicom-Sveriges Internetbarometer 2012. En bearbetning av Mediebarometern
+2012. In: Nordicom (2013)
+2. Gard, D.L., Keoleian, G.A.: Digital versus print. Energy performance in the selection and use
+of scholarly journals. J. Ind. Ecol. 6(2), 115–132 (2002)
+3. Kozak, G.: Printed scholarly books and e-book reading devices: a comparative life cycle
+assessment of two book options, vol. CSS03-04. In: Center for Sustainable Systems,
+University of Michigan (2003)
+4. Moberg, Å., Johansson, M., Finnveden, G., Jonsson, A.: Printed and tablet e-paper newspaper
+from an environmental perspective—a screening life cycle assessment. Environ. Impact
+Assess. Rev. 30(3), 177–191 (2010)
+5. Weber, C.L., Koomey, J.G., Matthews, H.S.: The energy and climate change impacts of
+different music delivery methods. In: Report to Microsoft Corporation and Intel Corporation
+(2009)
+6. Reichart, I., Hischier, R.: Environmental impact of electronic and print media: television,
+Internet newspaper and printed daily newspaper. In: Hilty, L.M., Gilgen, P.W. (eds.)
+Sustainability in the Information Society—15th International Symposium Informatics for
+Environmental Protection 2001, pp. 91–98. Metropolis-Verlag (2001)
+7. Reichart, I., Hischier, R.: The environmental impact of getting the news. A comparison of online, television, and newspaper information delivery. J. Ind. Ecol. 6(3–4), 185–200 (2003)
+8. Enroth, M.: Environmental impact of printed and electronic teaching aids, a screening study
+focusing on fossil carbon dioxide emission. In: Proceedings of the 36th International
+Research Conference of Advances in Printing Science and Technology, pp. 23–30.
+Stockholm, Sweden (2009)
+9. Moberg, Å., Borggren, C., Finnveden, G.: Books from an environmental perspective - Part 2.
+E-books as an alternative to paper books. The. Int. J. Life Cycle Assess. 16(3), 238–246 (2011)
+10. Arushanyan, Y., Ekener-Petersena, E., Finnveden, G.: Lessons learned—review of LCAs for
+ICT products and services. Comput. Ind. 65(2), 211–234 (2014). doi:10.1016/j.compind.
+2013.10.003
+
+

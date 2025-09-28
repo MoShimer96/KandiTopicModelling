@@ -1,0 +1,711 @@
+2015 1st International Conference on Futuristic trend in Computational Analysis and Knowledge Management (ABLAZE-2015)
+
+Green Cloud Computing: A Review on Green IT
+Areas for Cloud Computing Environment
+Yashwant Singh Patel#1, Neetesh Mehrotra*2, Swapnil Soner#3
+#
+
+Department of Computer Science,
+Chameli Devi Group of Institutions
+Indore
+*School of Computer Engineering
+KIIT University
+Bhubaneswar, India
+practices through some Green initiatives. The rest of this paper
+is structured as follows: In section 2 a brief introduction of
+Cloud computing is given. Basic principles and concepts of
+Green computing are discussed in section 3. Section 4 gives a
+complete review on Green IT areas for cloud computing. A
+comparative study of Green IT areas for cloud computing is
+elaborated in Section 5; It also discusses various research
+issues and some significant results of this survey. Finally a
+concluding remark of this paper is given in last section.
+
+Abstract—With the increasing growth of large data storage
+and computational demand, Green Cloud Computing is known to
+be a broad area and hot field for research. To capitalize various
+IT resources, Cloud computing has produced an ultimate and
+impressing way to virtualize servers and data centers and to
+make energy efficient. The IT resources consume huge amounts
+of power and energy, which in turn produces shortage in energy
+and change in global climate. Therefore, there is a need of Green
+cloud computing which can produce solutions that can not only
+make the IT resources energy efficient but also minimize the
+operational costs. To solve environment related issues in the field
+of IT, Green IT is named to be an important step. It includes a
+huge number of focus areas for instance to provide proper
+management of power, virtualization of servers, design of data
+centers,
+recycling
+methods,
+eco-labeling,
+environment
+sustainability design and energy efficient resources etc. In this
+review firstly, a brief discussion on Cloud and Green computing
+is given then various application areas of Green IT are discussed
+and reviewed further. Based on the comparative analysis on
+Green-IT areas several research issues related to concerned
+Green IT areas, Objectives of such areas etc. are elaborated
+further.
+
+II. CLOUD COMPUTING
+Cloud computing is an another type of distributed and
+parallel computing and a superset of Grid computing. It is
+known to be an evolving paradigm of equal resource sharing
+among the nodes. It is a recently developed technology based
+on pay-per-use model. It provides a use of energy-efficient,
+price effective technologies which helps during accessing,
+sharing of services and storage and management of resources
+[1] [2]. The advantages of cloud computing is access of
+network,
+infrastructure
+sharing,
+saving
+of
+cost,
+maintainability, reliability, flexibility, location autonomy and
+wide-variety of services etc. [3]
+
+Keywords— Cloud Computing, Green Computing, Green IT,
+Energy Efficiency, Power Management, Virtualization.
+
+A. Services of Cloud Computing
+Cloud is referred to a pool of Data centers on which
+various Services are deployed through Internet. Such services
+are broadly categorized in 3 categories: SaaS (Software as a
+Service), IaaS (Infrastructure as a Service) and PaaS (Platform
+as a Service) [4] [5] as represented in Fig. 1 [1] [6]. In, SaaS
+service model the consumers acquire the potential for
+accessing of application or service that is deployed on the
+cloud such as Salesforce.com. In PaaS, consumers acquire the
+potential for accessing platforms so that they can deploy their
+applications and softwares in the cloud. While in IaaS
+consumers acquire the potential for controlling and managing
+the systems in provisions of storage, connectivity of network,
+applications and operating systems, but can't controlled their
+selves the infrastructure of cloud. The other service such as
+CaaS (Communications as a Service) is known to be a subset
+of SaaS which is particularly related to market or industry and
+used to depict hosted services of IP telephony [7].
+
+I. INTRODUCTION
+In last few decades the day-to-day demand and usage of
+cloud computing in IT areas makes it compulsory to think
+towards the Green IT areas so that the energy and power can
+not only be minimized but can also be used for the purpose of
+recycling. Generally, Cloud exhibits the large amount of
+numerous data centers and servers to fulfill the huge amount
+of customers based on pay-per-use methodology. Such
+resources are spanned in large area and consume huge amount
+of power for networking devices, cooling technologies,
+monitors and farms of servers etc. Therefore to make these
+resources green by using Green technologies have become a
+primary purpose of various organization of both government
+as well as industries. Because of the environmental
+perspective, Green IT and to deal with IT related environment
+issues Green IT offers a large amount of methodologies and
+978-1-4799-8433-6/15/$31.00©2015 IEEE
+
+327
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:26:21 UTC from IEEE Xplore. Restrictions apply.
+
+2015 1st International Conference on Futuristic trend in Computational Analysis and Knowledge Management (ABLAZE-2015)
+B. Deployment Models of Cloud Computing
+The deployment of cloud computing is varied based on the
+requirements and based on these requirements the deployment
+models can be categorized into four types such as Private
+Cloud, Public cloud, Community cloud and Hybrid cloud [7]
+[8] as shown in Fig. 2. These models are described as follows:
+
+S
+A
+A
+S
+
+P
+A
+A
+S
+
+I
+A
+A
+S
+
+Collaboration
+Business
+Processes
+
+Fig. 2. Deployment Models of Cloud Computing
+
+i) Private Cloud: It is deployed, controlled and maintained
+for a particular organization or a company.
+
+CRM/ERP/HR
+
+ii) Public Cloud: It is available for commercial basis which
+allows the users to build up and deploy a service the
+environment of cloud.
+
+Industry
+Applications
+
+Web 2.0 application
+runtime
+Middleware
+
+iii) Community Cloud: It is utilized by number of
+organizations which are having common needs and interests.
+iv) Hybrid Cloud: It exhibits a number of clouds with
+different types but having the potentiality through their
+interfaces to allow and move applications or data between one
+to another cloud. It can be a combination of two or more
+clouds.
+
+Java runtime
+
+Database
+
+Data center
+fabric
+
+Servers
+
+Networking
+
+Storage
+
+Fig. 1. Services of Cloud Computing
+
+Hybrid Cloud
+
+Public Internet
+Cloud Services
+Public Cloud
+Enterprise 2
+
+Fig. 3. Application Areas of Green IT
+
+Private
+Cloud in
+Enterprise
+
+III. GREEN COMPUTING
+This section gives a brief discussion on origin, definitions,
+Green IT, applications of Green IT and need of Green IT as
+follows:
+
+Enterprise 1
+Enterprise
+
+328
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:26:21 UTC from IEEE Xplore. Restrictions apply.
+
+2015 1st International Conference on Futuristic trend in Computational Analysis and Knowledge Management (ABLAZE-2015)
+efficient and economically reliable. While offering the Cloud
+services, the service provides should be ensured that they can
+provide energy efficient services with economical cost. But
+the challenging and complex task is to lower the usage of
+energy of data centers. As data are growing exponentially, the
+Green Cloud computing having issues related to
+infrastructures for computations that can not only minimize
+the consumption of energy but can also make the Cloud
+services reliable and economically efficient.
+
+A. Origin
+The origin of Green Computing is started in 1987, when
+the report named "Our Common Future is issued by the World
+Commission. It basically stated the idea about "sustainable
+development [9] [10]. In 1992, one consumer Energy Star plan
+is launched by the U.S. Environmental Protection Agency
+(EPA) [11]. The purpose of this is to minimize the
+consumption of energy it was primarily for computer products.
+B. Definitions
+Green Computing refers to the efficient use of computers
+and other technologies with respect to environment so that the
+primary goals such as energy efficient peripherals, improve
+the consumption of resources and electronic waste can be
+satisfied. These goals will not only make the resources more
+efficient but also enhance the overall performance.
+
+IV. REVIEW ON GREEN IT AREAS FOR CLOUD COMPUTING
+There are number of authors who have worked in Green
+computing areas with respect to Cloud Computing. Table I
+represents the work done in terms of concern area of Green IT
+for Cloud computing. A year-wise study from 2009 to 2014 is
+given. It is shown with concern area of Green IT and
+Objectives which have focused to work towards the Green
+Cloud Computing. The Results of this survey are shown in the
+next section.
+
+In the technical way, the Green Computing can have 2
+aspects:
+(i) For software technology the purpose is to create such
+methods that can enhance the efficiency of program, storage
+and energy.
+
+V. RESULT ISSUES: RESULT OF THIS SURVEY
+After reviewing various areas of Green IT, In this section
+the primary objectives which are focused by various
+researches while working towards Green Cloud Computing
+are identified. Many areas are already explored and there are
+some other areas which are yet to be explored and to be
+worked further.
+
+While (ii) In hardware aspect there is need of such
+technologies which can not only minimize the consumption of
+energy but also make it economically efficient with the help of
+recycling [12] [13].
+C. Green IT
+Green IT, is a development and proposal of new
+computing models that used to make the IT resources more
+energy efficient both in terms of cost and power. While using
+the IT resources there are number of key areas that should be
+taken care. The Primary key areas of Green IT are discussed
+further.
+
+Table II depicts the primary objectives which are in
+concerns and pretend to be more important for Green Cloud
+Computing. In Table II, following assumptions are used:
+
+and
+
+D. Application Areas of Green IT
+Green IT spans a number of areas that are needed to be
+focused as shown in Fig. 3, such as:
+
+: Right symbol depicts that it is taken as objectives
+
+: Blank space for not considering as an objective.
+For instance, in Table II, S1 shows that it is study 1, in
+which power management and energy efficiency are taken as
+primary objectives. The purpose of this study it to show that
+which objectives are most important and which objectives are
+still needed to be worked further.
+
+i). Proper management of power
+ii). Virtualization of servers
+iii). Design of data centers
+iv). Design of recycling methods
+
+VI. CONCLUSIONS
+
+v). Eco-labeling for IT products
+
+Now a day as large data storage and computational
+demand is growing. Green Cloud Computing is known to be a
+broad and suitable area for research. To take advantage of
+various IT resources, Cloud computing has generated an
+ultimate and impressing way to virtualize servers and data
+centers and to make it energy efficient. It is nothing but known
+to be Green Cloud Computing. It focuses various areas such as
+power management, energy efficiency, virtualization of
+servers etc. In this paper a brief discussion on Cloud and
+Green Computing is given.
+
+vi). Environment sustainability design
+vii). Energy efficient resources
+These areas are needed to be taken under consideration,
+while using the IT resources.
+E. Need of Green IT for Cloud Computing
+In modern world, where the data centers and servers are
+remotely controlled under the Cloud Computing models there
+is a need of Green Computing to make these more energy
+
+329
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:26:21 UTC from IEEE Xplore. Restrictions apply.
+
+2015 1st International Conference on Futuristic trend in Computational Analysis and Knowledge Management (ABLAZE-2015)
+emissions, virtualization of servers and management of servers
+are very rare objectives which are used in studies and needed
+to be explored further.
+
+After a brief discussion, a year-wise review on Green IT
+areas for Cloud computing is represented. This study is based
+on concern are of Green IT and different objectives. From this
+review it is observed that energy efficiency and power
+management are taken as common and important objectives.
+In this study it is also observed that to sustain the natural
+resource, to provide green and cost efficiency, reduce carbon
+
+TABLE I. A BRIEF REVIEW ON GREEN IT AREAS FOR CLOUD COMPUTING
+Year
+
+Concern Area of Green IT
+
+Objectives
+
+1) 2014 [14]
+2) 2013 [1]
+3) 2013 [15]
+
+Power Management
+Energy consumption and CO2 emissions
+
+To use renewable energy in the cloud data centres.
+To use cloud computing in construction management.
+
+Energy efficiency
+
+To discuss key issues and challenges for an energy efficient cloud storage service.
+
+4) 2013 [16]
+
+Power Management, Green house
+gases and Energy efficiency
+
+5) 2013 [17]
+
+Energy efficiency
+
+6) 2013 [18]
+
+Sustain the natural resources
+
+7) 2013 [19]
+
+The reduction of the energy
+consumption by data centers
+
+8) 2013 [20]
+
+To provide green and cost-efficiency
+
+9) 2012 [21]
+
+Energy efficiency, Green house gases
+
+10) 2012 [22]
+
+Survey on Data centre, Minimizing CO2
+
+To present new ways of enhancing power performance of data centers, cloud
+application etc.
+To design and analyze Storage Area Network model for energy consumption with
+the help of Green-Cloud simulator.
+To propose an IT architecture for healthcare based on the triple challenge of
+sustainability, privacy, and cloud computing.
+To use stochastic service decision nets to investigate energy-efficient speed
+scaling on web servers.
+A synergistic cloud where the pricing plan, scheduler, and the charge-back model
+work in tandem with each other to provide green and cost-efficient computing
+options and incentives to the environmentally friendly and cost-conscious endusers.
+Based on the fact that resource utilization directly relates to energy
+consumption, they have successfully modeled their relationship and
+developed two energy-conscious task consolidation heuristics.
+Overview is given on green metrics that are applicable to data centers.
+
+11) 2012 [23]
+
+Energy and Power Management
+
+12) 2012 [24]
+
+Energy Efficiency
+
+13) 2011 [25]
+
+Virtualization of Servers
+
+14) 2011 [26]
+
+Virtualization of Servers
+
+15) 2011 [27]
+
+Power Management
+
+16) 2011[28]
+
+Energy efficiency
+
+17) 2011 [29]
+
+Energy efficiency and Power
+Management.
+
+18) 2010 [30]
+19) 2010 [31]
+
+20) 2010 [32]
+21) 2009 [33]
+22) 2009 [34]
+
+Virtualization of Servers, Carbon
+emissions
+Sustainable Distributed Data Center
+prototype
+
+Power consumption, Energy saving
+and CO2 emission
+Reducing the rate of emission of
+carbon dioxide and Energy
+Energy efficiency
+
+Important metrics of cloud computing are described that makes it greener. Various
+power, energy models and major challenges are identified to build a model for
+Green Cloud.
+To analyze the carbon footprint and utilization rates in a data center. The longterm goal of this work is to give data center administrators an enhanced
+perspective of data center operations to allow for more energy efficient operation,
+to lower the carbon footprint, and to promote green data centers.
+To highlight the emergence of Green IT as a result of the increasing trends in
+power consumption and discussed a number of measures for efficiency
+improvements.
+An overview on the importance of implementing green IT, the significant and
+growing role of IT and data centers in the world’s consumption of electric energy
+and carbon footprint is described.
+A generic protocol is proposed for resource allocation, which can be instantiated
+for specific objectives such as minimizing power consumption through server
+consolidation, while satisfying a changing load pattern.
+Energy consumption is analyzed based on types of services and obtain the
+conditions to facilitate green cloud computing to save overall energy consumption
+in the related information communication systems.
+The goal of the algorithm is to minimize the energy consumption in task
+executions in a cloud computing environment and It also applies the concept of
+active cooling control in order to minimize power consumption.
+To reduce energy consumption using virtualization clique star cover number
+technique.
+Management of servers running in free cooling conditions
+
+Vision for energy efficient management of cloud computing
+environments
+Cloud computing as an ideal solution is proposed to resolve challenges in
+e-government including Green ICT maintenance.
+A Cloud service selection framework is presented to save energy.
+
+330
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:26:21 UTC from IEEE Xplore. Restrictions apply.
+
+2015 1st International Conference on Futuristic trend in Computational Analysis and Knowledge Management (ABLAZE-2015)
+
+Objectives
+Studies
+
+Power
+Management
+
+Energy
+Efficiency
+
+Sustain the
+Natural
+resources
+
+To provide
+Green and
+Cost-efficiency
+
+Reduce
+Carbon
+Emissions
+
+Virtualization
+of servers
+
+Management
+of Servers
+
+S1
+S2
+S3
+S4
+S5
+S6
+S7
+S8
+S9
+S10
+S11
+S12
+S13
+S14
+S15
+S16
+S17
+S18
+S19
+S20
+S21
+S22
+
+TABLE II. A COMPARATIVE STUDY OF GREEN IT AREAS FOR CLOUD COMPUTING
+
+REFERENCES
+[1]
+
+[2]
+[3]
+[4]
+[5]
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+Rawai, N.M., Fathi, M.S., Abedi, M., Rambat, S., "Cloud Computing for
+Green Construction Management,"2013 Third International Conference
+on Intelligent System Design and Engineering Applications (ISDEA),
+16-18 Jan. 2013, pp.432-435.
+M.S. Fathi, M. Abedi, S. Rambat, S. Rawai and M.Z. Zakiyudin,
+"Context-Aware Cloud Computing for Construction Collaboration",
+Journal of Cloud Computing, vol. 2012, pp. 1-11.
+Rimal, B.P., Choi, E., and Lumb, Ian., "A taxonomy and survey of cloud
+computing systems", In Proceedings of the 5th IEEE International joint
+conference of INC, IMS and IDC, 2009, pp. 44-51.
+http://searchcloudcomputing.techtarget.com/definition/cloud-computing
+P.Srinivasa Rao, K.Thammi Reddy, MHM.Krishna Prasad,"A Novel
+Approach for Identification of Hadoop Cloud Temporal Patterns Using
+Map Reduce", IJITCS, vol.6, no.4, pp.37-42, 2014.
+C.J. Anumba, J. Pan, R.R.A. Issa, I. Mutis, "Collaborative project
+information management in a semantic web environment", Engineering,
+Construction and Architectural Management, vol. 15 Issue: 1, 2008,
+pp.78 - 94.
+Introduction to Cloud Computing- white paper,
+"http://www.dialogic.com/~/media/products/docs/whitepapers/12023cloud-computing-wp.pdf"
+Sumit Goyal,"Public vs Private vs Hybrid vs Community - Cloud
+Computing: A Critical Review", IJCNIS, vol.6, no.3, 2014, pp.20-29.
+
+[10]
+[11]
+[12]
+[13]
+
+[14]
+[15]
+
+[16]
+
+[17]
+
+Guo Bing, Shen Yan, and Shao ZL, “The Redefinition and Some
+Discussion of Green Computing”, Chinese Journal of Computers, vol.
+32, Dec. 2009, pp. 2311-2319.
+Zhang Juntao, “Urban and regional sustainable development”, Dongbei
+University of Finance and Economics Press, 2008.
+US Environmental Protection Agency, "http://www.epa.gov".
+Mydhili K Nair, Dr.V.Gopalakrishna, “Generic Web Services: A Step
+Towards Green Computing”, International Journal on Computer Science
+and Engineering, Vol.1, Mar. 2009, pp. 248-253.
+13-Sergi Figuerola, Mathieu Lemay, Victor Reijs, Michel Savoie, Bill
+St.Arnaud, “Converged Optical Network Infrastructures in Support of
+future Internet and Grid Services using IaaS to Reduce GHG
+Emissions”, Journal of Lightwave Technology, Vol. 27, Dec. 2009, pp.
+1941-1946.
+Wei Deng; Fangming Liu; Hai Jin; Bo Li; Dan Li, "Harnessing
+renewable energy in cloud datacenters: opportunities and challenges,"
+Network, IEEE , vol.28, no.1, January-February 2014, pp.48,55.
+Negru, C.; Pop, F.; Cristea, V.; Bessisy, N.; Jing Li, "Energy Efficient
+Cloud Storage Service: Key Issues and Challenges," 2013 Fourth
+International Conference on Emerging Intelligent Data and Web
+Technologies (EIDWT), 9-11 Sept. 2013, pp.763-766.
+Jain, A; Mishra, M.; Peddoju, S.K.; Jain, N., "Energy efficient
+computing- Green cloud computing," 2013 International Conference on
+Energy Efficient Technologies for Sustainability (ICEETS), 10-12 April
+2013, pp..978-982.
+Ikram, M.; Babar, Q.-U.-A; Anwar, Z.; Malik, AW., "GSAN: Green
+Cloud-Simulation for Storage Area Networks," 2013 11th International
+
+331
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:26:21 UTC from IEEE Xplore. Restrictions apply.
+
+2015 1st International Conference on Futuristic trend in Computational Analysis and Knowledge Management (ABLAZE-2015)
+
+[18]
+
+[19]
+
+[20]
+
+[21]
+[22]
+[23]
+[24]
+
+[25]
+
+[26]
+[27]
+
+[28]
+
+[29]
+
+[30]
+[31]
+
+[32]
+[33]
+[34]
+
+Conference on Frontiers of Information Technology (FIT), 16-18 Dec.
+2013, pp.265-270.
+Godbole, N.S.; Lamb, J., "The triple challenge for the healthcare
+industry: Sustainability, privacy, and cloud-centric regulatory
+compliance," 2013 10th International Conference and Expo on
+Emerging Technologies for a Smarter World (CEWIT), 21-22 Oct.
+2013, pp.1-6.
+Tian, Y.; Lin, C.; Chen, Z.; Wan, J.; Peng, X., "Performance evaluation
+and dynamic optimization of speed scaling on web servers in cloud
+computing," Tsinghua Science and Technology , vol.18, no.3, June
+2013, pp.298-307.
+Rini T. Kaushik, Prasenjit Sarkar, and Abdullah Gharaibeh, "Greening
+the compute cloud's pricing plans". In Proceedings of the Workshop on
+Power-Aware Computing and Systems (HotPower '13). ACM, New
+York, NY, USA, 2013.
+Yamini, R., "Power management in cloud computing using green
+algorithm," 2012 International Conference on Advances in Engineering,
+Science and Management (ICAESM) , 30-31 March 2012, pp.128-133.
+Cavdar, D.; Alagoz, F., "A survey of research on greening data centers,"
+2012 IEEE Global Communications Conference (GLOBECOM), 3-7
+Dec. 2012, pp.3237-3242.
+Priya, B.; Pilli, E.S.; Joshi, R.C., "A survey on energy and power
+consumption models for Greener Cloud," 2013 IEEE 3rd International
+on Advance Computing Conference (IACC), 22-23 Feb. 2013, pp.76-82.
+Michael Pawlish, Aparna S. Varde, and Stefan A. Robila, "Cloud
+computing for environment-friendly data centers", In Proceedings of the
+fourth international workshop on Cloud data management (CloudDB
+'12). ACM, New York, NY, USA, 2012, pp. 43-48.
+Lu Liu; Masfary, O.; Jianxin Li, "Evaluation of server virtualization
+technologies for Green IT," 2011 IEEE 6th International Symposium on
+Service Oriented System Engineering (SOSE), 12-14 Dec. 2011, pp.7984.
+Lamb, J., "Green IT and use of private cloud computing in South
+Africa," 2011 8th International Conference & Expo on Emerging
+Technologies for a Smarter World (CEWIT), 2-3 Nov. 2011, pp.1-6.
+Yanggratoke, R.; Wuhib, F.; Stadler, R., "Gossip-based resource
+allocation for green computing in large clouds," 2011 7th International
+Conference on Network and Service Management (CNSM), 24-28 Oct.
+2011, pp.1-9.
+Kiran, M.; Ming Jiang; Armstrong, D.J.; Djemame, K., "Towards a
+Service Lifecycle Based Methodology for Risk Assessment in Cloud
+Computing," 2011 IEEE Ninth International Conference on Dependable,
+Autonomic and Secure Computing (DASC), 12-14 Dec. 2011, pp.449456.
+Daniel Guimaraes do Lago, Edmundo R. M. Madeira, and Luiz
+Fernando Bittencourt, "Power-aware virtual machine scheduling on
+clouds using active cooling control and DVFS". In Proceedings of the
+9th International Workshop on Middleware for Grids, Clouds and eScience (MGC '11), ACM, New York, NY, USA, 2011.
+Yamini, B.; Selvi, D.V., "Cloud virtualization: A potential way to reduce
+global warming," Recent Advances in Space Technology Services and
+Climate Change (RSTSCC), 13-15 Nov. 2010, pp.55-57.
+Witkowski, M.; Brenner, P.; Jansen, R.; Go, D.B.; Ward, E., "Enabling
+Sustainable Clouds via Environmentally Opportunistic Computing,"
+2010 IEEE Second International Conference on Cloud Computing
+Technology and Science (CloudCom), Nov. 30 2010-Dec. 3 2010,
+pp.587-592.
+B. Gayathri, "Green Cloud Computing", Third International Conference
+on Sustainable Energy and Intelligent System (seiscon 2012),VCTW,
+Tamilnadu, India on 27-29 December 2012.
+M. Pokharel, J. S. Park, "Cloud Computing: Future solution for eGovernance", ICEGOV2009, November 10-13, 2009, Bogota,
+Colombia. pp. 409-410.
+Seung-Min Han, Mohammad Mehedi Hassan, Chang-Woo Yoon, and
+Eui-Nam Huh, "Efficient service recommendation system for cloud
+computing market", In Proceedings of the 2nd International Conference
+on Interaction Sciences: Information Technology, Culture and Human
+(ICIS '09). ACM, New York, NY, USA, 2009. pp. 839-845.
+
+332
+Authorized licensed use limited to: Lappeenranta-Lahti University of Technology LUT. Downloaded on July 31,2025 at 19:26:21 UTC from IEEE Xplore. Restrictions apply.
+
+

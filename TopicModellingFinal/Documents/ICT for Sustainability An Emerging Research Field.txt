@@ -1,0 +1,1657 @@
+ICT for Sustainability: An Emerging
+Research Field
+Lorenz M. Hilty and Bernard Aebischer
+
+Abstract This introductory chapter provides definitions of sustainability,
+sustainable development, decoupling, and related terms; gives an overview of
+existing interdisciplinary research fields related to ICT for Sustainability, including
+Environmental Informatics, Computational Sustainability, Sustainable HCI, and
+Green ICT; introduces a conceptual framework to structure the effects of ICT on
+sustainability; and provides an overview of this book.
+
+
+
+
+
+Keywords Sustainable use Sustainable development Technological substitution
+Decoupling Dematerialization ICT4S
+
+
+
+
+
+
+
+1 Introduction
+This book is about using the transformational power of Information and
+Communication Technology (ICT) to develop more sustainable patterns of production and consumption. It grew out of a conference that the editors organized
+in Zurich in 2013: the first international conference on ICT for Sustainability,
+
+L.M. Hilty (&)
+Department of Informatics, University of Zurich, Zurich, Switzerland
+e-mail: hilty@ifi.uzh.ch
+Empa, Swiss Federal Laboratories for Materials Science and Technology, St. Gallen,
+Switzerland
+Centre for Sustainable Communications CESC, KTH Royal Institute of Technology,
+Stockholm, Sweden
+B. Aebischer
+Zurich, Switzerland
+e-mail: baebischer@retired.ethz.ch
+ Springer International Publishing Switzerland 2015
+L.M. Hilty and B. Aebischer (eds.), ICT Innovations for Sustainability,
+Advances in Intelligent Systems and Computing 310,
+DOI 10.1007/978-3-319-09228-7_1
+
+3
+
+4
+
+L.M. Hilty and B. Aebischer
+
+or ICT4S for short [1]. After publishing the proceedings [2], we felt the need for a
+book that brings together more systematically the fundamental ideas and methods
+of ICT for Sustainability as a field of study. This book, a joint effort by 47 authors,
+is the result.
+As is to be expected, the book is only a first step. Many important aspects could
+not be covered, and efforts to generate consistent terminology and methodology
+are still in their infancy. We nevertheless hope that the reader will find inspiration
+and orientation in this exciting new field of research and innovation.
+How can we harness ICT for the benefit of sustainability? Two things are
+essential:
+1. To stop the growth of ICT’s own footprint
+2. To find ways to apply ICT as an enabler in order to reduce the footprint of
+production and consumption by society
+So far, we have not defined ‘‘sustainability’’ or ‘‘footprint,’’ but have relied on the
+reader’s preconceptions. Section 2 will provide definitions of the basic concepts
+associated with ICT for Sustainability. In Sect. 3, we give an overview of other
+research fields related to ICT4S, such as Environmental Informatics, Computational Sustainability, Sustainable HCI, and Green ICT. Section 4 introduces a
+conceptual framework for structuring the effects of ICT. Finally, Sect. 5 provides
+an overview of the topics covered in this book.
+
+2 What Is Sustainability?
+2.1 Basic Definitions
+We will first define ‘‘sustainable use’’ and then reconstruct the concept of
+‘‘sustainable development’’ based on its original definition by the World Commission on Environment and Development (WCED).
+Definition 1: Sustainable Use. To make sustainable use of a system S with
+regard to a function F and a time horizon L means to use S in a way that does not
+compromise its ability to fulfill F for a period L. In other words, a system is used
+sustainably if the user can sustain this use ‘‘long enough.’’
+S may also be called a ‘‘resource’’ in the broadest sense of the term, and the
+process of fulfilling F can also be called a ‘‘service.’’ We may think of S as being
+either a human-made or a natural system, or a combination of the two: a humanenvironment system.
+This definition may appear rather formalistic at first sight. However, it is simply
+an attempt to make explicit what follows logically from the idea of using something for a purpose, and the everyday meaning of the adjective ‘‘sustainable’’, i.e.,
+
+ICT for Sustainability: An Emerging Research Field
+
+5
+
+‘‘able to be maintained at a certain rate or level’’ [3]. For instance, if we want to
+make sustainable use of a climbing rope, we simply avoid overloading it to the
+extent that it breaks.1
+When H.C. von Carlowitz wrote his principles of sustainable forestry in 1713
+[4],2 the world was less complex than today. The function of a forest was to
+produce wood. His basic principle was simple: Do not cut more wood than will
+grow in the same period of time. Today, we are aware that forests have additional
+functions, such as filtering air and water, holding soil in place and preserving
+biodiversity, as well as protective and recreational functions. It follows that there
+is a variety of ideas on how to make sustainable use of a forest. Depending on the
+F that dominates our perspective and our interest, we may have different opinions
+on how to make sustainable use of a forest. Even worse, it may be unclear where
+exactly S begins and ends: Where should we draw the system boundary? Can S be
+meaningfully separated from the rest of the world?
+Many controversies related to sustainability stem from the fact that people think
+of different systems and functions to be sustained, as well as different time horizons, and do not explicitly declare them when engaging in a discourse, when
+designing a technological artifact or developing a business model. Any theories or
+actions referring to sustainability should therefore answer Dobson’s [5, p. 406]
+‘‘principal organising question’’, namely:
+What is to be sustained?
+
+Sustainable use, as we define it above, could be called a relative concept of
+sustainability. This is because its meaning depends on how system S, function F,
+and time horizon L are defined in context. It is a burden to the sustainability
+discourse that an increasing number of ‘‘sustainable x’’ terms (such as ‘‘sustainable
+management’’ or ‘‘sustainable software’’) are used without providing an explicit
+context in which S, F, and L are defined.
+However, there is at least one ‘‘sustainable x’’ term that can be regarded as
+referring to an absolute concept of sustainability, as the context was set by the
+WCED in 1987 [6]: sustainable development. Below, we explicitly refer to this
+original definition of sustainable development and not to later variants.
+Definition 2: Sustainable Development. ‘‘Sustainable development is development that meets the needs of the present without compromising the ability of
+future generations to meet their own needs.’’ [6]
+This definition, also known as the ‘‘Brundtland definition,’’ can be reformulated
+as ‘‘making sustainable use of our planet to maintain its function of fulfilling
+human needs.’’ As a first glance, it therefore seems that sustainable development is
+
+1
+
+Assuming that we intend to use the rope for the next ten years, we can specify the parameters
+as follows: S = rope, F = securing a climber of up to 100 kg, L = 10 years.
+2
+Carlowitz’s book is usually cited as the origin of the word ‘‘nachhaltig,’’ the counterpart of the
+English word ‘‘sustainable.’’
+
+6
+
+L.M. Hilty and B. Aebischer
+
+Table 1 Examples used in the text
+Description
+
+System S
+(resource)
+
+Function F
+(service provided)
+
+Time horizon L
+
+Using a climbing rope
+Sustainable forestry 1
+Sustainable forestry 2
+Sustainable forestry n
+Sustainable development
+
+A rope
+A forest
+A forest
+A forest
+The planet
+
+Securing a person
+Producing wood
+Preserving biodiversity
+… (Any other function)
+Meeting human needs
+
+A decade
+Generations
+Generations
+Generations
+Generations
+
+just a special case of sustainable use, whereby S = planet, F = fulfilling human
+needs, and L = several generations (Table 1).
+However, there is a second element in the Brundtland definition that cannot be
+reduced to sustainable use: distributive justice. The WCED highlighted ‘‘the
+essential needs of the world’s poor, to which overriding priority should be given’’
+[7]. M. Christen points out that sustainable development ‘‘might best be conceptualised as an attempt to grant the right to a decent life to all living human beings
+without jeopardising the opportunity to live decently in future.’’ Christen therefore
+revises Dobson’s ‘‘principal organising question’’ in the following manner:
+What has to be guaranteed or safeguarded for every person, no matter whether she lives at
+present or in the future? [7]
+
+It should be clear that no single product, process, policy, region, or technology can
+be ‘‘sustainable’’ in the sense of ‘‘sustainable development’’, as the latter concept
+has a global scope by definition.
+Definition 3: Sustainability Indicator. A sustainability indicator is a measure
+that is used in a process of governance3 to identify actions that are more beneficial
+to sustainability than others. In this definition, ‘‘sustainability’’ can be understood
+either as sustainable use (Definition 1) or as sustainable development (Definition 2).
+In the second case, there are two types of sustainability indicators:
+• Resource-oriented indicators: They cover the ‘‘sustainable use of the planet’’
+aspect of sustainable development. The term ‘‘footprint’’ has become a generic
+metaphor for resource-oriented sustainability indicators. Carbon footprint
+indicators estimate to what extent an activity uses the atmosphere’s limited
+capacity to absorb greenhouse gases. The ecological footprint is an indicator
+trying to map any human impact onto a share of the carrying capacity of the
+planet. [9]
+
+3
+
+‘‘Governance’’ is defined as ‘‘all processes of governing, whether undertaken by a government,
+market or network, whether over a family, tribe, formal or informal organization or territory and
+whether through laws, norms, power or language.’’ [8].
+
+ICT for Sustainability: An Emerging Research Field
+
+7
+
+• Well-being-oriented indicators: They cover the ‘‘fulfill human needs’’ aspect of
+sustainable development. As a basic indicator, Gross Domestic Product (GDP)
+is used. However, because ‘‘economic indicators such as GDP were never
+designed to be comprehensive measures of prosperity and well-being’’, additional indicators, known as ‘‘beyond-GDP indicators,’’ are under discussion.
+[10]
+It is important to understand that sustainable development (Definition 2) can only
+be quantified using indicators of both types; the idea is to fulfill human needs and
+make sustainable use of global resources.
+Resource-oriented indicators reduce the complexity of deeply nested resource
+systems S to simple metrics. This is why any resource-oriented indicator—at least
+implicitly—relies on a model of the service-providing system. This model is used
+to estimate the impact of an action in terms of sustainability of use: The greater an
+unwanted impact on the resource, the less sustainable the action.
+Established indicators are linked to specific impact assessment methods that
+prescribe how the data are collected and the models used to calculate the indicator
+for a specific case. Examples include the environmental impact assessment categories used in Life-Cycle Assessment (LCA).4
+In engineering contexts, there is a tendency to focus on energy use or CO2
+emissions as central resource-oriented indicators. The terms ‘‘energy-efficient,’’
+‘‘carbon-neutral,’’ and ‘‘sustainable’’ are often used interchangeably. However,
+this is an oversimplification, for three reasons. First, the diffusion of energyefficient technologies does not necessarily lead to an overall reduction of energy
+use: Efficient technologies can also stimulate the demand for the resource they use
+efficiently. This is known as Jeavons’ paradox or the ‘‘rebound effect.’’ Second, the
+production, use, and disposal of these technologies needs resources as well: When
+assessed from a life-cycle perspective, energy efficiency may look somewhat
+different. Third, although energy is crucial, the impact on other natural resources
+should also be included.
+
+2.2 Classification of Resources and the Question
+of Substitutability
+Resources can be classified in natural and human-made resources and in material
+and immaterial resources [14]. These two dimensions are orthogonal, in other
+words, all combinations are possible (Table 2). Furthermore, material natural
+resources can be renewable or non-renewable. A renewable resource can replenish
+
+4
+
+In several chapters of this book, the method of LCA is applied to estimate the environmental
+impacts of ICT goods and services: [11–13].
+
+8
+
+L.M. Hilty and B. Aebischer
+
+Table 2 Classification of resources and examples
+
+Natural
+
+Human-made
+
+Material
+
+Immaterial
+
+Renewable:
+Wood
+Non-renewable:
+Minerals
+Machines
+Built environment
+Engineered materials
+
+Song of a bird
+Genetic information
+Climate regulation
+Literature
+Scientific knowledge
+Algorithms
+
+if the rate at which it is used does not exceed its renewal rate. A non-renewable
+resource does not renew itself in meaningful human timeframes.
+We will not introduce formal definitions of these resource categories here as
+they are defined more or less consistently in the literature. However, the distinction
+between ‘‘material’’ and ‘‘immaterial’’ resources deserves some clarification.
+UNEP’s International Resource Panel introduced this useful distinction: A
+resource is called material if using it affects other uses of the resource. For
+example, a stone used to build a wall will no longer serve for other functions. By
+contrast, resources ‘‘whose use has no effect on the qualities that make them
+useful’’ are called immaterial. In this sense, ‘‘the shine of a star used by a captain
+to find his way’’ is an immaterial resource [14, p. 1].
+Technological innovation leads to the diffusion of new technologies, which are
+then partially or fully substituted for older technologies or natural resources. Cars
+have replaced horse-drawn carriages, the computer has replaced the abacus, and
+LCD screens have recently replaced CRT screens. To express substitution in the
+terms we defined above, we can regard each technological product as a resource S’
+that may fulfill the same function F as a resource S. If this is the case, S’ is
+obviously a potential substitute for S. Many controversies around sustainability are
+based on different beliefs about the future substitutability of resources. Below, we
+first define substitutability and then discuss an extended example.
+Definition 4: Substitutability. If a function F provided by a system S can also be
+provided by S’, we say that S’ is substitutable for S. Note that substitutability is a
+ternary relationship: S’ is substitutable for S with regard to F.
+Substitution is crucial with regard to non-renewable resources. Unless we
+assume, for example, that fossil energy sources are substitutable by renewables,
+transition to a sustainable use of energy must appear impossible.
+Substitutability has implications for the actions to be taken to promote sustainability. If S can be substituted by an S’ fulfilling F as well, there is no need to
+sustain S. What makes this concept hard to grapple with in political discourse is the
+fact that substitutability depends on future technological developments and discoveries, so it is impossible to know who is right today. An extreme technological
+optimist may believe that any limited material resource will become substitutable
+by some unlimited resource in due time, while a person thinking in an extremely
+precautionary way would not cut down a single tree as it might have some
+
+ICT for Sustainability: An Emerging Research Field
+
+9
+
+irreplaceable properties. Most people’s beliefs are located somewhere between
+these two poles.
+In fact, substitution is more complex as it can occur at different levels. An
+example will illustrate this idea. Bob wants to meet up with Jill, who lives on
+another continent. He may use an airline to travel to Jill’s country. The airline
+needs planes, airport infrastructure, personnel, fuel, the atmosphere, stable weather
+conditions, and many other resources. For the aircraft to be built, materials must be
+extracted from the Earth’s crust, people trained to build planes, power plants must
+generate electricity, and so on. The power plants, in turn, need fuel, they must be
+built, maintained, and so on. If Bob were to decide to have a virtual meeting with
+Jill instead, we would, of course, discover a similar structure of nested resource
+use.5
+This example shows that there is usually a hierarchy (formally, a tree) of
+resources that provides a service. From an economic perspective, each node of the
+tree is a production process, whose input is resources provided by other processes.
+Thus, the airline produces the service of transporting Bob from A to B, the aircraft
+industry produces aircraft, and a refinery produces fuel. The overall system that
+produces the final service delivered to Bob is inconceivably complex, and we
+would probably never understand it in all detail if we tried.6
+Given this hierarchy of resources that emerges when one asks how a specific
+service is produced, it is essential to understand that substitution can in principle
+occur at any level, as shown in Fig. 1:
+• Bob could replace physical transport with an immersive telepresence technology that makes a virtual meeting with Jill sufficiently similar to a face-toface meeting.
+• He could replace air travel with a new means of transport, such as a vactrain
+traveling through evacuated tubes at five times the speed of sound with almost
+zero resistance.
+• The airline could use a new type of aircraft that is extremely energy-efficient.
+• The aircraft could use a new type of fuel, e.g., based on solar energy.
+• CO2 emissions to the atmosphere could be reversed by a new carbon sequestration technology.
+People have different beliefs in substitutability depending on the level of the
+resource hierarchy. Some people tend to believe that we will still use planes
+
+5
+
+How to determine which alternative—flying or videoconferencing—is preferable from the
+perspective of sustainability is discussed in the chapter by Coroama et al. [13] in this volume.
+6
+Fortunately, we do not need to. The market economy has an extremely useful feature that
+computer scientists refer to as ‘‘information hiding’’: You do not have to know what is behind an
+interface to make use of a module. In the same way, Bob does not have to understand how a plane
+is operated, the airline does not have to know how planes are built, and (in theory) nobody has to
+worry about where the energy comes from or how the environment deals with pollutants.
+However, market failures and the goal of distributive justice force us to strive for a deeper
+understanding of the dynamics of resource use.
+
+10
+
+L.M. Hilty and B. Aebischer
+intercontinental
+meeting
+uses
+
+uses
+
+physical
+transport
+
+data
+transport
+
+uses
+
+uses
+
+conventional
+airline
+
+transcontinental
+vactrain
+
+uses
+
+uses
+
+conventional
+aircraft
+
+super-efficient
+aircraft
+
+uses
+
+uses
+
+conventional
+fuel
+
+“green”
+fuel
+
+uses
+
+uses
+
+atmosphere as
+sink for CO2 emissions
+
+CO2 sequestration
+system
+
+Fig. 1 A single branch of a resource-use hierarchy with potential substitutes at each level,
+indicated by dotted arrows
+
+100 years from now, but with some substitutions at the lower levels. Others think
+that it is easier to change social practices—adopt new forms of virtual meetings—
+than to replace fossil fuels or solve the problem of greenhouse gas emissions.
+An interesting question is what type of resource is at the bottom of the resource
+hierarchy. All human-made material resources are made from natural resources,
+abiotic or biotic, and even long-lasting human-made material resources need
+energy from the environment to be operated and maintained. No house can be built
+or repaired without using some form of energy; no food has ever been created
+without biomass as its raw material. Immaterial resources can be substituted for
+material ones only to a certain extent. All information needs a physical substrate;
+there is a theoretical minimum to the amount of energy used for information
+processing, known as Feynman’s limit.7
+We depend on the resources that we take from the environment. Humankind has
+learned to transform this environment, which makes it debatable to which extent it
+should still be called the ‘‘natural environment.’’ There is, however, no reason to
+
+7
+
+See also the chapter by Aebischer and Hilty [15] in this volume.
+
+ICT for Sustainability: An Emerging Research Field
+
+11
+
+assume that we could or should replace the basic ecosystem services provided by
+nature, which include the production of food and many raw materials, water and
+some forms of energy, as well as regulation services such as the purification of
+water and air, carbon sequestration, and climate regulation. These services, in turn,
+rely on supporting ecosystem services such as nutrient dispersal and cycling, seed
+dispersal and many others. The complexity of the global ecosystem is much
+greater than that of any human-made structure, and it can be regarded an ethical
+imperative that we should ‘‘sustain ecosystem services for all countries and generations to come.’’ [16]
+
+2.3 Is Sustainability a Question of Balance?
+Sustainable development is commonly described with the help of a metaphor:
+finding a ‘‘balance’’ between the environment, economy, and society. This
+approach is also known as the ‘‘three-pillar model.’’ It has become so common in
+the political discourse that critical reflection on it is often lacking.8
+Yet this metaphorical description deserves critical examination. A balance can
+only exist between entities that are in principle independent but connected. This is
+frequently expressed by diagrams similar to the one shown in Fig. 2a, suggesting
+as it does that environment, economy, and society are entities that exist at the same
+ontological level and which are connected by overlapping areas.
+With regard to the economy and society, this is a misconception. By definition,
+the economic system forms a part of society: It is hard to imagine economic
+activities outside human society.
+With regard to the environment and society, the situation is different. It is not
+impossible to view human society as an entity that is at least in principle independent of its natural environment. However, this view suggests an extreme
+position regarding the substitutability of resources: We would have to assume that
+human-made capital can in principle substitute all natural resources.9
+If, on the other hand, the three systems are regarded as nested—as shown in
+Fig. 2b—the idea of achieving a balance between them becomes impossible: By
+definition, there can be no balance between a part and a whole.
+
+8
+
+Indeed, there even exists a definition of ‘‘Computational Sustainability’’ built largely around
+this description (see Sect. 3.3).
+9
+The normative implication of this position has been called ‘‘weak sustainability’’—in contrast
+to ‘‘strong sustainability,’’ which rejects the assumption that human-made capital can substitute
+all natural resources. The precautionary principle for dealing with uncertainty about technological
+risk implies a position of strong sustainability [17].
+
+12
+
+L.M. Hilty and B. Aebischer
+
+(a)
+
+(b)
+Environment
+Society
+Society
+
+Environment
+
+Economy
+Economy
+
+Fig. 2 Different views of the environment, society, and the economy; a a diagram frequently
+used to ilustrate the three-pillar model of sustainable development; b the nested model
+
+2.4 Decoupling and Dematerialization
+Comparing the global development of GDP with the extraction of natural material
+resources over the last century (Fig. 3) reveals two things [14]:
+• The rate of resource extraction increased by a factor of 8.
+• World GDP increased by a factor of 23.
+This shows that the two indicators are ‘‘decoupled’’ to a certain degree. It also
+shows that the decoupling is not sufficient to bring resource extraction down, nor
+even to slow its growth. Below, we give a slightly generalized definition of
+decoupling.
+Definition 5: Decoupling. Given two sustainability indicators I1 and I2, with I1
+being a well-being-oriented indicator and I2 being a resource-oriented indicator
+(Definition 3), a process increasing the ratio I1/I2 over time is called decoupling I1
+from I2.10
+The quantity I1/I2 can itself be used as an indicator; it is called I2 productivity,
+and its inverse I2/I1 is called I2 intensity.
+Decoupling obviously requires some substitution of resources at some level of
+the system.11 To make a transition toward sustainable development possible, we
+must increase our understanding of technological substitution and focus on
+innovation that drives substitution in a sustainable direction.
+
+10
+
+The order in which the numerator and denominator are given varies, either as ‘decoupling I1
+from I2,’ e.g., ‘‘decoupling GDP growth from resource use,’’ [16] or as ‘decoupling I2 from I1,’
+e.g., ‘‘decoupling natural resource use… from economic growth.’’ [14].
+11
+One might argue that there is an alternative way of decoupling, based on increasing the
+efficiency of production processes rather than on substitution. Increasing efficiency, however, can
+be regarded as substituting immaterial resources (information) for other resources. See also the
+chapter on interactions between information, energy, and time by D. Spreng [18] in this volume.
+
+ICT for Sustainability: An Emerging Research Field
+
+13
+GDP
+[trillion (10^12) international dollars]
+
+Material extraction
+[Billion tons]
+100
+
+50
+
+80
+
+40
+Ores and industrial minerals
+Fossil energy carriers
+Construction minerals
+
+60
+
+30
+Biomass
+GDP
+
+40
+
+20
+
+20
+
+10
+
+0
+1900
+
+0
+1910
+
+1920
+
+1930
+
+1940
+
+1950
+
+1960
+
+1970
+
+1980
+
+1990
+
+2000
+
+Fig. 3 Global material extraction in billion (109) tons and GDP in trillion (1012) international
+dollars (Source [14, p. 11])
+
+The special case of decoupling based on the substitution of immaterial
+resources for material resources is also known as dematerialization.
+
+2.5 Distributive Justice
+The use of global resources is not distributed equally throughout the world. One
+striking example is the use of the atmosphere as a sink of CO2 and other greenhouse gases: Although people in all regions burn fossil fuels and practice agriculture (the two main reasons for greenhouse gas emissions), huge differences
+exist in per-capita emissions ([19], see Fig. 4).
+In the long term, these differences will have to shrink for reasons of distributive
+justice. If global emissions are to be reduced for reasons of climate policy, it follows
+that dramatic dematerialization is needed in the currently high-emitting countries.
+
+3 Related Research Fields
+Several fields of applied research have been established to connect the two worlds
+of ICT and sustainability. Each of these fields is in itself an interdisciplinary
+combination of approaches, usually combining methods from disciplines of
+
+14
+
+L.M. Hilty and B. Aebischer
+North America
+
+ce
+an
+ia
+
+5 GtCO 2 e/y
+
+O
+
+20
+
+be
+an
+
+A
+
+rib
+
+th
+
+Ca
+
+or
+a
+
+sia
+
+Ce
+
+nt
+
+ra
+
+lA
+
+m
+
+er
+
+ic
+
+ic
+er
+
+a&
+
+N
+t&
+m
+A
+th
+
+id
+M
+
+So
+u
+
+dl
+
+eE
+as
+
+10
+
+A
+
+5
+
+0
+
+Sub-Saharan Africa
+
+ro
+p
+
+fri
+
+e
+
+ca
+
+15
+Eu
+
+Greenhouse gas pollution (tons CO2 e/y per person)
+
+25
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+population (billions)
+
+Fig. 4 Greenhouse gas emissions in tons of CO2 equivalent per capita in the year 2000. The
+rectangular areas show the total annual emissions per region. This diagram includes all relevant
+greenhouse gases, not only CO2 (Source [19, p. 12])
+
+computing and communications with methods from environmental or social sciences. Below, we briefly introduce each field and then discuss how ICT4S relates
+to them. See Table 3 below for an overview.
+
+3.1 Cybernetics as a Precursor
+The idea of using computing power to make the world more sustainable is not new.
+The fourth Annual Symposium of the American Society for Cybernetics, held in
+Washington, D.C. in 1970, published its proceedings under the title ‘‘Cybernetics,
+Artificial Intelligence, and Ecology’’ [20]. It contained a vision of an automated air
+quality control system (Fig. 5) and boldly stated that ‘‘Knowledge acquisition is
+the answer to the ecological crisis!’’ ‘‘Model makers, system analysts, and those
+concerned with developing informational feedbacks’’ were encouraged to ‘‘help
+correcting environmental maladies.’’ [21] If published in the context of persuasive
+technology or eco-feedback systems today, this statement would not be unusual,
+although it could be criticized12 for its simplistic approach; for the 1970s, it was
+remarkable.
+
+12
+
+See the chapter ‘‘Gamification and Sustainable Consumption’’, which includes a critique of
+persuasive technologies, in this volume [71].
+
+ICT for Sustainability: An Emerging Research Field
+
+15
+
+Fig. 5 Vision of an automated air quality control system from 1970. (Source [22])
+
+3.2 Environmental Informatics
+Environmental Informatics (EI) combines methods from the fields of Computer
+Science and Information Systems with problem-oriented knowledge from Environmental Science and Management. Similar to Health Informatics or Bioinformatics,
+EI emerged from the need to systematically meet domain-specific requirements to
+information processing: ‘‘The design of information processing systems for the
+appropriate utilization of environmental data is a big challenge for computer
+scientists […] The existing solutions often suffer from a narrowed, unidisciplinary
+view of the problem scope.’’ [23] This need became obvious in the early 1990s,
+when many public authorities started building up Environmental Information
+Systems (EIS). At that time, EI was focused on applications in the public sector.
+Private-sector applications emerged as a sub-field a few years later [24].
+The first book entitled ‘‘Environmental Informatics’’ was edited in 1995 by
+Avouris and Page [25]. It lists six methods relevant for the field: modeling and
+simulation, knowledge-based systems, user interface design, computer graphics
+and visualization, artificial neural networks, and data integration. From today’s
+perspective, EI can best be described as a field that uses methods from Information
+Systems complemented by advanced simulation modeling techniques, and spatial
+data processing.
+EI has sometimes also been called ‘‘E-Environment’’ [26]. Traditional environmental monitoring and new forms of ICT-based environmental metrics [27] can be
+regarded as part of EI.
+The contribution of EI to sustainable development is the potential of shared data
+and understanding to create a consensus on environmental strategies and policies
+in the long term. Some authors today focus on the data-science aspects [28], while
+others put greater emphasis on transdisciplinary problem-solving and knowledge
+
+16
+
+L.M. Hilty and B. Aebischer
+
+integration. The latter group includes one of the founding fathers of the field, B.
+Page. In his view, EI ‘‘analyses real-world problems in a given environmental
+domain and defines requirements for information processing. On the other hand, it
+introduces the problem-solving potential of Informatics methodology and tools
+into the environmental field’’ [29, p. 697].
+The development of EI is documented in the proceedings of the three main
+conference series of the EI community: EnviroInfo, ISESS, and ITEE. The EI
+community is also connected to the International Environmental Modeling and
+Software Society and their bi-annual summit, iEMSs.13
+ICT-ENSURE, the European Commission’s support action for building a
+European Research Area in the field of ‘‘ICT for Environmental Sustainability’’
+2008–2010, has helped structure the field of EI [30].
+
+3.3 Computational Sustainability
+The field of Computational Sustainability (CompSust) is closely connected with
+the Institute for Computational Sustainability (ICS), which was founded in 2008
+with support from an ‘‘Expeditions in Computing’’ grant from the U.S. National
+Science Foundation. [35]
+CompSust is defined by ICS as ‘‘an interdisciplinary field that aims to apply
+techniques from computer science, information science, operations research,
+applied mathematics, and statistics for balancing environmental, economic, and
+societal needs for sustainable development.’’ [35]
+As described by C.P. Gomez, the aim of CompSust is to provide decision
+support for sustainable development policies, with a focus on ‘‘complex decisions
+about the management of natural resources. […] Making such decisions optimally,
+or nearly optimally, presents significant computational challenges that will require
+the efforts of researchers in computing, information science, and related disciplines, even though environmental, economic, and societal issues are not usually
+studied in those disciplines.’’ [36, p.5]
+The contribution of CompSust is found in methods of dynamic modeling,
+constraint reasoning and optimization. It has also provided approaches using
+machine learning and statistical modeling. [36]
+The phrase ‘‘balancing environmental, economic, and societal needs’’ occurs
+frequently in key documents describing CompSust (e.g., [35, 36]). However, it
+remains unclear which needs precisely are addressed, and what the assumed
+concept of balance is ([37], see also Sect. 2.3). The Brundtland definition (our
+Definition 2), to which the CompSust community also refers, addresses needs only
+13
+
+EnviroInfo: Environmental Informatics (since 1986) [31], ISESS: International Symposium on
+Environmental Software Systems (since 1995) [32], ITEE: International Conference on
+Information Technologies in Environmental Engineering (since 2000) [33], iEMSs: International
+Congress on Environmental Modelling and Software (since 2002) [34].
+
+ICT for Sustainability: An Emerging Research Field
+
+17
+
+in one sense: as the basic human needs that all people, including those living in the
+future, have to be granted. ‘‘Balancing’’ seems to address this issue in some way,
+but without referring to an approach for dealing with the deeply normative issues
+connected to distributive justice. An algorithm that can resolve normative issues
+has yet to be invented.
+
+3.4 Sustainable HCI
+Sustainable HCI is a sub-field of Human-Computer Interaction (HCI) that focuses
+on the relationship between humans and technology in the context of sustainability. Sustainable HCI had its starting point in 2007, when E. Blevis first presented the concept of Sustainable Interaction Design (SID). Sustainability was
+considered a major criterion for the design of technology, as important in the
+design process as criteria such as usability or robustness [38]. SID considers not
+only the material aspects of a system’s design, but also the interaction throughout
+the life cycle of the system, taking into account how a system might be designed to
+encourage longer use, transfer of ownership, and responsible disposal at the end of
+life.
+J. Mankoff et al. proposed a characterization of sustainability in interactive
+technologies according to the following categories:
+• ‘‘Sustainability through design’’: How can the design of technology and
+interactive systems support sustainable lifestyles or promote sustainable
+behavior?
+• ‘‘Sustainability in design’’: How can technology itself be designed such that its
+use is sustainable? [39]
+Which concepts of sustainability are addressed here, given the definitions of
+Sect. 2? In the second case, the focus appears to be on the sustainable use (Definition 1) of the technological artifact itself. However, there seems to be a common
+assumption that the longevity of an artifact contributes to sustainable development
+(Definition 2) as well, in particular by saving materials and reducing waste.14
+In the first case, ‘‘sustainability through design’’, the reference to lifestyles clearly
+suggests that sustainable development is addressed.
+DiSalvo et al. [41] provide an empirical analysis of the emerging structure of
+Sustainable HCI research. They divide the field into five genres:
+
+14
+
+Although this assumption provides good guidance in many cases, it should not be taken for
+granted. Counterintuitive examples have been presented in LCA studies in other domains. For
+example, using a cotton shopping bag for ten shopping trips has a greater environmental impact
+than using ten plastic bags just once each [40].
+
+18
+
+L.M. Hilty and B. Aebischer
+
+• ‘‘Persuasive technology’’ stimulating desired (sustainable) behavior
+• ‘‘Ambient awareness’’ systems making users aware of some aspect of the
+sustainability of their behavior, or qualities of the environment associated with
+issues of sustainability
+• ‘‘Sustainable interaction design’’
+• ‘‘Formative user studies’’
+• ‘‘Pervasive and participatory sensing’’
+E. M. Huang [42] describes an ‘‘initial wave of research’’ in Sustainable HCI,
+having shown that ‘‘HCI can contribute to solutions to sustainability challenges,’’
+but also that problems of sustainability cannot be ‘‘framed purely as problems for
+HCI or interaction design issues.’’ [16, 42] Based on this, she proposes building
+bridges to other fields: to existing bodies of environmental data (such as LCA data)
+and related theories, methods, and models; to environmental psychology (e.g.,
+when designing eco-feedback systems); and, last but not least, to real-world situations such as negotiating with a municipality.
+
+3.5 Green IT and Green ICT
+We use the terms ‘‘Green IT’’ and ‘‘Green ICT’’ interchangeably. The first is more
+common, while the second is more consistent with this book’s terminology. We
+assume that digital convergence has amalgamated the technologies of computation
+and telecommunications to an extent that makes their separation obsolete in this
+context.
+The term ‘‘Green IT’’ became popular after the publication of a Gartner report
+in 2007 [43] and was later joined by ‘‘Green Computing,’’ ‘‘Green Software,’’
+‘‘Green Software Engineering,’’ and ‘‘Green Information Systems (IS).’’
+S. Murugesan defined ‘‘Green IT’’ in 2008 as ‘‘the study and practice of
+designing, manufacturing, using, and disposing of computers, servers, and associated subsystems […] efficiently and effectively with minimal or no impact on the
+environment.’’ [44] He identifies the following focus areas [44, p. 26]:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Design for environmental sustainability
+Energy-efficient computing
+Power management
+Data center design, layout, and location
+Server virtualization
+Responsible disposal and recycling
+Regulatory compliance
+Green metrics, assessment tools, and methodology
+Environment-related risk mitigation
+Use of renewable energy sources
+Eco-labeling of IT products
+
+ICT for Sustainability: An Emerging Research Field
+
+19
+
+Besides these focus areas, he mentions two additional aspects:
+• ‘‘Using IT for Environmental Sustainability […] by offering innovative modeling, simulation, and decision support tools’’
+• ‘‘Using IT to Create Green Awareness’’ through ‘‘tools such as environmental
+Web portals, blogs, wikis, and interactive simulations of the environmental
+impact of an activity’’ [44, pp. 32f]
+The dichotomy between reducing the footprint of ICT itself and using ICT to
+support sustainability has also been called ‘‘Green in ICT’’ versus ‘‘Green by ICT’’
+[45].
+Q. Gu et al. develop a ‘‘Green Strategy Model’’ in the IT context that aims to
+‘‘provide decision makers with the information needed to decide on whether to
+take green strategies and eventually how to align them with their business strategies’’ [46, p. 62]. This conceptual model differentiates between ‘‘green goals’’
+(which an organization decides to achieve), ‘‘green actions’’ (which should help
+achieve a green goal), ‘‘action effects’’ (the ecological effects of the action with
+regard to the green goal), and the economic impacts of the action effects. Green
+actions are divided into two categories, ‘‘greening of IT’’ and ‘‘greening by IT’’
+[46, p. 65].
+In trying to cover both sides of the dichotomy, Green ICT is similar to Sustainable HCI. However, the implicit focus of Green ICT seems to be clearly on the
+‘‘Green in ICT’’ part, if one considers the literature. Highly elaborated definitions
+and syllabi for Green ICT, such as the syllabus of the British Computer Society
+[47], do not include a ‘‘Green by ICT’’ aspect.
+There are good reasons for this. Green ICT researchers seem to have created
+‘‘Green by ICT’’ from scratch to fill a perceived gap in their field, apparently
+unaware that this area was already covered by other established fields. The first
+‘‘additional aspect’’ mentioned by Murugesan and cited above, ‘‘Using IT for
+Environmental Sustainability…,’’ looks like a definition of EI or CompSust. The
+second aspect, ‘‘Using IT to Create Green Awareness,’’ is part of Persuasive
+Technologies and Ambient Awareness and thus covered by Sustainable HCI.
+The field of Green Information Systems or Green IS [48] has been conceptualized by Loeser and Erek, for example. The field of IS is, as usual, differentiated
+from IT by including not only technical infrastructure but also the human activities
+within an organization. Green IS is attributed a higher transformation potential
+than ‘‘classical’’ Green ICT: ‘‘Green IS […] promise a much greater, organizationwide potential to measure, monitor, report and reduce the firm’s environmental
+footprint, but the transformation of the business with the help of Green IS requires
+a holistic long-term strategy.’’ Green IS strategy is defined as ‘‘the organizational
+perspective on the investment in, deployment, use and management of information
+systems (IS) in order to minimize the negative environmental impacts of IS, ISenabled products and services, and business operations.’’ [48, p. 4]
+
+20
+
+L.M. Hilty and B. Aebischer
+
+Table 3 Overview of the research fields relating ICT to sustainability, their main methods, and
+intended contributions to sustainable development
+Name of the field
+
+Main methods
+
+Contribution to sustainable development
+
+Environmental
+Informatics
+
+Information systems
+Modeling and
+simulation
+Spatial data
+processing
+Modeling,
+optimization
+Constraint reasoning
+Machine learning,
+etc.
+Empirical HCI
+methods
+Design research
+Methods from other
+fields
+IT management
+IT engineering
+Software
+engineering
+Assessment methods
+(LCA, TA, others)
+Empirical methods
+(incl. social
+sciences)
+Scenario-building
+Modeling and
+simulation
+
+Monitoring the environment
+Understanding complex systems
+Data-sharing and consensus-building
+
+Computational
+Sustainability
+
+Sustainable HCI
+
+Green IT/ICT
+
+ICT for
+Sustainability
+
+Decision support for the management of natural
+resources
+‘‘Balancing’’ conflicting goals
+
+Longevity of devices
+Supporting sustainable lifestyle
+Promoting sustainable behavior
+
+Reducing the environmental impacts of ICT
+hardware and software
+(Green by ICT covered by other fields)
+Reducing ICT-induced energy and material
+flows
+Enabling sustainable patterns of production and
+consumption
+Understanding and using ICT as a
+transformational technology
+
+The software perspective of Green ICT is another important focus. A. Noureddine et al. [49] define Green IT from a software perspective as a ‘‘discipline concerned with the optimization of software solutions with regards to their energy
+consumption’’ [21, 49]. Their focus is on the environmental impacts caused by
+software, mainly CO2 emissions related to power consumption. The approach
+conceptually includes energy models showing the energy use caused by software in
+hardware resources (in particular processors, working memory and hard disks),
+power monitoring at runtime, and the use of ‘‘power-aware information to adapt
+applications at runtime based on energy concerns.’’ [49, p. 27]
+Both the software product and the processes of software engineering can be
+developed in the direction of sustainability (see the chapter by Naumann et al. [50]
+in this volume). A central question is how sustainability can be defined as a nonfunctional requirement [51].
+
+ICT for Sustainability: An Emerging Research Field
+
+21
+
+3.6 ICT for Sustainability
+Perhaps the clearest statement of what ICT for Sustainability (ICT4S) means, or
+should mean, is the preamble of the recommendations endorsed by the 200 participants of the first ICT4S conference held in Zurich in 2013. These
+recommendations are published under the title ‘‘How to Improve the Contribution
+of ICT to Sustainability’’ in the appendix of the proceedings [2]. The preamble
+reads:
+The transformational power of ICT can be used to make our patterns of production and
+consumption more sustainable. However, the history of technology has shown that
+increased energy efficiency does not automatically contribute to sustainable development.
+Only with targeted efforts on the part of politics, industry and consumers will it be possible
+to unleash the true potential of ICT to create a more sustainable society. [2, p. 284]
+
+ICT4S was not originally intended as a research field. It began as a conference
+attended by experts from academia, industry and politics with a common aim:
+Harnessing this technology for sustainable development. For this reason, there are
+many overlaps between ICT4S and pre-existing fields. ICT4S can be subdivided
+into:
+• Sustainability in ICT: Making ICT goods and services more sustainable over
+their whole life cycle, mainly by reducing the energy and material flows they
+invoke
+• Sustainability by ICT: Creating, enabling, and encouraging sustainable patterns
+of production and consumption by means of ICT
+Parts of the first aspect are covered by Green ICT, parts of the second by Sustainable HCI and EI. If there is something specific to ICT4S as a field, it is the
+critical perspective that challenges every technological solution by assessing its
+impact at the societal level: What is the effect of the solution on society at large
+– does it have a potential to contribute to sustainable development? In other words,
+sustainable development is seen a societal transformation, and technological
+impacts are interesting mainly for their transformational aspect.
+The methods used in ICT4S are as varied as the disciplines contributing to it.
+Due to the critical perspective mentioned above, assessment methods such as
+LCA, approaches from Technology Assessment, and others are in use. Empirical
+methods from the social sciences are used to study the interactions between
+technology design and human behavior. Scenario methods and interdisciplinary
+approaches to modeling and simulation are employed to deal with complex
+dynamic systems.
+ICT4S refers to sustainable development in the sense used by Brundtland, as
+defined in Sect. 2 (Definition 2).
+
+22
+
+L.M. Hilty and B. Aebischer
+
+3.7 Further Related Fields
+A wide variety of other fields are also related to ICT4S, albeit less closely than the
+four areas presented in Sects. 3.2–3.5 above:
+• ICT4D: ICT for Development, also known as ‘‘Development Informatics,’’ is
+defined as ‘‘the application of information and communication technologies for
+international development.’’ [52]
+• ICT4EE: ICT for Energy Efficiency, a notion coined by the European Commission as an umbrella term for activities aimed at improving the energy
+efficiency in the ICT sector as well as ‘‘ways in which the ICT sector can lead
+to more energy efficiency in other sectors such as buildings, transport and
+energy.’’ [53]
+• Energy Informatics: This field is concerned with ‘‘the application of information technologies to integrate and optimize current energy assets such as energy
+sources, generating and distributing infrastructures, billing and monitoring
+systems, and consumers.’’ [54]
+• Sustainable Computing: This field is characterized in the journal of the same
+name as ‘‘making computing sustainable’’ and ‘‘computing for sustainability—
+use of computing to make the world a sustainable place’’; it is thus similar to
+‘‘Green in ICT’’ and ‘‘Green by ICT’’ as discussed above, but with a focus on
+algorithms. [55]
+• Digital Sustainability: This term is used with various meanings. It may refer to
+the preservation of digital formats and content [56], to the use of media with
+low environmental impact [57], or to open access to information resources. [58]
+
+3.8 ICT4S and Ethics
+The normative aspects of ICT4S also connect this field to ethical aspects of
+computing. Historically, the discourse on the ethics of computing was initiated at
+the international level by IFIP TC9, IFIP’s Technical Committee on ICT and
+Society, which still promotes this discussion. IFIP, the International Federation for
+Information Processing, was founded in 1960 under the auspices of UNESCO as
+the umbrella organization of the national computer societies. IFIP TC9 has continuously inspired, monitored, and framed the development of national ethics
+guidelines and codes of conduct for computer professionals in the national member
+societies [59].
+A discourse analysis conducted by Lignovskaya [60] on the proceedings of the
+‘‘Human Choice and Computers’’ (HCC) proceedings published by IFIP TC9 in
+the period 1974–2012 revealed a number of results regarding sustainability. First
+mentioned at the 1998 HCC conference, the relationship between sustainable
+development and the information society (or knowledge society) was discussed in
+
+ICT for Sustainability: An Emerging Research Field
+
+23
+
+2002 and more broadly in the three succeeding conferences in 2002, 2006, and
+2008. The 2012 proceedings show a surprisingly high frequency of ‘‘sustainable x’’
+terms, in particular ‘‘sustainable innovation,’’ ‘‘sustainable business,’’ ‘‘sustainable
+growth,’’ ‘‘sustainable computing,’’ ‘‘sustainable consciousness,’’ and ‘‘sustainable
+governance,’’ whose relation to the concept of sustainable development is not
+always clear. The term ‘‘sustainable development’’ itself has almost vanished in the
+2012 proceedings. A speculative interpretation of this observation is that the concept of sustainable development has been replaced by vague concepts of sustainability. The ICT4S community should therefore contribute clear ideas about the
+ethical aspects of sustainable development and the role of ICT in this context.
+The results of the overall analysis, which are grouped around the ethical issues
+of autonomy and self-determination, responsibility, and distributive justice, are
+summarized in [61].
+
+4 Toward a Conceptual Framework for ICT Impacts
+on Sustainability
+A decade ago, the first author of this chapter was involved in a project by the
+European Commission’s Institute for Prospective Technological Studies (IPTS)
+that aimed to estimate the positive and negative effects of the ‘‘informatization’’ of
+society on environmental indicators. The method employed was to develop a
+socio-economic model and so simulate various scenarios with a time horizon of
+20 years. The most striking result of the simulations was that the overall impact of
+ICT on the environment was small, but it had substantial positive or negative
+impact in specific areas. For example, ICT applications for making freight transport more efficient increased the demand for transport (faster and cheaper transport
+stimulated demand), whereas utilizing the potential of ICT to dematerialize goods
+reduced the total demand for materials, which in turn reduced the demand for
+transport. Taken as a whole, such effects tended to cancel each other out.15 [62]
+The take-home message from the project was that the idea of ICT being either
+good or bad for the environment should be combated. Such simplistic beliefs are
+actually harmful, as they prevent the formation of policies that would systematically unleash the positive potential of ICT while inhibiting its negative potential.
+Targeted policies of this type can use ICT as a powerful tool to support the
+transition toward sustainability. One of the conclusions of the project team was
+that ‘‘It is […] essential to design policies that encourage environmentally
+
+15
+The ICT applications covered by the model were as follows: ‘‘e-business, virtual mobility
+(telework, teleshopping, virtual meetings), virtual goods (services partially replacing material
+goods), ICT in waste management, intelligent transport systems, ICT in energy supply, ICT in
+facility management, ICT in production process management.’’ [65] See the chapter by Ahmadi
+Achachlouei and Hilty [66] in this volume for an update on the model.
+
+24
+
+L.M. Hilty and B. Aebischer
+
+advantageous areas of ICT application, while inhibiting applications that tend to
+increase the speed of resource consumption.’’ [62, p. 61]
+This is less surprising than it seems when one considers that ICT currently
+impacts on almost every aspect of production and consumption, in many different
+ways. The universality and ubiquity of ICT make it necessary to take a closer look
+at its interactions with sustainability. Any approach to systematically addressing
+ICT in the context of sustainability, be it from a research, policy-making or
+innovation perspective, requires a conceptual framework that answers the fundamental question: What types of ICT impacts should we be looking for?
+There have been many attempts to define such frameworks, as documented in
+the annotated bibliography published in the annex of the ICT4S 2013 proceedings
+[63]. Below, we present our most recent proposal—the LES model (Sect. 4.2)—
+after describing some intermediate steps that led to it (Sect. 4.1).
+
+4.1 The Three-Levels Model
+Many authors differentiate between the first-, second- and third-order effects of
+ICT, a classification originally introduced by Berkhout and Hertin in a 2001
+OECD report [64]:
+1. ‘‘Direct environmental effects of the production and use of ICTs’’
+2. Indirect environmental impacts through the change of ‘‘production processes,
+products, and distribution systems’’
+3. Indirect environmental impacts ‘‘through impacts on life styles and value
+systems’’ [64, p. 2]
+This framework has been re-used, re-interpreted and re-labeled many times [63].
+Figure 6 shows how it can be combined with a second dimension that distinguishes positive from negative impacts, i.e., ‘‘ICT as part of the problem’’ from
+‘‘ICT as part of the solution.’’16 This matrix was published by the first author of
+this chapter in 2008 [67] and revised several times after that. It is intentionally
+normative, declaring some effects favorable for sustainability and others unfavorable. We discuss the possible downsides of such a normative approach in
+Sect. 4.2 below, and contrast it with a new approach that is purely descriptive.
+The matrix contains different categories of ICT effects:
+• Level 1 refers to the direct effects of the production, use and disposal of ICT,
+effects that can be assessed with a Life-Cycle Assessment (LCA) approach. In
+particular, this includes the demand for materials and energy throughout the
+whole life cycle. These effects are placed entirely on the negative side as they
+represent the cost of providing ICT services.
+16
+
+It is implicitly assumed that ‘‘the problem’’ here is the fact that sustainable development
+(Definition 2) does not currently exist.
+
+ICT for Sustainability: An Emerging Research Field
+
+ICT as part of the
+problem
+
+25
+
+ICT as part of the
+solution
+
+Production
+
+Technology
+
+Life cycle
+of ICT
+
+Use
+
+1
+n/a by definition
+
+Disposal
+
+Direct
+effects
+
+enables
+Induction effects
+
+Substitution effects
+
+Induction effects
+
+Application
+Obsolescence effects
+
+Optimization effects
+
+2
+Enabling
+effects
+
+enables
+
+Behavioral and
+structural
+change
+
+Rebound effects
+
+Rebound
+Transitioneffects
+towards
+
+Emerging risks
+
+sustainable patterns of
+production
+& consumption
+New
+critical infrastructure
+
+3
+Systemic
+effects
+
+Fig. 6 A matrix of ICT effects, based on [67]
+
+• Level 2 refers to the enabling effects of ICT services, or the effects of applying
+ICT. Two of them are attributed to the ‘‘problem’’ side, two to the ‘‘solution’’
+side:
+– Induction effect: ICT stimulates the consumption of another resource (e.g., a
+printer stimulates the consumption of paper as it uses it faster than a
+typewriter).
+– Obsolescence effect: ICT can shorten the useful life of another resource due
+to incompatibility (e.g., a device that is no longer supported by software
+updates is rendered obsolete).
+– Substitution effect: The use of ICT replaces the use of another resource
+(e.g., an e-book reader can replace printed books, which is positive if it
+avoids the printing of a sufficiently large number of books).17
+– Optimization effect: The use of ICT reduces the use of another resource
+(e.g., less energy is used for heating in a smart home that knows where the
+people who live in it are located, which windows are open, what weather is
+forecast, etc.).
+• Level 3 refers to the systemic effects, i.e. the long-term reaction of the dynamic
+socio-economic system to the availability of ICT services, including behavioral
+change (life styles) and economic structural change. On the negative side,
+rebound effects prevent the reduction of total material resource use despite
+decoupling (see Sect. 2.4) by converting efficiency improvements into additional consumption, and new risks may emerge, for example due to the vulnerability of ICT networks. On the positive side, ICT has the potential to
+support sustainable patterns of production and consumption.
+
+17
+
+For a detailed discussion of this example, see the chapter by Coroama et al. [13] in this
+volume.
+
+26
+
+L.M. Hilty and B. Aebischer
+
+Why is an induction effect not considered a rebound effect? The difference is one
+of perspective: An induction effect is the increase in the consumption of a specific
+resource as a consequence of applying ICT, viewed at the micro level. The
+rebound effect is the aggregated result of many processes interacting in a way that
+leads to increased consumption, viewed at the macro level. The same question
+could be asked with regard to substitution (or optimization) and sustainable production and consumption patterns.
+The fact that these distinctions are not immediately clear reveals a weakness in
+the framework, namely that it mixes up levels of abstraction and categories of
+effects. If we understand Level 2 to be the economic micro-level—i.e., referring to
+substitutions and other ICT-related actions taking place in firms and private
+households—it is not determined what the aggregated effect of these actions will
+be at the macro-level. This is because the actions that we are describing in isolation are not actually isolated: In reality, they interact closely with each other via
+markets and other mechanisms of social coordination. The rebound effect is thus
+not an effect on the macro-level, but a concept related to the relationship between
+micro- and macro-level descriptions.
+This criticism calls into question the whole idea of postulating normative categories of effects, at least at the micro-level. No substitution or optimization effect
+can be categorized as ‘‘sustainable’’ (or more precisely, conducive to sustainable
+development) a priori, as no induction or obsolescence effect can be considered
+‘‘unsustainable’’ or harmful with regard to sustainable development a priori.
+Sustainable development (Definition 2) is defined on a global level, which implies
+that any analysis or assessment must ultimately take a macro-level perspective.
+Isolated actions cannot be considered part of the problem, nor part of the potential
+solution, unless there is a procedure in place for systematically assessing the
+macro-level impacts of micro-level actions.
+
+4.2 The LES Model
+The new model presented below builds on the matrix approach discussed above
+(Sect. 4.1), but with the following improvements:
+• It avoids normative assumptions and tries to be purely descriptive.
+• It connects better to production theory by reducing optimization to substitution.
+• It connects better to the sociological structuration theory by using the dualism
+of action and structure.
+• It can be extended, as it does not attempt to categorize all the possible effects of
+ICT.
+We call our new model the ‘‘LES model,’’ LES standing for the three levels of
+impact: Life-cycle impact, Enabling impact, and Structural impact. Structural
+impact represents the highest level of abstraction and thus comes at the top of the
+diagram (see Fig. 7). However, we shall describe the levels of impact starting with
+the lowest level first and moving upward.
+
+ICT for Sustainability: An Emerging Research Field
+
+27
+
+Fig. 7 The LES model
+
+Level 1, Life-Cycle Impact. This refers to the effects caused by the physical
+actions needed to produce the raw materials for ICT hardware, to manufacture ICT
+hardware, to provide the electricity for using ICT systems (including the electricity
+for non-ICT infrastructures, such as cooling), to recycle ICT hardware, and finally
+to dispose of non-recycled waste. The total impact is then allocated to a functional
+unit of the service it produces during the use phase.
+The method of choice for assessing life-cycle impacts is Life-Cycle Assessment
+(LCA). LCA connects the action of providing ICT to the use of natural resources.
+In some cases, it may be necessary to include an assessment of social impacts, for
+example the social impact of the mining activities required to produce the raw
+materials, or the social impact of informal recycling.
+
+28
+
+L.M. Hilty and B. Aebischer
+
+material
+resource
+uses
+
+uses
+
+process
+optimization
+material
+resource
+
+Substitution
+
+immaterial
+resource
+
+uses
+
+material
+resource
+(medium)
+
+media
+substitution
+Substitution
+
+material
+resource
+(medium)
+
+Su
+
+bs
+
+tit
+u
+
+tio
+
+n
+
+immaterial
+resource
+(content)
+
+uses
+
+immaterial
+resource
+(content)
+
+externalization
+of control
+
+Fig. 8 Process optimization, media substitution, and externalization of control, explained as
+resource substitution: A material resource can be partially replaced by an immaterial resource
+(process optimization); the medium of an immaterial resource can be replaced by another
+medium (media substitution); and the content of an immaterial resource can be replaced by
+content provided from an external source (externalization of control)
+
+In many practical cases, it may be sufficient simply to assess the energy
+consumption during the use phase in detail, and use default estimates for the
+production and end-of-life treatment.
+Level 2, Enabling Impact. This refers to actions that are enabled by the
+application of ICT. In the context of sustainability, it is important to understand the
+effects of these actions on resource use. We therefore view all actions as processes
+of production or consumption. All impacts of ICT will be viewed as special types
+of substitution, thus linking the LES model to the definition of substitutability
+given further above (see Sect. 2.2, Definition 4).
+The model differentiates between three types of enabling impact, each of which
+is based on substitution and can occur in both production and consumption: process optimization, media substitution, and externalization of control. Note that
+these three impacts occur in several places in the central part of Fig. 7.
+These enabling impacts can be defined as special types of resource substitution
+in the following manner (see also Fig. 8):
+• Process optimization as substituting an immaterial for a material resource
+• Media substitution as substituting one material resource for another
+• Externalization of control as substituting one immaterial resource for another
+
+ICT for Sustainability: An Emerging Research Field
+
+29
+
+We discuss this in more detail below.
+Process Optimization. All processes that have a purpose can be optimized by
+making use of information. Information is used to reduce the use of another
+resource by the process. This applies to production processes in businesses as well
+as to consumption by private households.18 For example, a taxi driver may use a
+satellite navigation system to optimize the route taken when driving someone from
+A to B. If the driver of a private vehicle uses the same system to produce the same
+service for him- or herself, the optimization effect is essentially the same. In this
+sense, we may view process optimization as a category of enabling impact that
+applies to both production and consumption.
+Process optimization is based, whether explicitly or implicitly, on an objective
+function that specifies the input resource that is to be minimized. According to
+production theory, this input resource may be labor, capital, or a natural resource
+(e.g., energy). Following the distinction between material and immaterial resources
+given in Sect. 2.2, these are all material resources. We can therefore view process
+optimization, which makes use of information, as substituting immaterial for material resources. At the same time, there may also be substitution between different
+material resources, depending on the objective function. The typical case here is
+industrial automation, which reduces labor at the cost of capital, energy, and information. However, it is also possible to substitute information for energy or time
+(without increasing energy use) within certain limits. Spreng’s triangle, which
+describes the fundamental interactions between time, energy, and information, provides a basic framework for analyzing these substitutions (see [18], in this volume).19
+Process optimization can occur either at a level where people are involved (e.g.,
+organizational changes in production, behavioral changes in consumption) or at a
+purely technological level by making physical changes (see Fig. 7). For example,
+introducing sensors to control the lights in a building represents an optimization of
+the lighting process, one that does not involve organizational or behavioral change.
+Media Substitution. As stated before, immaterial resources need a material
+resource as a substrate or medium. The prototypical enabling impact of ICT is the
+substitution of a digital electronic medium for the medium that was used previously. For example, public utilities may replace printed invoices sent by traditional
+mail with electronic invoices sent via the Internet. Although this is often referred
+to as ‘‘dematerialization,’’ it actually involves substituting one material resource
+with another material resource. Whether this contributes to dematerialization as
+
+18
+
+Consumption processes are often similar to production processes, and can be viewed as
+‘‘household production’’ (except for the last step, i.e., the consumption of the final good or
+service). For example, when baking a cake, a consumer transforms commodities purchased on the
+market into the final good, which is then consumed.
+19
+Note that this terminology differs from that introduced in Sect. 4.1, which treats optimization
+and substitution as distinct concepts. In the LES model, process optimization is instead regarded
+as a special type of substitution.
+
+30
+
+L.M. Hilty and B. Aebischer
+
+we define it (i.e., as a special case of decoupling; see Sect. 2.4) is a question that
+requires systematic assessment in specific cases.20
+Externalization of Control. Whenever a process requires information as one of its
+inputs, it is possible to externalize control over that process. If the information
+previously came from an internal source (i.e., from within the organization or
+household), this source can be replaced or complemented by an external source.
+Typically, this is enabled by a prior media substitution. For example, if a heating
+system is connected to the Internet, it can be controlled externally. This has the
+potential to lead to further optimizations (e.g., energy savings, remote maintenance), but also opens the door to possible misuse of data.
+External control does not have to take place in real time. The distribution of
+software products has always represented a sort of external control over the system
+executing the software. In just the last few decades, update cycles have changed
+from years to days, and web-based applications are now close to real-time control.
+Two effects of the ‘‘part of the problem’’ side of the matrix (Fig. 6), namely
+obsolescence and emerging risks, can be explained by the externalization of
+control. These two effects partially overlap:
+• Obsolescence can occur if the provider of an external information resource has
+a monopoly on that resource and stops providing it; the customer’s process is
+‘‘no longer supported’’ and the capital attached to it devalued.21
+• The fact that the external source of control can affect internal material
+resources creates the potential for misuse. In principle, external control can be
+used to create obsolescence by means of physical effects or for unwanted
+interference by third parties (as in the case of Stuxnet).
+• The factual vulnerability of the ICT infrastructure creates risks for any system
+with external control.
+Level 3, Structural Impact. The third level of the LES model refers to ICT
+impacts that lead to persistent changes observable at the macro level. Structures
+emerge from the entirety of actions at the micro level and, in turn, influence these
+actions. We focus here on two types of social structures: economic structures that
+emerge through the accumulation of capital, and institutions. Institutions, in the
+wider sense, include anything immaterial that shapes action, that is to say law,
+policies, social norms, and anything that can be regarded as the ‘‘rules of the game.’’
+Structural Change. Structural change in general is any transition of economic
+structures. Two ongoing transitions connected to ICT are relevant for our discussion: dematerialization and the networked economy.
+
+20
+
+Examples of such assessments are given in the chapters by Coroama et al. [13] and by
+Hischier and Wäger [12] in this volume.
+21
+Note that we are not claiming that this is the only mechanism that can promote obsolescence,
+but it is the one most likely to occur as an impact of ICT. This impact is not restricted to ICT
+devices but can also affect other products with embedded ICT (e.g., a blind control system).
+
+ICT for Sustainability: An Emerging Research Field
+
+31
+
+We have defined dematerialization as a special case of decoupling (see
+Sect. 2.4). It can be viewed as a necessary but insufficient condition for sustainable
+development. In broad terms, dematerialization is the aggregate result of many
+process optimizations and media substitutions, moderated by rebound effects.
+The networked economy is a new mode of production that has emerged with the
+appearance of the Internet and, in particular, Web 2.0 technologies. ‘‘The fundamental unit of such an economy is not the corporation but the individual. Tasks
+aren’t assigned and controlled through a stable chain of management but rather are
+carried out autonomously by independent contractors.’’ [68] This development may
+be relevant for sustainability in two ways. First, it may change the patterns of
+resource use in production in general. Second, it may be used specifically for projects aimed at contributing to sustainability—as in the case of MIT’s Climate
+Co-Lab [69]—with the potential to tap the ‘‘wisdom of crowds.’’ [70].
+Institutions. To be relevant for sustainable development, institutional change
+usually involves environmental and development policies. These two types of
+policies are both crucial if society is to succeed in making sustainable use of the
+planet and meeting the needs of humanity.
+ICT is indirectly involved in this through its key role in environmental monitoring and research, which shapes our view of the environment. ICT-based environmental information systems also support the implementation of environmental
+policies and regulations. In addition, ICT plays an important role in development,
+for example by providing people living in poverty who do not have bank accounts
+with alternative systems for carrying out financial transactions.
+In a networked society, communication is more efficient and social norms
+evolve faster. This is conducive to the development of social norms related to
+sustainability, norms that are based on environmental and social awareness.
+Extendability of the LES Model. The list of ICT impacts in the LES model is
+not intended to be exhaustive. Although we have tried to build the conceptual
+structure around a minimal set of basic concepts (material and immaterial
+resources, substitution, production, consumption, economic structure, institution),
+we are fully aware that, in reality, the world is more complex.
+At Levels 2 and 3, where we could not draw upon an established methodology
+(unlike at Level 1), we have included ‘‘residual categories’’ at five different points:
+• Level 2, other organizational change: Besides business process optimization, ICT
+can induce many organizational changes in production (e.g., flexible work patterns).
+• Level 2, other behavioral change: This covers persuasive technologies, sustainable interaction design, and, more generally, research into social practices
+and lifestyles and their transformation.
+• Level 2, other technological change: Some effects of ICT besides process
+optimization, media substitution, and externalization of control can potentially
+be implemented directly at the physical level.
+• Level 3, other structural change: Economic structures may change in an ICTbased society in ways other than dematerialization and the network economy.
+
+32
+
+L.M. Hilty and B. Aebischer
+
+Fig. 9 The chapters of this book mapped onto the LES model (see Fig. 7 for a larger view of the
+model)
+
+Issues such as intellectual property rights linked to media substitution may
+trigger a structural change in other directions.
+• Level 3, other institutional change: Besides environmental policies, development policies, and social norms specifically connected to the issue of sustainability, many other institutional developments (e.g., ideological or religious
+developments) may be relevant for sustainable development.
+
+5 Organization of This Book
+This book is organized in five parts, as follows:
+• Part I consists of three chapters introducing the topic of the book from different
+perspectives.
+
+ICT for Sustainability: An Emerging Research Field
+
+33
+
+• Part II presents research into energy-related aspects of the ICT life cycle.
+• Part III presents research into material aspects of the ICT life cycle.
+• Part IV contains a collection of concepts, perspectives, and case studies on the
+enabling impact of ICT at the micro-level, including a number of assessments
+of aggregated effects.
+• Part V consists of three chapters presenting frameworks and models for the link
+between the micro- and the macro-level.
+In Fig. 9, we have attempted to map chapters to relevant parts of the LES model.
+Readers can use this map as a guide to identifying which chapters may be of
+greater interest to them. The map also reveals at least one ‘‘blind spot,’’ Level 3:
+structural impact. Future research into ICT for sustainability should work more
+closely with the social sciences (including economics), so as to capture the full
+interaction between enabling impacts and the evolution of social structures.
+
+References
+1. ICT4S, ICT for Sustainability. http://ict4s.org/ (2014). Accessed 2 June 2014
+2. Hilty, L.M., Aebischer, B., Andersson, G., Lohmann, W. (eds.): ICT4S 2013: Proceedings of
+the First International Conference on Information and Communication Technologies for
+Sustainability, ETH Zurich, 14–16 February 2013
+3. Stevenson, A., Lindberg, C.A. (eds.): New Oxford American Dictionary, 3rd edn. Oxford
+University Press, Oxford (2010)
+4. Von Carlowitz, H.C.: Sylvicultura oeconomica. Anweisung zur wilden Baum-Zucht Leipzig.
+Braun, Leipzig (1713). (Reprint: Irmer, K., Kießling, A. (eds.), Remagen, Kessel Verlag
+2012)
+5. Dobson, A.: Environmental sustainabilities: an analysis and a typology. Environ. Politics
+5(3), 401–428 (1996)
+6. WCED: World Commission on Environment and Development: Our Common Future.
+Oxford University Press, Oxford (1987)
+7. Christen, M.: A theory of the good for a conception of sustainability. In: The Sixteenth
+Annual International Sustainable Development Research Conference. Conference
+Proceedings, Hong Kong (2010)
+8. Bevir, M.: Governance: A Very Short Introduction. Oxford University Press, Oxford (2013)
+9. Global Footprint Network. http://www.footprintnetwork.org/en/index.php/GFN/page/
+footprint_basics_overview/ (2014). Accessed 2 June 2014
+10. European Commission: Beyond GDP. Measuring progress, true wealth, and the well-being of
+nations. http://ec.europa.eu/environment/beyond_gdp/index_en.html (2014). Accessed 2 June
+2014
+11. Hischier, R., Coroama, V.C., Schien, D., Ahmadi Achachlouei, M.: Grey energy and
+environmental impacts of ICT hardware. In: Hilty, L.M., Aebischer, B. (eds.) ICT
+Innovations for Sustainability. Advances in Intelligent Systems and Computing, vol. 310,
+pp. 171–189. Springer, Switzerland (2015)
+12. Hischier, R., Wäger, P.A.: The transition from desktop computers to tablets: a model for
+increasing resource efficiency? In: Hilty, L.M., Aebischer, B. (eds.) ICT Innovations for
+Sustainability. Advances in Intelligent Systems and Computing, vol. 310, pp. 243–256.
+Springer, Switzerland (2015)
+
+

@@ -1,0 +1,523 @@
+Semiconductor Technology
+and the Energy Efficiency of ICT
+Hubert Kaeslin
+
+Abstract CMOS circuits have been the workhorse of ICT for 40 years. Due to the
+unique scaling property of this technology, energy efficiency has enormously
+improved during that time, notably by lowering the supply voltage from the longtime standard of 5 to 1 V and less. As the era of ‘‘happy scaling’’ has come to an
+end, progress becomes increasingly difficult and techniques beyond 2D size
+reductions have come into play. A superior and viable alternative to CMOS has yet
+to be found.
+
+1 Why Has CMOS Become the Sole Technology
+for Information Processing?
+CMOS (complementary metal oxide semiconductor) circuits totally dominate
+information processing and memory devices (RAM) today, both for professional
+ICT and consumer products. Also, solid-state disks assembled from flash-type
+memory chips are currently making ever deeper inroads into permanent mass
+storage, the traditional realm of magnetic disks. To fully understand that situation,
+we begin this review with a brief account of why CMOS technology displaced all
+contenders.
+Initially a slow alternative to TTL, ECL, GaAs and other circuit technologies,
+CMOS had two unique and highly valuable traits:
+1. n- and p-channel MOSFETs (metal oxide semiconductor field effect transistors)
+are manufactured side-by-side on the same silicon chip and work together as
+pairs in each logic gate. As these complementary switches turn ‘‘on’’ and ‘‘off’’
+in an alternating fashion, supply current dropped to zero once a circuit had
+settled to a steady state. As a consequence, power dissipation was directly
+H. Kaeslin (&)
+Microelectronics Design Center, ETH Zurich, Zurich, Switzerland
+e-mail: kaeslin@ee.ethz.ch
+ Springer International Publishing Switzerland 2015
+L.M. Hilty and B. Aebischer (eds.), ICT Innovations for Sustainability,
+Advances in Intelligent Systems and Computing 310,
+DOI 10.1007/978-3-319-09228-7_5
+
+105
+
+106
+
+H. Kaeslin
+
+proportional to the switching activities in a circuit or, in other words, to the
+overall computational burden. This was in stark contrast to competing circuit
+technologies that draw significant amounts of DC current even when idle.
+2. Almost all figures of merit of a circuit benefited from smaller layout geometries. Over the past 40 years, transistors, interconnect lines, and the separations
+between them have been downsized by a factor of approximately 1.4 with each
+new process generation. Each such shrink improved
+•
+•
+•
+•
+•
+
+the number of transistors per area,
+the switching speed and, hence, the attainable clock frequency,
+the computational performance and the storage capacity,
+the energy dissipated per switching event, and
+the unit costs per function (transistor, logic gate, computing operation,
+memory bit, etc.).
+
+The first person to recognize the tremendous potential of CMOS scaling was
+Robert Dennard, who in 1974 formulated a set of rules that involved both geometrical and electrical quantities. Scaling is what has made it possible to serve
+ever higher computational and storage needs over several decades. Dennard
+scaling can indeed be understood as the explanation behind Moore’s law. To this
+day, the ability to offer better performance at lower unit costs constitutes the
+competitive advantage that drives the semiconductor industry and that justifies
+ever larger investments. Established companies and start-ups eagerly picked up on
+the new possibilities, offering ever more sophisticated products, software applications, and services to the public.
+Watch circuits, in which speed is immaterial and zero standby power crucial,
+were in fact among the earliest CMOS applications before the technology entered
+embedded computing in the form of microprocessors for its robustness, low power,
+and—at the time—relative simplicity. Affordable CMOS microprocessors later
+helped create the home computer, a product and a market that had not existed
+before and that paved the way to personal computing. Gaining in density and
+performance with each new process generation, CMOS Very Large Scale Integration (VLSI) circuits gradually moved up the ladder and eventually made their
+way into supercomputers. Integrating many millions of logic gates on a single
+silicon microchip ultimately proved more useful than squeezing the maximum
+operating frequency out of a handful of gates manufactured using a fancy
+technology.
+Over the same time frame, VLSI chips also enabled mobile computing,
+broadband and digital wireless telecommunication, handheld music players and
+GPS devices, smartphones, download services, video streaming, Internet shopping,
+social networks, and all those applications that we see today.
+As long as a typical processor dissipated only a few watts due to its relatively
+modest transistor count and operating frequency, VLSI designers had no reason to
+pay much attention to energy efficiency. Cost and performance invariably came
+first, and much the same applied to memory chips. This attitude radically changed
+in the 1990s with the advent of mobile computing which turned battery run time
+
+Semiconductor Technology and the Energy Efficiency of ICT
+
+107
+
+voltage
+constant-field scaling
+
+constant-voltage scaling
+[V]
+5
+
+DVFS & adaptive threshold control
+
+3.0μm 2.0μm 1.5μm 1.0μm 0.6μm 0.5μm
+
+nominal supply voltage
+
+4
+Udd −Uth
+above-threshold
+gate drive voltage
+
+3
+2
+
+high-speed
+operation
+
+0.35μm
+
+typical threshold voltage
+0.25μm
+
+low-voltage
+low-leakage
+operation
+
+?
+
+180nm
+130nm 90nm
+
+1
+
+65nm
+
+45nm 32nm
+
+22nm
+
+16nm
+
+11nm
+time
+
+0
+1980
+
+1985
+
+1990
+
+1995
+
+2000
+
+2005
+
+2010
+
+2015
+
+2020
+
+[A.D.]
+
+Fig. 1 Evolution of CMOS supply and threshold voltages. Source [1]
+
+into a key issue. Mains-operated computers also ran into power limitations due to
+the problems associated with carrying away the heat produced by high-performance CPUs and graphic processors. This is because thermal flows in excess of
+100–120 W drive up the costs for heat sinks, cooling fans, heat pipes, and related
+equipment to uneconomical heights. As the energy dissipated by a CMOS circuit
+for a given computation grows with the supply voltage squared, devising circuits
+and architectures that could provide the same level of performance from a lower
+voltage was a natural choice; see Fig. 1. Suspending the clock to inactive circuit
+blocks, known as clock gating, was an important innovation, but there were many
+others such as input silencing, delay balancing, and dynamic back biasing.
+Over many product generations, the combined efforts of scaling and improved
+engineering led to a reduction in the amount of energy spent on a given computing
+or storage operation by several orders of magnitude. Yet, the explosion of new ICT
+products and services and their general adoption simply outpaced those efficiency
+gains. Today, the primary goal of VLSI design is to provide more computing
+performance and more storage capacity within the current power and energy
+budgets.
+
+2 Where Does CMOS Technology Stand Today?
+Dennard scaling, where geometric shrinking is accompanied by a proportional
+reduction of the supply voltage to maintain a constant electric field, came to an end
+around 2004, at the same time as the Gigahertz race; see Figs. 1 and 2. This is
+because to maintain the operating speed, MOSFET threshold voltages must be
+scaled down along with the supply voltage. Unfortunately, the lower its threshold
+voltage, the more a MOSFET tends to leak when turned off. To make things worse,
+the dependency is inherently exponential as any further reduction of a mere
+70–100 mV inflates the sub-threshold current by a factor of 10. And to complicate
+
+108
+
+H. Kaeslin
+10,000,000
+1,000,000
+
+Transistors per chip
+
+100,000
+
+Number of transistors (thousands)
+Relative performance
+Clock speed (MHz)
+Power type (W)
+Number of cores/chip
+
+10,000
+1,000
+100
+10
+1
+0
+1985
+
+1990
+
+1995
+2000
+Year of introduction
+
+2005
+
+2010
+
+Fig. 2 Transistors, frequency, power, performance, and processor cores over time. The original
+Moore’s law projection of increasing transistors per chip remains unabated even as performance
+has stalled. Source [2]
+
+matters further, leakage is highly dependent on temperature and subject to
+important variations from the fabrication process. All this, in conjunction with the
+billions of potential leakage paths present in any complex VLSI chip, currently
+prevents industry from generally adopting core supply voltages much below 0.8 V.
+Instead, supply and threshold voltages are chosen so as to balance dynamic and
+static power in search of the maximum overall energy efficiency.
+As a collateral damage, advanced high-performance VLSI technologies have
+lost the original CMOS virtue of zero or close-to-zero quiescent current. A circuit
+technique known as power gating had to be introduced to electrically disconnect
+temporarily inactive circuit blocks from the supply voltage. ‘‘Dark silicon’’ is a
+buzzword coined to describe the growing gap between the number of logic gates
+that can be manufactured on a chip with each process generation and the number
+one can actually afford to operate simultaneously without exceeding the thermal
+envelope.
+As Dennard scaling ran out of steam, semiconductor technologists began to
+resort to low-[r inter-level dielectrics, copper interconnect (instead of aluminum),
+crystal straining, high-[r metal gate (HKMG) stacks, silicon on insulator (SOI)
+fabrication, and other alternative approaches. The finFET—announced in 2011 and
+referred to as ‘‘tri-gate transistor’’ by Intel—significantly improved current control
+by allowing the gate field to impinge on the conducting channel from two or even
+three sides (instead of just one as in planar devices; compare Fig. 3a, c). This has
+made it possible to reduce voltage levels from 1.0 to 0.8 V, but necessitated a total
+redesign of the MOSFET’s spatial arrangement and manufacturing steps [3]. The
+ultimate stage of development in this direction would be the ‘‘gate-all-around
+FET’’ where an annular gate completely surrounds a silicon nanowire; see Fig. 3d.
+
+Semiconductor Technology and the Energy Efficiency of ICT
+
+(a)
+
+field acts on channel
+from 1 side
+
+109
+
+G
+S
+
+D
+
+n+
+
+n+
+
+p-
+
+gate dielectric
+
+current flow
+
+technological
+evolution
+
+(b)
+S
+
+from 3 sides
+
+(c)
+
+G
+
+from 2 sides
+
+gate yoke
+fin,
+p-doped
+G
+under yoke
+S
+
+D
+
+(d)
+
+n+
+
+n+
+
+S
+
+from 4 sides
+G
+
+D
+
+D
+
+?
+n+
+
+nanowire,
+p-doped
+in passage
+
+n+
+
+n+
+
+n+
+
+pgate dielectric
+
+gate dielectric
+
+gate dielectric
+
+Fig. 3 Topological options for field-effect devices. Fully depleted n-channel MOSFET (a),
+planar double-gate MOSFET (b), fin-FET (c), and nanowire gate-all-around transistor
+(d) (simplified). Source [1]
+
+Samples have been demonstrated in the laboratory, but the industrial viability is
+yet to be proven.
+Circuit and architecture designers also continue to develop innovative ideas
+including multiple sleep and power saving modes, dynamic voltage and frequency
+scaling (DVFS), heterogeneous multicore architectures, and approximate/inexact/
+probabilistic computing. However, as the low hanging fruits have been harvested,
+alternative techniques tend to suffer from diminishing returns.
+
+3 What Are the Perspectives?
+Now at the 22 nm generation, CMOS technology is approaching atomistic
+dimensions. As size reductions cannot go on indefinitely,1 important decisions lie
+ahead after 40 extremely successful years of geometric scaling. Compared to the
+tried and tested MOSFET, a superior switching device ought to
+1
+
+Current expectations are that MOSFETs should continue to behave as such down to a channel
+length in the order of 7 nm before source-to-drain tunneling will likely render further shrinks
+pointless. Whether the electrical properties and unit costs of such devices will justify the
+tremendous capital expenditures required to develop and produce them remains an open question,
+though.
+
+110
+
+H. Kaeslin
+impact ionijunction- zation FET;
+less FET; CMOS tunnel FET;
+CMOS
+CMOS
+GNR tunnel FET;
+carbon
+nanotubes
+CMOG
+
+?
+
+switching device;
+logic family
+key virtue
+
+≈1960
+≈1945
+relay
+
+vacuum
+tube
+
+BJT;
+TTL / ECL
+high speed
+
+≈1985
+
+MOSFET;
+≈1965 NMOS / PMOS ≈1975
+high density @ low cost
+or
+
+MOSFET;
+CMOS
+low power → high perf.
+≈1995
+
+BJT & MOSFET;
+BiCMOS
+
+≈2015
+
+III-V & Ge FETs;
+FPNI-CMOS
+??-FET;
+CMOS
+
+finFET;
+CMOS
+
+memristor;
+crossbar logic
+quantum
+devices
+
+refractive gate;
+mux-based logic
+
+RSFQ/
+spintronics
+Josephson molecular
+junction
+devices
+must operate at
+cryogenic temperatures
+
+?
+
+Fig. 4 Predominant computing technology, past, present, and future (note: years indicate
+massive shifts, not date of announcement). Source [1]
+
+•
+•
+•
+•
+
+operate with a lower voltage swing,
+exhibit a more abrupt ‘‘on’’-‘‘off’’ transition,
+manage with smaller electrical charges, and
+be insensitive to or take advantage of atomistic effects.
+
+Fabricating isolated devices does not suffice to supersede CMOS, however. Any
+realistic alternative must
+•
+•
+•
+•
+
+combine billions of switches in a tiny volume,
+offer comparable levels of performance,
+be produceable in large quantities at comparable cost, and
+operate at room temperatures.
+
+Research into a ‘‘new switch’’ has been underway for quite some time. Many ideas
+have been published, many prospective devices have been studied and simulated,
+some have even been manufactured in the lab. However, no truly superior and
+industrially viable replacement for the MOSFET has been demonstrated yet, and
+research continues in multiple directions as summarized in Fig. 4. In a joint effort
+by industry and academia, the semiconductor community regularly publishes their
+assessments in the ‘‘International Technology Roadmap for Semiconductors’’ [4].
+In the meantime, industry is experimenting with ultra compact 3D assemblies of
+processor and memory chips that reduce parasitic capacitances and so afford
+further energy efficiency gains. This requires vertical interconnects between
+stacked semiconductor chips, called through-silicon vias, and poses heat evacuation problems. Another active research avenue aims at locally replacing the silicon
+in the transistors by high mobility semiconductors such as indium gallium arsenide
+(for the n-channel MOSFETs) and germanium (for the p-channel devices). Current
+plans are to deposit thin films of those materials on silicon wafers to avoid the
+costs of exotic substrates. What justifies the extra process complexity is the
+
+Semiconductor Technology and the Energy Efficiency of ICT
+
+111
+
+promise of energy efficiency gains on the order of 60 % that should result from
+bringing the supply voltage down to a mere 0.5 V with no loss in performance [5].
+A major challenge on the architecture side is to reconcile flexibility and a
+simple programming model with energy efficiency. Agreeing on stable standards
+for all those data and signal processing algorithms that involve frequent and stereotypical calculations would allow the ICT industry to develop fixed function
+blocks for them and to incorporate those into future processors as a kind of
+‘‘hardware subroutines’’. This would help because instruction set architectures
+waste orders of magnitude more energy for certain highly repetitive calculations
+than hardwired logic does.
+
+4 Conclusions
+While it is utterly clear that there can be no further progress without corresponding
+improvements in energy efficiency, the thirst for ever higher data bandwidths, the
+quest for better video resolutions, the current move towards storing everything in
+the cloud rather than locally,2 the desire to communicate even with humble objects
+over the Internet, and similar trends will in all likelihood continue to drive up the
+energy demand of ICT as a whole. Unfortunately, CMOS scaling alone can no
+longer be counted upon to yield the same gains in terms of performance, efficiency,
+and cost reduction as in the past. And unless a radical breakthrough occurs,
+growing capital needs will further restrict the number of manufacturers in the
+semiconductor industry.
+
+References
+1. Kaeslin, H.: Top-Down Digital VLSI Design. Morgan Kaufmann Publishers, Boston (2014,
+forthcoming)
+2. Fuller, S.H., Millett, L.I.: Computing performance: game over or next level? IEEE Comput.
+44(1), 31–38 (2011)
+3. Liu, T.J.K.: Finfet: history, fundamentals and future. In: Short Course, Symposium on VLSI
+Technology, Department of Electrical Engineering and Computer Sciences, University of
+California, Berkeley (2012)
+4. ITRS ERD Team: Emerging Research Devices (ERD). In: The International Technology
+Roadmap for Semiconductors (2011)
+5. Stevenson, R.: Compound semiconductors join the race to sustain Moore’s law. IEEE Spectr.
+51(1), 15–18 (2014)
+6. Baliga, J., Ayre, R.W., Hinton, K., Tucker, R.S.: Green cloud computing: balancing energy in
+processing, storage, and transport. Proc. IEEE 99(1), 149–167 (2011)
+
+2
+
+See [6] for a study on the impact of cloud computing on ICT energy consumption.
+
+
