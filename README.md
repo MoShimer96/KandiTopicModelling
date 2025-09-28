@@ -19,13 +19,15 @@ Generates:
 📝 Representative topic chunks per topic (stored in /RepDOCS)
 📁 Project Structure
 .
-\n├── Documents/                # (Input) Raw .txt files
-\n├── DocumentsCleaned/         # (Output) Cleaned documents from processDocuments.py
+\`\`\`
+├── Documents/                # (Input) Raw .txt files
+├── DocumentsCleaned/         # (Output) Cleaned documents from processDocuments.py
 ├── Plots/                    # Generated topic word plots
 ├── RepDOCS/                  # Text files containing representative topic chunks
 ├── processDocuments.py       # Cleans and sanitizes raw text files
 ├── topicModelling.py         # Runs topic modelling with BERTopic
 └── README.md
+\`\`\`
 
 ⚙️ Installation & Requirements
 pip install nltk pandas seaborn matplotlib bertopic sentence-transformers
