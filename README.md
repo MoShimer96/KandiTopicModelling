@@ -75,10 +75,10 @@ In \topicModelling.py\ you can adjust the following settings:
 
 | Variable        | Description                                  | Default |
 |------------------|----------------------------------------------|---------|
-| \TOP_N_WORDS\     | Number of top words per topic                | \12\    |
-| \PROB_THRESHOLD\  | Minimum probability to assign a chunk to a topic | \0.3\   |
-| \nr_topics\       | Number of topics to extract                  | \25\    |
-| \MAX_REP_DOCS\    | Max number of representative samples per topic | \10\    |
+| \TOP_N_WORDS\     | Number of top words per topic                | 12    |
+| \PROB_THRESHOLD\  | Minimum probability to assign a chunk to a topic | 0.3   |
+| \nr_topics\       | Number of topics to extract                  | 25    |
+| \MAX_REP_DOCS\    | Max number of representative samples per topic | 10    |
 
 ---
 
