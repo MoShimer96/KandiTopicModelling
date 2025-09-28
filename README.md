@@ -28,16 +28,16 @@ This was the code I used for my bachelor’s thesis. This project provides an au
 
 ## 📁 Project Structure
 
-\`\`\`
+ 
 .
-├── Documents/                # Input: raw .txt files
-├── DocumentsCleaned/         # Output: cleaned documents
-├── Plots/                    # Generated topic word visualizations
-├── RepDOCS/                  # Representative text excerpts per topic
-├── processDocuments.py       # Cleaning pipeline
-├── topicModelling.py         # Topic modelling + visualizations
-└── README.md                 # This file
-\`\`\`
+-├── Documents/                # Input: raw .txt files
+-├── DocumentsCleaned/         # Output: cleaned documents
+-├── Plots/                    # Generated topic word visualizations
+-├── RepDOCS/                  # Representative text excerpts per topic
+-├── processDocuments.py       # Cleaning pipeline
+-├── topicModelling.py         # Topic modelling + visualizations
+-└── README.md                 # This file
+ 
 
 ---
 
