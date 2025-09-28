@@ -47,7 +47,7 @@ Install dependencies using pip:
 
 ```bash
 pip install nltk pandas seaborn matplotlib bertopic sentence-transformers
-
+```
 The project also uses NLTK's resources (e.g. stopwords); these are usually downloaded during the first run.
 
 ---
