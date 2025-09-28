@@ -85,8 +85,8 @@ In \topicModelling.py\ you can adjust the following settings:
 
 ## ✅ Output Examples
 
-- **Plot Example**: \Plots/faceted_topic_words_0.png\  
-- **Representative Text**: \RepDOCS/repDocs_0.txt\
+- **Plot Example**: Plots/faceted_topic_words_0.png 
+- **Representative Text**: RepDOCS/repDocs_0.txt
 
 ---
 
